@@ -76,7 +76,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Researcher Scientists
+  - Research Scientists
 ---
 
 Dr. Kigerl has led efforts to combine large state records files, including IDOC records, and developed prediction algorithms. 
