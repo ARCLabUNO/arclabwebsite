@@ -6,6 +6,10 @@ title: Zachary Hamilton
 first_name: Zachary
 last_name: Hamilton
 
+# Username (this should match the folder name)
+authors:
+  - admin
+
 # Is this the primary user of the site?
 superuser: true
 
