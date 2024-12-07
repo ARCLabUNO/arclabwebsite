@@ -77,13 +77,6 @@ user_groups:
   - Researchers
 ---
 
-Dr. Tostlebe’s research focuses on three main issues: (1) the application and elaboration of criminological 
-theory to the landscapes of institutional corrections and reentry, (2) criminal justice system responses 
-to incarcerated and previously incarcerated individuals, and (3) exploring the intersection of social 
-influences and individual characteristics and how they independently and interactively impact illicit 
-activity both in custodial settings and post-release. Dr. Tostlebe's current project--funded by Sherwood Foundation--centers 
-on establishing the processes and procedures of an Omaha-based reentry house. She serves on the editorial 
-board of *Corrections*. Her research has appeared in outlets such as *Criminology*, *Journal of Research in 
-Crime and Delinquency*, *Health & Justice*, *Homicide Studies*, and *Preventive Medicine*.
+Dr. Tostlebe’s research focuses on three main issues: (1) the application and elaboration of criminological theory to the landscapes of institutional corrections and reentry, (2) criminal justice system responses to incarcerated and previously incarcerated individuals, and (3) exploring the intersection of social influences and individual characteristics and how they independently and interactively impact illicit activity both in custodial settings and post-release. Dr. Tostlebe's current project--funded by Sherwood Foundation--centers on establishing the processes and procedures of an Omaha-based reentry house. She serves on the editorial board of *Corrections*. Her research has appeared in outlets such as *Criminology*, *Journal of Research in Crime and Delinquency*, *Health & Justice*, *Homicide Studies*, and *Preventive Medicine*.
 
 To learn more about Dr. Tostlebe's research, check out her [personal website](https://www.thecriminologyacademy.com). 
