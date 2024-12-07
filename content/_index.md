@@ -5,6 +5,27 @@ date: 2022-10-24
 type: landing
 
 sections:
+  - block: slider
+    content:
+      title: |
+        **Advancing Research in Corrections**
+      images:
+        - filename: image1.jpg
+          alt: Image 1 Description
+        - filename: image2.jpg
+          alt: Image 2 Description
+        - filename: image3.jpg
+          alt: Image 3 Description
+      text: |
+        <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 36px; font-weight: bold; text-align: center;">
+          Advancing Research to Transform the Future of Corrections
+        </p>
+    design:
+      style: sliding
+      background: light
+      transition: fade
+
+sections:
   - block: hero
     content:
       title: |
