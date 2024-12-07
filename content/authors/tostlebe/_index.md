@@ -32,15 +32,15 @@ interests:
 
 education:
   courses:
-    - course: PhD in Criminal Justice
-      institution: Rutgers University
-      year: 2010
-    - course: MA in Criminal Justice
-      institution: Rutgers University
-      year: 2004
-    - course: BA in Sociology and Psychology
-      institution: University of Iowa
-      year: 2002
+    - course: PhD in Sociology
+      institution: University of Colorado Boulder
+      year: 2023
+    - course: MS in Sociology
+      institution: Iowa State University
+      year: 2017
+    - course: BA in Criminology and Criminal Justice
+      institution: Iowa State University
+      year: 2012
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
@@ -49,13 +49,13 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:zhamilton@unomaha.edu'
+    link: 'mailto:jtostlebe@unomaha.edu'
   - icon: twitter
     icon_pack: fab
-    link: https://twitter.com/Zkhamilto
+    link: https://twitter.com/JennTostlebe
   - icon: google-scholar
     icon_pack: ai
-    link: https://scholar.google.com/citations?user=o6xc4oUAAAAJ
+    link: https://scholar.google.com/citations?user=62LnMmEAAAAJ
 #  - icon: github
 #    icon_pack: fab
 #    link: https://github.com/gcushen
@@ -63,7 +63,7 @@ social:
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
   - icon: cv
     icon_pack: ai
-    link: files/cv_hamilton.pdf
+    link: https://docs.google.com/document/d/1zP34heDaeicBpK46GFXlW3H9rx9l7JsB
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ''
