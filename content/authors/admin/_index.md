@@ -1,41 +1,44 @@
 ---
 # Display name
-title: Nelson Bighetti
+title: Zachary Hamilton
 
 # Full Name (for SEO)
-first_name: Nelson
-last_name: Bighetti
+first_name: Zachary
+last_name: Hamilton
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position
-role: Professor of Artificial Intelligence
+role: Professor
 
 # Organizations/Affiliations
 organizations:
-  - name: Stanford University
-    url: ''
-
+  - name: University of Nebraska Omaha
+    url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/zach-hamilton.php'
+  - name: Nebraska Center for Justice Research
+    url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/nebraska-center-for-justice-research/index.php'
+    
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: My research centers on innovation in risk and needs assessment development.
 
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Institutional and community corrections
+  - Risk and needs assessments
+  - Criminal justice policy and practice
+  - Evaluation
 
 education:
   courses:
-    - course: PhD in Artificial Intelligence
-      institution: Stanford University
-      year: 2012
-    - course: MEng in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2009
-    - course: BSc in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2008
+    - course: PhD in Criminal Justice
+      institution: Rutgers University
+      year: 2010
+    - course: MA in Criminal Justice
+      institution: Rutgers University
+      year: 2004
+    - course: BA in Sociology and Psychology
+      institution: University of Iowa
+      year: 2002
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
@@ -44,21 +47,21 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:test@example.org'
+    link: 'mailto:zhamilton@unomaha.edu'
   - icon: twitter
     icon_pack: fab
-    link: https://twitter.com/GeorgeCushen
+    link: https://twitter.com/Zkhamilto
   - icon: google-scholar
     icon_pack: ai
-    link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
-  - icon: github
-    icon_pack: fab
-    link: https://github.com/gcushen
+    link: https://scholar.google.com/citations?user=o6xc4oUAAAAJ
+#  - icon: github
+#    icon_pack: fab
+#    link: https://github.com/gcushen
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# - icon: cv
-#   icon_pack: ai
-#   link: files/cv.pdf
+  - icon: cv
+    icon_pack: ai
+    link: files/cv_hamilton.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ''
@@ -72,6 +75,4 @@ user_groups:
   - Researchers
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Dr. Hamilton's research centers on innovation in risk and needs assessment development. Specifically, Dr. Hamilton works directly with adult corrections and juvenile justice agencies to create assessments that are optimized for their agency’s needs. These state-of-the art assessment tools are administered in dozens of states, hundreds of times a day, assisting correctional practitioners by guiding the provision of interventions and programming to improve the lives of those incarcerated and in the community. He has published over 50 journal articles, chapters, and books on risk and needs assessment, evidence-based practices, and correctional program efficacy. His work in developing risk-needs assessments were recently recognized by the American Society of Criminology, awarding him the 2023 Differential Intervention Award.
