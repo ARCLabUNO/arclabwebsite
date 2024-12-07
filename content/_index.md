@@ -1,3 +1,4 @@
+---
 # Leave the homepage title empty to use the site title
 title:
 date: 2022-10-24
@@ -100,3 +101,4 @@ sections:
       spacing:
         padding: ['20px', '0', '20px', '0']
       css_class: fullscreen
+---
