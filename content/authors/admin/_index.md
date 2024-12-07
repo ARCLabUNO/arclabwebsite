@@ -76,7 +76,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Researchers
+  - Co-Directors
 ---
 
 Dr. Hamilton's research centers on innovation in risk and needs assessment development. Specifically, Dr. Hamilton works directly with adult corrections and juvenile justice agencies to create assessments that are optimized for their agency’s needs. These state-of-the art assessment tools are administered in dozens of states, hundreds of times a day, assisting correctional practitioners by guiding the provision of interventions and programming to improve the lives of those incarcerated and in the community. He has published over 50 journal articles, chapters, and books on risk and needs assessment, evidence-based practices, and correctional program efficacy. His work in developing risk-needs assessments were recently recognized by the *American Society of Criminology*, awarding him the [2023 Differential Intervention Award](https://ascdcs.org/awards/marguerite-q-warren-and-ted-b-palmer-differential-intervention-award/).
