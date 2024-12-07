@@ -5,7 +5,7 @@
 
 # Appearance
 
-appearance:
+appearance: my_theme
   theme_day: minimal
   theme_night:
   font: native
@@ -15,11 +15,11 @@ appearance:
 
 marketing:
   seo:
-    site_type: Organization
+    site_type: ResearchOrganization
     local_business_type: ''
     org_name: ''
-    description: 'A highly-customizable Hugo research group theme powered by Wowchemy website builder.'
-    twitter: 'GetResearchDev'
+    description: 'The Advancing Research in Corrections Lab.'
+    twitter: ''
   analytics:
     google_analytics: ''
     baidu_tongji: ''
@@ -43,14 +43,14 @@ header:
 
 # Site footer
 
-footer:
-  copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
-    license:
-      enable: true
-      allow_derivatives: false
-      share_alike: true
-      allow_commercial: false
+#footer:
+#  copyright:
+#    notice: '© {year} Me. This work is licensed under {license}'
+#    license:
+#      enable: true
+#      allow_derivatives: false
+#      share_alike: true
+#      allow_commercial: false
 
 # Localization
 
@@ -101,6 +101,7 @@ features:
     provider: 'mapnik'
     api_key: ''
     zoom: 15
+sharing: true
 
 # Extensions
 
@@ -116,3 +117,6 @@ extensions:
 publications:
   date_format: January 2006
   citation_style: apa
+
+#sharing_image: 'icon.png'
+#logo: 'icon.png'
