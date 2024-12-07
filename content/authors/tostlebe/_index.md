@@ -19,16 +19,16 @@ role: Assistant Professor
 # Organizations/Affiliations
 organizations:
   - name: University of Nebraska Omaha
-    url: ''
+    url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/jennifer-tostlebe.php'
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research centers on innovation in risk and needs assessment development.
+bio: My research focuses on criminological theory and empirical tests of it within institutional corrections and prisoner reentry, system responses to incarcerated and previously incarcerated individuals, and the intersection between individual differences and social influences.
 
 interests:
-  - Institutional and community corrections
-  - Risk and needs assessments
-  - Criminal justice policy and practice
-  - Evaluation
+  - Institutional corrections and reentry
+  - Misconduct and recidivism
+  - Gangs in institutions and communities
+  - Mental and physical health
 
 education:
   courses:
