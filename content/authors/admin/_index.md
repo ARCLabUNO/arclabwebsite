@@ -52,9 +52,9 @@ social:
   - icon: envelope
     icon_pack: fas
     link: 'mailto:zhamilton@unomaha.edu'
-  - icon: twitter
+  - icon: x-twitter
     icon_pack: fab
-    link: https://twitter.com/Zkhamilto
+    link: https://x.com/Zkhamilto
   - icon: google-scholar
     icon_pack: ai
     link: https://scholar.google.com/citations?user=o6xc4oUAAAAJ
