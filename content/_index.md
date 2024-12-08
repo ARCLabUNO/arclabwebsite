@@ -67,17 +67,19 @@ sections:
     design:
       columns: '1'
       background:
-        image: 
-          filename: coders.jpg
-          filters:
-            brightness: 1
-          parallax: false
-          position: center
-          size: cover
-          text_color_light: true
+        images:
+          - filename: coders.jpg
+          - filename: contact.jpg
+          - filename: welcome.jpg
+        filters:
+          brightness: 1
+        parallax: false
+        position: center
+        size: cover
+        text_color_light: true
+      css_class: rotating-background
       spacing:
         padding: ['20px', '0', '20px', '0']
-      css_class: fullscreen
 
   - block: markdown
     content:
