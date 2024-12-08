@@ -5,17 +5,16 @@ date: 2022-10-24
 type: landing
 
 sections:
-  - block: hero
-    content:
-      title: |
-        **A**dvancing **R**esearch in **C**orrections
-      image:
-        filename: welcome.jpg  # This is the image used for the overlay
-        align: center
-        overlay_color: '#000000'
-        overlay_img: welcome.jpg
-        height: 300px
-        position: center
+  - id: welcome-section
+    blocks:
+      - type: hero
+        image:
+          src: "welcome.jpg"  # Replace with your image file name
+          placement: 1  # Full column width
+          focal_point: "Center"  # Adjust focal point as needed
+        text:
+          headline: **A**dvancing **R**esearch in **C**orrections
+          subtext: ""
 
   - block: markdown
     content:
