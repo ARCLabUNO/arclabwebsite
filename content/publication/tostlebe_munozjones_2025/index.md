@@ -21,7 +21,7 @@ publication_types: ["book-chapter"]
 publication: "Handbook on Contemporary Issues in Health, Crime, and Punishment"
 publication_short: ""
 
-abstract: Incarcerated individuals tend to come from socially marginalized and medically underserved backgrounds. Therefore, they often enter correction institutions with pre-existing mental and physical health vulnerabilities. Existing research has highlighted the health profiles of incarcerated individuals, problematic environmental features of prisons, the impact of the COVID-19 pandemic, and views of healthcare from the perspectives of incarcerated persons. However, there is a lack of insight on the policies and stated practices that maintain and uphold healthcare systems in prison, as well as information on deaths in custody. This information is important as “our ability to achieve any meaningful improvements has been linked to one principle more than any other: transparency. Health risks for the incarcerated are directly linked to how secretive a [correctional institution] is” (Venters, 2019, p. 135). In this chapter, we document the landscape of healthcare in corrections. We begin by describing what is known about healthcare and death in U.S. prisons. Second, using publicly available data on state Department of Corrections (DOC) websites, we document and describe healthcare policies (e.g., delivery of physical, dental, and mental healthcare) and administrative and procedural stated practices (e.g., intake assessment timeframe, copays, healthcare provider). Deaths in custody are also summarized, including policy, numbers of death, and if causes of death are accessible. We conclude by discussing research and policy implications that would result in positive benefits for incarcerated individuals, DOC facilities, friends and family of incarcerated individuals, and the safety of the general public.
+abstract: In this chapter, we document the landscape of healthcare in corrections. We begin by describing what is known about healthcare and death in U.S. prisons. Second, using publicly available data on state Department of Corrections (DOC) websites, we document and describe healthcare policies (e.g., delivery of physical, dental, and mental healthcare) and administrative and procedural stated practices (e.g., intake assessment timeframe, copays, healthcare provider). Deaths in custody are also summarized, including policy, numbers of death, and if causes of death are accessible. We conclude by discussing research and policy implications that would result in positive benefits for incarcerated individuals, DOC facilities, friends and family of incarcerated individuals, and the safety of the general public.
 
 # Summary. An optional shortened abstract.
 #summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
@@ -37,7 +37,7 @@ featured: false
 # links:
 # - name: ""
 #   url: ""
-url_pdf: https://www.researchgate.net/publication/377467664_Public_Accessibility_of_Healthcare_Information_in_Prison_A_Review_of_US_State_Department_of_Corrections_Websites
+url_pdf: 'https://www.researchgate.net/publication/377467664_Public_Accessibility_of_Healthcare_Information_in_Prison_A_Review_of_US_State_Department_of_Corrections_Websites'
 # url_code: 'https://github.com/HugoBlox/hugo-blox-builder'
 url_dataset: ''
 url_poster: ''
