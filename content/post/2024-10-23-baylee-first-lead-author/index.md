@@ -5,7 +5,7 @@ image:
   focal_point: 'top'
 ---
 
-Congratulations to Ph.D. Candidate, [Baylee Allen-Flores](allenflores), on her first lead-authored publication in Crime & Delinquency.
+Congratulations to Ph.D. Candidate, [Baylee Allen-Flores](https://arclabuno.netlify.app/author/baylee-allen-flores/), on her first lead-authored publication in Crime & Delinquency.
 
 <!--more-->
 
