@@ -4,7 +4,6 @@ title:
 date: 2022-10-24
 type: landing
 
-sections:
   - block: markdown
     content:
       title:
@@ -20,10 +19,10 @@ sections:
           parallax: false
           position: center
           size: "cover"
-          height: 300px  # Add the height directly here
+          height: "50vh"  # Adjusted to 50% of the viewport height
           text_color_light: true
       spacing:
-        padding: ['10px', '0', '10px', '0']  # Adjust padding if needed
+        padding: ['10px', '0', '10px', '0']
       css_class: smaller-image
 
   - block: markdown
