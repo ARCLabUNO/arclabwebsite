@@ -11,6 +11,12 @@ sections:
         **A**dvancing **R**esearch in **C**orrections
       image:
         filename: welcome.jpg
+        alt: "Welcome Image"
+      overlay:
+        color: rgba(0, 0, 0, 0.5)  # Semi-transparent black overlay
+        text: |
+          <h2>Empowering research to improve correctional systems and reintegration.</h2>
+          <p>Collaborating across disciplines to create effective, evidence-based solutions.</p>
 
   - block: markdown
     content:
