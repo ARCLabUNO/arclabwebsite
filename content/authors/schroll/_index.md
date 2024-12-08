@@ -50,7 +50,7 @@ social:
   - icon: envelope
     icon_pack: fas
     link: 'mailto:dschroll@unomaha.edu'
-  - icon: twitter
+  - icon: x-twitter
     icon_pack: fab
     link: https://x.com/DakSchroll
 #  - icon: google-scholar
