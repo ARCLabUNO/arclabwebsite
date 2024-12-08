@@ -49,7 +49,7 @@ social:
   - icon: envelope
     icon_pack: fas
     link: 'mailto:tgaonzles@unomaha.edu'
-  - icon: twitter
+  - icon: x-twitter
     icon_pack: fab
     link: https://x.com/TGonzales_CJ
   - icon: google-scholar
