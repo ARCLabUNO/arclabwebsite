@@ -37,7 +37,7 @@ tags:
 featured: false
 
 # Links
-url_pdf: ""
+url_pdf: "https://www.researchgate.net/publication/362436390_Procedural_justice_legal_orientations_and_gang_membership_Testing_an_alternative_explanation_to_understand_the_gang-misconduct_link"
 url_dataset: ""
 url_poster: ""
 url_project: ""
