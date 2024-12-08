@@ -4,6 +4,7 @@ title:
 date: 2022-10-24
 type: landing
 
+sections:
   - block: markdown
     content:
       title:
@@ -13,7 +14,7 @@ type: landing
       columns: '1'
       background:
         image: 
-          filename: welcome_arc.jpg
+          filename: coders.jpg
           filters:
             brightness: 1
           parallax: false
@@ -67,7 +68,7 @@ type: landing
       columns: '1'
       background:
         image: 
-          filename: welcome.jpg
+          filename: coders.jpg
           filters:
             brightness: 1
           parallax: false
