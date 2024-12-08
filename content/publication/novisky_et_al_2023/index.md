@@ -39,7 +39,7 @@ featured: false
 # links:
 # - name: ""
 #   url: ""
-# url_pdf: http://arxiv.org/pdf/1512.04133v1
+url_pdf: https://www.researchgate.net/publication/376236176_The_COVID-19_pandemic_and_operational_challenges_impacts_and_lessons_learned_a_multi-methods_study_of_US_prison_systems
 # url_code: 'https://github.com/HugoBlox/hugo-blox-builder'
 url_dataset: ''
 url_poster: ''
