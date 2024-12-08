@@ -15,7 +15,7 @@ publishDate: "2024-12-08T00:00:00Z"
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
 # Enter a publication type from the CSL standard.
-publication_types: ["book-chapter"]
+publication_types: ["chapter"]
 
 # Publication name and optional abbreviated publication name.
 publication: "Contemporary Issues in Health and Punishment. DCS Handbook on Corrections and Sentencing, Volume 9"
