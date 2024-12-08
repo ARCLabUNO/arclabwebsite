@@ -20,7 +20,7 @@ publishDate: "2024-10-23T00:00:00Z"
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Crime & Delinquency"
+publication: "Crime & Delinquency"
 publication_short: ""
 
 abstract: The Risk-Needs-Responsivity (RNR) model posits separating lower from higher-risk individuals to avoid “risk contamination.” In a prison setting, policies and restrictions lead to mixing different populations within a housing unit. While this may pose a threat, it may allow higher-risk individuals to gradually promote through security levels, reducing risk. We term this “risk dilution.” The current study compares the infraction behavior of individuals that are over-classified (housed higher than their risk) and those under-classified (housed lower than their risk). Using mixed-effect models with a large (N = 52,000) sample of incarcerated men, findings demonstrate support for both contamination and dilution. Policy implications identify the impact of these two processes on overcrowded prisons and the consolidation of housing units post decarceration.
