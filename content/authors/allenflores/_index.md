@@ -56,6 +56,9 @@ social:
   - icon: google-scholar
     icon_pack: ai
     link: https://scholar.google.com/citations?user=bU6dpxsAAAAJ
+  - icon: linkedin
+    icon_pack: fab
+    link: https://www.linkedin.com/in/baylee-allen-flores-2a15a331a/
 #  - icon: github
 #    icon_pack: fab
 #    link: https://github.com/gcushen
