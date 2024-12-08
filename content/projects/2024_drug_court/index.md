@@ -3,7 +3,7 @@ title: Adult Treatment Court Training Initiative and Veteran Treatment Court Tra
 date: 2024-01-01
 ---
 
-Principal Investigator: Dr. Zachary Hamilton.
+Principal Investigator: Dr. Zachary Hamilton
 
 <!--more-->
 
