@@ -1,5 +1,5 @@
 ---
-title: Lancaster Jail Forecasting (2024-2025)
+title: Lancaster county criminal justice system and jail assessment (2024-2025)
 date: 2024-01-01
 ---
 
