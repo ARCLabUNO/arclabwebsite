@@ -22,8 +22,12 @@ sections:
           size: cover
           text_color_light: true
       spacing:
-        padding: ['20px', '0', '20px', '0']
-      css_class: fullscreen
+        padding: ['10px', '0', '10px', '0']  # Reduced padding to make the section smaller
+      css_class: smaller-image
+  - css:
+      .smaller-image {
+        height: 300px;  # Adjust the height of the background image
+      }
 
   - block: markdown
     content:
