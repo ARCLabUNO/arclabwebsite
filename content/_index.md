@@ -11,6 +11,11 @@ sections:
         **A**dvancing **R**esearch in **C**orrections
       image:
         filename: welcome.jpg
+
+  - block: markdown
+    content:
+      title: |
+        Welcome to the ARC Lab
       text: |
         <br>
         
