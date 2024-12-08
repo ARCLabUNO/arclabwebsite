@@ -34,7 +34,7 @@ education:
     - course: PhD in Criminology & Criminal Justice
       institution: University of Nebraska Omaha
       year: "Anticipated 2027"
-    - course: MA in Criminal Justice
+    - course: MCJ in Criminal Justice
       institution: New Mexico State University
       year: 2023
     - course: BA in XX
