@@ -19,15 +19,12 @@ sections:
             brightness: 1
           parallax: false
           position: center
-          size: cover
+          size: "cover"
+          height: 300px  # Add the height directly here
           text_color_light: true
       spacing:
-        padding: ['10px', '0', '10px', '0']  # Reduced padding to make the section smaller
+        padding: ['10px', '0', '10px', '0']  # Adjust padding if needed
       css_class: smaller-image
-  - css:
-      .smaller-image {
-        height: 300px;  # Adjust the height of the background image
-      }
 
   - block: markdown
     content:
@@ -71,19 +68,17 @@ sections:
     design:
       columns: '1'
       background:
-        images:
-          - filename: coders.jpg
-          - filename: contact.jpg
-          - filename: welcome.jpg
-        filters:
-          brightness: 1
-        parallax: false
-        position: center
-        size: cover
-        text_color_light: true
-      css_class: rotating-background
+        image: 
+          filename: coders.jpg
+          filters:
+            brightness: 1
+          parallax: false
+          position: center
+          size: cover
+          text_color_light: true
       spacing:
         padding: ['20px', '0', '20px', '0']
+      css_class: fullscreen
 
   - block: markdown
     content:
