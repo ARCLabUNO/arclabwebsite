@@ -3,7 +3,7 @@ title: Lancaster Jail Forecasting (2024-2025)
 date: 2024-01-01
 ---
 
-Principal Investigator: Dr. Zachary Hamilton.
+Principal Investigator: Dr. Zachary Hamilton
 
 <!--more-->
 
