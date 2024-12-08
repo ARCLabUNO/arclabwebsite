@@ -1,5 +1,5 @@
 ---
-title: Adult Treatment Court Training Initiative and Veteran Treatment Court Training and Technical Assistance (2024-2025)
+title: Adult treatment court training initative and veteran treatment court training and technical assistance (2024-2025)
 date: 2024-01-01
 ---
 
