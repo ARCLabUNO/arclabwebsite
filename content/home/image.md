@@ -1,34 +1,32 @@
 ---
 widget: slider  # See https://wowchemy.com/docs/page-builder/
 headless: true  # This file represents a page section.
-weight: 10  # Order that this section will appear.
-active: true
+active: true  # This section is active and will be displayed.
 
 # Order that this section appears on the page.
 weight: 40
 
-# ... Put Your Section Options Here (section position etc.) ...
-
-# Slide interval.
-# Use `false` to disable animation or enter a time in ms, e.g. `5000` (5s).
+# Slide interval in milliseconds (5000 = 5 seconds)
 interval: 5000
 
-# Minimum slide height.
-# Specify a height to ensure a consistent height for each slide.
-height: '500px; background-position:center; background-repeat: no-repeat; background-size: contain'
+# Minimum slide height. Specify just the height in px or %.
+height: '500px'  # Adjust to desired height
 
 item: 
   - title: ""
     align: center
     overlay_color: '#000000'
     overlay_img: coders.jpg
+    # Ensure the overlay image path is correct and exists in the static folder.
   - title: ""
     align: center
     overlay_color: '#000000'
     overlay_img: contact.jpg
+    # Ensure the overlay image path is correct and exists in the static folder.
   - title: ""
     align: center
     overlay_color: '#000000'
     overlay_img: jenn_asc2024.jpg
+    # Ensure the overlay image path is correct and exists in the static folder.
 
 ---
