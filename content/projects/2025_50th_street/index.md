@@ -1,5 +1,5 @@
 ---
-title: Improving the prospects of formerly incarcerated adults: Establishing the processes and procedures of 50th Street Landing Reentry Program (2025)
+title: Improving the prospects of formerly incarcerated adults - Establishing the processes and procedures of 50th Street Landing Reentry Program (2025)
 date: 2024-12-01
 ---
 
