@@ -1,16 +1,16 @@
 ---
-title: "Birds of a feather? Individual differences and gang membership"
+title: "Public accessibility of healthcare information in prison: An overview of U.S. state Department of Corrections websites"
 authors:
 - tostlebe
-- Jose Antonio Sanchez
+- Selena Munoz-Jones
 #author_notes:
 #- "Equal contribution"
 #- "Equal contribution"
-date: "2024-01-01T00:00:00Z"
-doi: "https://doi.org/10.1093/oxfordhb/9780197618158.013.11"
+date: "2025-01-01T00:00:00Z"
+doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2024-01-01T00:00:00Z"
+publishDate: "2024-12-08T00:00:00Z"
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
@@ -18,28 +18,26 @@ publishDate: "2024-01-01T00:00:00Z"
 publication_types: ["book-chapter"]
 
 # Publication name and optional abbreviated publication name.
-publication: "The Oxford Handbook of Gangs and Society"
+publication: "Handbook on Contemporary Issues in Health, Crime, and Punishment"
 publication_short: ""
 
-abstract: Gang membership has a robust relationship with crime and violence, leading scholars to take an interest in examining the sources of gang joining. One understudied line of inquiry is individual differences, which are rank-order or time-stable characteristics that vary between people. One reason for this lack of attention is the debate around whether researchers should examine individual differences at all. This chapter takes stock of studies conducted on individual differences and gang joining to determine their relevance for research. First, the chapter provides an overview of the state dependence and population heterogeneity perspectives for gang joining. Next, it reviews research conducted on 11 individual differences spanning 50 studies and the authors determine that research at the individual level is ultimately worth pursuing. However, conclusions must be interpreted with caution due to neglected theorizing on the relationship, lack of longitudinal research, and minimal empirical studies conducted. Finally, the chapter charts directions for future research on this topic.
+abstract: Incarcerated individuals tend to come from socially marginalized and medically underserved backgrounds. Therefore, they often enter correction institutions with pre-existing mental and physical health vulnerabilities. Existing research has highlighted the health profiles of incarcerated individuals, problematic environmental features of prisons, the impact of the COVID-19 pandemic, and views of healthcare from the perspectives of incarcerated persons. However, there is a lack of insight on the policies and stated practices that maintain and uphold healthcare systems in prison, as well as information on deaths in custody. This information is important as “our ability to achieve any meaningful improvements has been linked to one principle more than any other: transparency. Health risks for the incarcerated are directly linked to how secretive a [correctional institution] is” (Venters, 2019, p. 135). In this chapter, we document the landscape of healthcare in corrections. We begin by describing what is known about healthcare and death in U.S. prisons. Second, using publicly available data on state Department of Corrections (DOC) websites, we document and describe healthcare policies (e.g., delivery of physical, dental, and mental healthcare) and administrative and procedural stated practices (e.g., intake assessment timeframe, copays, healthcare provider). Deaths in custody are also summarized, including policy, numbers of death, and if causes of death are accessible. We conclude by discussing research and policy implications that would result in positive benefits for incarcerated individuals, DOC facilities, friends and family of incarcerated individuals, and the safety of the general public.
 
 # Summary. An optional shortened abstract.
 #summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
 tags:
-- Gang Membership
-- Gangs
-- Individual Differences
-- Population Heterogeneity
-- Psychopathy
-- Selection
-- Self-control
+- Correctional Healthcare
+- Health
+- Healthcare Policies and Practices
+- Deaths in Custody
+- Prison
 featured: false
 
 # links:
 # - name: ""
 #   url: ""
-url_pdf: https://www.researchgate.net/publication/370286051_Birds_of_a_feather_Individual_differences_and_gang_membership
+url_pdf: https://www.researchgate.net/publication/377467664_Public_Accessibility_of_Healthcare_Information_in_Prison_A_Review_of_US_State_Department_of_Corrections_Websites
 # url_code: 'https://github.com/HugoBlox/hugo-blox-builder'
 url_dataset: ''
 url_poster: ''
