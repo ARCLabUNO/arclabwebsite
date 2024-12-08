@@ -13,13 +13,13 @@ sections:
         Advancing knowledge in institutional corrections, community corrections, and reentry.
       image:
         filename: welcome.jpg
-      cta:
-        - label: "Learn More"
-          url: "#about" # Add an anchor link or replace with a page URL
-          style: primary
-        - label: "Latest News"
-          url: "#latest-news"
-          style: secondary
+#      cta:
+#        - label: "Learn More"
+#          url: "#about" # Add an anchor link or replace with a page URL
+#          style: primary
+#        - label: "Latest News"
+#          url: "news"
+#          style: secondary
 
   - block: markdown
     content:
