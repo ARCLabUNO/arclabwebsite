@@ -10,6 +10,12 @@ appearance:
   theme_night:
   font: native
   font_size: M
+  background_color: "#36454F"  # Background color
+#  text_color: "#333333"  # Text color
+#  link_color: "#1a73e8"  # Link color
+#  link_hover:
+#    color: "#d32f2f"  # Hover link color
+#    background_color: "#e0e0e0"  # Hover background color
 
 # SEO
 
