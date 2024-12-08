@@ -29,7 +29,11 @@ abstract: The purpose of this study was to examine how the COVID-19 pandemic cha
 #summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
 tags:
-- Source Themes
+- Prisons
+- COVID-19
+- Infectious disease
+- Correctional staff
+- Health
 featured: false
 
 # links:
