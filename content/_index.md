@@ -15,8 +15,17 @@ sections:
       overlay:
         color: rgba(0, 0, 0, 0.5)  # Semi-transparent black overlay
         text: |
-          <h2>Empowering research to improve correctional systems and reintegration.</h2>
-          <p>Collaborating across disciplines to create effective, evidence-based solutions.</p>
+          <h2 style="color: white; text-align: center; font-size: 2.5rem;">Empowering research to improve correctional systems and reintegration.</h2>
+          <p style="color: white; text-align: center;">Collaborating across disciplines to create effective, evidence-based solutions.</p>
+    design:
+      background:
+        image: "assets/media/welcome.jpg"  # Full width image
+        position: center
+        size: cover  # Make sure it spans across the full page width
+        repeat: no-repeat
+        attachment: fixed
+      spacing:
+        padding: ['0', '0', '0', '0']  # Remove padding to allow the image to stretch across
 
   - block: markdown
     content:
