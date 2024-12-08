@@ -56,27 +56,6 @@ sections:
       view: card
       columns: '1'
 
-  # Fourth Section: Image Slider
-  - block: slider
-    weight: 4
-    content:
-      interval: 5000  # Interval for slide transition (in milliseconds)
-      height: '500px'
-      active: true
-      item:
-        - title: "Slide 1"
-          align: center
-          overlay_color: '#000000'
-          overlay_img: "coders.jpg"  # Replace with your actual image paths
-        - title: "Slide 2"
-          align: center
-          overlay_color: '#000000'
-          overlay_img: "contact.jpg"
-        - title: "Slide 3"
-          align: center
-          overlay_color: '#000000'
-          overlay_img: "jenn_asc2024.jpg"
-  
   # Fifth Section: Meet the Team Call-to-Action
   - block: markdown
     weight: 5
