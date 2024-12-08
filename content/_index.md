@@ -21,10 +21,12 @@ sections:
           position: center
           size: cover
           text_color_light: true
+      css_class: smaller-image  # Add a custom class to control the height
       spacing:
         padding: ['20px', '0', '20px', '0']
-      css_class: fullscreen
-
+    .smaller-image {
+      height: 300px;  /* Adjust this value to control the image height */
+    }
   - block: markdown
     content:
       title: |
