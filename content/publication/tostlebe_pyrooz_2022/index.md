@@ -15,7 +15,7 @@ publishDate: "2022-08-02T00:00:00Z"
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
 # Enter a publication type from the CSL standard.
-publication_types: 
+publication_types:
 - article-journal
 
 # Publication name and optional abbreviated publication name.
@@ -29,7 +29,7 @@ abstract: A top priority of prison authorities is maintaining a safe and orderly
 
 # Tags: can be used for filtering projects.
 # Example: `tags: ["machine-learning", "deep-learning"]`
-tags: 
+tags:
 - LoneStar Project
 - Legitimacy
 - Obligation to obey
