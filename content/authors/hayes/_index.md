@@ -49,7 +49,7 @@ social:
   - icon: envelope
     icon_pack: fas
     link: 'mailto:ahayes26@unomaha.edu'
-  - icon: twitter
+  - icon: x-twitter
     icon_pack: fab
     link: https://x.com/AbigailHayes0
   - icon: google-scholar
