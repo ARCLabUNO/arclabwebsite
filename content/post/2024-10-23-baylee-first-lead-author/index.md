@@ -3,10 +3,9 @@ title: Baylee Allen-Flores has her First Lead-Authored Paper Published
 date: 2024-10-23
 image:
   focal_point: 'top'
-author: allenflores
 ---
 
-Congratulations to Ph.D. Candidate, Baylee Allen-Flores, on her first lead-authored publication in Crime & Delinquency.
+Congratulations to Ph.D. Candidate, [Baylee Allen-Flores](allenflores), on her first lead-authored publication in Crime & Delinquency.
 
 <!--more-->
 
