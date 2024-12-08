@@ -13,7 +13,7 @@ sections:
           placement: 1  # Full column width
           focal_point: "Center"  # Adjust focal point as needed
         text:
-          headline: **A**dvancing **R**esearch in **C**orrections
+          headline: "**A**dvancing **R**esearch in **C**orrections"
           subtext: ""
 
   - block: markdown
