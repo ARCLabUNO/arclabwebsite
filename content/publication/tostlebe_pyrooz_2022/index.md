@@ -18,7 +18,7 @@ publishDate: "2022-08-02T00:00:00Z"
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Criminology"
+publication: "Criminology"
 publication_short: ""
 
 abstract: A top priority of prison authorities is maintaining a safe and orderly institutional environment. Gangs are believed to impede this objective, warranting bespoke policies and practices. Drawing on the process-based model of regulation, we depart from orthodox explanations for the gang–misconduct link and argue that gang affiliates are treated less fairly than nongang affiliates owing to suppression-oriented administrative policies and harsher day-to-day interactions with officers, which, in turn, impact compliance. We use administrative and survey data sources based on a sample of 802 male prisoners and generalized structural equation modeling to examine whether procedural justice and legal orientations mediate the association between official classification of gang affiliation and self-reported misconduct. Our findings reveal partial support for the process-based model: procedural justice and legitimacy are poorer among gang than among nongang respondents but do not mediate the gang–misconduct link. The traditional pathway between procedural justice, legitimacy, and obligation to obey was observed, none of which were related to misconduct, standing in sharp contrast to the expectations of the process-based model. These findings suggest that factors other than procedural justice and legal orientations may be more relevant for rule violations among gangs, specifically, and within correctional environments, generally.
