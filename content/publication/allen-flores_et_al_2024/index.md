@@ -28,9 +28,9 @@ abstract: The Risk-Needs-Responsivity (RNR) model posits separating lower from h
 # Summary. An optional shortened abstract.
 #summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
-tags:
-- Source Themes
-featured: false
+# Tags: can be used for filtering projects.
+# Example: `tags = ["machine-learning", "deep-learning"]`
+tags = ["Classification", "Decarceration", "Misconduct", "Prison Management"]
 
 # links:
 # - name: ""
