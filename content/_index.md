@@ -10,7 +10,7 @@ sections:
       title: |
         **A**dvancing **R**esearch in **C**orrections
       image:
-        filename: welcome.jpg
+        filename: welcome.jpg  # This is the image used for the overlay
         alt: "Welcome Image"
       overlay:
         color: rgba(0, 0, 0, 0.5)  # Semi-transparent black overlay
@@ -19,7 +19,7 @@ sections:
           <p style="color: white; text-align: center;">Collaborating across disciplines to create effective, evidence-based solutions.</p>
     design:
       background:
-        image: "assets/media/welcome.jpg"  # Full width image
+        image: "/assets/media/welcome.jpg"  # Full width image
         position: center
         size: cover  # Make sure it spans across the full page width
         repeat: no-repeat
