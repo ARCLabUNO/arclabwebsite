@@ -12,7 +12,7 @@ sections:
       title: |
         **A**dvancing **R**esearch in **C**orrections
       image:
-        filename: welcome.jpg
+        filename: coders.jpg
         alt: "Welcome Image"
       overlay:
         color: rgba(0, 0, 0, 0.5)  # Semi-transparent black overlay
