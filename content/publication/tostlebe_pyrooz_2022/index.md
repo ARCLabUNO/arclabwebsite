@@ -26,9 +26,9 @@ abstract: A top priority of prison authorities is maintaining a safe and orderly
 # Summary. An optional shortened abstract.
 #summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
-# Tags: can be used for filtering projects.
-# Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["LoneStar Project", "Legitimacy", "Obligation to obey", "Misconduct", "Procedural justice", "Structural equation modeling"]
+tags:
+- Source Themes
+featured: false
 
 # links:
 # - name: ""
