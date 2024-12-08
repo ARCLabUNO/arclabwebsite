@@ -14,7 +14,7 @@ sections:
       columns: '1'
       background:
         image: 
-          filename: welcome_arc.png
+          filename: welcome_arc2.png
           filters:
             brightness: 1
           parallax: false
