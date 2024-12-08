@@ -18,45 +18,17 @@ interval: 5000
 height: '500px; background-position:center; background-repeat: no-repeat; background-size: contain'
 
 item: 
-  - title: "Duck Bowling 🎳"
-    align: center
-    overlay_color: '#000000'
-    overlay_img: duck_bowling.png
-  - title: "Omaha PSN Task Force"
-    align: center
-    overlay_color: '#000000'
-    overlay_img: psn_task_force.jpg
   - title: ""
     align: center
     overlay_color: '#000000'
-    overlay_img: nix-tregle-data.jpg
+    overlay_img: coders.jpg
   - title: ""
     align: center
     overlay_color: '#000000'
-    overlay_img: sadaf_website_2.png
+    overlay_img: contact.jpg
   - title: ""
     align: center
     overlay_color: '#000000'
-    overlay_img: jessie_website_1.jpg
-  - title: ""
-    align: center
-    overlay_color: '#000000'
-    overlay_img: nix_teaching_2.png
-  - title: ""
-    align: center
-    overlay_color: '#000000'
-    overlay_img: sadaf_website_1.png
-  - title: ""
-    align: center
-    overlay_color: '#000000'
-    overlay_img: jessie_website_2.jpg
-  - title: ""
-    align: center
-    overlay_color: '#000000'
-    overlay_img: nix_teaching_4.png
-  - title: ""
-    align: center
-    overlay_color: '#000000'
-    overlay_img: jessie_website_3.jpg
-    
+    overlay_img: jenn_asc2024.jpg
+
 ---
