@@ -25,10 +25,9 @@ organizations:
 bio: My research interests lie in XX.
 
 interests:
-  - XX
-  - XX
-  - XX
-  - XX
+  - Biopsychosocial Criminology
+  - Traits and Behavior
+  - Courts
 
 education:
   courses:
