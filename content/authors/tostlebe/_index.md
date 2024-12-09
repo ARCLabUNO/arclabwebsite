@@ -80,7 +80,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Co-Directors
+  - Directors
 ---
 
 Dr. Tostlebe’s research focuses on incarceration and reentry; mental and physical health; gangs in communities and institutions; empirical tests of criminological theory; and correctional evaluations. Dr. Tostlebe has been the project manager for a study investigating the impact of solitary confinement (and a step-down program) on incarcerated individuals and prisons in Oregon. Dr. Tostlebe's current project--funded by Sherwood Foundation--centers on establishing the processes and procedures of an Omaha-based reentry house. She serves on the editorial board of [*Corrections*](https://www.tandfonline.com/journals/ucor20/about-this-journal#editorial-board). Her research has appeared in outlets such as *Criminology*, *Journal of Research in Crime and Delinquency*, *Health & Justice*, *Homicide Studies*, and *Preventive Medicine*. She co-hosts [The Criminology Academy Podcast](https://www.thecriminologyacademy.com), which is supported by the ARC Lab.
