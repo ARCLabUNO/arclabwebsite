@@ -22,13 +22,14 @@ organizations:
     url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/baylee-allen.php'
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests lie in XX.
+bio: Her research interests are risk-needs assessments, implementation science, prison misconduct, and prison policy.
 
 interests:
   - Corrections
-  - Decarceration
-  - Misconduct
-  - Gender-informed approaches to corrections
+  - Risk-need assessment
+  - Implementation science and strategies
+  - Prison behavior and misconduct
+  - Prison policy
 
 education:
   courses:
@@ -80,4 +81,4 @@ user_groups:
   - Grad Students
 ---
 
-Baylee Allen-Flores is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests include corrections, decarceration, and XX. XXXX.
+Baylee Allen-Flores is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests include risk-needs assessments, implementation science, prison misconduct, and prison policy. She is involved in two projects with Dr. Zach Hamilton: Washington One Needs Assessment and Washington One User Manual.
