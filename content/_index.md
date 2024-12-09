@@ -38,7 +38,7 @@ sections:
 
         Additionally, ARC is committed to providing undergraduate and graduate students with hands-on training in data-driven research, specialized skills essential for understanding corrections and reentry, and valuable networking opportunities that enhance their academic and professional development. By engaging in real-world research and evaluation projects, students are equipped to contribute meaningfully to the field while shaping future policies and practices in institutional and community corrections.
 
-        We invite you to explore our website for information on [our team](https://arclabuno.netlify.app/people/), the [latest news](https://arclabuno.netlify.app/post/) and information on our [current projects](https://arclabuno.netlify.app/projects), [recent publications](https://arclabuno.netlify.app/publication), and more.
+        We invite you to explore our website for information on [our team](https://arclabuno.org/people/), the [latest news](https://arclabuno.org/post/) and information on our [current projects](https://arclabuno.org/projects/), [recent publications](https://arclabuno.org/publication/), and more.
   
   - block: collection
     content:
