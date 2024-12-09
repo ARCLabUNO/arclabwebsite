@@ -7,34 +7,18 @@ main:
   - name: Meet Our Team
     url: people
     weight: 10
-  - name: What We Do
-    url: what_we_do
-    weight: 20
-    subfolders: 
-      - name: Assessments
-        url: what_we_do/assessment
-        weight: 10
-      - name: Program Evaluation
-        url: what_we_do/evaluation
-        weight: 20
-      - name: Decarceration and Desistance
-        url: what_we_do/decar_desist
-        weight: 30
-      - name: Criminal and Institutional Behavior
-        url: what_we_do/behavior
-        weight: 40
   - name: News
     url: post
-    weight: 30
-  - name: Current Projects
+    weight: 20
+  - name: Projects
     url: projects
-    weight: 40
+    weight: 30
   - name: Publications
     url: publication
-    weight: 50
+    weight: 40
   - name: The Criminology Academy Podcast
     url: 'http://thecriminologyacademy.com'
-    weight: 60
+    weight: 50
   - name: Contact
     url: contact
-    weight: 70
+    weight: 60
