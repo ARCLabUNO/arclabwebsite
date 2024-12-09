@@ -81,4 +81,4 @@ user_groups:
   - Grad Students
 ---
 
-Baylee Allen-Flores is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests include risk-needs assessments, implementation science, prison misconduct, and prison policy. She is involved in two projects with Dr. Zach Hamilton: Washington One Needs Assessment and Washington One User Manual.
+Baylee Allen-Flores is a Doctoral Candidate in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests include risk-needs assessments, implementation science, prison misconduct, and prison policy. She is involved in two projects with Dr. Zach Hamilton: Washington One Needs Assessment and Washington One User Manual.
