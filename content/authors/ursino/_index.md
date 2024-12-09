@@ -22,12 +22,14 @@ organizations:
     url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/zach-hamilton.php'
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests lie in XX.
+bio: My research focuses on advancing evidence-based practices in criminal justice. Primary areas of research include evaluating and constructing risk-need assessments to enhance decision-making processes, addressing challenges related to prison and jail crowding, and exploring correctional system reforms. His work so far has appeared in journals such as *Justice Quarterly*, *Crime and Delinquency*, and *Journal of Criminal Justice*.
 
 interests:
   - Risk-need assessments
+  - Correctional policy
+  - Prison and jail crowding
   - Correctional programming
-  - Decarceration strategies
+  - Reentry
 
 education:
   courses:
@@ -37,9 +39,9 @@ education:
     - course: MA in Criminal Justice
       institution: North Dakota State University
       year: 2022
-    - course: BA in XX
-      institution: XX
-      year: 20XX
+    - course: BA in Criminal Justice
+      institution: North Dakota State University
+      year: 2021
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
@@ -55,6 +57,9 @@ social:
   - icon: google-scholar
     icon_pack: ai
     link: https://scholar.google.com/citations?user=VaCSP8IAAAAJ
+  - icon: researchgate
+    icon_pack: fab
+    link: https://www.researchgate.net/profile/John-Ursino-2
 #  - icon: github
 #    icon_pack: fab
 #    link: https://github.com/gcushen
@@ -76,4 +81,12 @@ user_groups:
   - Grad Students
 ---
 
-John Ursino is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. His research interests include XX, XX, and XX. XXXXX.
+John Ursino is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha, under the guidance of Dr. Zachary Hamilton. His research interests focus on evaluating and constructing risk-need assessments, addressing prison and jail overcrowding, and advancing correctional policy reform. He has assisted in creating a pre-trial risk assessment for King County, Washington; evaluating prison crowding within Nebraska facilities; conduct outcome evaluations of prison programs and examined strategies to reduce bias within risk-need assessments.
+
+John’s ongoing projects include:
+1) **Decarceration Policy in Washington State**: Longitudinal analysis of strategies to reduce incarceration rates without compromising public safety.
+2) **Jail Crowding in Nebraska**: Conducting a comprehensive assessment of overcrowding in a county jail, focusing on systemic causes and solutions.
+3) **Warehousing Effects in Nebraska Prisons**: Analyzing the implications of warehousing incarcerated individuals on system efficiency and inmate outcomes.
+4) **Risk-Need Score Changes and Recidivism**: Examining the relationship between changes in risk-need scores and recidivism trends.
+5) **Misconduct Risk Assessments for Washington State**: Supporting the development of a tool to predict and mitigate misconduct within the corrections system.
+6) **Evaluating LSI-R and ORAS**: Assessing the predictive accuracy and identifying potential biases in these widely used risk assessment tools through a multi-state dataset.
