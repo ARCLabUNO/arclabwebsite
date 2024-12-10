@@ -28,7 +28,7 @@ sections:
   - block: markdown
     content:
       title: |
-        Welcome to the ARC Lab
+        Welcome to the ARC Lab!
       text: |
         <br>
         
