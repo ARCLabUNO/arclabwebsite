@@ -76,4 +76,4 @@ user_groups:
   - Grad Students
 ---
 
-Abby Hayes is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests include institutional corrections, gangs, and rehabilitative programming. Abby holds a MPS in Criminology and Criminal Justice from Fort Hays State University. Currently, she working with Dr. Tostlebe studying solitary confinement and Dr. Towne studying the effect of reentry programming on employment and earnings.
+Abby Hayes is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests include institutional corrections, gangs, and rehabilitative programming. Abby holds a MPS in Criminology and Criminal Justice from Fort Hays State University. Currently, she is working with Dr. Tostlebe studying solitary confinement and [Dr. Katelynn Towne](https://www.unomaha.edu/college-of-public-affairs-and-community-service/nebraska-center-for-justice-research/about-us/katelynn-towne.php) studying the effect of reentry programming on employment and earnings.
