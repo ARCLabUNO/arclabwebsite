@@ -40,7 +40,7 @@ education:
     - course: MA in Criminology & Criminal Justice
       institution: University of Nebraska Omaha
       year: 2023
-    - course: BS in Biomedical Sciences; MA in Criminology
+    - course: BS in Biomedical Sciences; minor in Criminology
       institution: University of South Florida
       year: 2021
 
