@@ -22,10 +22,12 @@ organizations:
     url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/funded-graduate-students.php#Doctoral%20Students-main'
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests lie in XX.
+bio: My research interests are mental health, physical health, corrections, rehabilitation, and biosocial criminology.
 
 interests:
-  - Health
+  - Mental health
+  - Physical health
+  - Corrections
   - Neuroscience
   - Biosocial Criminology
   - Rehabilitation
@@ -38,7 +40,7 @@ education:
     - course: MA in Criminology & Criminal Justice
       institution: University of Nebraska Omaha
       year: 2023
-    - course: BS in Biomedical Sciences
+    - course: BS in Biomedical Sciences; MA in Criminology
       institution: University of South Florida
       year: 2021
 
@@ -50,9 +52,9 @@ social:
   - icon: envelope
     icon_pack: fas
     link: 'mailto:salfalatah@unomaha.edu'
-#  - icon: twitter
-#    icon_pack: fab
-#    link: https://twitter.com/Zkhamilto
+  - icon: x-twitter
+    icon_pack: fab
+    link: https://x.com/salfalatah
   - icon: google-scholar
     icon_pack: ai
     link: https://scholar.google.com/citations?user=imXN2XQAAAAJ
@@ -77,4 +79,4 @@ user_groups:
   - Grad Students
 ---
 
-Sarah Al Falatah is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests include health, neuroscience, biosocial criminology, and rehabilitation. Sarah holds a MA in Criminology and Criminal Justice from the University of Nebraska Omaha. Currently, she working with  Dr. Tostlebe studying suicide in Omaha.
+Sarah Al Falatah is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests focus on  health criminology, specially physical and mental health. Sarah holds a MA in Criminology and Criminal Justice from the University of Nebraska Omaha. Currently, she is working on an evaluation of prison programming in the Nebraska Department of Correctional Services with Drs. Zachary Hamilton and Jenn Tostlebe. Sarah is also working with Dr. Tostlebe studying suicide in Omaha.
