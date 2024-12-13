@@ -22,7 +22,7 @@ organizations:
     url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/zach-hamilton.php'
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research focuses on advancing evidence-based practices in criminal justice. Primary areas of research include evaluating and constructing risk-need assessments to enhance decision-making processes, addressing challenges related to prison and jail crowding, and exploring correctional system reforms. His work so far has appeared in journals such as *Justice Quarterly*, *Crime and Delinquency*, and *Journal of Criminal Justice*.
+bio: My research focuses on advancing evidence-based practices in criminal justice. Primary areas of research include evaluating and constructing risk-need assessments to enhance decision-making processes, addressing challenges related to prison and jail crowding, and exploring correctional system reforms.
 
 interests:
   - Risk-need assessments
@@ -81,7 +81,7 @@ user_groups:
   - Grad Students
 ---
 
-John Ursino is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha, under the guidance of Dr. Zachary Hamilton. His research interests focus on evaluating and constructing risk-need assessments, addressing prison and jail overcrowding, and advancing correctional policy reform. He has assisted in creating a pre-trial risk assessment for King County, Washington; evaluating prison crowding within Nebraska facilities; conduct outcome evaluations of prison programs and examined strategies to reduce bias within risk-need assessments.
+John Ursino is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha, under the guidance of Dr. Zachary Hamilton. His research interests focus on evaluating and constructing risk-need assessments, addressing prison and jail overcrowding, and advancing correctional policy reform. He has assisted in creating a pre-trial risk assessment for King County, Washington; evaluating prison crowding within Nebraska facilities; conduct outcome evaluations of prison programs and examined strategies to reduce bias within risk-need assessments. His work has appeared in journals such as *Justice Quarterly*, *Crime and Delinquency*, and *Journal of Criminal Justice*.
 
 John’s ongoing projects include:
 1) **Decarceration Policy in Washington State**: Longitudinal analysis of strategies to reduce incarceration rates without compromising public safety.
