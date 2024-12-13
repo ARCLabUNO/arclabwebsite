@@ -22,11 +22,12 @@ organizations:
     url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/taylor-gonzales.php'
     
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests lie in XX.
+bio: My research centers around corrections, recidivism, and program evaluations.
 
 interests:
-  - Recidivism
   - Corrections
+  - Recidivism of justice-involved individuals
+  - Reentry
   - Program evaluation
 
 education:
@@ -37,8 +38,11 @@ education:
     - course: MCJ in Criminal Justice
       institution: New Mexico State University
       year: 2023
-    - course: BA in XX
-      institution: XX
+    - course: BCJ in Criminal Justice
+      institution: New Mexico State University
+      year: 2021
+    - course: BA in Psychology
+      institution: New Mexico State University
       year: 2021
 
 # Social/Academic Networking
@@ -76,4 +80,4 @@ user_groups:
   - Grad Students
 ---
 
-Taylor Gonzales is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests include XX, XX, and XX. XXXXX.
+Taylor Gonzales is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. My research interests center around corrections, recidivism, and program evaluations. I am currently working on a few different projects related to the realm of corrections. First, I am working with Dr. Jennifer Tostlebe on a grant-funded project examining a local reentry program. Our project goal is to establish the process and procedures for the reentry program while also tracking prior participants of the program to gauge their success post-program. Additionally, I am working with Dr. Zachary Hamilton on a manuscript that seeks to compare risk and need scores at four different time points, ranging from 6 months prior to release to 18 months post-release. Our goal is to determine if and how needs shift over time and to assess the impact of these changes on recidivism risk. Lastly, I am working with a former advisor, Dr. Ahram Cho from New Mexico State University and Dr. Alexander Updegrove from University of North Texas on a drug court related manuscript. We are utilizing group-based trajectory modeling to identify patterns of early in-program substance use and assess their effect on overall program completion.
