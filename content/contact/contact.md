@@ -23,7 +23,7 @@ content:
       # Enable CAPTCHA challenge to reduce spam?
       captcha: true
       
-  email: arclabuno@gmail.com
+  email: arclab@unomaha.edu
   phone: +1 402 554 2800
   address:
     street: 6001 Dodge Street
