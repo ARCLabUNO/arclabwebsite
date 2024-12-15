@@ -72,7 +72,8 @@ sections:
               filename: pitch_groupphoto.jpg
               filters:
                 brightness: 0.7
-              fit: contain
+              style:
+                fit: contain
             position: right
             color: '#666'
         - title: Lunch & Learn ☕️
