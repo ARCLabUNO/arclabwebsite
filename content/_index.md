@@ -59,32 +59,29 @@ sections:
       view: card
       columns: '2'
   
-  - block: markdown
+  - block: slider
     content:
-      title:
-      subtitle: ''
-      text:
+      slides:
+        - image:
+            filename: pitch_groupphoto.jpg
+            filters:
+              brightness: 1
+            parallax: false
+            position: center
+            size: contain
+          text: "Pitch Pizzeria End-of-Semester Lab Meeting"
+        - image:
+            filename: welcome.jpg
+            filters:
+              brightness: 1
+            parallax: false
+            position: center
+            size: contain
+          text: "Temp Photo"
     design:
-      columns: '1'
-      background:
-        image: 
-          filename: pitch_groupphoto.jpg
-          filters:
-            brightness: 1
-          parallax: false
-          position: center
-          size: contain
-          text_color_light: true
-      css_class: smaller-image  # Add a custom class to control the height
-      background_color: black # Adds a black background
+      background_color: black
       spacing:
         padding: ['20px', '0', '20px', '0']
-      footer:
-        text: "Pitch Pizzeria Holiday Lab Meeting"
-        design:
-          text_align: center
-          background_color: black
-          text_color_light: true
 
   - block: markdown
     content:
