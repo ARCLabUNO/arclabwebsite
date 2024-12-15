@@ -12,32 +12,34 @@
   height: 500px;  /* Adjust this value to control the image height */
 }
 
-.image-container {
-  position: relative; /* Enable positioning for the overlay text */
+.image-with-overlay {
+  position: relative;  /* Ensures positioning context for the overlay text */
+  height: 500px;       /* Adjust based on the desired height of the image block */
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 800px; /* Adjust based on image dimensions */
-  margin: 0 auto;
+  background-color: black;
 }
 
-.image-container img {
+.image-with-overlay::before {
+  content: '';
   display: block;
+  background-image: url('pitch_groupphoto.jpg');  /* Ensure the path matches your image */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
-  height: auto;
-  object-fit: contain; /* Ensures the entire image is visible */
+  height: 100%;
+  opacity: 1;
 }
 
-.overlay-text {
+.image-overlay-text {
   position: absolute;
-  bottom: 10px; /* Adjusts the vertical position near the bottom */
-  left: 50%;
-  transform: translateX(-50%); /* Centers the text horizontally */
-  color: white;
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background for contrast */
-  padding: 10px 20px;
-  font-size: 16px; /* Adjust font size as needed */
+  bottom: 10px;  /* Places text near the bottom */
+  width: 100%;
   text-align: center;
-  border-radius: 5px; /* Optional: adds rounded corners to the text background */
+  color: white;
+  background: rgba(0, 0, 0, 0.5);  /* Semi-transparent background for contrast */
+  padding: 10px 0;
+  font-size: 16px;  /* Adjust for readability */
 }
