@@ -74,18 +74,18 @@ sections:
                 brightness: 0.7
             position: right
             color: '#666'
-        - title: Lunch & Learn ☕️
-          content: 'Share your knowledge with the group and explore exciting new topics together!'
-          align: left
-          background:
-            image:
-              # Specify an image from `assets/media/`
-              # or delete the image section to remove it
-              filename: jenn_asc2024.jpg
-              filters:
-                brightness: 0.7
-            position: center
-            color: '#555'
+#        - title: Lunch & Learn ☕️
+#          content: 'Share your knowledge with the group and explore exciting new topics together!'
+#          align: left
+#          background:
+#            image:
+#              # Specify an image from `assets/media/`
+#              # or delete the image section to remove it
+#              filename: jenn_asc2024.jpg
+#              filters:
+#                brightness: 0.7
+#            position: center
+#            color: '#555'
     design:
       # Slide height is automatic unless you force a specific height (e.g. '400px')
       slide_height: ''
