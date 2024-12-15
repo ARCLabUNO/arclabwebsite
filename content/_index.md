@@ -59,26 +59,26 @@ sections:
       view: card
       columns: '2'
   
-#  - block: markdown
-#    content:
-#      title:
-#      subtitle: ''
-#      text:
-#    design:
-#      columns: '1'
-#      background:
-#        image: 
-#          filename: welcome.jpg
-#          filters:
-#            brightness: 1
-#          parallax: false
-#          position: center
-#          size: cover
-#          text_color_light: true
-#      css_class: smaller-image  # Add a custom class to control the height
-#      spacing:
-#        padding: ['20px', '0', '20px', '0']
-#      css_class: fullscreen
+  - block: markdown
+    content:
+      title:
+      subtitle: ''
+      text:
+    design:
+      columns: '1'
+      background:
+        image: 
+          filename: pitch_groupphoto.jpg
+          filters:
+            brightness: 1
+          parallax: false
+          position: center
+          size: cover
+          text_color_light: true
+      css_class: smaller-image  # Add a custom class to control the height
+      spacing:
+        padding: ['20px', '0', '20px', '0']
+      css_class: fullscreen
 
   - block: markdown
     content:
