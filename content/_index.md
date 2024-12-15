@@ -63,7 +63,8 @@ sections:
     content:
       title:
       subtitle: ''
-      text:
+      text: |
+        <div class="image-overlay-text">Pitch Pizzeria End-of-Semester Lab Meeting</div>
     design:
       columns: '1'
       background:
@@ -75,16 +76,10 @@ sections:
           position: center
           size: contain
           text_color_light: true
-      css_class: smaller-image  # Add a custom class to control the height
+      css_class: image-with-overlay  # Add a custom class for styling
       background_color: black # Adds a black background
       spacing:
         padding: ['20px', '0', '20px', '0']
-      footer:
-        text: "Pitch Pizzeria Holiday Lab Meeting"
-        design:
-          text_align: center
-          background_color: black
-          text_color_light: true
 
   - block: markdown
     content:
