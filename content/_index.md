@@ -72,10 +72,6 @@ sections:
               filename: pitch_groupphoto.jpg
               filters:
                 brightness: 0.7
-              style:
-                max-width: 100%
-                height: auto
-                margin: 0 auto
             position: right
             color: '#666'
         - title: Lunch & Learn ☕️
