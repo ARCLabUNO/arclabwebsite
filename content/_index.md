@@ -64,17 +64,22 @@ sections:
       title:
       subtitle: ''
       text: |
-        <div class="image-container">
-          <imag src="pitch_groupphoto.jpg" alt="Group Photo" />
-          <div class="overlay-text">Pitch Pizzeria End-of-Semester Lab Meeting</div>
-        </div>
+        <div class="image-overlay-text">Pitch Pizzeria End-of-Semester Lab Meeting</div>
     design:
       columns: '1'
       background:
-        css_class: image-with-text-overlay  # Add a custom class for styling
-        background_color: black # Adds a black background
+        image: 
+          filename: pitch_groupphoto.jpg
+          filters:
+            brightness: 1
+          parallax: false
+          position: center
+          size: contain
+          text_color_light: true
+      css_class: image-with-overlay  # Add a custom class for styling
+      background_color: black # Adds a black background
       spacing:
-        padding: ['0', '0', '0', '0']
+        padding: ['20px', '0', '20px', '0']
 
   - block: markdown
     content:
