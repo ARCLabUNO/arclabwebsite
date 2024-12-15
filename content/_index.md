@@ -73,12 +73,12 @@ sections:
             brightness: 1
           parallax: false
           position: center
-          size: cover
+          size: contain
           text_color_light: true
       css_class: smaller-image  # Add a custom class to control the height
+      background_color: black # Adds a black background
       spacing:
         padding: ['20px', '0', '20px', '0']
-      css_class: fullscreen
 
   - block: markdown
     content:
