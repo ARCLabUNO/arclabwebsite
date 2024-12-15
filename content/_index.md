@@ -70,12 +70,9 @@ sections:
               # Specify an image from `assets/media/`
               # or delete the image section to remove it
               filename: pitch_groupphoto.jpg
-              style:
-                background-size: contain
-                background-position: center
-                background-repeat: no-repeat
               filters:
                 brightness: 0.7
+              fit: contain
             position: right
             color: '#666'
         - title: Lunch & Learn ☕️
