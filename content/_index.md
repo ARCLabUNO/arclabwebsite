@@ -62,7 +62,7 @@ sections:
   - block: slider
     content:
       slides:
-        - title: 👋 Welcome to the group
+        - title: 👋 Welcome to the lab
           content: Take a look at what we're working on...
           align: center
           background:
@@ -81,7 +81,7 @@ sections:
             image:
               # Specify an image from `assets/media/`
               # or delete the image section to remove it
-              filename: contact.jpg
+              filename: jenn_asc2024.jpg
               filters:
                 brightness: 0.7
             position: center
