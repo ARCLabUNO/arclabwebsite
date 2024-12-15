@@ -62,14 +62,14 @@ sections:
   - block: slider
     content:
       slides:
-        - title: 👋 Welcome to the group
-          content: Take a look at what we're working on...
+        - title: Pitch Pizzeria End-of-Semester Meeting
+          content: 
           align: center
           background:
             image:
               # Specify an image from `assets/media/`
               # or delete the image section to remove it
-              filename: coders.jpg
+              filename: pitch_groupphoto.jpg
               filters:
                 brightness: 0.7
             position: right
@@ -93,7 +93,7 @@ sections:
             image:
               # Specify an image from `assets/media/`
               # or delete the image section to remove it
-              filename: welcome.jpg
+              filename: coders.jpg
               filters:
                 brightness: 0.5
             position: center
@@ -107,7 +107,7 @@ sections:
       # Slide height is automatic unless you force a specific height (e.g. '400px')
       slide_height: ''
       # Make the slides full screen within the browser window?
-      is_fullscreen: true
+      is_fullscreen: false
       # Automatically transition through slides?
       loop: false
       # Duration of transition between slides (in ms)
