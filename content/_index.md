@@ -73,7 +73,9 @@ sections:
               filters:
                 brightness: 0.7
               style:
-                fit: contain
+                max-width: 100%
+                height: auto
+                margin: 0 auto
             position: right
             color: '#666'
         - title: Lunch & Learn ☕️
