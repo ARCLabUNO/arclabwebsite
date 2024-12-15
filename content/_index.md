@@ -69,10 +69,11 @@ sections:
             image:
               # Specify an image from `assets/media/`
               # or delete the image section to remove it
-              filename: coders.jpg
+              filename: pitch_groupphoto.jpg
               filters:
                 brightness: 0.7
             position: right
+            fit: contain
             color: '#666'
         - title: Lunch & Learn ☕️
           content: 'Share your knowledge with the group and explore exciting new topics together!'
