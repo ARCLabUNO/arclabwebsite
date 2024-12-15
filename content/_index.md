@@ -61,21 +61,26 @@ sections:
   
   - block: markdown
     content:
-      title:
-      subtitle: ''
-      text:
-    design:
-      columns: '1'
-      background:
-        image: 
+    slides:
+      - image:
           filename: pitch_groupphoto.jpg
           filters:
             brightness: 1
           parallax: false
           position: center
           size: contain
-          text_color_light: true
-      css_class: smaller-image  # Add a custom class to control the height
+        caption: "Pitch Pizzeria End-of-Semester Lab Meeting"
+      - image:
+          filename: welcome.jpg
+          filters:
+            brightness: 1
+          parallax: false
+          position: center
+          size: contain
+        caption: "Temp Photo"
+    design:
+      columns: '1'
+      css_class: slider-component  # Add a custom class to control the height
       background_color: black # Adds a black background
       spacing:
         padding: ['20px', '0', '20px', '0']
