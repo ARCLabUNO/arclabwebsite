@@ -22,12 +22,12 @@ organizations:
     url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/naya-russell-coprich.php'
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests lie in XX.
+bio: My research interests span evaluation, theory development, police-community relations, and juvenile delinquency. My academic journey is marked by a multifaceted approach, as I explore diverse areas within the field to refine my expertise and identify a focused path for my research.
 
 interests:
   - Juvenile Delinquency
-  - Reentry
   - Criminological Theory
+  - Evaluation
   - Police and Community Interactions
 
 education:
@@ -77,4 +77,8 @@ user_groups:
   - Grad Students
 ---
 
-Naya Russell-Coprich is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests include XX, XX, and XX. XXXXX.
+Naya Russell-Coprich is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests include evaluation, theory development, police-community relations, and juvenile delinquency. She earned her bachelor's and master's degrees in Criminal Justice and Criminology from the University of Northern Colorado, where she was a Ronald E. McNair Scholar and received the Dean's Citation of Excellence for her master's thesis. Her academic expertise lies in mixed-methods research, with a primary focus on qualitative approaches to understanding complex issues within the criminal justice system.
+
+She is passionate about bridging the gap between police officers and communities, understanding crime and victimization from a theoretical standpoint, and advancing the field of criminal justice through innovative and unique interest topics. Her work asims to contribute to evidence-based practices that promote equity, safety, and stronger community relationships.
+
+Currently, she is working with the Nebraska Center for Justice Research, conducting an evaluation of Nebraska Department of Correctional Services clinical and non-clinical programs.
