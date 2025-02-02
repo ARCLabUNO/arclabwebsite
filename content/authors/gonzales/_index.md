@@ -66,7 +66,7 @@ social:
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
   - icon: cv
     icon_pack: ai
-    link: files/cv_gonzales.pdf
+    link: https://docs.google.com/document/d/1vNr8yXfahdG2vT5MC3lVaZcY8RxSvkNn/edit?usp=sharing&ouid=105109841228464333367&rtpof=true&sd=true
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ''
