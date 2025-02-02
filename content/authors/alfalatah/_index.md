@@ -58,6 +58,9 @@ social:
   - icon: google-scholar
     icon_pack: ai
     link: https://scholar.google.com/citations?user=imXN2XQAAAAJ
+  - icon: researchgate
+    icon_pack: fab
+    link: https://www.researchgate.net/profile/Sarah-Al-Falatah
 #  - icon: github
 #    icon_pack: fab
 #    link: https://github.com/gcushen
