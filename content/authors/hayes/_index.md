@@ -62,7 +62,7 @@ social:
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
   - icon: cv
     icon_pack: ai
-    link: files/cv_hayes.pdf
+    link: https://docs.google.com/document/d/1wTNejQbAK1rFXB5b6OLOANR2fCv8YftOUtX4NyiGvrI
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ''
