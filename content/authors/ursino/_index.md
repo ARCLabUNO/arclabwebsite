@@ -14,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Ph.D. Student
+role: Ph.D. Candidate
 
 # Organizations/Affiliations
 organizations:
@@ -81,7 +81,7 @@ user_groups:
   - Grad Students
 ---
 
-John Ursino is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha, under the guidance of Dr. Zachary Hamilton. His research interests focus on evaluating and constructing risk-need assessments, addressing prison and jail overcrowding, and advancing correctional policy reform. He has assisted in creating a pre-trial risk assessment for King County, Washington; evaluating prison crowding within Nebraska facilities; conduct outcome evaluations of prison programs and examined strategies to reduce bias within risk-need assessments. His work has appeared in journals such as *Justice Quarterly*, *Crime and Delinquency*, and *Journal of Criminal Justice*.
+John Ursino is a Doctoral candidate in the School of Criminology and Criminal Justice at the University of Nebraska Omaha, under the guidance of Dr. Zachary Hamilton. His research interests focus on evaluating and constructing risk-need assessments, addressing prison and jail overcrowding, and advancing correctional policy reform. He has assisted in creating a pre-trial risk assessment for King County, Washington; evaluating prison crowding within Nebraska facilities; conduct outcome evaluations of prison programs and examined strategies to reduce bias within risk-need assessments. His work has appeared in journals such as *Justice Quarterly*, *Crime and Delinquency*, and *Journal of Criminal Justice*.
 
 John’s ongoing projects include:
 1) **Decarceration Policy in Washington State**: Longitudinal analysis of strategies to reduce incarceration rates without compromising public safety.
