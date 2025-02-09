@@ -9,11 +9,26 @@ sections:
     content:
       title:
       subtitle: ''
-      text: ![Welcome GIF](welcome_arc.gif)
+      text:
     design:
       columns: '1'
+      background:
+        image: 
+          filename: welcome_arc.gif
+          filters:
+            brightness: 1
+          parallax: false
+          position: center
+          size: cover
+          text_color_light: true
+      css_class: smaller-image  # Add a custom class to control the height
       spacing:
         padding: ['20px', '0', '20px', '0']
+      media:
+        type: gif
+        filename: welcome_arc.gif
+        autoplay: true
+        loop: true
 
   - block: markdown
     content:
