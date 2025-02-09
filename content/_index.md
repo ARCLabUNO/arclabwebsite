@@ -14,7 +14,7 @@ sections:
       columns: '1'
       background:
         image: 
-          filename: test_gif.gif
+          filename: temp_arc.png
           filters:
             brightness: 1
           parallax: false
