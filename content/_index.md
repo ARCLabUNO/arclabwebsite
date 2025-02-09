@@ -24,11 +24,6 @@ sections:
       css_class: smaller-image  # Add a custom class to control the height
       spacing:
         padding: ['20px', '0', '20px', '0']
-      media:
-        type: gif
-        filename: welcome_arc.gif
-        autoplay: true
-        loop: true
 
   - block: markdown
     content:
