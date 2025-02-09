@@ -9,9 +9,19 @@ sections:
     content:
       title:
       subtitle: ''
-      text: '<img src="/images/welcome_arc.gif" alt="Welcome GIF" />'
+      text: 
     design:
       columns: '1'
+      background:
+        image: 
+          filename: welcome_arc.gif
+          filters:
+            brightness: 1
+          parallax: false
+          position: center
+          size: cover
+          text_color_light: true
+      css_class: smaller-image  # Add a custom class to control the height
       spacing:
         padding: ['20px', '0', '20px', '0']
 
