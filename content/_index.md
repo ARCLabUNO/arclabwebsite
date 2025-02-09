@@ -4,6 +4,8 @@ title:
 date: 2022-10-24
 type: landing
 
+![Your Alt Text](/test_gif.gif)
+
 sections:
   - block: markdown
     content:
