@@ -9,7 +9,19 @@ sections:
     content:
       title:
       subtitle: ''
-      text: ![Arc GIF](/assets/media/test_gif.gif)
+      text: 
+    design:
+      columns: '1'
+      background:
+        image: 
+          filename: test_gif.gif
+          filters:
+            brightness: 1
+          parallax: false
+          position: center
+          size: cover
+          text_color_light: true
+      css_class: smaller-image  # Add a custom class to control the height
       spacing:
         padding: ['20px', '0', '20px', '0']
 
