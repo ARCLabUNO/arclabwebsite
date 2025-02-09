@@ -22,6 +22,7 @@ sections:
           size: cover
           text_color_light: true
       css_class: smaller-image  # Add a custom class to control the height
+        height: 700px
       spacing:
         padding: ['20px', '0', '20px', '0']
       media:
