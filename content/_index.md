@@ -14,7 +14,7 @@ sections:
       columns: '1'
       background:
         image: 
-          filename: ![Alt text](assets/media/test_gif.gif)
+          filename: test_gif.gif
           filters:
             brightness: 1
           parallax: false
