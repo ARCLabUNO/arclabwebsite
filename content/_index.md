@@ -14,7 +14,7 @@ sections:
       columns: '1'
       background:
         image: 
-          filename: welcome_arc.gif
+          filename: NewProject.mp4
           filters:
             brightness: 1
           parallax: false
