@@ -22,7 +22,7 @@ organizations:
     url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/baylee-allen.php'
 
 # Short bio (displayed in user profile at end of posts)
-bio: Her research interests are risk-needs assessments, implementation science, prison misconduct, and prison policy.
+bio: My research interests are risk-needs assessments, implementation science, prison misconduct, and prison policy.
 
 interests:
   - Corrections
