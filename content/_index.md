@@ -37,8 +37,27 @@ sections:
         Additionally, ARC is committed to providing undergraduate and graduate students with hands-on training in data-driven research, specialized skills essential for understanding corrections and reentry, and valuable networking opportunities that enhance their academic and professional development. By engaging in real-world research and evaluation projects, students are equipped to contribute meaningfully to the field while shaping future policies and practices in institutional and community corrections.
 
         We invite you to explore our website for information on [our team](https://arcorrectionslab.org/people/), the [latest news](https://arcorrectionslab.org/post/) and information on our [current projects](https://arcorrectionslab.org/projects/), [recent publications](https://arcorrectionslab.org/publication/), and more.
- 
-   - block: slider
+  
+  - block: collection
+    content:
+      title: Latest News
+      subtitle:
+      text:
+      count: 2
+      filters:
+        author: ''
+        category: ''
+        exclude_featured: false
+        publication_type: ''
+        tag: ''
+      offset: 0
+      order: desc
+      page_type: post
+    design:
+      view: card
+      columns: '2'
+
+  - block: slider
     content:
       slides:
         - title: 👋 Welcome to ARC
@@ -74,25 +93,6 @@ sections:
       loop: false
       # Duration of transition between slides (in ms)
       interval: 2000
- 
-  - block: collection
-    content:
-      title: Latest News
-      subtitle:
-      text:
-      count: 2
-      filters:
-        author: ''
-        category: ''
-        exclude_featured: false
-        publication_type: ''
-        tag: ''
-      offset: 0
-      order: desc
-      page_type: post
-    design:
-      view: card
-      columns: '2'
 
   - block: markdown
     content:
