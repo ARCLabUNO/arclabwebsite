@@ -53,7 +53,7 @@ sections:
             color: '#666'
     design:
       slide_height: ''
-      is_fullscreen: true
+      is_fullscreen: false
       loop: false
       interval: 2000
       
