@@ -9,7 +9,7 @@ sections:
     content:
       title:
       subtitle: ''
-      text: '<img src="animated_curve.gif" alt="Animated Image" class="animated-gif">'
+      text: '<img src"/static/img/animated_curve.gif" alt="Animated GIF" class="animated-gif">'
     design:
       columns: '1'
       background:
