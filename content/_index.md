@@ -38,26 +38,6 @@ sections:
 
         We invite you to explore our website for information on [our team](https://arcorrectionslab.org/people/), the [latest news](https://arcorrectionslab.org/post/) and information on our [current projects](https://arcorrectionslab.org/projects/), [recent publications](https://arcorrectionslab.org/publication/), and more.
   
-  - block: slider
-    content:
-      slides:
-        - title: 👋 Welcome to ARC
-          content: Take a look at what we're working on...
-          align: center
-          background: 
-            image:
-              filename: pitch_groupphoto.jpg
-              filters:
-                brightness: 0.7
-            position: center
-            color: '#666'
-    design:
-      slide_height: ''
-      is_fullscreen: false
-      loop: false
-      interval: 2000
-      width: 100%
-      
   - block: collection
     content:
       title: Latest News
@@ -76,6 +56,43 @@ sections:
     design:
       view: card
       columns: '2'
+
+  - block: slider
+    content:
+      slides:
+        - title: 👋 Welcome to ARC
+          content: Take a look at what we're working on...
+          align: center
+          background:
+            image:
+              # Specify an image from `assets/media/`
+              # or delete the image section to remove it
+              filename: pitch_groupphoto.jpg
+              filters:
+                brightness: 0.7
+            position: right
+            color: '#666'
+#        - title: Lunch & Learn ☕️
+#          content: 'Share your knowledge with the group and explore exciting new topics together!'
+#          align: left
+#          background:
+#            image:
+#              # Specify an image from `assets/media/`
+#              # or delete the image section to remove it
+#              filename: jenn_asc2024.jpg
+#              filters:
+#                brightness: 0.7
+#            position: center
+#            color: '#555'
+    design:
+      # Slide height is automatic unless you force a specific height (e.g. '400px')
+      slide_height: ''
+      # Make the slides full screen within the browser window?
+      is_fullscreen: true
+      # Automatically transition through slides?
+      loop: false
+      # Duration of transition between slides (in ms)
+      interval: 2000
 
   - block: markdown
     content:
