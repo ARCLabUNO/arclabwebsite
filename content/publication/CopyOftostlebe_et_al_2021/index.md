@@ -21,7 +21,7 @@ publication_types:
 publication: "International Journal of Rural Criminology"
 publication_short: ""
 
-abstract: The continuing crises of the COVID-19 pandemic and issues surrounding disparate policing practices have illuminated an underlying issue facing law enforcement agencies: how to recruit, hire, and retain qualified officers. Using survey data from over 200 rural and urban agencies across three states, this article explores the various issues agencies have with recruitment and retention, paying particular attention to the apparent differences between agency type and size, as well as the extent of urbanization in the jurisdiction. The implications of and potential policy solutions to these issues are then discussed.
+abstract: The continuing crises of the COVID-19 pandemic and issues surrounding disparate policing practices have illuminated an underlying issue facing law enforcement agencies- how to recruit, hire, and retain qualified officers. Using survey data from over 200 rural and urban agencies across three states, this article explores the various issues agencies have with recruitment and retention, paying particular attention to the apparent differences between agency type and size, as well as the extent of urbanization in the jurisdiction. The implications of and potential policy solutions to these issues are then discussed.
 
 tags:
   - Rural policing
