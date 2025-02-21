@@ -9,12 +9,10 @@ sections:
     content:
       title:
       subtitle: ''
-      text: 
+      text: '<img src="animated_curve.gif" alt="Animated Image" class="animated-gif">'
     design:
       columns: '1'
       background:
-        image: 
-          filename: temp_arc.png
           filters:
             brightness: 1
           parallax: false
