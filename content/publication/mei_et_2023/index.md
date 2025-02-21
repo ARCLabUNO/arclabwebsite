@@ -1,5 +1,5 @@
 ---
-title: "Best Practices for Neglected Assumptions: Multi-site Confirmation of the MPACT-6"
+title: "Best practices for neglected assumptions: Multi-site confirmation of the MPACT-6"
 authors:
 - Xiaohan Mei
 - admin

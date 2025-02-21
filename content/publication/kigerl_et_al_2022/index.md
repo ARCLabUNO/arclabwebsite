@@ -1,5 +1,5 @@
 ---
-title: "The Great Methods Bake-Off: Comparing Performance of Machine Learning Algorithms"
+title: "The great methods bake-off: Comparing performance of machine learning algorithms"
 authors:
 - kigerl
 - admin

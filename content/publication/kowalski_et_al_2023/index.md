@@ -1,5 +1,5 @@
 ---
-title: "Protecting Against Adversity: The Role of Positive Childhood Experiences in Youth Recidivism"
+title: "Protecting against adversity: The role of positive childhood experiences in youth recidivism"
 authors:
 - Melissa Kowalski
 - admin
