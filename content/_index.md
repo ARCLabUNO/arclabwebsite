@@ -19,16 +19,9 @@ sections:
           position: center
           size: cover
           text_color_light: true
-      css_class: smaller-image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        padding: 0;
-      }
-      # Add a custom class to control the height
-      # spacing:
-        # padding: ['20px', '0', '10px', '0']
+      css_class: smaller-image  # Add a custom class to control the height
+      spacing:
+        padding: ['0', '0', '0', '0']
 
   - block: markdown
     content:
