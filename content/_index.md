@@ -49,13 +49,14 @@ sections:
               filename: pitch_groupphoto.jpg
               filters:
                 brightness: 0.7
-            position: right
+            position: center
             color: '#666'
     design:
       slide_height: ''
       is_fullscreen: false
       loop: false
       interval: 2000
+      width: 100%
       
   - block: collection
     content:
