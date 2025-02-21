@@ -9,7 +9,7 @@ sections:
     content:
       title:
       subtitle: ''
-      text: '<img src"/static/img/animated_curve.gif" alt="Animated GIF" class="animated-gif">'
+      text: '<img src="https://arcorrectionslab.org/img/animated_curve.gif" alt="Animated GIF">'
     design:
       columns: '1'
       background:
