@@ -21,7 +21,7 @@ sections:
           text_color_light: true
       css_class: smaller-image  # Add a custom class to control the height
       spacing:
-        padding: ['0', '0', '0', '0']
+        padding: ['30px', '0', '10px', '0']
 
   - block: markdown
     content:
