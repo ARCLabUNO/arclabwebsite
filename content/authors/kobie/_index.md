@@ -22,7 +22,7 @@ organizations:
     url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/addison-kobie.php'
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests lie in XX.
+#bio: My research interests lie in XX.
 
 interests:
   - Corrections
@@ -33,12 +33,12 @@ education:
     - course: PhD in Criminology & Criminal Justice
       institution: University of Nebraska Omaha
       year: "Anticipated 2025"
-    - course: MS in XX
-      institution: XX
-      year: 20XX
-    - course: BA in  XX
-      institution: XX
-      year: 20XX
+#    - course: MS in XX
+#      institution: XX
+#      year: 20XX
+#    - course: BA in  XX
+#      institution: XX
+#      year: 20XX
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
@@ -59,8 +59,8 @@ social:
 #    link: https://github.com/gcushen
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-  - icon: cv
-    icon_pack: ai
+#  - icon: cv
+#    icon_pack: ai
     #link: files/cv_kobie.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
@@ -75,4 +75,4 @@ user_groups:
   - Grad Students
 ---
 
-Addie Kobie is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests include corrections, juvenile delinquency, and XX. XXXX.
+Addie Kobie is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests include corrections and juvenile delinquency.
