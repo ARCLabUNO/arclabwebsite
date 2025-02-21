@@ -25,11 +25,11 @@ abstract: >
   on the process-based model of regulation, we depart from orthodox explanations for the 
   gang–misconduct link and argue that gang affiliates are treated less fairly than nongang affiliates 
   owing to suppression-oriented administrative policies and harsher day-to-day interactions with officers, 
-  which, in turn, impact compliance. ...
+  which, in turn, impact compliance.
 
 tags:
-  - Source Themes
   - Procedural Justice
+  - Gang Membership
   - Legitimacy
   - Misconduct
   - Structural Equation Modeling
