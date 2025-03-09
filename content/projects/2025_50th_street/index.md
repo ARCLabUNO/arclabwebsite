@@ -3,8 +3,7 @@ title: Improving the prospects of formerly incarcerated adults - Establishing th
 date: 2024-12-01
 ---
 
-Principal Investigator: Dr. Jennifer Tostlebe
-Graduate Research Assistant: Taylor Gonzales
+Principal Investigator: Dr. Jennifer Tostlebe // Graduate Research Assistant: Taylor Gonzales
 
 <!--more-->
 
