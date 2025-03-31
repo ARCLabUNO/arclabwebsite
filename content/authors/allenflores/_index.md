@@ -83,4 +83,4 @@ user_groups:
 
 Baylee Allen-Flores is a Doctoral Candidate in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests include risk-needs assessments, implementation science, prison misconduct, and prison policy. She is involved in two projects with Dr. Zach Hamilton: Washington One Needs Assessment and Washington One User Manual.
 
-In March 2025, Baylee accepted an Assistant Professor position in the Criminology Department at DePaul University! She will begin her new position in Fall 2025.
+Baylee has accepted an Assistant Professor position in the Criminology Department at DePaul University! She will begin her new position in Fall 2025.
