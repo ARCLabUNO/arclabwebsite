@@ -82,4 +82,6 @@ user_groups:
   - Grad Students
 ---
 
-Sarah Al Falatah is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests focus on  health criminology, specially physical and mental health. Sarah holds a MA in Criminology and Criminal Justice from the University of Nebraska Omaha. Currently, she is working on an evaluation of prison programming in the Nebraska Department of Correctional Services with Drs. Zachary Hamilton and Jenn Tostlebe. Sarah is also working with Dr. Tostlebe studying suicide in Omaha.
+Sarah Al Falatah is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests focus on  health criminology, specially physical and mental health. Sarah holds a MA in Criminology and Criminal Justice from the University of Nebraska Omaha. 
+
+Currently, Sarah is working on an evaluation of prison programming in the Nebraska Department of Correctional Services with Drs. Zachary Hamilton and Jenn Tostlebe. Sarah is also working with Dr. Tostlebe studying suicide in Omaha.
