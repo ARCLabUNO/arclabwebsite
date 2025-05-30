@@ -19,7 +19,7 @@ role: Ph.D. Student
 # Organizations/Affiliations
 organizations:
   - name: University of Nebraska Omaha
-    url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/funded-graduate-students.php#Doctoral%20Students-main'
+    url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/sarah-al-falatah.php'
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests are mental health, physical health, corrections, rehabilitation, and biosocial criminology.
