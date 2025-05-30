@@ -8,7 +8,7 @@ last_name: Kim
 
 # Username (this should match the folder name)
 authors:
-  - hayes
+  - kim
 
 # Is this the primary user of the site?
 superuser: false
@@ -79,6 +79,4 @@ user_groups:
   - Grad Students
 ---
 
-Abby Hayes is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests include institutional corrections, gangs, and rehabilitative programming. Abby holds a MPS in Criminology and Criminal Justice from Fort Hays State University. 
-
-Currently, she is working with Dr. Jenn Tostlebe studying restrictive housing and [Dr. Katelynn Towne](https://www.unomaha.edu/college-of-public-affairs-and-community-service/nebraska-center-for-justice-research/about-us/katelynn-towne.php) studying the effect of reentry programming on employment and earnings.
+Yujin Kim is a master’s student in the School of Criminology and Criminal Justice at the University of Nebraska, Omaha. Her research interests include drug policy, the opioid overdose crisis, and criminal justice system responses to drug-related harms. Currently, Yujin is studying Drug-Induced Homicide (DIH) laws and police officers’ perception of the law.
