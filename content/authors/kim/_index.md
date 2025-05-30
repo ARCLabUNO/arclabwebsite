@@ -1,10 +1,10 @@
 ---
 # Display name
-title: Abigail Hayes
+title: Yujin Kim
 
 # Full Name (for SEO)
-first_name: Abigail
-last_name: Hayes
+first_name: Yujin
+last_name: Kim
 
 # Username (this should match the folder name)
 authors:
@@ -14,32 +14,35 @@ authors:
 superuser: false
 
 # Role/position
-role: Ph.D. Student
+role: M.A. Student
 
 # Organizations/Affiliations
 organizations:
   - name: University of Nebraska Omaha
-    url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/abby-hayes.php'
+#    url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/abby-hayes.php'
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research focuses on the issues and operations of correctional institutions, violence in carceral spaces, and the reentry process of formerly incarcerated individuals.
+bio: My research interests focus on the opioid overdose crisis and evolving drug policy responses, particularly in relation to criminal justice systems.
 
 interests:
-  - Institutional corrections
-  - Prison gangs
-  - Rehabilitative programming
+  - Opioid overdose
+  - Drug courts
+  - Drug policy
+  - Hate crime
+  - Recidivism
+  - Social networks
 
 education:
   courses:
-    - course: PhD in Criminology and Criminal Justice
-      institution: University of Nebraska Omaha
-      year: Anticipated 2027
-    - course: MPS in Criminology and Criminal Justice
-      institution: Fort Hays State University
-      year: 2022
-    - course: BS in Criminal Justice
-      institution: Fort Hays State University
-      year: 2021
+#    - course: PhD in Criminology and Criminal Justice
+#      institution: University of Nebraska Omaha
+#      year: Anticipated 2027
+    - course: M.A. in Criminology and Criminal Justice
+      institution: University of Nebraska at Omaha
+      year: 2026
+    - course: B.A. in Sociology
+      institution: Chung-Ang University (Seoul, Republic of Korea)
+      year: 2024
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
@@ -48,13 +51,13 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:ahayes26@unomaha.edu'
-  - icon: x-twitter
-    icon_pack: fab
-    link: https://x.com/AbigailHayes0
-  - icon: google-scholar
-    icon_pack: ai
-    link: https://scholar.google.com/citations?hl=en&user=JQw_-w4AAAAJ
+    link: 'mailto:ykim57@unomaha.edu'
+#  - icon: x-twitter
+#    icon_pack: fab
+#    link: https://x.com/AbigailHayes0
+#  - icon: google-scholar
+#    icon_pack: ai
+#    link: https://scholar.google.com/citations?hl=en&user=JQw_-w4AAAAJ
 #  - icon: github
 #    icon_pack: fab
 #    link: https://github.com/gcushen
@@ -62,7 +65,7 @@ social:
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
   - icon: cv
     icon_pack: ai
-    link: https://docs.google.com/document/d/1wTNejQbAK1rFXB5b6OLOANR2fCv8YftOUtX4NyiGvrI
+    link: files/cv_kim.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ''
