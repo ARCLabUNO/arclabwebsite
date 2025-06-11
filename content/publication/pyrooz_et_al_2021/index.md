@@ -42,7 +42,7 @@ featured: false
 # links:
 # - name: ""
 #   url: ""
-# url_pdf: http://arxiv.org/pdf/1512.04133v1
+url_pdf: https://www.researchgate.net/publication/343834170_Gang_Affiliation_and_Prisoner_Reentry_Discrete-Time_Variation_in_Recidivism_by_Current_Former_and_Non-Gang_Status?_sg%5B0%5D=BUwAnV8HSMI1JNVmE74eHQLs5aHOS8B0Jq7I-6t38BQOWgP0qLQJhlCmv9ECS7yOgFF2Xu5yIxJAJqD2eWMF0DPDthLuhluNxVC55TP-.OLsPevgpbQrMYlFmtTzyYri3VKxtW7oPazaOx6grugRqLeCaSTld8zn-67be7iWdvvCUT85AzUFD6hM1jBkcyg&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InByb2ZpbGUiLCJwYWdlIjoicHJvZmlsZSIsInBvc2l0aW9uIjoicGFnZUNvbnRlbnQifX0
 # url_code: 'https://github.com/HugoBlox/hugo-blox-builder'
 url_dataset: ''
 url_poster: ''
