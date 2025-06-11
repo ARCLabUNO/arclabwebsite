@@ -38,7 +38,7 @@ featured: false
 # links:
 # - name: ""
 #   url: ""
-# url_pdf: http://arxiv.org/pdf/1512.04133v1
+url_pdf: https://www.researchgate.net/publication/354150677_Reforming_solitary_confinement_the_development_implementation_and_processes_of_a_restrictive_housing_step_down_reentry_program_in_Oregon
 # url_code: 'https://github.com/HugoBlox/hugo-blox-builder'
 url_dataset: ''
 url_poster: ''
