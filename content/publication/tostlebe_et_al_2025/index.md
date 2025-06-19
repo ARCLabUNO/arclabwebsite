@@ -1,5 +1,5 @@
 ---
-title: "Experimental effects of a restrictive housing step-down program on violent and non-violent misconduct in the Oregon Department of Corrections"
+title: "Experimental effects of a restrictive housing step-down program on violent and non-violent misconduct"
 authors:
   - tostlebe
   - David Pyrooz
