@@ -33,7 +33,7 @@ tags:
 featured: false
 
 # Links
-#url_pdf: https://www.researchgate.net/publication/341811646_The_National_Death_Index_as_a_Source_of_Homicide_Data_A_Methodological_Exposition_of_Promises_and_Pitfalls_for_Criminologists
+url_pdf: https://www.researchgate.net/publication/393052641_Experimental_effects_of_a_restrictive_housing_step-down_program_on_violent_and_non-violent_misconduct
 url_dataset: ""
 url_poster: ""
 url_project: ""
