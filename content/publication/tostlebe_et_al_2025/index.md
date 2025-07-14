@@ -5,12 +5,11 @@ authors:
   - David Pyrooz
   - Ryan Labrecque
   - Bert Useem
-
-date: "2025-06-19T00:00:00Z"
-#doi: "h"ttps://doi.org/10.1177/1088767920924450
+date: "2025-07-13T00:00:00Z"
+doi: "https://doi.org/10.1016/j.jcrimjus.2025.102466"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2025-06-17T00:00:00Z"
+publishDate: "2025-07-13T00:00:00Z"
 
 # Publication type
 publication_types:
