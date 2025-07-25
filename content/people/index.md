@@ -15,7 +15,7 @@ sections:
 #          - Researchers
           - Research Scientists
 #          - SCCJ Faculty Affiliates
-          - Grad Students
+          - Graduate Students
 #          - External Affiliates
 #          - Alumni
       sort_by: Params.last_name
