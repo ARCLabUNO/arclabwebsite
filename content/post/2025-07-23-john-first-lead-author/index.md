@@ -9,4 +9,4 @@ Congratulations to Ph.D. Student, [John Ursino](https://arcorrectionslab.org/aut
 
 <!--more-->
 
-The article is titled ["Short timers and idle populations in overcrowded prisons."](https://arcorrectionslab.org/publication/gonzales_cho_2024/)
+The article is titled ["Short timers and idle populations in overcrowded prisons."](https://arcorrectionslab.org/publication/ursino_et_al_2025/)
