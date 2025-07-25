@@ -35,7 +35,7 @@ education:
   courses:
     - course: PhD in Criminology & Criminal Justice
       institution: University of Nebraska Omaha
-      year: "2025"
+      year: "Anticipated 2025"
     - course: MS in Forensic Psychology
       institution: Walden University
       year: 2021
