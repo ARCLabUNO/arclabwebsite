@@ -5,7 +5,7 @@ image:
   focal_point: 'top'
 ---
 
-Congratulations to Ph.D. Student, [John Ursino](https://arcorrectionslab.org/author/john-ursino/), on his first lead-authored publication in Journal of Criminal Justice.
+Congratulations to Ph.D. Candidate, [John Ursino](https://arcorrectionslab.org/author/john-ursino/), on his first lead-authored publication in Journal of Criminal Justice.
 
 <!--more-->
 
