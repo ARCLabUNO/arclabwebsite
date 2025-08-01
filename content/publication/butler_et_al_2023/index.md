@@ -8,7 +8,7 @@ authors:
 #author_notes:
 #- "Equal contribution"
 #- "Equal contribution"
-date: "2025-04-01T00:00:00Z"
+date: "2023-01-01T00:00:00Z"
 doi: "https://psycnet.apa.org/doi/10.1080/15564886.2022.2139032"
 
 # Schedule page publish date (NOT publication's date).
