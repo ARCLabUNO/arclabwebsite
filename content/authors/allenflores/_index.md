@@ -14,12 +14,12 @@ authors:
 superuser: false
 
 # Role/position
-role: Ph.D. Candidate
+role: Alumna
 
 # Organizations/Affiliations
 organizations:
-  - name: University of Nebraska Omaha
-    url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/baylee-allen.php'
+  - name: DePaul University
+#    url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/baylee-allen.php'
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests are risk-needs assessments, implementation science, prison misconduct, and prison policy.
@@ -35,7 +35,7 @@ education:
   courses:
     - course: PhD in Criminology & Criminal Justice
       institution: University of Nebraska Omaha
-      year: "Anticipated 2025"
+      year: "2025"
     - course: MS in Forensic Psychology
       institution: Walden University
       year: 2021
@@ -78,9 +78,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Grad Students
+  - Alumni
 ---
 
-Baylee Allen-Flores is a Doctoral Candidate in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests include risk-needs assessments, implementation science, prison misconduct, and prison policy. She is involved in two projects with Dr. Zach Hamilton: Washington One Needs Assessment and Washington One User Manual.
-
-Baylee has accepted an Assistant Professor position in the Criminology Department at DePaul University! She will begin her new position in Fall 2025.
+Baylee Allen-Flores is an alumna of School of Criminology and Criminal Justice PhD program. Her research interests include risk-needs assessments, implementation science, prison misconduct, and prison policy. She is an Assistant Professor in the Criminology Department at DePaul University.
