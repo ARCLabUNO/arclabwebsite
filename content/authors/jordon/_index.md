@@ -14,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Incoming Ph.D. Student
+role: Ph.D. Student
 
 # Organizations/Affiliations
 organizations:
@@ -78,4 +78,4 @@ user_groups:
   - Grad Students
 ---
 
-Caitlyn Jordon is an incoming (2025) Doctoral Student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests are institutional corrections and rehabilitation, reentry supports for previously incarcerated people, and community-based preventative factors. She holds a B.S in Criminology from Northwest Missouri State University and a M.S. in Criminology from the University of Missouri – Kansas City.
+Caitlyn Jordon is a Doctoral Student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests are institutional corrections and rehabilitation, reentry supports for previously incarcerated people, and community-based preventative factors. She holds a B.S in Criminology from Northwest Missouri State University and a M.S. in Criminology from the University of Missouri – Kansas City.
