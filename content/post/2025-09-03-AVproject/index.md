@@ -1,5 +1,5 @@
 ---
-title: Drs. Hamilton, Tostlebe, and Kigerl received support from Arnold Ventures!
+title: Drs. Hamilton, Tostlebe, and Kigerl receive support from Arnold Ventures!
 date: 2025-09-03
 ---
 
