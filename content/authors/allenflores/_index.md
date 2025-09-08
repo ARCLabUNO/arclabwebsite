@@ -14,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Alumna (2025)
+role: Alumna
 
 # Organizations/Affiliations
 organizations:
