@@ -12,29 +12,17 @@ sections:
       #   Edit `user_groups` in each user's profile to add them to one or more of these groups.
       user_groups:
           - Directors
+#          - Researchers
+          - Research Scientists
+#          - SCCJ Faculty Affiliates
+          - Grad Students
+#          - External Affiliates
+          - Alumni
+#      sort_by: Params.last_name
       sort_by: weight
       sort_ascending: true
     design:
       show_interests: false
       show_role: true
       show_social: true
-      
-  - block: people
-    content:
-      title: 
-      # Choose which groups/teams of users to display.
-      #   Edit `user_groups` in each user's profile to add them to one or more of these groups.
-      user_groups:
-          - Research Scientists
-#          - SCCJ Faculty Affiliates
-          - Grad Students
-#          - External Affiliates
-          - Alumni
-      sort_by: Params.last_name
-      sort_ascending: true
-    design:
-      show_interests: false
-      show_role: true
-      show_social: true
-
 ---
