@@ -2,6 +2,9 @@
 # Display name
 title: Naya Russell-Coprich
 
+# Weight controls the order in lists (lower = shown first)
+weight: 7
+
 # Full Name (for SEO)
 first_name: Naya
 last_name: Russell-Coprich

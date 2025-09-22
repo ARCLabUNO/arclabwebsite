@@ -2,6 +2,9 @@
 # Display name
 title: Yujin Kim
 
+# Weight controls the order in lists (lower = shown first)
+weight: 9
+
 # Full Name (for SEO)
 first_name: Yujin
 last_name: Kim

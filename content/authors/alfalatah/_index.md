@@ -2,6 +2,9 @@
 # Display name
 title: Sarah Al Falatah
 
+# Weight controls the order in lists (lower = shown first)
+weight: 3
+
 # Full Name (for SEO)
 first_name: Sarah
 last_name: Al Falatah
