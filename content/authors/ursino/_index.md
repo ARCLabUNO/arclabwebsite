@@ -22,7 +22,7 @@ role: Ph.D. Candidate
 # Organizations/Affiliations
 organizations:
   - name: University of Nebraska Omaha
-    url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/funded-graduate-students.php#Doctoral%20Students-main'
+    url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/john-ursino.php'
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research focuses on advancing evidence-based practices in criminal justice. Primary areas of research include evaluating and constructing risk-need assessments to enhance decision-making processes, addressing challenges related to prison and jail crowding, and exploring correctional system reforms.
