@@ -22,7 +22,7 @@ role: Ph.D. Student
 # Organizations/Affiliations
 organizations:
   - name: University of Nebraska Omaha
-#    url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/funded-graduate-students.php#Doctoral%20Students-main'
+    url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/caitlyn-jordon.php'
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests focus on a mixed-methods criminological approach to corrections and rehabilitation relating to prison reentry, resources available for previously incarcerated individuals upon reentry, and the examination of community-based preventative factors both on an individual and institutional level.
