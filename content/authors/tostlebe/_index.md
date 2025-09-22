@@ -2,6 +2,9 @@
 # Display name
 title: Jennifer Tostlebe
 
+# Weight controls the order in lists (lower = shown first)
+weight: 1
+
 # Full Name (for SEO)
 first_name: Jennifer
 last_name: Tostlebe
