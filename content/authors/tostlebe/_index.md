@@ -3,7 +3,7 @@
 title: Jennifer Tostlebe
 
 # Weight controls the order in lists (lower = shown first)
-weight: 1
+weight: 2
 
 # Full Name (for SEO)
 first_name: Jennifer
