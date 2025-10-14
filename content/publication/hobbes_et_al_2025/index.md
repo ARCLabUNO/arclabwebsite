@@ -1,5 +1,5 @@
 ---
-title: "Restorative diversion: victim youth conferencing effects on recidivism"
+title: "Restorative diversion: Victim youth conferencing effects on recidivism"
 authors:
 - Anne Hobbs
 - Julie Garman
