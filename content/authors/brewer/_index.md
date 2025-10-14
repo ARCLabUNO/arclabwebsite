@@ -25,13 +25,13 @@ organizations:
     url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/sadie-brewer.php'
 
 # Short bio (displayed in user profile at end of posts)
-#bio: My research interests focus on a mixed-methods criminological approach to corrections and rehabilitation relating to prison reentry, resources available for previously incarcerated individuals upon reentry, and the examination of community-based preventative factors both on an individual and institutional level.
+bio: My research interests center around juvenile rehabilitation, motivation and emotions, mentorship, and public policy.
 
 interests:
-  - Youth motivations
-  - Corrections
+  - Motivation and emotions
+  - Youth rehabilitation
+  - Public policy
   - Mentorship
-  - Rehabilitation
 
 education:
   courses:
@@ -80,4 +80,6 @@ user_groups:
   - Grad Students
 ---
 
-Sadie Brewer is a doctoral student at the University of Nebraska Omaha and works as a research assistant for the Juvenile Justice Institute (JJI). With a Master of Science in Criminology, her work focuses on youth motivations, corrections, mentorship, and rehabilitation. Currently, her focus is on understanding how to successfully implement mentoring programs for justice-involved youth who are preparing to reenter into their communities.
+Sadie Brewer is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests center around juvenile rehabilitation, motivation and emotions, mentorship, and public policy.
+
+Sadie is currently involved in several research and service projects focused on juvenile justice. She is working with Dr. Jessica Deitzer to examine how juvenile situation selection influences delinquency outcomes, with the goal of understanding how emotional regulation shapes decision-making and how programs can promote positive situation selection strategies. Working with Dr. Zachary Hamilton, she is collaborating on a manuscript identifying consistent needs profiles among juveniles, emphasizing the importance of needs-based rather than risk-based classifications to guide proportionate treatment. Sadie also collaborates with the Juvenile Justice Institute and the Juvenile Re-entry Mentoring Program to foster mentoring relationships between undergraduate students and system-involved youth, promoting prosocial behavior, goal setting, and community reintegration. Additionally, she is developing a manuscript analyzing how politics and geography influence state-level minimum age policies for criminal court transfers across the United States.
