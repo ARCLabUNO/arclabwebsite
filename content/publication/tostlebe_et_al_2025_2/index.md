@@ -5,11 +5,11 @@ authors:
   - Meghan Novisky
   - hayes
   - John Bennett
-date: "2025-10-28T00:00:00Z"
-#doi: "https://doi.org/10.1016/j.jcrimjus.2025.102466"
+date: "2025-10-31T00:00:00Z"
+doi: "https://doi.org/10.1080/23774657.2025.2581081"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2025-10-28T00:00:00Z"
+publishDate: "2025-10-31T00:00:00Z"
 
 # Publication type
 publication_types:
