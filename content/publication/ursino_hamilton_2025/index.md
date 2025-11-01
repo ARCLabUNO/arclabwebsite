@@ -1,5 +1,5 @@
 ---
-title: "Decarceration and public safety in Washington State"
+title: "Decarceration and public safety in Washington State - Research Brief"
 authors:
   - "ursino"
   - "admin"
@@ -9,7 +9,7 @@ publishDate: "2025-10-31T00:00:00Z"
 publication_types: ["report"]
 
 # Optional; remove if you don't use them
-publication: null
+publication: Advancing Research in Corrections
 publication_short: null
 
 abstract: >-
