@@ -1,5 +1,5 @@
 ---
-title: "Decarceration and public safety in Washington State - Research Brief"
+title: "Decarceration and public safety in Washington State - Research brief"
 authors:
   - "ursino"
   - "admin"
