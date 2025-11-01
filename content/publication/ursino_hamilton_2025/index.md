@@ -34,7 +34,7 @@ tags:
   - Decarceration
 featured: false
 
-url_pdf: "content/publication/ursino_harmilton_2025/ursino_2025.pdf"
+url_pdf: "publication/ursino_hamilton_2025/ursino_2025.pdf"
 url_dataset:
 url_poster:
 url_project:
