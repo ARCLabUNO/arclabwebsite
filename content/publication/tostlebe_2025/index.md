@@ -2,11 +2,11 @@
 title: "Selection and facilitation: Is the gang membership-psychopathic traits link a product of individual differences, social influences, or both?"
 authors:
   - tostlebe
-date: "2025-10-28T00:00:00Z"
+date: "2025-11-10T00:00:00Z"
 #doi: "https://doi.org/10.1016/j.jcrimjus.2025.102466"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2025-10-28T00:00:00Z"
+publishDate: "2025-10-10T00:00:00Z"
 
 # Publication type
 publication_types:
