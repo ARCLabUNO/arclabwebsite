@@ -3,7 +3,7 @@ title: "Selection and facilitation: Is the gang membership-psychopathic traits l
 authors:
   - tostlebe
 date: "2025-11-10T00:00:00Z"
-#doi: "https://doi.org/10.1016/j.jcrimjus.2025.102466"
+doi: "https://doi.org/10.1177/00224278251381350"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2025-10-10T00:00:00Z"
