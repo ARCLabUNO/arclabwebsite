@@ -19,7 +19,7 @@ role: Alumna
 # Organizations/Affiliations
 organizations:
   - name: DePaul University
-#    url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/baylee-allen.php'
+    url: 'https://las.depaul.edu/academics/criminology/faculty/Pages/baylee-allen-flores.aspx'
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests are risk-needs assessments, implementation science, prison misconduct, and prison policy.
