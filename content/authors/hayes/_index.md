@@ -3,7 +3,7 @@
 title: Abigail Hayes
 
 # Weight controls the order in lists (lower = shown first)
-weight: 5
+weight: 4
 
 # Full Name (for SEO)
 first_name: Abigail
