@@ -29,9 +29,9 @@ bio: My research centers around corrections, recidivism, and program evaluations
 
 interests:
   - Corrections
-  - Recidivism of justice-involved individuals
   - Reentry
   - Program evaluation
+  - Recidivism of justice-involved individuals
 
 education:
   courses:
