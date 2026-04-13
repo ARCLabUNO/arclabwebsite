@@ -35,7 +35,7 @@ education:
   courses:
     - course: PhD in Criminology & Criminal Justice
       institution: University of Nebraska Omaha
-      year: "Anticipated 2026"
+      year: "2026"
 #    - course: MS in XX
 #      institution: XX
 #      year: 20XX
