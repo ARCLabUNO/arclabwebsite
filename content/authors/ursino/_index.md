@@ -38,7 +38,7 @@ education:
   courses:
     - course: PhD in Criminology and Criminal Justice
       institution: University of Nebraska Omaha
-      year: Anticipated 2026
+      year: 2026
     - course: MA in Criminal Justice
       institution: North Dakota State University
       year: 2022
