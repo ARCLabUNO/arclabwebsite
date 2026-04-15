@@ -4,7 +4,8 @@ date: 2025-05-05
 categories: ["current"]
 ---
 
-Principal Investigators: Drs. Zachary Hamilton and Jennifer Tostlebe
+Principal Investigators: Drs. Zachary Hamilton and Jennifer Tostlebe <br>
+Supported By: The Nebraska Department of Correctional Services
 
 <!--more-->
 

@@ -4,7 +4,8 @@ date: 2024-12-01
 categories: ["completed"]
 ---
 
-Principal Investigator: Dr. Jennifer Tostlebe
+Principal Investigator: Dr. Jennifer Tostlebe <br>
+Supported By: The Sherwood Foundation
 
 <!--more-->
 

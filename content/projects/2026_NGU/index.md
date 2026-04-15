@@ -4,7 +4,8 @@ date: 2026-04-15
 categories: ["current"]
 ---
 
-Principal Investigator: Dr. Jennifer Tostlebe
+Principal Investigator: Dr. Jennifer Tostlebe <br>
+Supported By (internal): UNO University Committee on Research and Creative Activity
 
 <!--more-->
 

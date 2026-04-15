@@ -3,7 +3,8 @@ title: Adult and veterans treatment court training and technical assistance (202
 date: 2024-01-01
 ---
 
-Principal Investigator: Dr. Zachary Hamilton
+Principal Investigator: Dr. Zachary Hamilton <br>
+Supported By: The Bureau of Justice Assistance
 
 <!--more-->
 

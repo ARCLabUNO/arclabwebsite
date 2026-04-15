@@ -3,7 +3,8 @@ title: Juvenile assessment and reoffending (2022-2026)
 date: 2022-01-01
 ---
 
-Principal Investigator: Dr. Zachary Hamilton
+Principal Investigator: Dr. Zachary Hamilton <br>
+Supported By: The National Institute of Justice
 
 <!--more-->
 
