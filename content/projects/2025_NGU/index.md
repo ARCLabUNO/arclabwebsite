@@ -1,6 +1,7 @@
 ---
 title: Improving the prospects of formerly incarcerated adults - Establishing the processes and procedures of the Never Give Up Transitional Living reentry program (2025)
 date: 2024-12-01
+categories: ["completed"]
 ---
 
 Principal Investigator: Dr. Jennifer Tostlebe

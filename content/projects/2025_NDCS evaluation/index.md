@@ -1,6 +1,7 @@
 ---
 title: Nebraska Department of Correctional Services program evaluation (2022-2026)
 date: 2025-05-05
+categories: ["current"]
 ---
 
 Principal Investigators: Drs. Zachary Hamilton and Jennifer Tostlebe
