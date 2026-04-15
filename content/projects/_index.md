@@ -3,11 +3,13 @@ title: Projects
 
 sections:
   - title: Current Projects
-    query: category == "current"
+    query: 
+      filter: category == "current"
     view: compact
     
   - title: Completed Projects
-    query: category = "completed"
+    query: 
+      filter: category = "completed"
     view: compact
 
 # Listing view
