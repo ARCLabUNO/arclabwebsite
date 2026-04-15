@@ -1,5 +1,5 @@
 ---
-title: Turning hope into evidence: A pilot study preparing for evaluation of the Never Give Up Transitional Living Program
+title: Turning hope into evidence - A pilot study preparing for evaluation of the Never Give Up Transitional Living Program (2026)
 date: 2026-04-15
 categories: ["current"]
 ---
