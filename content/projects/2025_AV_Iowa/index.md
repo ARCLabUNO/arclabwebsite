@@ -1,6 +1,7 @@
 ---
 title: Development and evaluation of a parole decision making tool (2025-2030)
 date: 2025-08-15
+categories: ["current"]
 ---
 
 Principal Investigators: Drs. Zachary Hamilton, Jennifer Tostlebe, and Alex Kigerl (with Drs. David Pyrooz and Stephen Billings)
