@@ -67,7 +67,7 @@ sections:
             image:
               # Specify an image from `assets/media/`
               # or delete the image section to remove it
-              filename: pitch_groupphoto.jpg
+              filename: homyphoto_edited2.jpg
               filters:
                 brightness: 0.7
             position: right
