@@ -42,7 +42,7 @@ education:
 #      year: Anticipated 2027
     - course: M.A. in Criminology and Criminal Justice
       institution: University of Nebraska at Omaha
-      year: Anticipated 2026
+      year: 2026
     - course: B.A. in Sociology
       institution: Chung-Ang University (Seoul, Republic of Korea)
       year: 2024
