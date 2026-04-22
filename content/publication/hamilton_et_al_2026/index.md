@@ -46,7 +46,7 @@ url_code = ""
   
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-links = [{name = "Interim Report", url="MN LSCMI Report_2026-04-21.pdf", icon = "unlock-alt", icon_pack = "fas"}, {name = "Research Brief", url="MN_LSCMI Brief_2026-04-21.pdf", icon = "unlock-alt", icon_pack = "fas"}]
+links = [{name = "Interim Report", url="MN LSCMI Report_2026-04-21.pdf", icon = "unlock-alt", icon_pack = "fas", target = "_blank"}, {name = "Research Brief", url="MN_LSCMI Brief_2026-04-21.pdf", icon = "unlock-alt", icon_pack = "fas", target = "_blank"}]
   
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder.
