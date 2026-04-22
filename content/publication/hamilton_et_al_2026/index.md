@@ -43,8 +43,6 @@ url_pdf = ""
 url_slides = ""
 url_video = ""
 url_code = ""
-url_report = "MN LSCMI Report_2026-04-21.pdf"
-url_researchbrief = "MN_LSCMI Brief_2026-04-21.pdf"
   
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
