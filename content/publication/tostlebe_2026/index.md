@@ -51,10 +51,10 @@ links = [{name = "Preprint", url="https://www.researchgate.net/publication/39684
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder.
 [image]
-# Caption (optional)
-caption = ""
+  # Caption (optional)
+  caption = ""
   
-# Focal point (optional)
-# Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
-focal_point = "Center"
+  # Focal point (optional)
+  # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
+  focal_point = "Center"
 +++
