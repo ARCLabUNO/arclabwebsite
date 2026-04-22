@@ -46,7 +46,7 @@ url_code = ""
   
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-links = [{name = "Postprint", url="https://www.researchgate.net/publication/354150677_Reforming_solitary_confinement_the_development_implementation_and_processes_of_a_restrictive_housing_step_down_reentry_program_in_Oregon0", icon = "unlock-alt", icon_pack = "fas"}, {name = "DOI", url="https://link.springer.com/article/10.1186/s40352-021-00151-9"}]
+links = [{name = "Postprint", url="https://www.researchgate.net/publication/354150677_Reforming_solitary_confinement_the_development_implementation_and_processes_of_a_restrictive_housing_step_down_reentry_program_in_Oregon0", icon = "unlock-alt", icon_pack = "fas"}, {name = "DOI", url="https://doi.org/10.1186/s40352-021-00151-9", icon = "unlock-alt", icon_pack = "fas"}]
   
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder.
