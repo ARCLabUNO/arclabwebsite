@@ -46,7 +46,7 @@ url_code = ""
   
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-links = [{name = "Preprint", url="https://www.researchgate.net/publication/393052641_Experimental_effects_of_a_restrictive_housing_step-down_program_on_violent_and_non-violent_misconduct", icon = "unlock-alt", icon_pack = "fas"}, {name = "DOI", url="https://doi.org/10.1016/j.jcrimjus.2025.102466"}]
+links = [{name = "Preprint", url="https://www.researchgate.net/publication/393052641_Experimental_effects_of_a_restrictive_housing_step-down_program_on_violent_and_non-violent_misconduct", icon = "unlock-alt", icon_pack = "fas"}, {name = "DOI", url="https://doi.org/10.1016/j.jcrimjus.2025.102466"}, {name = "Pre-registration", url="https://osf.io/t6qpx", icon = "osf", icon_pack = "ai"}]
   
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder.
