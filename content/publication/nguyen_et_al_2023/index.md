@@ -46,7 +46,7 @@ url_code = ""
   
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-links = [{name = "DOI", url="https://doi.org/10.1111/1745-9125.12338"}]
+links = [{name = "DOI", url="https://doi.org/10.1111/1745-9125.12338", icon = "unlock-alt", icon_pack = "fas"}]
   
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder.
