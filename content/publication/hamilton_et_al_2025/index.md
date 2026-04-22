@@ -1,73 +1,60 @@
----
-title: "A methodological template for the next generation: Redesigning the STRONG-R needs assessment"
-authors:
-- admin
-- Xiaohan Mei
-- tostlebe
-- allenflores
-- ursino
-- kigerl
-#author_notes:
-#- "Equal contribution"
-#- "Equal contribution"
-date: "2025-06-11T00:00:00Z"
-doi: "https://doi.org/10.1016/j.jcrimjus.2025.102454"
-
-# Schedule page publish date (NOT publication's date).
-publishDate: "2025-06-11T00:00:00Z"
-
-# Publication type.
-# Accepts a single type but formatted as a YAML list (for Hugo requirements).
-# Enter a publication type from the CSL standard.
-publication_types: ["article-journal"]
-
-# Publication name and optional abbreviated publication name.
-publication: "Journal of Criminal Justice"
-publication_short: ""
-
-abstract: Andrews and colleagues (1999) development of the Risk-Need-Responsivity model was a watershed moment for the field. As a result, Risk-Needs Assessments (RNAs) were shaped to identify needs domains, in which sub-scale scores are used to guide program-matching. Yet, despite ubiquitous use, needs assessments are an afterthought in RNA development, failing to demonstrate evidence and support for widespread application. Using 111,731 reentrants assessed via the Static Risk Offender Needs Guide–Revised (STRONG-R), we redesigned the needs assessment and establish construct validity via exploratory, confirmatory, multi-group confirmatory factor analysis, correlation, receiver operating characteristics, and regression techniques. Five multi-dimensional dynamic domains and a Global Needs Factor are established, demonstrating gender and race/ethnicity measurement invariance, moderate recidivism prediction accuracy, and relative gender and race/ethnicity parity. In addition to strong findings, we provide step-by-step instructions for the (re)development and validation of correctional needs assessments. Policy implications discus the importance of evaluating and updating current RNAs.
-
-# Summary. An optional shortened abstract.
-#summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
-
-tags:
-- Assessment validation
-- Construct validity
-- Needs assessment
-- Risk-need-responsivity
-- STRONG-R
-featured: false
-
-# links:
-# - name: ""
-#   url: ""
-url_pdf: https://www.researchgate.net/publication/392466795_A_methodological_template_for_the_next_generation_Redesigning_the_STRONG-R_needs_assessment
-# url_code: 'https://github.com/HugoBlox/hugo-blox-builder'
-url_dataset: ''
-url_poster: ''
-url_project: ''
-url_slides: ''
-url_source: ''
-url_video: ''
-
-# Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder. 
-image:
-#  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/jdD8gXaTZsc)'
-  focal_point: ""
-  preview_only: false
-
-# Associated Projects (optional).
-#   Associate this publication with one or more of your projects.
-#   Simply enter your project's folder or file name without extension.
-#   E.g. `internal-project` references `content/project/internal-project/index.md`.
-#   Otherwise, set `projects: []`.
-projects: []
-
++++
+# Paper title
+title = "A methodological template for the next generation: Redesigning the STRONG-R needs assessment"
+  
+# Authors
+authors = ["Zachary Hamilton", "Xiaohan Mei", "tostlebe", "allenflores", "ursino", "kigerl"]
+  
+# Publication
+publication = "*Journal of Criminal Justice*"
+  
+# Publication types (2 = Journal article; 3 = preprint; 4 = report; 6 = book chapter)
+publication_types = ["2"]
+  
+# Date the paper was published.
+date = 2025-06-11T10:00:00Z
+  
+# Date this page was created.
+publishdate = 2025-06-11T10:00:00Z
+  
+# Project summary to display on homepage.
+summary = ""
+  
+# Abstract
+abstract = "Andrews and colleagues (1999) development of the Risk-Need-Responsivity model was a watershed moment for the field. As a result, Risk-Needs Assessments (RNAs) were shaped to identify needs domains, in which sub-scale scores are used to guide program-matching. Yet, despite ubiquitous use, needs assessments are an afterthought in RNA development, failing to demonstrate evidence and support for widespread application. Using 111,731 reentrants assessed via the Static Risk Offender Needs Guide–Revised (STRONG-R), we redesigned the needs assessment and establish construct validity via exploratory, confirmatory, multi-group confirmatory factor analysis, correlation, receiver operating characteristics, and regression techniques. Five multi-dimensional dynamic domains and a Global Needs Factor are established, demonstrating gender and race/ethnicity measurement invariance, moderate recidivism prediction accuracy, and relative gender and race/ethnicity parity. In addition to strong findings, we provide step-by-step instructions for the (re)development and validation of correctional needs assessments. Policy implications discus the importance of evaluating and updating current RNAs."
+  
+# Tags: can be used for filtering projects.
+# Example: `tags = ["machine-learning", "deep-learning"]`
+tags = ["assessment validation", "construct validity", "needs assessment", "risk-need-responsivity"]
+  
+# Optional external URL for project (replaces project detail page).
+external_link = ""
+  
 # Slides (optional).
-#   Associate this publication with Markdown slides.
+#   Associate this project with Markdown slides.
 #   Simply enter your slide deck's filename without extension.
-#   E.g. `slides: "example"` references `content/slides/example/index.md`.
-#   Otherwise, set `slides: ""`.
-# slides: example
----
+#   E.g. `slides = "example-slides"` references
+#   `content/slides/example-slides.md`.
+#   Otherwise, set `slides = ""`.
+slides = ""
+  
+# Links (optional).
+url_pdf = ""
+url_slides = ""
+url_video = ""
+url_code = ""
+  
+# Custom links (optional).
+#   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
+links = [{name = "Preprint", url="https://www.researchgate.net/publication/392466795_A_methodological_template_for_the_next_generation_Redesigning_the_STRONG-R_needs_assessment", icon = "unlock-alt", icon_pack = "fas"}, {name = "DOI", url="https://doi.org/10.1016/j.jcrimjus.2025.102454"}]
+  
+# Featured image
+# To use, add an image named `featured.jpg/png` to your project's folder.
+[image]
+  # Caption (optional)
+  caption = ""
+  
+  # Focal point (optional)
+  # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
+  focal_point = "Center"
++++
