@@ -1,6 +1,7 @@
 ---
 title: Adult and veterans treatment court training and technical assistance (2024-2025)
 date: 2024-01-01
+categories: ["current"]
 ---
 
 Principal Investigator: Dr. Zachary Hamilton <br>
