@@ -3,7 +3,7 @@
 title = "Experimental effects of a restrictive housing step-down program on violent and non-violent misconduct"
   
 # Authors
-authors = ["tostlebe", "David Pyrooz, "Ryan Labrecque", "Bert Useem"]
+authors = ["tostlebe", "David Pyrooz", "Ryan Labrecque", "Bert Useem"]
   
 # Publication
 publication = "*Journal of Criminal Justice*  (Special Issue on Policy Reforms to Segregation Practices in U.S. Prisons)"
