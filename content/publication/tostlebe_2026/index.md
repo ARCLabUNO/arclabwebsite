@@ -40,7 +40,7 @@ slides = ""
   
 # Links (optional).
 url_pdf = ""
-url_slides = "asc_2022_presentation.pdf"
+url_slides = ""
 url_video = ""
 url_code = ""
   
