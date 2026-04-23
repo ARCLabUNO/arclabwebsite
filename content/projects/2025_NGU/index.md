@@ -14,3 +14,6 @@ Critical to a successful reentry experience are obtaining quality employment, se
 One such program is [Never Give Up Transitional Living](https://www.nevergiveupomaha.org) in Omaha, Nebraska. This study will (1) establish the referral and acceptance process to Never Give Up, (2) take stock of the program’s structure and requirements, including the documenting the scientific rigor of the programmatic elements (i.e., are the courses being delivered evidence based) and conducting interviews with program participants’ and stakeholders to determine if they believe the reentry program is helpful, and (3) provide basic descriptives on program completion.
 
 This is a six-month project funded by Sherwood Foundation for $33,465.
+
+[Final Sherwood Report](Final Report - Improving the Prospects of Formerly Incarcerated Adults.pdf)
+[Slides](November 2025 Fundraiser.pdf)
