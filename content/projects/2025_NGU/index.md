@@ -15,5 +15,6 @@ One such program is [Never Give Up Transitional Living](https://www.nevergiveupo
 
 This is a six-month project funded by Sherwood Foundation for $33,465.
 
-[Final Sherwood Report](Final Report - Improving the Prospects of Formerly Incarcerated Adults.pdf)
-[Slides](November 2025 Fundraiser.pdf)
+# Custom links (optional).
+#   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
+links = [{name = "Final Report", url="Final Report - Improving the Prospects of Formerly Incarcerated Adults.pdf", icon = "unlock-alt", icon_pack = "fas"}, {name = "Slides", url="November 2025 Fundraiser.pdf"}]
