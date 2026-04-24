@@ -11,7 +11,7 @@ last_name: Hamilton
 
 # Username (this should match the folder name)
 authors:
-  - hamilton
+  - admin
 
 # Is this the primary user of the site?
 superuser: true
