@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Zachary Hamilto
+title: Zachary Hamilton
 
 # Weight controls the order in lists (lower = shown first)
 weight: 1
