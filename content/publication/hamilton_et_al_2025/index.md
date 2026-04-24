@@ -3,7 +3,7 @@
 title = "A methodological template for the next generation: Redesigning the STRONG-R needs assessment"
   
 # Authors
-authors = ["Zachary Hamilton", "Xiaohan Mei", "tostlebe", "allenflores", "ursino", "kigerl"]
+authors = ["admin", "Xiaohan Mei", "tostlebe", "allenflores", "ursino", "kigerl"]
   
 # Publication
 publication = "*Journal of Criminal Justice*"
