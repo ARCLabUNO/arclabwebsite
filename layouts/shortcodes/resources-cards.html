@@ -1,4 +1,4 @@
-<!-- Custom Resources Card Layout (ARC Blue + Orange, Clean) -->
+<!-- Custom Resources Card Layout (Dark Cards + Navy Buttons) -->
 <style>
 .resources-container {
   max-width: 1200px;
@@ -14,25 +14,28 @@
 }
 
 .resource-card {
-  background: #ffffff !important; /* force white */
+  background: #111827; /* deep charcoal, not pure black */
+  color: #f9fafb;
   border-radius: 10px;
   padding: 2rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.25);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   text-align: center;
-  border: 1px solid #e2e8f0;
-  border-top: 4px solid #b45309; /* orange accent */
+  border: 1px solid #1f2937;
+  border-top: 4px solid #1f3a5f; /* ARC navy accent */
 }
 
 .resource-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 6px 22px rgba(0,0,0,0.10);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.35);
 }
 
+/* ICONS */
 .resource-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #b45309;
+  color: #9ca3af; /* muted gray instead of emoji colors */
+  filter: grayscale(100%) brightness(1.2); /* removes yellow tones */
   transition: transform 0.25s ease;
 }
 
@@ -40,24 +43,27 @@
   transform: scale(1.1);
 }
 
+/* HEADINGS */
 .resource-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #1f3a5f;
+  color: #f9fafb;
 }
 
+/* TEXT */
 .resource-card p {
-  color: #4a5568;
+  color: #d1d5db;
   line-height: 1.6;
   margin-bottom: 1.5rem;
   min-height: 60px;
 }
 
+/* BUTTON */
 .resource-link {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background: #1f3a5f;
-  color: #fff !important;
+  background: #1f3a5f; /* ARC navy */
+  color: #ffffff !important;
   text-decoration: none;
   border-radius: 6px;
   font-weight: 500;
@@ -66,27 +72,6 @@
 
 .resource-link:hover {
   background: #162944;
-}
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  .resource-card {
-    background: #1e2933 !important;
-    border-color: #2d3748;
-    border-top-color: #d97706;
-  }
-
-  .resource-card h3 {
-    color: #e2e8f0;
-  }
-
-  .resource-card p {
-    color: #cbd5e0;
-  }
-
-  .resource-icon {
-    color: #d97706;
-  }
 }
 
 /* Responsive */
@@ -113,6 +98,7 @@
 <div class="resources-container">
   <div class="resources-grid">
 
+    <!-- Podcasts -->
     <div class="resource-card">
       <div class="resource-icon">🎧</div>
       <h3>Podcasts</h3>
@@ -120,6 +106,7 @@
       <a href="/resources/podcasts/" class="resource-link">Explore Podcasts</a>
     </div>
 
+    <!-- Organizations -->
     <div class="resource-card">
       <div class="resource-icon">🤝</div>
       <h3>Other Organizations</h3>
@@ -127,6 +114,7 @@
       <a href="/resources/other_organizations/" class="resource-link">View Organizations</a>
     </div>
 
+    <!-- Reports -->
     <div class="resource-card">
       <div class="resource-icon">📄</div>
       <h3>Recent Reports</h3>
@@ -134,6 +122,7 @@
       <a href="/resources/recent_reports/" class="resource-link">Browse Reports</a>
     </div>
 
+    <!-- Data -->
     <div class="resource-card">
       <div class="resource-icon">🗄️</div>
       <h3>Open Source Data</h3>
