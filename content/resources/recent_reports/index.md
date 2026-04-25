@@ -5,7 +5,7 @@ image:
   focal_point: "top"
 ---
 
-{{< resource-list-enhancement-with-search >}}
+{{< resource-list-enhancer >}}
 
 A running list of major reports on corrections, reentry, and the broader criminal justice system published in the last decade.
 
