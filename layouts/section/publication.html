@@ -1,0 +1,181 @@
+{{ define "main" }}
+<div class="universal-wrapper pt-3">
+  <h1>{{ .Title }}</h1>
+
+  {{ with .Content }}
+    <div class="article-style">{{ . }}</div>
+  {{ end }}
+
+  <div class="pub-card-grid">
+    {{ range .Pages.ByDate.Reverse }}
+      <article class="pub-card">
+        {{ $img := .Resources.GetMatch "featured*" }}
+        {{ if $img }}
+          <a href="{{ .RelPermalink }}" class="pub-card-image-link">
+            <img src="{{ $img.RelPermalink }}" alt="{{ .Title }}" class="pub-card-image">
+          </a>
+        {{ end }}
+
+        <div class="pub-card-body">
+          <h2 class="pub-card-title">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h2>
+
+          {{ with .Params.authors }}
+            <p class="pub-card-authors">
+              {{ delimit . ", " }}
+            </p>
+          {{ end }}
+
+          <p class="pub-card-meta">
+            {{ with .Params.publication }}{{ . | markdownify }}{{ end }}
+            {{ with .Date }} • {{ .Format "2006" }}{{ end }}
+          </p>
+
+          {{ with .Params.summary }}
+            <p class="pub-card-summary">{{ . }}</p>
+          {{ end }}
+
+          {{ with .Params.tags }}
+            <div class="pub-card-tags">
+              {{ range . }}
+                <span class="pub-tag">{{ . }}</span>
+              {{ end }}
+            </div>
+          {{ end }}
+
+          {{ with .Params.links }}
+            <div class="pub-card-links">
+              {{ range . }}
+                <a class="pub-link-pill" href="{{ .url }}" target="_blank" rel="noopener">
+                  {{ .name }}
+                </a>
+              {{ end }}
+            </div>
+          {{ end }}
+
+          <div class="pub-card-footer">
+            <a href="{{ .RelPermalink }}" class="pub-read-more">Read More</a>
+          </div>
+        </div>
+      </article>
+    {{ end }}
+  </div>
+</div>
+
+<style>
+.pub-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.pub-card {
+  background: #111827;
+  color: #f9fafb;
+  border: 1px solid #1f2937;
+  border-top: 4px solid #1f3a5f;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.22);
+  display: flex;
+  flex-direction: column;
+}
+
+.pub-card-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.pub-card-body {
+  padding: 1.25rem 1.25rem 1.5rem;
+}
+
+.pub-card-title {
+  font-size: 1.25rem;
+  line-height: 1.35;
+  margin: 0 0 0.75rem;
+}
+
+.pub-card-title a {
+  color: #f9fafb;
+  text-decoration: none;
+}
+
+.pub-card-title a:hover {
+  color: #cbd5e1;
+}
+
+.pub-card-authors {
+  color: #d1d5db;
+  margin: 0 0 0.5rem;
+  font-size: 0.98rem;
+}
+
+.pub-card-meta {
+  color: #93c5fd;
+  margin: 0 0 0.85rem;
+  font-size: 0.95rem;
+}
+
+.pub-card-summary {
+  color: #e5e7eb;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.pub-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1rem;
+}
+
+.pub-tag {
+  background: #1f2937;
+  color: #dbeafe;
+  border: 1px solid #374151;
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.85rem;
+}
+
+.pub-card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1rem;
+}
+
+.pub-link-pill,
+.pub-read-more {
+  display: inline-block;
+  background: #1f3a5f;
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.pub-link-pill:hover,
+.pub-read-more:hover {
+  background: #162944;
+  text-decoration: none;
+}
+
+.pub-card-footer {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .pub-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+{{ end }}
