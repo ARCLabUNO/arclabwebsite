@@ -21,41 +21,94 @@
             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
           </h2>
 
-          {{ with .Params.authors }}
-            <p class="pub-card-authors">
-              {{ delimit . ", " }}
-            </p>
-          {{ end }}
+          <div class="pub-card-authors">
+            {{ partial "page_metadata_authors" (dict "page" . "is_list" 1) }}
+          </div>
 
           <p class="pub-card-meta">
             {{ with .Params.publication }}{{ . | markdownify }}{{ end }}
-            {{ with .Date }} • {{ .Format "2006" }}{{ end }}
+            {{ with .Date }} <span class="pub-dot">•</span> {{ .Format "2006" }}{{ end }}
           </p>
 
           {{ with .Params.summary }}
             <p class="pub-card-summary">{{ . }}</p>
           {{ end }}
 
-          {{ with .Params.tags }}
-            <div class="pub-card-tags">
-              {{ range . }}
-                <span class="pub-tag">{{ . }}</span>
+          <div class="pub-card-links">
+            {{ with .Params.url_pdf }}
+              {{ $href := . }}
+              {{ with $.Resources.GetMatch . }}
+                {{ $href = .RelPermalink }}
               {{ end }}
-            </div>
-          {{ end }}
+              <a class="pub-link-pill pub-link-file" href="{{ $href }}" target="_blank" rel="noopener">PDF</a>
+            {{ end }}
 
-          {{ with .Params.links }}
-            <div class="pub-card-links">
+            {{ with .Params.url_slides }}
+              {{ $href := . }}
+              {{ with $.Resources.GetMatch . }}
+                {{ $href = .RelPermalink }}
+              {{ end }}
+              <a class="pub-link-pill pub-link-file" href="{{ $href }}" target="_blank" rel="noopener">Slides</a>
+            {{ end }}
+
+            {{ with .Params.url_video }}
+              {{ $href := . }}
+              {{ with $.Resources.GetMatch . }}
+                {{ $href = .RelPermalink }}
+              {{ end }}
+              <a class="pub-link-pill pub-link-file" href="{{ $href }}" target="_blank" rel="noopener">Video</a>
+            {{ end }}
+
+            {{ with .Params.url_code }}
+              {{ $href := . }}
+              {{ with $.Resources.GetMatch . }}
+                {{ $href = .RelPermalink }}
+              {{ end }}
+              <a class="pub-link-pill pub-link-file" href="{{ $href }}" target="_blank" rel="noopener">Code</a>
+            {{ end }}
+
+            {{ with .Params.links }}
               {{ range . }}
-                <a class="pub-link-pill" href="{{ .url }}" target="_blank" rel="noopener">
-                  {{ .name }}
+                {{ $name := .name | default "Link" }}
+                {{ $url := .url }}
+                {{ $class := "pub-link-pill pub-link-external" }}
+
+                {{ with $.Resources.GetMatch $url }}
+                  {{ $url = .RelPermalink }}
+                {{ end }}
+
+                {{ if or
+                  (eq $name "DOI")
+                  (eq $name "Preprint")
+                  (eq $name "Postprint")
+                  (eq $name "Pre-registration")
+                  (eq $name "Preregistration")
+                  (eq $name "Replication Materials")
+                  (eq $name "Open-Source Materials")
+                  (eq $name "Open Source Materials")
+                  (eq $name "Open Access")
+                  (eq $name "Research Brief")
+                  (eq $name "Interim Report")
+                  (eq $name "Slides")
+                  (eq $name "Appendix")
+                  (eq $name "Supplement")
+                }}
+                  {{ $class = "pub-link-pill pub-link-resource" }}
+                {{ end }}
+
+                <a class="{{ $class }}" href="{{ $url }}" target="_blank" rel="noopener">
+                  {{ with .icon }}
+                    {{ $pack := $.icon_pack | default "fas" }}
+                    <i class="{{ $pack }} fa-{{ . }}"></i>
+                  {{ end }}
+                  {{ $name }}
                 </a>
               {{ end }}
-            </div>
-          {{ end }}
+            {{ end }}
+          </div>
 
           <div class="pub-card-footer">
-            <a href="{{ .RelPermalink }}" class="pub-read-more">Read More</a>
+            <a href="{{ .RelPermalink }}" class="pub-read-more">View Publication</a>
           </div>
         </div>
       </article>
@@ -83,6 +136,10 @@
   flex-direction: column;
 }
 
+.pub-card-image-link {
+  display: block;
+}
+
 .pub-card-image {
   width: 100%;
   height: 220px;
@@ -92,6 +149,9 @@
 
 .pub-card-body {
   padding: 1.25rem 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .pub-card-title {
@@ -115,32 +175,35 @@
   font-size: 0.98rem;
 }
 
+.pub-card-authors a {
+  color: #d1d5db;
+  text-decoration: none;
+}
+
+.pub-card-authors a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 .pub-card-meta {
   color: #93c5fd;
   margin: 0 0 0.85rem;
   font-size: 0.95rem;
 }
 
+.pub-card-meta p,
+.pub-card-meta em {
+  margin: 0;
+}
+
+.pub-dot {
+  opacity: 0.7;
+}
+
 .pub-card-summary {
   color: #e5e7eb;
   line-height: 1.6;
   margin: 0 0 1rem;
-}
-
-.pub-card-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 0 0 1rem;
-}
-
-.pub-tag {
-  background: #1f2937;
-  color: #dbeafe;
-  border: 1px solid #374151;
-  border-radius: 999px;
-  padding: 0.3rem 0.7rem;
-  font-size: 0.85rem;
 }
 
 .pub-card-links {
@@ -152,24 +215,63 @@
 
 .pub-link-pill,
 .pub-read-more {
-  display: inline-block;
-  background: #1f3a5f;
-  color: #fff !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   text-decoration: none;
   border-radius: 999px;
   padding: 0.45rem 0.8rem;
   font-size: 0.9rem;
   font-weight: 500;
+  line-height: 1.2;
 }
 
-.pub-link-pill:hover,
-.pub-read-more:hover {
-  background: #162944;
+.pub-link-resource {
+  background: #1f2937;
+  color: #dbeafe !important;
+  border: 1px solid #374151;
+}
+
+.pub-link-resource:hover {
+  background: #273449;
+  text-decoration: none;
+}
+
+.pub-link-file {
+  background: #243b53;
+  color: #fff !important;
+  border: 1px solid #2f4c6b;
+}
+
+.pub-link-file:hover {
+  background: #1b2f45;
+  text-decoration: none;
+}
+
+.pub-link-external {
+  background: #374151;
+  color: #f9fafb !important;
+  border: 1px solid #4b5563;
+}
+
+.pub-link-external:hover {
+  background: #4b5563;
   text-decoration: none;
 }
 
 .pub-card-footer {
-  margin-top: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.pub-read-more {
+  background: #1f3a5f;
+  color: #fff !important;
+}
+
+.pub-read-more:hover {
+  background: #162944;
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {
