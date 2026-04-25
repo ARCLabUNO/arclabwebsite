@@ -8,8 +8,8 @@ authors = ["admin", "ursino", "kim"]
 # Publication
 publication = "*Advancing Research in Corrections Lab*"
   
-# Publication types (2 = Journal article; 3 = preprint; 4 = report; 6 = book chapter)
-publication_types = ["4"]
+# Publication types 
+publication_types = ["report"]
   
 # Date the paper was published.
 date = 2026-04-22T10:00:00Z
