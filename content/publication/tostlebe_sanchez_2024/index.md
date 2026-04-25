@@ -9,7 +9,7 @@ authors = ["tostlebe", "Jose Antonio Sanchez"]
 publication = "*The Oxford Handbook of Gangs and Society*"
   
 # Publication types (2 = Journal article; 3 = preprint; 4 = report; 6 = book chapter)
-publication_types = ["book-chapter"]
+publication_types = ["chapter"]
   
 # Date the paper was published.
 date = 2024-01-01T10:00:00Z
