@@ -6,27 +6,23 @@
     <div class="article-style">{{ . }}</div>
   {{ end }}
 
-  {{/* Collect all tags for filter buttons */}}
-  {{ $allTags := slice }}
-  {{ range .Pages }}
-    {{ with .Params.tags }}
-      {{ range . }}
-        {{ $allTags = $allTags | append . }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-  {{ $allTags = uniq $allTags | sort }}
-
   <div class="pub-controls">
     <div class="pub-search">
       <input type="text" id="pubSearch" placeholder="Search publications...">
     </div>
 
-    <div class="pub-filter-group" id="pubTagFilters">
-      <button type="button" class="pub-filter-btn active" data-tag="all">All</button>
-      {{ range $allTags }}
-        <button type="button" class="pub-filter-btn" data-tag="{{ . | urlize }}">{{ . }}</button>
-      {{ end }}
+    <div class="pub-select-wrap">
+      <label for="pubTopicFilter" class="pub-select-label">Filter by topic</label>
+      <select id="pubTopicFilter" class="pub-topic-select">
+        <option value="all">All Topics</option>
+        <option value="corrections">Corrections</option>
+        <option value="community-corrections">Community Corrections</option>
+        <option value="reentry">Reentry</option>
+        <option value="risk-assessment">Risk Assessment</option>
+        <option value="drug-treatment-courts">Drug Treatment Courts</option>
+        <option value="health-covid">Health & COVID-19</option>
+        <option value="youth-juvenile-justice">Youth / Juvenile Justice</option>
+      </select>
     </div>
 
     <div class="pub-results-count" id="pubResultsCount"></div>
@@ -34,16 +30,29 @@
 
   <div class="pub-card-grid" id="pubCardGrid">
     {{ range .Pages.ByDate.Reverse }}
-      {{ $tagString := "" }}
+      {{ $topic := "corrections" }}
+
       {{ with .Params.tags }}
-        {{ range . }}
-          {{ $tagString = printf "%s %s" $tagString (. | urlize) }}
+        {{ $tagsJoined := lower (delimit . " | ") }}
+
+        {{ if or (in $tagsJoined "community corrections") (in $tagsJoined "probation") (in $tagsJoined "parole") (in $tagsJoined "pretrial") }}
+          {{ $topic = "community-corrections" }}
+        {{ else if or (in $tagsJoined "reentry") (in $tagsJoined "recidivism") (in $tagsJoined "desistance") }}
+          {{ $topic = "reentry" }}
+        {{ else if or (in $tagsJoined "risk assessment") (in $tagsJoined "classification") (in $tagsJoined "ls/cmi") (in $tagsJoined "strong-r") }}
+          {{ $topic = "risk-assessment" }}
+        {{ else if or (in $tagsJoined "drug treatment courts") (in $tagsJoined "substance use") }}
+          {{ $topic = "drug-treatment-courts" }}
+        {{ else if or (in $tagsJoined "covid-19") (in $tagsJoined "infectious disease") (in $tagsJoined "health") }}
+          {{ $topic = "health-covid" }}
+        {{ else if or (in $tagsJoined "juvenile") (in $tagsJoined "youth") (in $tagsJoined "adolescents") }}
+          {{ $topic = "youth-juvenile-justice" }}
         {{ end }}
       {{ end }}
 
       <article
         class="pub-card"
-        data-tags="{{ trim $tagString " " }}"
+        data-topic="{{ $topic }}"
         data-search="{{ lower (printf "%s %s %s %s" .Title (.Params.summary | default "") (.Params.publication | default "") (delimit (.Params.tags | default (slice)) " ")) }}"
       >
         {{ $img := .Resources.GetMatch "featured*" }}
@@ -84,7 +93,7 @@
   </div>
 
   <div class="pub-no-results" id="pubNoResults">
-    No publications match your current search or tag filter.
+    No publications match your current search or topic filter.
   </div>
 </div>
 
@@ -95,10 +104,8 @@
   background: #111827;
   border: 1px solid #1f2937;
   border-radius: 12px;
-}
-
-.pub-search {
-  margin-bottom: 1rem;
+  display: grid;
+  gap: 1rem;
 }
 
 .pub-search input {
@@ -111,38 +118,33 @@
   font-size: 1rem;
 }
 
-.pub-search input:focus {
+.pub-search input:focus,
+.pub-topic-select:focus {
   outline: none;
   border-color: #1f3a5f;
   box-shadow: 0 0 0 3px rgba(31, 58, 95, 0.25);
 }
 
-.pub-filter-group {
+.pub-select-wrap {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-bottom: 0.75rem;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-width: 320px;
 }
 
-.pub-filter-btn {
-  background: #1f2937;
-  color: #dbeafe;
+.pub-select-label {
+  color: #cbd5e1;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.pub-topic-select {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
   border: 1px solid #374151;
-  border-radius: 999px;
-  padding: 0.45rem 0.85rem;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.pub-filter-btn:hover {
-  background: #273449;
-}
-
-.pub-filter-btn.active {
-  background: #1f3a5f;
-  color: #fff;
-  border-color: #1f3a5f;
+  background: #1f2937;
+  color: #f9fafb;
+  font-size: 0.96rem;
 }
 
 .pub-results-count {
@@ -303,30 +305,34 @@
   .pub-card-grid {
     grid-template-columns: 1fr;
   }
+
+  .pub-select-wrap {
+    max-width: 100%;
+  }
 }
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const searchInput = document.getElementById('pubSearch');
-  const filterButtons = document.querySelectorAll('.pub-filter-btn');
+  const topicSelect = document.getElementById('pubTopicFilter');
   const cards = document.querySelectorAll('.pub-card');
   const resultsCount = document.getElementById('pubResultsCount');
   const noResults = document.getElementById('pubNoResults');
 
-  let activeTag = 'all';
   let activeSearch = '';
+  let activeTopic = 'all';
 
   function updateResults() {
     let visibleCount = 0;
 
     cards.forEach(card => {
       const text = card.dataset.search || '';
-      const tags = (card.dataset.tags || '').split(' ');
+      const topic = card.dataset.topic || '';
       const matchesSearch = !activeSearch || text.includes(activeSearch);
-      const matchesTag = activeTag === 'all' || tags.includes(activeTag);
+      const matchesTopic = activeTopic === 'all' || topic === activeTopic;
 
-      if (matchesSearch && matchesTag) {
+      if (matchesSearch && matchesTopic) {
         card.classList.remove('is-hidden');
         visibleCount += 1;
       } else {
@@ -335,7 +341,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     if (resultsCount) {
-      resultsCount.textContent = `Showing ${visibleCount} publication${visibleCount === 1 ? '' : 's'}`;
+      resultsCount.textContent = 'Showing ' + visibleCount + ' publication' + (visibleCount === 1 ? '' : 's');
     }
 
     if (noResults) {
@@ -350,14 +356,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', function() {
-      filterButtons.forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-      activeTag = this.dataset.tag;
+  if (topicSelect) {
+    topicSelect.addEventListener('change', function() {
+      activeTopic = this.value;
       updateResults();
     });
-  });
+  }
 
   updateResults();
 });
