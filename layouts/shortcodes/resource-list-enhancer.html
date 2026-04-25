@@ -6,7 +6,7 @@
   display: none !important;
 }
 
-/* Intro text */
+/* Style the intro text */
 .article-container > p:first-of-type {
   font-size: 1.1rem;
   color: #d1d5db;
@@ -14,7 +14,7 @@
   line-height: 1.6;
 }
 
-/* Section headings */
+/* Style section headings */
 .article-container h2 {
   color: #f9fafb;
   font-size: 1.8rem;
@@ -32,10 +32,10 @@
   font-weight: 600;
 }
 
-/* Only style real resource lists */
-.article-container h2 + ul,
-.article-container h3 + ul,
-.article-container > p:has(a[href*="mailto"]) + ul {
+/* Style only article-content lists, not footer/share/social lists */
+.article-container > ul,
+.article-container > div > ul,
+.article-container > section > ul {
   list-style: none;
   padding: 0;
   display: grid;
@@ -45,9 +45,9 @@
 }
 
 /* Cards */
-.article-container h2 + ul > li,
-.article-container h3 + ul > li,
-.article-container > p:has(a[href*="mailto"]) + ul > li {
+.article-container > ul > li,
+.article-container > div > ul > li,
+.article-container > section > ul > li {
   background: #111827;
   color: #f9fafb;
   border: 1px solid #1f2937;
@@ -59,17 +59,17 @@
   min-height: 100px;
 }
 
-.article-container h2 + ul > li:hover,
-.article-container h3 + ul > li:hover,
-.article-container > p:has(a[href*="mailto"]) + ul > li:hover {
+.article-container > ul > li:hover,
+.article-container > div > ul > li:hover,
+.article-container > section > ul > li:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 28px rgba(0,0,0,0.35);
 }
 
-/* Links inside cards */
-.article-container h2 + ul > li a,
-.article-container h3 + ul > li a,
-.article-container > p:has(a[href*="mailto"]) + ul > li a {
+/* Links */
+.article-container > ul > li a,
+.article-container > div > ul > li a,
+.article-container > section > ul > li a {
   color: #93c5fd;
   text-decoration: none;
   font-weight: 600;
@@ -78,48 +78,47 @@
   margin-bottom: 0.5rem;
 }
 
-.article-container h2 + ul > li a:hover,
-.article-container h3 + ul > li a:hover,
-.article-container > p:has(a[href*="mailto"]) + ul > li a:hover {
+.article-container > ul > li a:hover,
+.article-container > div > ul > li a:hover,
+.article-container > section > ul > li a:hover {
   color: #bfdbfe;
 }
 
-/* Nested lists inside cards */
-.article-container h2 + ul > li ul,
-.article-container h3 + ul > li ul,
-.article-container > p:has(a[href*="mailto"]) + ul > li ul {
+/* Nested lists */
+.article-container > ul > li ul,
+.article-container > div > ul > li ul,
+.article-container > section > ul > li ul {
   display: block;
   margin-top: 1rem;
   padding-left: 0;
   list-style: none;
 }
 
-.article-container h2 + ul > li ul li,
-.article-container h3 + ul > li ul li,
-.article-container > p:has(a[href*="mailto"]) + ul > li ul li {
+.article-container > ul > li ul li,
+.article-container > div > ul > li ul li,
+.article-container > section > ul > li ul li {
   background: #1f2937;
   border: 1px solid #374151;
   padding: 0.75rem 1rem;
   border-radius: 6px;
   box-shadow: none;
-  color: #f9fafb;
 }
 
-.article-container h2 + ul > li ul li:hover,
-.article-container h3 + ul > li ul li:hover,
-.article-container > p:has(a[href*="mailto"]) + ul > li ul li:hover {
+.article-container > ul > li ul li:hover,
+.article-container > div > ul > li ul li:hover,
+.article-container > section > ul > li ul li:hover {
   transform: translateY(-2px);
 }
 
-.article-container h2 + ul > li ul li a,
-.article-container h3 + ul > li ul li a,
-.article-container > p:has(a[href*="mailto"]) + ul > li ul li a {
+.article-container > ul > li ul li a,
+.article-container > div > ul > li ul li a,
+.article-container > section > ul > li ul li a {
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 0;
 }
 
-/* Contact email block */
+/* Contact email prompt */
 .article-container > p:has(a[href*="mailto"]) {
   background: #1f2937;
   border-left: 4px solid #1f3a5f;
@@ -132,9 +131,9 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .article-container h2 + ul,
-  .article-container h3 + ul,
-  .article-container > p:has(a[href*="mailto"]) + ul {
+  .article-container > ul,
+  .article-container > div > ul,
+  .article-container > section > ul {
     grid-template-columns: 1fr;
   }
 }
