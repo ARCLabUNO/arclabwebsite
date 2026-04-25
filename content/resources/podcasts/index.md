@@ -17,4 +17,4 @@ A running list of podcasts on corrections, reentry, and lived experiences.
 * [**Criminal InJustice**](http://www.criminalinjusticepodcast.com/) by David Harris
 * [**Justice in America**](https://theappeal.org/topics/justice-in-america/) by *The Appeal*
 * [**Probable Causation**](https://www.probablecausation.com/) by Jennifer Doleac
-* [**The Criminology Academy**](https://thecrimacademy.podbean.com/) by Jose Sanchez and Jennifer Tostlebe
+* [**The Criminology Academy**](https://thecriminologyacademy.com/) by Jose Sanchez and Jennifer Tostlebe
