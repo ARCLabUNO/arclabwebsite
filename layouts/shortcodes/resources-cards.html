@@ -4,6 +4,7 @@
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
+  background: #f8fafc;
 }
 
 .resources-grid {
@@ -15,33 +16,34 @@
 
 .resource-card {
   background: #ffffff;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   text-align: center;
-  border: 1px solid #d9e1e8;
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid #3a7ca5; /* accent bar */
 }
 
 .resource-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 6px 22px rgba(0,0,0,0.10);
 }
 
 .resource-icon {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
-  color: #1f3a5f; /* ARC-style navy */
+  color: #3a7ca5; /* accent color */
 }
 
 .resource-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #1f3a5f;
+  color: #243b53; /* primary */
 }
 
 .resource-card p {
-  color: #4a5568;
+  color: #486581;
   line-height: 1.6;
   margin-bottom: 1.5rem;
   min-height: 60px;
@@ -50,48 +52,52 @@
 .resource-link {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background: #1f3a5f;
+  background: #243b53;
   color: #fff !important;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 6px;
   font-weight: 500;
-  transition: background 0.3s ease;
+  transition: background 0.25s ease;
 }
 
 .resource-link:hover {
-  background: #162944;
+  background: #1b2a38;
   text-decoration: none;
 }
 
-/* Dark mode support */
+/* Dark mode */
 @media (prefers-color-scheme: dark) {
+  .resources-container {
+    background: #0f172a;
+  }
+
   .resource-card {
     background: #1e2933;
     border-color: #2d3748;
   }
-  
+
   .resource-card h3 {
     color: #e2e8f0;
   }
-  
+
   .resource-card p {
     color: #cbd5e0;
   }
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 768px) {
   .resources-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .resource-card {
     padding: 1.5rem;
   }
 }
 
-/* Hide auto-generated Hugo list content */
+/* Hide auto-generated Hugo content */
 .resources-container ~ .article-style,
 .resources-container ~ .stream-container,
 .resources-container ~ ul,
@@ -102,38 +108,38 @@
 
 <div class="resources-container">
   <div class="resources-grid">
-    
-    <!-- Podcasts Card -->
+
+    <!-- Podcasts -->
     <div class="resource-card">
-      <div class="resource-icon">🎧️</div>
+      <div class="resource-icon">🎧</div>
       <h3>Podcasts</h3>
       <p>A curated collection of podcasts covering corrections, reentry, and the broader criminal justice system.</p>
       <a href="/resources/podcasts/" class="resource-link">Explore Podcasts</a>
     </div>
-    
-    <!-- Other Organizations Card -->
+
+    <!-- Organizations -->
     <div class="resource-card">
-      <div class="resource-icon">🤝️</div>
+      <div class="resource-icon">🤝</div>
       <h3>Other Organizations</h3>
       <p>A running list of organizations working to advance knowledge in corrections and reentry.</p>
       <a href="/resources/other_organizations/" class="resource-link">View Organizations</a>
     </div>
-    
-    <!-- Recent Reports Card -->
+
+    <!-- Reports -->
     <div class="resource-card">
       <div class="resource-icon">📄</div>
       <h3>Recent Reports</h3>
       <p>Major research reports and publications from the last decade on corrections, incarceration, and reentry outcomes.</p>
       <a href="/resources/recent_reports/" class="resource-link">Browse Reports</a>
     </div>
-    
-    <!-- Open Source Data Card -->
+
+    <!-- Data -->
     <div class="resource-card">
       <div class="resource-icon">🗄️</div>
       <h3>Open Source Data</h3>
       <p>Freely available datasets related to corrections, community supervision, and reentry for research use.</p>
       <a href="/resources/open_source_data/" class="resource-link">Access Data</a>
     </div>
-    
+
   </div>
 </div>
