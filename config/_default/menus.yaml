@@ -19,9 +19,6 @@ main:
   - name: Other Resources
     url: resources
     weight: 50
-  - name: The Criminology Academy Podcast
-    url: 'http://thecriminologyacademy.com'
-    weight: 60
   - name: Contact
     url: contact
-    weight: 70
+    weight: 60
