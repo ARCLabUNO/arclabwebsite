@@ -6,16 +6,18 @@
   display: none !important;
 }
 
-/* Style the intro text */
-.article-container > p:first-of-type {
+/* Intro text */
+.article-container > p:first-of-type,
+.article-container .article-style > p:first-of-type {
   font-size: 1.1rem;
   color: #d1d5db;
   margin-bottom: 2rem;
   line-height: 1.6;
 }
 
-/* Style section headings */
-.article-container h2 {
+/* Section headings */
+.article-container h2,
+.article-container .article-style h2 {
   color: #f9fafb;
   font-size: 1.8rem;
   margin-top: 3rem;
@@ -24,7 +26,8 @@
   border-bottom: 2px solid #1f3a5f;
 }
 
-.article-container h3 {
+.article-container h3,
+.article-container .article-style h3 {
   color: #e5e7eb;
   font-size: 1.3rem;
   margin-top: 2rem;
@@ -32,10 +35,10 @@
   font-weight: 600;
 }
 
-/* Style only article-content lists, not footer/share/social lists */
-.article-container > ul,
-.article-container > div > ul,
-.article-container > section > ul {
+/* ONLY style lists inside the main content body */
+.article-style > ul,
+.article-style h2 + ul,
+.article-style h3 + ul {
   list-style: none;
   padding: 0;
   display: grid;
@@ -45,9 +48,9 @@
 }
 
 /* Cards */
-.article-container > ul > li,
-.article-container > div > ul > li,
-.article-container > section > ul > li {
+.article-style > ul > li,
+.article-style h2 + ul > li,
+.article-style h3 + ul > li {
   background: #111827;
   color: #f9fafb;
   border: 1px solid #1f2937;
@@ -59,17 +62,17 @@
   min-height: 100px;
 }
 
-.article-container > ul > li:hover,
-.article-container > div > ul > li:hover,
-.article-container > section > ul > li:hover {
+.article-style > ul > li:hover,
+.article-style h2 + ul > li:hover,
+.article-style h3 + ul > li:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 28px rgba(0,0,0,0.35);
 }
 
 /* Links */
-.article-container > ul > li a,
-.article-container > div > ul > li a,
-.article-container > section > ul > li a {
+.article-style > ul > li a,
+.article-style h2 + ul > li a,
+.article-style h3 + ul > li a {
   color: #93c5fd;
   text-decoration: none;
   font-weight: 600;
@@ -78,25 +81,25 @@
   margin-bottom: 0.5rem;
 }
 
-.article-container > ul > li a:hover,
-.article-container > div > ul > li a:hover,
-.article-container > section > ul > li a:hover {
+.article-style > ul > li a:hover,
+.article-style h2 + ul > li a:hover,
+.article-style h3 + ul > li a:hover {
   color: #bfdbfe;
 }
 
 /* Nested lists */
-.article-container > ul > li ul,
-.article-container > div > ul > li ul,
-.article-container > section > ul > li ul {
+.article-style > ul > li ul,
+.article-style h2 + ul > li ul,
+.article-style h3 + ul > li ul {
   display: block;
   margin-top: 1rem;
   padding-left: 0;
   list-style: none;
 }
 
-.article-container > ul > li ul li,
-.article-container > div > ul > li ul li,
-.article-container > section > ul > li ul li {
+.article-style > ul > li ul li,
+.article-style h2 + ul > li ul li,
+.article-style h3 + ul > li ul li {
   background: #1f2937;
   border: 1px solid #374151;
   padding: 0.75rem 1rem;
@@ -104,22 +107,23 @@
   box-shadow: none;
 }
 
-.article-container > ul > li ul li:hover,
-.article-container > div > ul > li ul li:hover,
-.article-container > section > ul > li ul li:hover {
+.article-style > ul > li ul li:hover,
+.article-style h2 + ul > li ul li:hover,
+.article-style h3 + ul > li ul li:hover {
   transform: translateY(-2px);
 }
 
-.article-container > ul > li ul li a,
-.article-container > div > ul > li ul li a,
-.article-container > section > ul > li ul li a {
+.article-style > ul > li ul li a,
+.article-style h2 + ul > li ul li a,
+.article-style h3 + ul > li ul li a {
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 0;
 }
 
-/* Contact email prompt */
-.article-container > p:has(a[href*="mailto"]) {
+/* Contact email block */
+.article-container > p:has(a[href*="mailto"]),
+.article-style > p:has(a[href*="mailto"]) {
   background: #1f2937;
   border-left: 4px solid #1f3a5f;
   padding: 1rem 1.5rem;
@@ -131,9 +135,9 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .article-container > ul,
-  .article-container > div > ul,
-  .article-container > section > ul {
+  .article-style > ul,
+  .article-style h2 + ul,
+  .article-style h3 + ul {
     grid-template-columns: 1fr;
   }
 }
