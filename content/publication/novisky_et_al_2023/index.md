@@ -9,7 +9,7 @@ authors = ["Meghan Novisky", "tostlebe", "David Pyrooz", "Jose Antonio Sanchez"]
 publication = "*Health & Justice*"
   
 # Publication types (2 = Journal article; 3 = preprint; 4 = report; 6 = book chapter)
-publication_types = ["2"]
+publication_types = ["article-journal"]
   
 # Date the paper was published.
 date = 2023-12-03T10:00:00Z
