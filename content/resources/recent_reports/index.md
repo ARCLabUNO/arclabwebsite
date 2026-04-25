@@ -34,7 +34,7 @@ A running list of major reports on corrections, reentry, and the broader crimina
 
 * [Impact Report: COVID-19 Testing in State Prisons](https://counciloncj.org/impact-report-covid-19-testing-in-state-prisons/)
 * [Impact Report: COVID-19 and Prisons: December 2020 Update](https://counciloncj.org/impact-report-covid-19-and-prisons/)
-* [Impact Report: COVID-19 and Jails: December 2020 Update](https://counciloncj.org/impact-report-covid-19-and-jails/
+* [Impact Report: COVID-19 and Jails: December 2020 Update](https://counciloncj.org/impact-report-covid-19-and-jails/)
 
 ## National Institute of Justice
 
