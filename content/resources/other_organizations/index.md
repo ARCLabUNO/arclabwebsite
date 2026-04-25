@@ -28,6 +28,7 @@ A running list of other groups and organizations working to advance knowledge in
 ## Community Groups in Omaha
 
 * [Never Give Up Transitional Living Program](nevergiveupomaha.org)
+* [Omaha 360](https://empoweromaha.com/violence-prevention-omaha-360/)
 * [Rise Reentry Program](https://www.seeusrise.org/)
 * [YouTurn](https://shareomaha.org/nonprofit/youturn)
 
