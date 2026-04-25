@@ -1,0 +1,20 @@
+---
+title: Podcasts
+date: 2026-04-24
+image:
+  focal_point: "top"
+---
+
+{{< resource-list-enhancer >}}
+
+A running list of podcasts on corrections, reentry, and lived experiences.
+
+<!--more-->
+
+(What are we missing? [Let us know!](mailto:arclab@unomaha.edu))
+
+* [**Conversations with Criminologists**](https://anchor.fm/criminology) by UCC Criminology
+* [**Criminal InJustice**](http://www.criminalinjusticepodcast.com/) by David Harris
+* [**Justice in America**](https://theappeal.org/topics/justice-in-america/) by *The Appeal*
+* [**Probable Causation**](https://www.probablecausation.com/) by Jennifer Doleac
+* [**The Criminology Academy**](https://thecrimacademy.podbean.com/) by Jose Sanchez and Jennifer Tostlebe
