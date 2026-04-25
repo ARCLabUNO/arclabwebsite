@@ -32,10 +32,10 @@
   font-weight: 600;
 }
 
-/* Only style real resource lists */
+/* Main resource lists */
 .article-container h2 + ul,
 .article-container h3 + ul,
-.article-container > p:has(a[href*="mailto"]) + ul {
+.article-container ul:first-of-type {
   list-style: none;
   padding: 0;
   display: grid;
@@ -47,7 +47,7 @@
 /* Cards */
 .article-container h2 + ul > li,
 .article-container h3 + ul > li,
-.article-container > p:has(a[href*="mailto"]) + ul > li {
+.article-container ul:first-of-type > li {
   background: #111827;
   color: #f9fafb;
   border: 1px solid #1f2937;
@@ -61,7 +61,7 @@
 
 .article-container h2 + ul > li:hover,
 .article-container h3 + ul > li:hover,
-.article-container > p:has(a[href*="mailto"]) + ul > li:hover {
+.article-container ul:first-of-type > li:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 28px rgba(0,0,0,0.35);
 }
@@ -69,7 +69,7 @@
 /* Links inside cards */
 .article-container h2 + ul > li a,
 .article-container h3 + ul > li a,
-.article-container > p:has(a[href*="mailto"]) + ul > li a {
+.article-container ul:first-of-type > li a {
   color: #93c5fd;
   text-decoration: none;
   font-weight: 600;
@@ -80,14 +80,14 @@
 
 .article-container h2 + ul > li a:hover,
 .article-container h3 + ul > li a:hover,
-.article-container > p:has(a[href*="mailto"]) + ul > li a:hover {
+.article-container ul:first-of-type > li a:hover {
   color: #bfdbfe;
 }
 
-/* Nested lists inside cards */
+/* Nested lists */
 .article-container h2 + ul > li ul,
 .article-container h3 + ul > li ul,
-.article-container > p:has(a[href*="mailto"]) + ul > li ul {
+.article-container ul:first-of-type > li ul {
   display: block;
   margin-top: 1rem;
   padding-left: 0;
@@ -96,7 +96,7 @@
 
 .article-container h2 + ul > li ul li,
 .article-container h3 + ul > li ul li,
-.article-container > p:has(a[href*="mailto"]) + ul > li ul li {
+.article-container ul:first-of-type > li ul li {
   background: #1f2937;
   border: 1px solid #374151;
   padding: 0.75rem 1rem;
@@ -107,13 +107,13 @@
 
 .article-container h2 + ul > li ul li:hover,
 .article-container h3 + ul > li ul li:hover,
-.article-container > p:has(a[href*="mailto"]) + ul > li ul li:hover {
+.article-container ul:first-of-type > li ul li:hover {
   transform: translateY(-2px);
 }
 
 .article-container h2 + ul > li ul li a,
 .article-container h3 + ul > li ul li a,
-.article-container > p:has(a[href*="mailto"]) + ul > li ul li a {
+.article-container ul:first-of-type > li ul li a {
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 0;
@@ -134,7 +134,7 @@
 @media (max-width: 768px) {
   .article-container h2 + ul,
   .article-container h3 + ul,
-  .article-container > p:has(a[href*="mailto"]) + ul {
+  .article-container ul:first-of-type {
     grid-template-columns: 1fr;
   }
 }
