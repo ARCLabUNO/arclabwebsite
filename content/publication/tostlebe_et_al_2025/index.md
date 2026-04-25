@@ -9,7 +9,7 @@ authors = ["tostlebe", "David Pyrooz", "Ryan Labrecque", "Bert Useem"]
 publication = "*Journal of Criminal Justice*  (Special Issue on Policy Reforms to Segregation Practices in U.S. Prisons)"
   
 # Publication types (2 = Journal article; 3 = preprint; 4 = report; 6 = book chapter)
-publication_types = ["2"]
+publication_types = ["article-journal"]
   
 # Date the paper was published.
 date = 2025-07-13T10:00:00Z
