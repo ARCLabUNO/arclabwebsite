@@ -9,7 +9,7 @@ authors = ["tostlebe"]
 publication = "*Journal of Research in Crime and Delinquency*"
   
 # Publication types (2 = Journal article; 3 = preprint; 4 = report; 6 = book chapter)
-publication_types = ["2"]
+publication_types = ["article-journal"]
   
 # Date the paper was published.
 date = 2026-01-01T10:00:00Z
