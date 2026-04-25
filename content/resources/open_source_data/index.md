@@ -7,7 +7,7 @@ image:
 
 A running list of open source data related to corrections, incarceration, community supervision, reentry, and the broader criminal justice system.
 
-{{< resource-list-enhancement >}}
+{{< resource-list-enhancer >}}
 
 <!--more-->
 
