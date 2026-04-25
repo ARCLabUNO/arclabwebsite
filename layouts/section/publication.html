@@ -6,9 +6,46 @@
     <div class="article-style">{{ . }}</div>
   {{ end }}
 
-  <div class="pub-card-grid">
+  {{/* Collect all tags for filter buttons */}}
+  {{ $allTags := slice }}
+  {{ range .Pages }}
+    {{ with .Params.tags }}
+      {{ range . }}
+        {{ $allTags = $allTags | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $allTags = uniq $allTags | sort }}
+
+  <div class="pub-controls">
+    <div class="pub-search">
+      <input type="text" id="pubSearch" placeholder="Search publications...">
+    </div>
+
+    <div class="pub-filter-group" id="pubTagFilters">
+      <button type="button" class="pub-filter-btn active" data-tag="all">All</button>
+      {{ range $allTags }}
+        <button type="button" class="pub-filter-btn" data-tag="{{ . | urlize }}">{{ . }}</button>
+      {{ end }}
+    </div>
+
+    <div class="pub-results-count" id="pubResultsCount"></div>
+  </div>
+
+  <div class="pub-card-grid" id="pubCardGrid">
     {{ range .Pages.ByDate.Reverse }}
-      <article class="pub-card">
+      {{ $tagString := "" }}
+      {{ with .Params.tags }}
+        {{ range . }}
+          {{ $tagString = printf "%s %s" $tagString (. | urlize) }}
+        {{ end }}
+      {{ end }}
+
+      <article
+        class="pub-card"
+        data-tags="{{ trim $tagString " " }}"
+        data-search="{{ lower (printf "%s %s %s %s" .Title (.Params.summary | default "") (.Params.publication | default "") (delimit (.Params.tags | default (slice)) " ")) }}"
+      >
         {{ $img := .Resources.GetMatch "featured*" }}
         {{ if $img }}
           <a href="{{ .RelPermalink }}" class="pub-card-image-link">
@@ -39,15 +76,80 @@
           </div>
 
           <div class="pub-card-footer">
-            <a href="{{ .RelPermalink }}" class="pub-read-more">Read More</a>
+            <a href="{{ .RelPermalink }}" class="pub-read-more">View Publication</a>
           </div>
         </div>
       </article>
     {{ end }}
   </div>
+
+  <div class="pub-no-results" id="pubNoResults">
+    No publications match your current search or tag filter.
+  </div>
 </div>
 
 <style>
+.pub-controls {
+  margin: 2rem 0 2.5rem;
+  padding: 1.25rem;
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+}
+
+.pub-search {
+  margin-bottom: 1rem;
+}
+
+.pub-search input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  background: #1f2937;
+  color: #f9fafb;
+  font-size: 1rem;
+}
+
+.pub-search input:focus {
+  outline: none;
+  border-color: #1f3a5f;
+  box-shadow: 0 0 0 3px rgba(31, 58, 95, 0.25);
+}
+
+.pub-filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.pub-filter-btn {
+  background: #1f2937;
+  color: #dbeafe;
+  border: 1px solid #374151;
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pub-filter-btn:hover {
+  background: #273449;
+}
+
+.pub-filter-btn.active {
+  background: #1f3a5f;
+  color: #fff;
+  border-color: #1f3a5f;
+}
+
+.pub-results-count {
+  color: #cbd5e1;
+  font-size: 0.92rem;
+}
+
 .pub-card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -65,6 +167,10 @@
   box-shadow: 0 6px 22px rgba(0,0,0,0.22);
   display: flex;
   flex-direction: column;
+}
+
+.pub-card.is-hidden {
+  display: none;
 }
 
 .pub-card-image-link {
@@ -136,7 +242,6 @@
   margin: 0 0 1rem;
 }
 
-/* Restyle theme-generated publication buttons inside cards */
 .pub-card-links .btn,
 .pub-card-links .btn-page-header,
 .pub-card-links .btn-links {
@@ -162,7 +267,6 @@
   text-decoration: none;
 }
 
-/* Make "View Publication" visually distinct */
 .pub-card-footer {
   margin-top: auto;
   padding-top: 0.5rem;
@@ -184,10 +288,78 @@
   text-decoration: none;
 }
 
+.pub-no-results {
+  display: none;
+  margin-top: 2rem;
+  color: #cbd5e1;
+  text-align: center;
+}
+
+.pub-no-results.show {
+  display: block;
+}
+
 @media (max-width: 768px) {
   .pub-card-grid {
     grid-template-columns: 1fr;
   }
 }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('pubSearch');
+  const filterButtons = document.querySelectorAll('.pub-filter-btn');
+  const cards = document.querySelectorAll('.pub-card');
+  const resultsCount = document.getElementById('pubResultsCount');
+  const noResults = document.getElementById('pubNoResults');
+
+  let activeTag = 'all';
+  let activeSearch = '';
+
+  function updateResults() {
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const text = card.dataset.search || '';
+      const tags = (card.dataset.tags || '').split(' ');
+      const matchesSearch = !activeSearch || text.includes(activeSearch);
+      const matchesTag = activeTag === 'all' || tags.includes(activeTag);
+
+      if (matchesSearch && matchesTag) {
+        card.classList.remove('is-hidden');
+        visibleCount += 1;
+      } else {
+        card.classList.add('is-hidden');
+      }
+    });
+
+    if (resultsCount) {
+      resultsCount.textContent = `Showing ${visibleCount} publication${visibleCount === 1 ? '' : 's'}`;
+    }
+
+    if (noResults) {
+      noResults.classList.toggle('show', visibleCount === 0);
+    }
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      activeSearch = this.value.trim().toLowerCase();
+      updateResults();
+    });
+  }
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      filterButtons.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      activeTag = this.dataset.tag;
+      updateResults();
+    });
+  });
+
+  updateResults();
+});
+</script>
 {{ end }}
