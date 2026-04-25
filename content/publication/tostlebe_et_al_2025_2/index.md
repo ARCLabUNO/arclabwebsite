@@ -9,7 +9,7 @@ authors = ["tostlebe", "Meghan Novisky", "hayes", "John Bennett"]
 publication = "*Corrections: Policy, Practice and Research*"
   
 # Publication types (2 = Journal article; 3 = preprint; 4 = report; 6 = book chapter)
-publication_types = ["2"]
+publication_types = ["article-journal"]
   
 # Date the paper was published.
 date = 2025-10-31T10:00:00Z
