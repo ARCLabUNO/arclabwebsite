@@ -7,7 +7,7 @@ image:
 
 {{< resource-list-enhancer >}}
 
-A running list of other groups and organizations working to advance knowledge in the areas of corrections, reentry, and violence reduction.
+A running list of other groups and organizations working to advance knowledge in the areas of corrections, reentry, and public safety.
 
 <!--more-->
 
