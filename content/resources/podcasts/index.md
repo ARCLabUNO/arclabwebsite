@@ -15,6 +15,9 @@ A running list of podcasts on corrections, reentry, and lived experiences.
 
 * [**Conversations with Criminologists**](https://anchor.fm/criminology) by UCC Criminology
 * [**Criminal InJustice**](http://www.criminalinjusticepodcast.com/) by David Harris
+* [**Decarceration Nation**](https://decarcerationnation.com/about/) by Joshua B. Hoe
+* [**Ear Hustle**](https://www.earhustlesq.com/) by Nigel Poor and Earlonne Woods
+* [**Justice Focus**](https://www.justicefocus.org/) by Omar Phoenix Khan
 * [**Justice in America**](https://theappeal.org/topics/justice-in-america/) by *The Appeal*
 * [**Probable Causation**](https://www.probablecausation.com/) by Jennifer Doleac
 * [**The Criminology Academy**](https://thecriminologyacademy.com/) by Jose Sanchez and Jennifer Tostlebe
