@@ -32,10 +32,10 @@
   font-weight: 600;
 }
 
-/* Style only lists inside the main markdown content area */
-.article-container .markdown-body h2 + ul,
-.article-container .markdown-body h3 + ul,
-.article-container .markdown-body > ul:first-of-type {
+/* Only style real resource lists */
+.article-container h2 + ul,
+.article-container h3 + ul,
+.article-container > p:has(a[href*="mailto"]) + ul {
   list-style: none;
   padding: 0;
   display: grid;
@@ -45,9 +45,9 @@
 }
 
 /* Cards */
-.article-container .markdown-body h2 + ul > li,
-.article-container .markdown-body h3 + ul > li,
-.article-container .markdown-body > ul:first-of-type > li {
+.article-container h2 + ul > li,
+.article-container h3 + ul > li,
+.article-container > p:has(a[href*="mailto"]) + ul > li {
   background: #111827;
   color: #f9fafb;
   border: 1px solid #1f2937;
@@ -59,17 +59,17 @@
   min-height: 100px;
 }
 
-.article-container .markdown-body h2 + ul > li:hover,
-.article-container .markdown-body h3 + ul > li:hover,
-.article-container .markdown-body > ul:first-of-type > li:hover {
+.article-container h2 + ul > li:hover,
+.article-container h3 + ul > li:hover,
+.article-container > p:has(a[href*="mailto"]) + ul > li:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 28px rgba(0,0,0,0.35);
 }
 
 /* Links inside cards */
-.article-container .markdown-body h2 + ul > li a,
-.article-container .markdown-body h3 + ul > li a,
-.article-container .markdown-body > ul:first-of-type > li a {
+.article-container h2 + ul > li a,
+.article-container h3 + ul > li a,
+.article-container > p:has(a[href*="mailto"]) + ul > li a {
   color: #93c5fd;
   text-decoration: none;
   font-weight: 600;
@@ -78,25 +78,25 @@
   margin-bottom: 0.5rem;
 }
 
-.article-container .markdown-body h2 + ul > li a:hover,
-.article-container .markdown-body h3 + ul > li a:hover,
-.article-container .markdown-body > ul:first-of-type > li a:hover {
+.article-container h2 + ul > li a:hover,
+.article-container h3 + ul > li a:hover,
+.article-container > p:has(a[href*="mailto"]) + ul > li a:hover {
   color: #bfdbfe;
 }
 
-/* Nested lists */
-.article-container .markdown-body h2 + ul > li ul,
-.article-container .markdown-body h3 + ul > li ul,
-.article-container .markdown-body > ul:first-of-type > li ul {
+/* Nested lists inside cards */
+.article-container h2 + ul > li ul,
+.article-container h3 + ul > li ul,
+.article-container > p:has(a[href*="mailto"]) + ul > li ul {
   display: block;
   margin-top: 1rem;
   padding-left: 0;
   list-style: none;
 }
 
-.article-container .markdown-body h2 + ul > li ul li,
-.article-container .markdown-body h3 + ul > li ul li,
-.article-container .markdown-body > ul:first-of-type > li ul li {
+.article-container h2 + ul > li ul li,
+.article-container h3 + ul > li ul li,
+.article-container > p:has(a[href*="mailto"]) + ul > li ul li {
   background: #1f2937;
   border: 1px solid #374151;
   padding: 0.75rem 1rem;
@@ -105,22 +105,22 @@
   color: #f9fafb;
 }
 
-.article-container .markdown-body h2 + ul > li ul li:hover,
-.article-container .markdown-body h3 + ul > li ul li:hover,
-.article-container .markdown-body > ul:first-of-type > li ul li:hover {
+.article-container h2 + ul > li ul li:hover,
+.article-container h3 + ul > li ul li:hover,
+.article-container > p:has(a[href*="mailto"]) + ul > li ul li:hover {
   transform: translateY(-2px);
 }
 
-.article-container .markdown-body h2 + ul > li ul li a,
-.article-container .markdown-body h3 + ul > li ul li a,
-.article-container .markdown-body > ul:first-of-type > li ul li a {
+.article-container h2 + ul > li ul li a,
+.article-container h3 + ul > li ul li a,
+.article-container > p:has(a[href*="mailto"]) + ul > li ul li a {
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 0;
 }
 
 /* Contact email block */
-.article-container .markdown-body > p:has(a[href*="mailto"]) {
+.article-container > p:has(a[href*="mailto"]) {
   background: #1f2937;
   border-left: 4px solid #1f3a5f;
   padding: 1rem 1.5rem;
@@ -132,9 +132,9 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .article-container .markdown-body h2 + ul,
-  .article-container .markdown-body h3 + ul,
-  .article-container .markdown-body > ul:first-of-type {
+  .article-container h2 + ul,
+  .article-container h3 + ul,
+  .article-container > p:has(a[href*="mailto"]) + ul {
     grid-template-columns: 1fr;
   }
 }
