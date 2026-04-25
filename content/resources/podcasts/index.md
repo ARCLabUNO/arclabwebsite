@@ -20,4 +20,4 @@ A running list of podcasts on corrections, reentry, and lived experiences.
 * [**Justice Focus**](https://www.justicefocus.org/) by Omar Phoenix Khan
 * [**Justice in America**](https://theappeal.org/topics/justice-in-america/) by *The Appeal*
 * [**Probable Causation**](https://www.probablecausation.com/) by Jennifer Doleac
-* [**The Criminology Academy**](https://thecriminologyacademy.com/) by Jose Sanchez and Jennifer Tostlebe
+* [**The Criminology Academy**](https://thecriminologyacademy.com/) by Jose Sanchez and Jennifer Tostlebe (co-director of ARC)
