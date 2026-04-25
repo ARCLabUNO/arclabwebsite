@@ -11,7 +11,7 @@ A running list of open source data related to corrections, incarceration, commun
 
 <!--more-->
 
-(Are we missing something? [Let us know!](mailto:your-email@domain.com))
+(Are we missing something? [Let us know!](mailto:arclab@unomaha.edu))
 
 ## Corrections & Incarceration
 
