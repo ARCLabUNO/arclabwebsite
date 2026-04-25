@@ -22,7 +22,7 @@
           </h2>
 
           <div class="pub-card-authors">
-            {{ partial "page_metadata_authors" (dict "page" . "is_list" 1) }}
+            {{ partial "page_metadata_authors" . }}
           </div>
 
           <p class="pub-card-meta">
@@ -35,76 +35,7 @@
           {{ end }}
 
           <div class="pub-card-links">
-            {{ with .Params.url_pdf }}
-              {{ $href := . }}
-              {{ with $.Resources.GetMatch . }}
-                {{ $href = .RelPermalink }}
-              {{ end }}
-              <a class="pub-link-pill pub-link-file" href="{{ $href }}" target="_blank" rel="noopener">PDF</a>
-            {{ end }}
-
-            {{ with .Params.url_slides }}
-              {{ $href := . }}
-              {{ with $.Resources.GetMatch . }}
-                {{ $href = .RelPermalink }}
-              {{ end }}
-              <a class="pub-link-pill pub-link-file" href="{{ $href }}" target="_blank" rel="noopener">Slides</a>
-            {{ end }}
-
-            {{ with .Params.url_video }}
-              {{ $href := . }}
-              {{ with $.Resources.GetMatch . }}
-                {{ $href = .RelPermalink }}
-              {{ end }}
-              <a class="pub-link-pill pub-link-file" href="{{ $href }}" target="_blank" rel="noopener">Video</a>
-            {{ end }}
-
-            {{ with .Params.url_code }}
-              {{ $href := . }}
-              {{ with $.Resources.GetMatch . }}
-                {{ $href = .RelPermalink }}
-              {{ end }}
-              <a class="pub-link-pill pub-link-file" href="{{ $href }}" target="_blank" rel="noopener">Code</a>
-            {{ end }}
-
-            {{ with .Params.links }}
-              {{ range . }}
-                {{ $name := .name | default "Link" }}
-                {{ $url := .url }}
-                {{ $class := "pub-link-pill pub-link-external" }}
-
-                {{ with $.Resources.GetMatch $url }}
-                  {{ $url = .RelPermalink }}
-                {{ end }}
-
-                {{ if or
-                  (eq $name "DOI")
-                  (eq $name "Preprint")
-                  (eq $name "Postprint")
-                  (eq $name "Pre-registration")
-                  (eq $name "Preregistration")
-                  (eq $name "Replication Materials")
-                  (eq $name "Open-Source Materials")
-                  (eq $name "Open Source Materials")
-                  (eq $name "Open Access")
-                  (eq $name "Research Brief")
-                  (eq $name "Interim Report")
-                  (eq $name "Slides")
-                  (eq $name "Appendix")
-                  (eq $name "Supplement")
-                }}
-                  {{ $class = "pub-link-pill pub-link-resource" }}
-                {{ end }}
-
-                <a class="{{ $class }}" href="{{ $url }}" target="_blank" rel="noopener">
-                  {{ with .icon }}
-                    {{ $pack := $.icon_pack | default "fas" }}
-                    <i class="{{ $pack }} fa-{{ . }}"></i>
-                  {{ end }}
-                  {{ $name }}
-                </a>
-              {{ end }}
-            {{ end }}
+            {{ partial "page_links" (dict "page" . "is_list" 1) }}
           </div>
 
           <div class="pub-card-footer">
@@ -191,11 +122,6 @@
   font-size: 0.95rem;
 }
 
-.pub-card-meta p,
-.pub-card-meta em {
-  margin: 0;
-}
-
 .pub-dot {
   opacity: 0.7;
 }
@@ -207,66 +133,50 @@
 }
 
 .pub-card-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
   margin: 0 0 1rem;
 }
 
-.pub-link-pill,
-.pub-read-more {
+/* Restyle theme-generated publication buttons inside cards */
+.pub-card-links .btn,
+.pub-card-links .btn-page-header,
+.pub-card-links .btn-links {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  text-decoration: none;
+  margin: 0 0.5rem 0.5rem 0;
   border-radius: 999px;
   padding: 0.45rem 0.8rem;
   font-size: 0.9rem;
   font-weight: 500;
-  line-height: 1.2;
-}
-
-.pub-link-resource {
+  text-decoration: none;
   background: #1f2937;
   color: #dbeafe !important;
   border: 1px solid #374151;
+  box-shadow: none;
 }
 
-.pub-link-resource:hover {
+.pub-card-links .btn:hover,
+.pub-card-links .btn-page-header:hover,
+.pub-card-links .btn-links:hover {
   background: #273449;
   text-decoration: none;
 }
 
-.pub-link-file {
-  background: #243b53;
-  color: #fff !important;
-  border: 1px solid #2f4c6b;
-}
-
-.pub-link-file:hover {
-  background: #1b2f45;
-  text-decoration: none;
-}
-
-.pub-link-external {
-  background: #374151;
-  color: #f9fafb !important;
-  border: 1px solid #4b5563;
-}
-
-.pub-link-external:hover {
-  background: #4b5563;
-  text-decoration: none;
-}
-
+/* Make "View Publication" visually distinct */
 .pub-card-footer {
   margin-top: auto;
   padding-top: 0.5rem;
 }
 
 .pub-read-more {
+  display: inline-block;
   background: #1f3a5f;
   color: #fff !important;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.92rem;
+  font-weight: 600;
 }
 
 .pub-read-more:hover {
