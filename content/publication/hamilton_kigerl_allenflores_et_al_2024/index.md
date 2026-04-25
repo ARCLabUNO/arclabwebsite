@@ -46,7 +46,7 @@ url_code = ""
   
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-links = [{name = "Technical Report", url="technicalreport.pdf"}, {name = "Research Brief", url="researchbrief.pdf"}]
+links = [{name = "Technical Report", url="technicalreport.pdf", icon = "unlock-alt", icon_pack = "fas"}, {name = "Research Brief", url="researchbrief.pdf", icon = "unlock-alt", icon_pack = "fas"}]
   
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder.
