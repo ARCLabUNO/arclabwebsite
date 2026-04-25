@@ -5,11 +5,11 @@ image:
   focal_point: "top"
 ---
 
-{{< resource-list-enhancer >}}
-
 A running list of podcasts on corrections, reentry, and lived experiences.
 
 <!--more-->
+
+{{< resource-list-enhancer >}}
 
 (What are we missing? [Let us know!](mailto:arclab@unomaha.edu))
 
