@@ -18,7 +18,7 @@ date = 2024-01-01T10:00:00Z
 publishdate = 2024-01-01T10:00:00Z
   
 # Project summary to display on homepage.
-summary = ""
+summary = "Gang membership has a robust relationship with crime and violence, leading scholars to take an interest in examining the sources of gang joining."
   
 # Abstract
 abstract = "Gang membership has a robust relationship with crime and violence, leading scholars to take an interest in examining the sources of gang joining. One understudied line of inquiry is individual differences, which are rank-order or time-stable characteristics that vary between people. One reason for this lack of attention is the debate around whether researchers should examine individual differences at all. This chapter takes stock of studies conducted on individual differences and gang joining to determine their relevance for research. First, the chapter provides an overview of the state dependence and population heterogeneity perspectives for gang joining. Next, it reviews research conducted on 11 individual differences spanning 50 studies and the authors determine that research at the individual level is ultimately worth pursuing. However, conclusions must be interpreted with caution due to neglected theorizing on the relationship, lack of longitudinal research, and minimal empirical studies conducted. Finally, the chapter charts directions for future research on this topic."
