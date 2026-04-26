@@ -25,7 +25,7 @@ abstract = "Andrews and colleagues (1999) development of the Risk-Need-Responsiv
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["assessment validation", "construct validity", "needs assessment", "risk-need-responsivity"]
+tags = ["risk-needs-assessment", "methods-and-measurement"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""
