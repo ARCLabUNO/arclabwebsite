@@ -1,6 +1,8 @@
 ---
 title: Taylor Gonzales and Abby Hayes Advance to Candidacy!
 date: 2026-02-01
+summary: "Congratulations to Taylor Gonzales and Abby Hayes who successfully passed their Systems Comprehensive Examination!
+"
 ---
 
 Congratulations to [Taylor Gonzales](https://arcorrectionslab.org/author/taylor-gonzales/) and [Abby Hayes](https://arcorrectionslab.org/author/abigail-hayes/) who successfully passed their Criminal Justice Systems Comprehensive Examination in January!
