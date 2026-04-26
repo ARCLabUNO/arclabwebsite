@@ -25,7 +25,7 @@ abstract = "Juvenile Sex Offenders (JSOs) are often the subject of public scruti
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["juvenile-justice"]
+tags = ["juvenile-justice", "grad student lead author"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""

@@ -25,7 +25,7 @@ abstract = ""
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["drug courts", "substance use", "courts"]
+tags = ["drug courts", "substance use", "courts", "grad student lead author"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""

@@ -25,7 +25,7 @@ abstract = "Correctional systems across the United States continue to face persi
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["institutional corrections", "misconduct", "crowding", "decarceration", "programming"]
+tags = ["institutional corrections", "misconduct", "crowding", "decarceration", "programming", "grad student lead author"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""

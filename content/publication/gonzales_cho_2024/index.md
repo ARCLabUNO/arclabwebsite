@@ -25,7 +25,7 @@ abstract = "Drug court programs were introduced in 1989 to reduce incarceration 
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["courts", "health", "drug courts"]
+tags = ["courts", "health", "drug courts", "grad student lead author"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""
