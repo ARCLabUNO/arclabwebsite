@@ -25,7 +25,7 @@ abstract = "Employment theoretically serves as a source of informal social contr
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["age", "recidivism", "employment"]
+tags = ["age", "recidivism", "employment", "reentry"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""

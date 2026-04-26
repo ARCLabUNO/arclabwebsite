@@ -25,7 +25,7 @@ abstract = "The purpose of this study was to examine how the COVID-19 pandemic c
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["institutional-corrections", "health"]
+tags = ["institutional corrections", "health"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""
