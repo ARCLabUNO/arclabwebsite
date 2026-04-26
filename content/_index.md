@@ -49,7 +49,7 @@ sections:
       text: |
         <div style="text-align:center; max-width:950px; margin:0 auto;">
           <h2>The ARC Lab Team</h2>
-          <img src="/media/homyphoto_edited.png" alt="ARC Lab group photo" style="max-width:850px; width:100%; height:auto; border-radius:12px; display:block; margin:1.5rem auto;">
+          <img src="/media/homyphoto_edited2.png" alt="ARC Lab group photo" style="max-width:850px; width:100%; height:auto; border-radius:12px; display:block; margin:1.5rem auto;">
           <p>
             The ARC Lab brings together faculty, research staff, and graduate researchers committed to advancing corrections research through collaborative, applied work.
           </p>
