@@ -1,10 +1,107 @@
+<style>
+.news-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem;
+}
+
+.news-header {
+  margin-bottom: 2rem;
+}
+
+.news-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.news-intro {
+  opacity: 0.8;
+  font-size: 1.05rem;
+}
+
+.news-featured {
+  margin-bottom: 2rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  background: #fff;
+}
+
+.news-featured a,
+.news-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.news-featured h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0.35rem 0 0.9rem;
+}
+
+.news-featured p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.news-date {
+  font-size: 0.92rem;
+  opacity: 0.7;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.news-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 1.2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  background: #fff;
+}
+
+.news-card h2 {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  margin: 0.35rem 0 0.65rem;
+}
+
+.news-card p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0;
+  opacity: 0.86;
+}
+
+@media (max-width: 900px) {
+  .news-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news-featured h2 {
+    font-size: 1.5rem;
+  }
+}
+</style>
+
 {{ define "main" }}
-<main class="container" style="max-width: 1200px; margin: 0 auto; padding: 3rem 1.25rem;">
-  
-  <header style="margin-bottom: 2rem;">
-    <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">{{ .Title }}</h1>
+<main class="container news-page">
+  <header class="news-header">
+    <h1>{{ .Title }}</h1>
     {{ with .Content }}
-      <div style="font-size: 1.05rem; opacity: 0.8;">{{ . }}</div>
+      <div class="news-intro">{{ . }}</div>
     {{ end }}
   </header>
 
@@ -12,52 +109,25 @@
   {{ $posts = $posts.ByDate.Reverse }}
 
   {{ with index $posts 0 }}
-    <article style="margin-bottom: 2rem; border: 1px solid #e5e7eb; border-radius: 18px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
-      <a href="{{ .RelPermalink }}" style="display: grid; grid-template-columns: 1.2fr 1fr; text-decoration: none; color: inherit;">
-        {{ with .Params.image }}
-          <div>
-            <img src="{{ . }}" alt="{{ $.Title }}" style="width: 100%; height: 100%; min-height: 340px; object-fit: cover; display: block;">
-          </div>
-        {{ end }}
-        <div style="padding: 2rem;">
-          <div style="font-size: 0.95rem; opacity: 0.7; margin-bottom: 0.75rem;">
-            {{ .Date.Format "January 2, 2006" }}
-          </div>
-          <h2 style="font-size: 2rem; line-height: 1.2; margin-bottom: 1rem;">
-            {{ .Title }}
-          </h2>
-          <div style="font-size: 1.05rem; line-height: 1.6; opacity: 0.9;">
-            {{ with .Summary }}{{ . | plainify | truncate 220 }}{{ end }}
-          </div>
-        </div>
+    <article class="news-featured">
+      <a href="{{ .RelPermalink }}">
+        <div class="news-date">{{ .Date.Format "January 2, 2006" }}</div>
+        <h2>{{ .Title }}</h2>
+        <p>{{ .Summary | plainify | truncate 240 }}</p>
       </a>
     </article>
   {{ end }}
 
-  <section>
-    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem;">
-      {{ range after 1 $posts }}
-        <article style="border: 1px solid #e5e7eb; border-radius: 18px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); background: #fff;">
-          <a href="{{ .RelPermalink }}" style="display: block; text-decoration: none; color: inherit; height: 100%;">
-            {{ with .Params.image }}
-              <img src="{{ . }}" alt="{{ $.Title }}" style="width: 100%; height: 220px; object-fit: cover; display: block;">
-            {{ end }}
-            <div style="padding: 1.1rem 1.1rem 1.25rem;">
-              <div style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 0.5rem;">
-                {{ .Date.Format "January 2, 2006" }}
-              </div>
-              <h2 style="font-size: 1.2rem; line-height: 1.3; margin-bottom: 0.7rem;">
-                {{ .Title }}
-              </h2>
-              <div style="font-size: 0.95rem; line-height: 1.55; opacity: 0.85;">
-                {{ with .Summary }}{{ . | plainify | truncate 120 }}{{ end }}
-              </div>
-            </div>
-          </a>
-        </article>
-      {{ end }}
-    </div>
+  <section class="news-grid">
+    {{ range after 1 $posts }}
+      <article class="news-card">
+        <a href="{{ .RelPermalink }}">
+          <div class="news-date">{{ .Date.Format "January 2, 2006" }}</div>
+          <h2>{{ .Title }}</h2>
+          <p>{{ .Summary | plainify | truncate 140 }}</p>
+        </a>
+      </article>
+    {{ end }}
   </section>
-
 </main>
 {{ end }}
