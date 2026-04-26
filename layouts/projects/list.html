@@ -1,6 +1,53 @@
+{{ define "main" }}
+<div class="universal-wrapper pt-3 projects-page">
+  <h1>{{ .Title }}</h1>
+
+  {{ with .Content }}
+    <div class="article-style">{{ . }}</div>
+  {{ end }}
+
+  {{ $pages := .Pages.ByDate.Reverse }}
+  {{ $current := where $pages "Params.category" "current" }}
+  {{ $completed := where $pages "Params.category" "completed" }}
+
+  {{ if gt (len $current) 0 }}
+    <section class="project-section">
+      <h2 class="project-section-title">Current Projects</h2>
+      <div class="project-card-grid">
+        {{ range $current }}
+          {{ partial "project-card.html" . }}
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+
+  {{ if gt (len $completed) 0 }}
+    <section class="project-section">
+      <h2 class="project-section-title">Completed Projects</h2>
+      <div class="project-card-grid">
+        {{ range $completed }}
+          {{ partial "project-card.html" . }}
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+</div>
+
 <style>
 .projects-page {
   max-width: 1200px;
+}
+
+.projects-page .article-style {
+  margin: 1rem 0 2rem;
+  max-width: 700px;
+}
+
+.projects-page .article-style p {
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 0;
 }
 
 .projects-page .project-section {
@@ -10,14 +57,6 @@
 .projects-page .project-section-title {
   margin: 0 0 1.25rem;
   color: #f9fafb;
-}
-
-.projects-page .project-intro {
-  margin: 1rem 0 2rem;
-  font-size: 1.05rem;
-  color: #cbd5e1;
-  max-width: 700px;
-  line-height: 1.6;
 }
 
 .projects-page .project-card-grid {
