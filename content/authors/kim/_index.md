@@ -79,4 +79,4 @@ user_groups:
   - Alumni
 ---
 
-Yujin Kim is an alumna of the School of Criminology and Criminal Justice at the University of Nebraska, Omaha. She is beginning her doctorate at George Mason University in Fall 2026. Her research interests include drug policy, the opioid overdose crisis, and criminal justice system responses to drug-related harms. Currently, Yujin is studying Drug-Induced Homicide (DIH) laws and police officers’ perception of the law.
+Yujin Kim is an alumna of the MA program in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. She is beginning her doctorate at George Mason University in Fall 2026. Her research interests include drug policy, the opioid overdose crisis, and criminal justice system responses to drug-related harms. Currently, Yujin is studying Drug-Induced Homicide (DIH) laws and police officers’ perception of the law.
