@@ -25,7 +25,7 @@ abstract = "A paucity of research has examined the prevalence of domestic and in
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["intimate partner violence", "evictions", "housing insecurity"]
+tags = ["intimate partner violence", "evictions", "housing insecurity", "victims"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""
