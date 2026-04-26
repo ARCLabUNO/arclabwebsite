@@ -25,7 +25,7 @@ abstract = "This study addresses two issues that challenge policy, practice, and
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["institutional-corrections", "restrictive housing", "methods-and-measurement"]
+tags = ["institutional corrections", "restrictive housing", "methods-and-measurement"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""
