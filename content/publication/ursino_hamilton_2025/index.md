@@ -9,7 +9,7 @@ authors = ["ursino", "admin"]
 publication = "*Advancing Research in Corrections Lab*"
   
 # Publication types (2 = Journal article; 3 = preprint; 4 = report; 6 = book chapter)
-publication_types = ["4"]
+publication_types = ["report"]
   
 # Date the paper was published.
 date = 2025-10-31T10:00:00Z
@@ -25,7 +25,7 @@ abstract = "Decarceration is a national effort to shrink prison populations whil
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["corrections", "decarceration"]
+tags = ["institutional corrections", "decarceration"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""
