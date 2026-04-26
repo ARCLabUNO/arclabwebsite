@@ -1,9 +1,8 @@
 ---
 title: "Congratulations Yujin!"
 date: 2026-04-16
+summary: "Congratulations to Yujin Kim, who successfully defended her thesis on April 16th."
 ---
-
-Congratulations to [Yujin Kim](https://arcorrectionslab.org/author/yujin-kim/), who successfully defended her thesis on April 16th.
 
 <!--more-->
 
