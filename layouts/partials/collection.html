@@ -1,0 +1,28 @@
+{{ $cols := .Params.design.columns | default "1" }}
+
+<div class="custom-collection custom-cols-{{ $cols }}">
+  {{ with .Params.content.title }}
+    <div class="collection-header">
+      <h2>{{ . }}</h2>
+      {{ with $.Params.content.archive }}
+        {{ if .enable }}
+          <a href="{{ .link }}">{{ .text }}</a>
+        {{ end }}
+      {{ end }}
+    </div>
+  {{ end }}
+
+  <div class="collection-grid">
+    {{ range first .Params.content.count (where site.RegularPages "Type" .Params.content.page_type) }}
+      <div class="collection-item">
+        <a href="{{ .RelPermalink }}">
+          {{ with .Params.image }}
+            <img src="{{ . }}" alt="">
+          {{ end }}
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Summary }}</p>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</div>
