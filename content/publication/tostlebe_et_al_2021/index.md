@@ -25,7 +25,7 @@ abstract = "Criminologists largely rely on national deidentified data sources to
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["National Death Index", "gang membership", "methods and measurement"]
+tags = ["National Death Index", "gang-membership", "methods-and-measurement"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""

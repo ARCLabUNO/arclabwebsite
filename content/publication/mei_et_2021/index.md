@@ -25,7 +25,7 @@ abstract = "Since their seminal work, Andrews and Bonta outlined the Central Eig
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["juvenile justice", "risk-need-assessment"]
+tags = ["juvenile-justice", "risk-need-assessment"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""

@@ -25,7 +25,7 @@ abstract = "Restorative justice diversion programs provide an alternative to tra
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["juvenile justice"]
+tags = ["juvenile-justice"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""

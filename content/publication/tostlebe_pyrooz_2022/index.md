@@ -25,7 +25,7 @@ abstract = "A top priority of prison authorities is maintaining a safe and order
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["gang membership", "misconduct", "procedural justice", "legitimacy"]
+tags = ["gang-membership", "misconduct", "procedural justice", "legitimacy"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""

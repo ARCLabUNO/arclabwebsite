@@ -25,7 +25,7 @@ abstract = "An abundance of research has established Adverse Childhood Experienc
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["juvenile justice", "recidivism"]
+tags = ["juvenile-justice", "recidivism"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""

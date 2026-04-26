@@ -25,7 +25,7 @@ abstract = "Risk assessments have been constructed using a variety of algorithms
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["risk-needs-assessment", "machine learning", "methods and measurement"]
+tags = ["risk-needs-assessment", "machine learning", "methods-and-measurement"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""

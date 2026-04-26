@@ -25,7 +25,7 @@ abstract = "Risk-needs assessments (RNAs) assist correctional staff in assigning
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["risk-needs-assessment", "recidivism", "juvenile justice"]
+tags = ["risk-needs-assessment", "recidivism", "juvenile-justice"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""

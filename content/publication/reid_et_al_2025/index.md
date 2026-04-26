@@ -25,7 +25,7 @@ abstract = "Amid the proliferation of synthetic opioids, prosecutors have increa
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["drug-induced homicide", "drug law enforcement", "policing"]
+tags = ["drug-induced homicide", "policing"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""

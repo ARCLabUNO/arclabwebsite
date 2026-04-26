@@ -25,7 +25,7 @@ abstract = "In response to growing concerns among stakeholders and policy makers
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["institutional corrections", "crowding"]
+tags = ["institutional-corrections", "crowding"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""

@@ -25,7 +25,7 @@ abstract = "In the assessment world, risk determines “who” to treat and need
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["juvenile justice", "risk-needs-assessment", "methods and measurement"]
+tags = ["juvenile-justice", "risk-needs-assessment", "methods-and-measurement"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""

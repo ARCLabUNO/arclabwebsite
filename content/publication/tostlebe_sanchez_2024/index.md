@@ -25,7 +25,7 @@ abstract = "Gang membership has a robust relationship with crime and violence, l
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["gang membership", "individual differences", "selection"]
+tags = ["gang-membership", "individual differences", "selection"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""

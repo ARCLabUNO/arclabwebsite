@@ -25,7 +25,7 @@ abstract = "The issue of psychopathology among gang populations is controversial
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["gang membership", "psychopathic traits", "selection", "facilitation"]
+tags = ["gang-membership", "psychopathic traits", "selection", "facilitation"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""

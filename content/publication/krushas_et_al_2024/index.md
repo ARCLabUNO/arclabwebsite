@@ -25,7 +25,7 @@ abstract = "While risk instruments are consistently used to aid classification a
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["juvenile justice", "recidivism", "risk-need-assessment"]
+tags = ["juvenile-justice", "recidivism", "risk-need-assessment"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""

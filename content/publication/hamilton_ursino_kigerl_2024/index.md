@@ -25,7 +25,7 @@ abstract = "Used to reduce detention, bail/bond, and jail, pretrial risk assessm
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["pretrial", "community corrections", "risk-needs-assessment"]
+tags = ["pretrial", "community-corrections", "risk-needs-assessment"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""
