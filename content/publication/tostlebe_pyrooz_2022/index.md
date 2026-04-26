@@ -9,7 +9,7 @@ authors = ["tostlebe", "David Pyrooz"]
 publication = "*Criminology*"
   
 # Publication types (2 = Journal article; 3 = preprint; 4 = report; 6 = book chapter)
-publication_types = ["2"]
+publication_types = ["article-journal"]
   
 # Date the paper was published.
 date = 2022-08-22T10:00:00Z
