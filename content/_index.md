@@ -93,7 +93,7 @@ sections:
       page_type: post
       archive:
         enable: true
-       text: See more news
+        text: See more news
         link: /news/
     design:
       view: card
@@ -109,7 +109,7 @@ sections:
       text:
       count: 3
       offset: 0
-    order: desc
+      order: desc
       page_type: projects
     design:
       view: card
