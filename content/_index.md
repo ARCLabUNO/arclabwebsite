@@ -85,22 +85,30 @@ sections:
   - block: collection
     content:
       title: Latest News
-      filters:
-        - post
-      count: 4
+      subtitle:
+      text:
+      count: 2
+      offset: 0
+      order: desc
+      page_type: post
     design:
       view: card
-      columns: 2
+      columns: '2'
+      spacing:
+        padding: ['40px', '0', '48px', '0']
 
   - block: collection
     content:
       title: Featured Projects
-      filters:
-        - projects
+      subtitle:
+      text:
       count: 3
+      offset: 0
+      order: desc
+      page_type: projects
     design:
       view: card
-      columns: 3
+      columns: '3'
       background:
         color:
           light: '#f8fafc'
