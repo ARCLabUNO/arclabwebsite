@@ -48,6 +48,9 @@ taxonomies:
   author: authors
 markup:
   _merge: deep
+  goldmark:       # ← added
+    renderer:     # ← added
+      unsafe: true  # ← added
 related:
   threshold: 80
   includeNewer: true
