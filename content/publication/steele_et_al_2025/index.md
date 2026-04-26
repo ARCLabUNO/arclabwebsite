@@ -25,7 +25,7 @@ abstract = "Police officers must approach volatile situations that may escalate 
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["training", "policing, "police use-of-force", "de-escalation", "police reform"]
+tags = ["training", "policing", "police use-of-force", "de-escalation", "police reform"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""
