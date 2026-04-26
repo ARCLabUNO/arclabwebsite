@@ -94,7 +94,6 @@ sections:
     design:
       view: card
       columns: '2'
-      css_class: news-grid
       spacing:
         padding: ['40px', '0', '48px', '0']
 
@@ -110,7 +109,6 @@ sections:
     design:
       view: card
       columns: '3'
-      css_class: projects-grid
       background:
         color:
           light: '#f8fafc'
