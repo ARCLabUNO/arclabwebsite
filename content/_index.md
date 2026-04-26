@@ -48,12 +48,10 @@ sections:
       subtitle: ''
       text: |
         <div style="text-align:center; max-width:950px; margin:0 auto;">
-          <h2>Research and collaboration</h2>
+          <h2>The ARC Lab Team</h2>
+          <img src="/media/homeyphoto_edited2.jpg" alt="ARC Lab group photo" style="max-width:850px; width:100%; height:auto; border-radius:12px; display:block; margin:1.5rem auto;">
           <p>
-            ARC actively collaborates with SCCJ faculty, <a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/nebraska-center-for-justice-research/index.php">Nebraska Center for Justice Research (NCJR)</a>, <a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/juvenile-justice-institute/index.php">Juvenile Justice Institute (JJI)</a> staff, community partners, and state and federal agencies to bridge the gap between research and practice. These partnerships support a multidisciplinary approach and the development of evidence-based solutions that improve both institutional and community outcomes.
-          </p>
-          <p>
-            ARC is also committed to providing graduate students with hands-on training in data-driven research, specialized skills essential for understanding corrections and reentry, and valuable networking opportunities that strengthen their academic and professional development. Through real-world research and evaluation projects, students are equipped to contribute meaningfully to the field while helping shape future policy and practice.
+            The ARC Lab brings together faculty, research staff, and graduate researchers committed to advancing corrections research through collaborative, applied work.
           </p>
         </div>
     design:
@@ -67,10 +65,12 @@ sections:
       subtitle: ''
       text: |
         <div style="text-align:center; max-width:950px; margin:0 auto;">
-          <h2>The ARC Lab Team</h2>
-          <img src="/media/homyphoto_edited2.jpg" alt="ARC Lab group photo" style="max-width:850px; width:100%; height:auto; border-radius:12px; display:block; margin:1.5rem auto;">
+          <h2>Research and collaboration</h2>
           <p>
-            The ARC Lab brings together faculty, research staff, and graduate researchers committed to advancing corrections research through collaborative, applied work.
+            ARC actively collaborates with SCCJ faculty, <a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/nebraska-center-for-justice-research/index.php">Nebraska Center for Justice Research (NCJR)</a>, <a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/juvenile-justice-institute/index.php">Juvenile Justice Institute (JJI)</a> staff, community partners, and state and federal agencies to bridge the gap between research and practice. These partnerships support a multidisciplinary approach and the development of evidence-based solutions that improve both institutional and community outcomes.
+          </p>
+          <p>
+            ARC is also committed to providing graduate students with hands-on training in data-driven research, specialized skills essential for understanding corrections and reentry, and valuable networking opportunities that strengthen their academic and professional development. Through real-world research and evaluation projects, students are equipped to contribute meaningfully to the field while helping shape future policy and practice.
           </p>
         </div>
     design:
