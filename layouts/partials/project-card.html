@@ -1,0 +1,54 @@
+{{ $status := lower (.Params.category | default "current") }}
+{{ $img := .Resources.GetMatch "featured*" }}
+
+<article
+  class="project-card"
+  data-status="{{ $status }}"
+  data-search="{{ lower (printf "%s %s %s %s %s" .Title (.Params.summary | default "") (.Params.subtitle | default "") (.Params.investigators | default "") (.Params.funder | default "")) }}"
+>
+  {{ if $img }}
+    <a href="{{ .RelPermalink }}" class="project-card-image-link">
+      <img src="{{ $img.RelPermalink }}" alt="{{ .Title }}" class="project-card-image">
+    </a>
+  {{ end }}
+
+  <div class="project-card-body">
+    <div class="project-card-top">
+      <span class="project-status-badge status-{{ $status }}">
+        {{ if eq $status "completed" }}Completed{{ else }}Current{{ end }}
+      </span>
+
+      {{ with .Lastmod }}
+        <p class="project-card-date">Updated {{ .Format "Jan 2, 2006" }}</p>
+      {{ else }}
+        {{ with .Date }}
+          <p class="project-card-date">Updated {{ .Format "Jan 2, 2006" }}</p>
+        {{ end }}
+      {{ end }}
+    </div>
+
+    <h2 class="project-card-title">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h2>
+
+    {{ with .Params.subtitle }}
+      <p class="project-card-subtitle">{{ . }}</p>
+    {{ end }}
+
+    {{ with .Params.investigators }}
+      <p class="project-card-meta"><strong>Principal Investigator(s):</strong> {{ . }}</p>
+    {{ end }}
+
+    {{ with .Params.funder }}
+      <p class="project-card-meta"><strong>Supported By:</strong> {{ . }}</p>
+    {{ end }}
+
+    {{ with .Params.summary }}
+      <p class="project-card-summary">{{ . }}</p>
+    {{ end }}
+
+    <div class="project-card-footer">
+      <a href="{{ .RelPermalink }}" class="project-read-more">Read More</a>
+    </div>
+  </div>
+</article>

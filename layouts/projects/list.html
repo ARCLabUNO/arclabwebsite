@@ -1,0 +1,342 @@
+{{ define "main" }}
+<div class="universal-wrapper pt-3">
+  <h1>{{ .Title }}</h1>
+
+  {{ with .Content }}
+    <div class="article-style">{{ . }}</div>
+  {{ end }}
+
+  <div class="project-controls">
+    <div class="project-search">
+      <input type="text" id="projectSearch" placeholder="Search projects...">
+    </div>
+
+    <div class="project-select-wrap">
+      <label for="projectStatusFilter" class="project-select-label">Filter by status</label>
+      <select id="projectStatusFilter" class="project-status-select">
+        <option value="all">All Projects</option>
+        <option value="current">Current</option>
+        <option value="completed">Completed</option>
+      </select>
+    </div>
+
+    <div class="project-results-count" id="projectResultsCount"></div>
+  </div>
+
+  {{ $pages := .Pages.ByDate.Reverse }}
+  {{ $current := where $pages "Params.category" "current" }}
+  {{ $completed := where $pages "Params.category" "completed" }}
+
+  {{ if gt (len $current) 0 }}
+    <section class="project-section" data-status-group="current">
+      <h2 class="project-section-title">Current Projects</h2>
+      <div class="project-card-grid">
+        {{ range $current }}
+          {{ partial "project-card.html" . }}
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+
+  {{ if gt (len $completed) 0 }}
+    <section class="project-section" data-status-group="completed">
+      <h2 class="project-section-title">Completed Projects</h2>
+      <div class="project-card-grid">
+        {{ range $completed }}
+          {{ partial "project-card.html" . }}
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+
+  <div class="project-no-results" id="projectNoResults">
+    No projects match your current search or status filter.
+  </div>
+</div>
+
+<style>
+.project-controls {
+  margin: 2rem 0 2.5rem;
+  padding: 1.25rem;
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  display: grid;
+  gap: 1rem;
+}
+
+.project-search input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  background: #1f2937;
+  color: #f9fafb;
+  font-size: 1rem;
+}
+
+.project-search input:focus,
+.project-status-select:focus {
+  outline: none;
+  border-color: #1f3a5f;
+  box-shadow: 0 0 0 3px rgba(31, 58, 95, 0.25);
+}
+
+.project-select-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-width: 320px;
+}
+
+.project-select-label {
+  color: #cbd5e1;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.project-status-select {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  background: #1f2937;
+  color: #f9fafb;
+  font-size: 0.96rem;
+}
+
+.project-results-count {
+  color: #cbd5e1;
+  font-size: 0.92rem;
+}
+
+.project-section {
+  margin-top: 2.5rem;
+}
+
+.project-section-title {
+  margin: 0 0 1.25rem;
+  color: #111827;
+}
+
+.project-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: #111827;
+  color: #f9fafb;
+  border: 1px solid #1f2937;
+  border-top: 4px solid #1f3a5f;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.22);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card.is-hidden {
+  display: none;
+}
+
+.project-card-image-link {
+  display: block;
+}
+
+.project-card-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card-body {
+  padding: 1.25rem 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.project-status-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.project-status-badge.status-current {
+  background: rgba(34, 197, 94, 0.14);
+  color: #86efac;
+  border: 1px solid rgba(34, 197, 94, 0.28);
+}
+
+.project-status-badge.status-completed {
+  background: rgba(148, 163, 184, 0.14);
+  color: #cbd5e1;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.project-card-date {
+  color: #94a3b8;
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+.project-card-title {
+  font-size: 1.25rem;
+  line-height: 1.35;
+  margin: 0 0 0.75rem;
+}
+
+.project-card-title a {
+  color: #f9fafb;
+  text-decoration: none;
+}
+
+.project-card-title a:hover {
+  color: #cbd5e1;
+}
+
+.project-card-subtitle {
+  color: #dbeafe;
+  margin: 0 0 0.9rem;
+  line-height: 1.5;
+  font-size: 0.98rem;
+}
+
+.project-card-meta {
+  color: #d1d5db;
+  margin: 0 0 0.55rem;
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+.project-card-summary {
+  color: #e5e7eb;
+  line-height: 1.6;
+  margin: 0.75rem 0 1rem;
+}
+
+.project-card-footer {
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.project-read-more {
+  display: inline-block;
+  background: #1f3a5f;
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.project-read-more:hover {
+  background: #162944;
+  text-decoration: none;
+}
+
+.project-no-results {
+  display: none;
+  margin-top: 2rem;
+  color: #475569;
+  text-align: center;
+}
+
+.project-no-results.show {
+  display: block;
+}
+
+.project-section.is-hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .project-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-select-wrap {
+    max-width: 100%;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('projectSearch');
+  const statusSelect = document.getElementById('projectStatusFilter');
+  const cards = document.querySelectorAll('.project-card');
+  const sections = document.querySelectorAll('.project-section');
+  const resultsCount = document.getElementById('projectResultsCount');
+  const noResults = document.getElementById('projectNoResults');
+
+  let activeSearch = '';
+  let activeStatus = 'all';
+
+  function updateResults() {
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const text = card.dataset.search || '';
+      const status = (card.dataset.status || '').trim().toLowerCase();
+
+      const matchesSearch = !activeSearch || text.includes(activeSearch);
+      const matchesStatus = activeStatus === 'all' || status === activeStatus;
+
+      if (matchesSearch && matchesStatus) {
+        card.classList.remove('is-hidden');
+        visibleCount += 1;
+      } else {
+        card.classList.add('is-hidden');
+      }
+    });
+
+    sections.forEach(section => {
+      const visibleCards = section.querySelectorAll('.project-card:not(.is-hidden)');
+      section.classList.toggle('is-hidden', visibleCards.length === 0);
+    });
+
+    if (resultsCount) {
+      resultsCount.textContent = 'Showing ' + visibleCount + ' project' + (visibleCount === 1 ? '' : 's');
+    }
+
+    if (noResults) {
+      noResults.classList.toggle('show', visibleCount === 0);
+    }
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      activeSearch = this.value.trim().toLowerCase();
+      updateResults();
+    });
+  }
+
+  if (statusSelect) {
+    statusSelect.addEventListener('change', function() {
+      activeStatus = this.value.toLowerCase();
+      updateResults();
+    });
+  }
+
+  updateResults();
+});
+</script>
+{{ end }}
