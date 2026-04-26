@@ -75,4 +75,4 @@ user_groups:
   - Alumni
 ---
 
-Addie Kobie is an alumna of the SCCJ PhD program. Her research interests include corrections and juvenile delinquency.
+Addie Kobie is an alumna of the PhD program  in the School of Criminology and Criminal Justice at University of Nebraska at Omaha. Her research interests include corrections and juvenile delinquency.
