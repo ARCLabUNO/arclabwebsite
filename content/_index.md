@@ -87,10 +87,14 @@ sections:
       title: Latest News
       subtitle:
       text:
-      count: 2
+      count: 4
       offset: 0
       order: desc
       page_type: post
+      archive:
+        enable: true
+        text: See more news
+        link: news/
     design:
       view: card
       columns: '2'
