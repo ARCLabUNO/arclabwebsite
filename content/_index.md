@@ -93,11 +93,12 @@ sections:
       page_type: post
       archive:
         enable: true
-        text: See more news
-        link: news/
+       text: See more news
+        link: /news/
     design:
       view: card
       columns: '2'
+      css_class: news-grid
       spacing:
         padding: ['40px', '0', '48px', '0']
 
@@ -108,11 +109,12 @@ sections:
       text:
       count: 3
       offset: 0
-      order: desc
+    order: desc
       page_type: projects
     design:
       view: card
       columns: '3'
+      css_class: projects-grid
       background:
         color:
           light: '#f8fafc'

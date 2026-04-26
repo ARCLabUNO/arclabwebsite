@@ -1,13 +1,56 @@
-// Make page header alignment consistent with widget page header alignment
 .universal-wrapper h1 {
   text-align: center;
 }
 
-// Center the CTA shortcode button
 .cta-group {
   justify-content: center;
 }
 
 .smaller-image {
-  height: 500px;  /* Adjust this value to control the image height */
+  height: 500px;
+}
+
+// Homepage collection grid fixes
+.news-grid .row,
+.projects-grid .row {
+  display: grid !important;
+  gap: 1.5rem;
+}
+
+.news-grid .row {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.projects-grid .row {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+// Make section titles sit above the cards
+.news-grid .section-heading,
+.projects-grid .section-heading {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+// Neutralize Bootstrap column sizing so grid can win
+.news-grid .row > div,
+.projects-grid .row > div {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: unset !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+@media (max-width: 991.98px) {
+  .news-grid .row,
+  .projects-grid .row {
+    grid-template-columns: 1fr;
+  }
+
+  .news-grid .section-heading,
+  .projects-grid .section-heading {
+    grid-column: 1 / -1;
+  }
 }
