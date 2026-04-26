@@ -6,29 +6,12 @@
     <div class="article-style">{{ . }}</div>
   {{ end }}
 
-  <div class="project-controls">
-    <div class="project-search">
-      <input type="text" id="projectSearch" placeholder="Search projects...">
-    </div>
-
-    <div class="project-select-wrap">
-      <label for="projectStatusFilter" class="project-select-label">Filter by status</label>
-      <select id="projectStatusFilter" class="project-status-select">
-        <option value="all">All Projects</option>
-        <option value="current">Current</option>
-        <option value="completed">Completed</option>
-      </select>
-    </div>
-
-    <div class="project-results-count" id="projectResultsCount"></div>
-  </div>
-
   {{ $pages := .Pages.ByDate.Reverse }}
   {{ $current := where $pages "Params.category" "current" }}
   {{ $completed := where $pages "Params.category" "completed" }}
 
   {{ if gt (len $current) 0 }}
-    <section class="project-section" data-status-group="current">
+    <section class="project-section">
       <h2 class="project-section-title">Current Projects</h2>
       <div class="project-card-grid">
         {{ range $current }}
@@ -39,7 +22,7 @@
   {{ end }}
 
   {{ if gt (len $completed) 0 }}
-    <section class="project-section" data-status-group="completed">
+    <section class="project-section">
       <h2 class="project-section-title">Completed Projects</h2>
       <div class="project-card-grid">
         {{ range $completed }}
@@ -48,69 +31,11 @@
       </div>
     </section>
   {{ end }}
-
-  <div class="project-no-results" id="projectNoResults">
-    No projects match your current search or status filter.
-  </div>
 </div>
 
 <style>
 .projects-page {
   max-width: 1200px;
-}
-
-.projects-page .project-controls {
-  margin: 2rem 0 2.5rem;
-  padding: 1.25rem;
-  background: #111827;
-  border: 1px solid #1f2937;
-  border-radius: 12px;
-  display: grid;
-  gap: 1rem;
-}
-
-.projects-page .project-search input {
-  width: 100%;
-  padding: 0.85rem 1rem;
-  border-radius: 8px;
-  border: 1px solid #374151;
-  background: #1f2937;
-  color: #f9fafb;
-  font-size: 1rem;
-}
-
-.projects-page .project-search input:focus,
-.projects-page .project-status-select:focus {
-  outline: none;
-  border-color: #1f3a5f;
-  box-shadow: 0 0 0 3px rgba(31, 58, 95, 0.25);
-}
-
-.projects-page .project-select-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  max-width: 320px;
-}
-
-.projects-page .project-select-label {
-  color: #cbd5e1;
-  font-size: 0.92rem;
-  font-weight: 600;
-}
-
-.projects-page .project-status-select {
-  padding: 0.8rem 1rem;
-  border-radius: 8px;
-  border: 1px solid #374151;
-  background: #1f2937;
-  color: #f9fafb;
-  font-size: 0.96rem;
-}
-
-.projects-page .project-results-count {
-  color: #cbd5e1;
-  font-size: 0.92rem;
 }
 
 .projects-page .project-section {
@@ -143,10 +68,6 @@
   min-width: 0;
   height: 100%;
   margin: 0;
-}
-
-.projects-page .project-card.is-hidden {
-  display: none;
 }
 
 .projects-page .project-card-image-link {
@@ -267,21 +188,6 @@
   text-decoration: none;
 }
 
-.projects-page .project-no-results {
-  display: none;
-  margin-top: 2rem;
-  color: #475569;
-  text-align: center;
-}
-
-.projects-page .project-no-results.show {
-  display: block;
-}
-
-.projects-page .project-section.is-hidden {
-  display: none;
-}
-
 @media (max-width: 991px) {
   .projects-page .project-card-grid {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -293,75 +199,9 @@
     grid-template-columns: 1fr;
   }
 
-  .projects-page .project-select-wrap {
-    max-width: 100%;
-  }
-
   .projects-page .project-card-image {
     height: 220px;
   }
 }
 </style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const searchInput = document.getElementById('projectSearch');
-  const statusSelect = document.getElementById('projectStatusFilter');
-  const cards = document.querySelectorAll('.project-card');
-  const sections = document.querySelectorAll('.project-section');
-  const resultsCount = document.getElementById('projectResultsCount');
-  const noResults = document.getElementById('projectNoResults');
-
-  let activeSearch = '';
-  let activeStatus = 'all';
-
-  function updateResults() {
-    let visibleCount = 0;
-
-    cards.forEach(card => {
-      const text = card.dataset.search || '';
-      const status = (card.dataset.status || '').trim().toLowerCase();
-
-      const matchesSearch = !activeSearch || text.includes(activeSearch);
-      const matchesStatus = activeStatus === 'all' || status === activeStatus;
-
-      if (matchesSearch && matchesStatus) {
-        card.classList.remove('is-hidden');
-        visibleCount += 1;
-      } else {
-        card.classList.add('is-hidden');
-      }
-    });
-
-    sections.forEach(section => {
-      const visibleCards = section.querySelectorAll('.project-card:not(.is-hidden)');
-      section.classList.toggle('is-hidden', visibleCards.length === 0);
-    });
-
-    if (resultsCount) {
-      resultsCount.textContent = 'Showing ' + visibleCount + ' project' + (visibleCount === 1 ? '' : 's');
-    }
-
-    if (noResults) {
-      noResults.classList.toggle('show', visibleCount === 0);
-    }
-  }
-
-  if (searchInput) {
-    searchInput.addEventListener('input', function() {
-      activeSearch = this.value.trim().toLowerCase();
-      updateResults();
-    });
-  }
-
-  if (statusSelect) {
-    statusSelect.addEventListener('change', function() {
-      activeStatus = this.value.toLowerCase();
-      updateResults();
-    });
-  }
-
-  updateResults();
-});
-</script>
 {{ end }}

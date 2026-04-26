@@ -1,11 +1,7 @@
 {{ $status := lower (.Params.category | default "current") }}
 {{ $img := .Resources.GetMatch "featured*" }}
 
-<article
-  class="project-card"
-  data-status="{{ $status }}"
-  data-search="{{ lower (printf "%s %s %s %s %s" .Title (.Params.summary | default "") (.Params.subtitle | default "") (.Params.investigators | default "") (.Params.funder | default "")) }}"
->
+<article class="project-card">
   {{ if $img }}
     <a href="{{ .RelPermalink }}" class="project-card-image-link">
       <img src="{{ $img.RelPermalink }}" alt="{{ .Title }}" class="project-card-image">
