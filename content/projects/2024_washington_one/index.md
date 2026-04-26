@@ -1,10 +1,13 @@
 ---
-title: Washington offender needs evaluation 2.0 (2024-2025)
+title: "Washington offender needs evaluation 2.0 (2024-2025)"
 date: 2024-01-01
-categories: ["current"]
+lastmod: 2026-04-25
+category: "current"
+subtitle: ""
+investigators: "Dr. Zachary Hamilton"
+funder: ""
+summary: "In 2017 the Washington State Department of Corrections (WADOC) implemented their Offender Needs Evaluation (ONE), which is used to assess the recidivism risk and programming needs of all individuals supervised in prison facilities and the community."
 ---
-
-Principal Investigator: Dr. Zachary Hamilton
 
 <!--more-->
 
