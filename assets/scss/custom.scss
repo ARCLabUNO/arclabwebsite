@@ -3,3 +3,23 @@
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+
+/* Force 2-column grid for news posts */
+.home-section .isotope-item {
+  width: 50% !important;
+}
+
+/* Force 3-column grid for featured projects */
+section[id*="project"] .isotope-item,
+section[id*="project"] .col-12 {
+  width: 33.333% !important;
+  flex: 0 0 33.333% !important;
+  max-width: 33.333% !important;
+}
+
+/* Full-width GIF container */
+.full-width-gif .container {
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
