@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="universal-wrapper pt-3">
+<div class="universal-wrapper pt-3 projects-page">
   <h1>{{ .Title }}</h1>
 
   {{ with .Content }}
@@ -55,7 +55,11 @@
 </div>
 
 <style>
-.project-controls {
+.projects-page {
+  max-width: 1200px;
+}
+
+.projects-page .project-controls {
   margin: 2rem 0 2.5rem;
   padding: 1.25rem;
   background: #111827;
@@ -65,7 +69,7 @@
   gap: 1rem;
 }
 
-.project-search input {
+.projects-page .project-search input {
   width: 100%;
   padding: 0.85rem 1rem;
   border-radius: 8px;
@@ -75,27 +79,27 @@
   font-size: 1rem;
 }
 
-.project-search input:focus,
-.project-status-select:focus {
+.projects-page .project-search input:focus,
+.projects-page .project-status-select:focus {
   outline: none;
   border-color: #1f3a5f;
   box-shadow: 0 0 0 3px rgba(31, 58, 95, 0.25);
 }
 
-.project-select-wrap {
+.projects-page .project-select-wrap {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
   max-width: 320px;
 }
 
-.project-select-label {
+.projects-page .project-select-label {
   color: #cbd5e1;
   font-size: 0.92rem;
   font-weight: 600;
 }
 
-.project-status-select {
+.projects-page .project-status-select {
   padding: 0.8rem 1rem;
   border-radius: 8px;
   border: 1px solid #374151;
@@ -104,27 +108,28 @@
   font-size: 0.96rem;
 }
 
-.project-results-count {
+.projects-page .project-results-count {
   color: #cbd5e1;
   font-size: 0.92rem;
 }
 
-.project-section {
-  margin-top: 2.5rem;
+.projects-page .project-section {
+  margin-top: 2.75rem;
 }
 
-.project-section-title {
+.projects-page .project-section-title {
   margin: 0 0 1.25rem;
   color: #111827;
 }
 
-.project-card-grid {
+.projects-page .project-card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 2rem;
+  align-items: stretch;
 }
 
-.project-card {
+.projects-page .project-card {
   background: #111827;
   color: #f9fafb;
   border: 1px solid #1f2937;
@@ -134,31 +139,39 @@
   box-shadow: 0 6px 22px rgba(0,0,0,0.22);
   display: flex;
   flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  margin: 0;
 }
 
-.project-card.is-hidden {
+.projects-page .project-card.is-hidden {
   display: none;
 }
 
-.project-card-image-link {
+.projects-page .project-card-image-link {
   display: block;
+  width: 100%;
+  flex-shrink: 0;
 }
 
-.project-card-image {
+.projects-page .project-card-image {
   width: 100%;
-  height: 220px;
+  height: 240px;
   object-fit: cover;
   display: block;
+  margin: 0;
 }
 
-.project-card-body {
+.projects-page .project-card-body {
   padding: 1.25rem 1.25rem 1.5rem;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
-.project-card-top {
+.projects-page .project-card-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -167,7 +180,7 @@
   flex-wrap: wrap;
 }
 
-.project-status-badge {
+.projects-page .project-status-badge {
   display: inline-flex;
   align-items: center;
   border-radius: 999px;
@@ -176,67 +189,69 @@
   font-weight: 700;
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
-.project-status-badge.status-current {
+.projects-page .project-status-badge.status-current {
   background: rgba(59, 130, 246, 0.14);
   color: #93c5fd;
   border: 1px solid rgba(59, 130, 246, 0.28);
 }
 
-.project-status-badge.status-completed {
+.projects-page .project-status-badge.status-completed {
   background: rgba(148, 163, 184, 0.14);
   color: #cbd5e1;
   border: 1px solid rgba(148, 163, 184, 0.25);
 }
 
-.project-card-date {
+.projects-page .project-card-date {
   color: #94a3b8;
   font-size: 0.88rem;
   margin: 0;
 }
 
-.project-card-title {
+.projects-page .project-card-title {
   font-size: 1.25rem;
   line-height: 1.35;
   margin: 0 0 0.75rem;
+  word-break: break-word;
 }
 
-.project-card-title a {
+.projects-page .project-card-title a {
   color: #f9fafb;
   text-decoration: none;
 }
 
-.project-card-title a:hover {
+.projects-page .project-card-title a:hover {
   color: #cbd5e1;
 }
 
-.project-card-subtitle {
+.projects-page .project-card-subtitle {
   color: #dbeafe;
   margin: 0 0 0.9rem;
   line-height: 1.5;
   font-size: 0.98rem;
 }
 
-.project-card-meta {
+.projects-page .project-card-meta {
   color: #d1d5db;
   margin: 0 0 0.55rem;
   line-height: 1.55;
   font-size: 0.95rem;
 }
 
-.project-card-summary {
+.projects-page .project-card-summary {
   color: #e5e7eb;
   line-height: 1.6;
   margin: 0.75rem 0 1rem;
 }
 
-.project-card-footer {
+.projects-page .project-card-footer {
   margin-top: auto;
   padding-top: 0.5rem;
 }
 
-.project-read-more {
+.projects-page .project-read-more {
   display: inline-block;
   background: #1f3a5f;
   color: #fff !important;
@@ -247,33 +262,43 @@
   font-weight: 600;
 }
 
-.project-read-more:hover {
+.projects-page .project-read-more:hover {
   background: #162944;
   text-decoration: none;
 }
 
-.project-no-results {
+.projects-page .project-no-results {
   display: none;
   margin-top: 2rem;
   color: #475569;
   text-align: center;
 }
 
-.project-no-results.show {
+.projects-page .project-no-results.show {
   display: block;
 }
 
-.project-section.is-hidden {
+.projects-page .project-section.is-hidden {
   display: none;
 }
 
+@media (max-width: 991px) {
+  .projects-page .project-card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
-  .project-card-grid {
+  .projects-page .project-card-grid {
     grid-template-columns: 1fr;
   }
 
-  .project-select-wrap {
+  .projects-page .project-select-wrap {
     max-width: 100%;
+  }
+
+  .projects-page .project-card-image {
+    height: 220px;
   }
 }
 </style>
