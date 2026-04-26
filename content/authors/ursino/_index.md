@@ -84,7 +84,7 @@ user_groups:
   - Research Scientists
 ---
 
-John Ursino is a research specialist in the Lab. His research interests focus on evaluating and constructing risk-need assessments, addressing prison and jail overcrowding, and advancing correctional policy reform. He has assisted in creating a pre-trial risk assessment for King County, Washington; evaluating prison crowding within Nebraska facilities; conduct outcome evaluations of prison programs and examined strategies to reduce bias within risk-need assessments. His work has appeared in journals such as *Justice Quarterly*, *Crime and Delinquency*, and *Journal of Criminal Justice*.
+John Ursino is a research specialist in the ARC Lab. His research interests focus on evaluating and constructing risk-need assessments, addressing prison and jail overcrowding, and advancing correctional policy reform. He has assisted in creating a pre-trial risk assessment for King County, Washington; evaluating prison crowding within Nebraska facilities; conduct outcome evaluations of prison programs and examined strategies to reduce bias within risk-need assessments. His work has appeared in journals such as *Justice Quarterly*, *Crime and Delinquency*, and *Journal of Criminal Justice*.
 
 John’s ongoing projects include:
 1) **Decarceration Policy in Washington State**: Longitudinal analysis of strategies to reduce incarceration rates without compromising public safety.
