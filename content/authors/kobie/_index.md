@@ -2,9 +2,6 @@
 # Display name
 title: Addison Kobie
 
-# Weight controls the order in lists (lower = shown first)
-weight: 1
-
 # Full Name (for SEO)
 first_name: Addison
 last_name: Kobie
@@ -17,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Ph.D. Candidate
+role: Alumna
 
 # Organizations/Affiliations
 organizations:
@@ -75,7 +72,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Grad Students
+  - Alumni
 ---
 
-Addie Kobie is a Doctoral student in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests include corrections and juvenile delinquency.
+Addie Kobie is an alumna of the SCCJ PhD program. Her research interests include corrections and juvenile delinquency.

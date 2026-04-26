@@ -3,7 +3,7 @@
 title: Caitlyn Jordon
 
 # Weight controls the order in lists (lower = shown first)
-weight: 8
+weight: 5
 
 # Full Name (for SEO)
 first_name: Caitlyn
