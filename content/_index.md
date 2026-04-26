@@ -90,7 +90,7 @@ sections:
       count: 2
       offset: 0
       order: desc
-      page_type: posts
+      page_type: post
     design:
       view: card
       columns: '2'
