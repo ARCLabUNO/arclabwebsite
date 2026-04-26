@@ -25,7 +25,7 @@ abstract = "In this chapter, we document the landscape of healthcare in correcti
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["institutional-corrections", "health", "deaths-in-custody"]
+tags = ["institutional corrections", "health", "deaths-in-custody"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""
