@@ -1,11 +1,9 @@
-/* ===== PEOPLE PAGE LAYOUT ===== */
-
-/* Make all people sections flexible + centered */
+/* Make People sections use flexible rows */
 .people .row {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  justify-content: center;
+  justify-content: center; /* keeps 2 directors centered nicely */
 }
 
 /* Card sizing */
@@ -14,59 +12,10 @@
   max-width: 340px;
   border-radius: 18px;
   overflow: hidden;
-  background: #fff;
-
-  /* base shadow */
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-
-  /* smooth interaction */
-  transition: all 0.2s ease;
 }
 
-/* Hover effect (adds "pop") */
+/* Slight polish */
 .people .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
-}
-
-/* ===== DIRECTORS EMPHASIS ===== */
-
-/* Slightly elevate director cards */
-.people [id*="director"] .card {
-  transform: scale(1.03);
-  box-shadow: 0 14px 36px rgba(0,0,0,0.12);
-}
-
-/* ===== TYPOGRAPHY CLEANUP ===== */
-
-.people h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.25rem;
-}
-
-.people p {
-  font-size: 0.9rem;
-  opacity: 0.75;
-  margin-bottom: 0;
-}
-
-/* ===== OPTIONAL SECTION POLISH ===== */
-
-/* Add subtle separation between sections */
-.people section {
-  padding: 2rem 1.5rem;
-  border-radius: 20px;
-}
-
-/* Light alternating background (very subtle) */
-.people section:nth-child(even) {
-  background: #fafafa;
-}
-
-/* ===== MOBILE TWEAKS ===== */
-
-@media (max-width: 700px) {
-  .people .card {
-    max-width: 100%;
-  }
+  transform: translateY(-3px);
+  transition: all 0.2s ease;
 }
