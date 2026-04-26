@@ -1,6 +1,7 @@
 ---
 title: Congratulations Dr. Allen-Flores!
 date: 2025-07-25
+summary: "Congratulations to Baylee Allen-Flores, who successfully defended her dissertation."
 ---
 
 Congratulations to [Baylee Allen-Flores](https://arcorrectionslab.org/author/baylee-allen-flores/), who successfully defended her dissertation, *What about those we left behind? The unintended consequences of decarceration for those still incarcerated*, on July 25th.
@@ -8,5 +9,3 @@ Congratulations to [Baylee Allen-Flores](https://arcorrectionslab.org/author/bay
 This fall, Baylee will start her first semester as an Assistant Professor in the [Criminology Department](https://las.depaul.edu/academics/criminology/about/Pages/default.aspx) at DePaul University.
 
 All of us in the ARC Lab wish you the best, Dr. Allen-Flores!
-
-<!--more-->
