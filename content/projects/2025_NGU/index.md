@@ -1,11 +1,13 @@
 ---
-title: Improving the prospects of formerly incarcerated adults - Establishing the processes and procedures of the Never Give Up Transitional Living reentry program (2025)
+title: "Improving the prospects of formerly incarcerated adults - Establishing the processes and procedures of the Never Give Up Transitional Living reentry program (2025)"
 date: 2024-12-01
-categories: ["completed"]
+lastmod: 2026-04-25
+category: "completed"
+subtitle: ""
+investigators: "Dr. Jennifer Tostlebe"
+funder: "Sherwood Foundation"
+summary: "Critical to a successful reentry experience are obtaining quality employment, securing a prosocial place to live, developing a community support network, getting drug treatment (as needed), and changing one’s identity."
 ---
-
-Principal Investigator: Dr. Jennifer Tostlebe <br>
-Supported By: The Sherwood Foundation
 
 <!--more-->
 
