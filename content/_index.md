@@ -129,7 +129,7 @@ sections:
                 <div class="homepage-card-body">
                   <p class="homepage-card-kicker">News</p>
                   <h3>Presentation to the Lancaster League of Women Voters!</h3>
-                  <p>ARC presented findings from the Lancaster Jail Assessment to the Lancaster League of Women Voters.</p>
+                  <p>ARC presented findings from the Lancaster Jail Assessment.</p>
                 </div>
               </a>
             </div>
