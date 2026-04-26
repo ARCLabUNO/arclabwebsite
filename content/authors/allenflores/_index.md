@@ -82,3 +82,5 @@ user_groups:
 ---
 
 Baylee Allen-Flores is an alumna of School of Criminology and Criminal Justice PhD program. Her research interests include risk-needs assessments, implementation science, prison misconduct, and prison policy. She is an Assistant Professor in the Criminology Department at DePaul University.
+
+Baylee's dissertation, *What about those we left behind? The unintended consequences of decarceration for those still incarcerated*, can be read [here](https://www.proquest.com/openview/7006d94b57f5e2d6e9f845c1a8952fb0/1?pq-origsite=gscholar&cbl=18750&diss=y).
