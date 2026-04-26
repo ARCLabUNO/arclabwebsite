@@ -79,3 +79,5 @@ user_groups:
 ---
 
 Brian is an alumnus of the SCCJ PhD program. He worked several years as a probation officer in a domestic violence court. Additionally, he has prior experience working within family courts, public and behavioral health. Brian is an Assistant Professor of Criminal Justice at Colorado Mesa University.
+
+Brian's dissertation, *RNR principles’ impact on probation officers’ supervision styles in a domestic violence court*, can be read [here](https://www.proquest.com/docview/3324002363?pq-origsite=gscholar&fromopenview=true&sourcetype=Dissertations%20&%20Theses).
