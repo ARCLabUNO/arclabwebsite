@@ -25,7 +25,7 @@ abstract = "Research indicates non-cisgender and non-heterosexual individuals ex
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["intimate partner violence", "victimization"]
+tags = ["intimate partner violence", "victimization", "victims"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""
