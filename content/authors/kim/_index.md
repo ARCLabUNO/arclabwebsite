@@ -2,9 +2,6 @@
 # Display name
 title: Yujin Kim
 
-# Weight controls the order in lists (lower = shown first)
-weight: 9
-
 # Full Name (for SEO)
 first_name: Yujin
 last_name: Kim
@@ -17,11 +14,11 @@ authors:
 superuser: false
 
 # Role/position
-role: M.A. Student
+role: Alumna
 
 # Organizations/Affiliations
 organizations:
-  - name: University of Nebraska Omaha
+  - name: George Mason Universtiy
 #    url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/abby-hayes.php'
 
 # Short bio (displayed in user profile at end of posts)
@@ -79,7 +76,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-  - Grad Students
+  - Alumni
 ---
 
-Yujin Kim is a master’s student in the School of Criminology and Criminal Justice at the University of Nebraska, Omaha. Her research interests include drug policy, the opioid overdose crisis, and criminal justice system responses to drug-related harms. Currently, Yujin is studying Drug-Induced Homicide (DIH) laws and police officers’ perception of the law.
+Yujin Kim is an alumna of the School of Criminology and Criminal Justice at the University of Nebraska, Omaha. She is beginning her doctorate at George Mason University in Fall 2026. Her research interests include drug policy, the opioid overdose crisis, and criminal justice system responses to drug-related harms. Currently, Yujin is studying Drug-Induced Homicide (DIH) laws and police officers’ perception of the law.
