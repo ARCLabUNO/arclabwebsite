@@ -53,7 +53,7 @@ A running list of other groups and organizations working to advance knowledge in
 * [Prison Policy Initative](https://www.prisonpolicy.org/)
 * [ProPublica - Criminal Justice](https://www.propublica.org/topics/criminal-justice)
 * [RAND Corporation](https://www.rand.org/)
-* [RTI Center for Policing Research and Investigative Science](https://www.rti.org/practice-area/policing)
+* [RTI Courts and Corrections Research](https://www.rti.org/practice-area/courts-and-corrections-research)
 * [The Marshall Project](https://www.themarshallproject.org/)
 * [Urban Institute - Corrections](https://www.urban.org/tags/corrections)
 * [Vera Institute of Justice](https://www.vera.org/)
