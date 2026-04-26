@@ -10,47 +10,44 @@
   height: 500px;
 }
 
-/* Homepage collection grid fixes
-   Section 5 = Latest News
-   Section 6 = Featured Projects
-   If you add/remove sections above these later, update the numbers.
-*/
+/* Custom collection layout */
 
-.home-section:nth-of-type(5) .article-container,
-.home-section:nth-of-type(6) .article-container {
-  max-width: 100%;
+.collection-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
 }
 
-.home-section:nth-of-type(5) .media-stream,
-.home-section:nth-of-type(6) .media-stream {
-  display: grid !important;
+.collection-grid {
+  display: grid;
   gap: 1.5rem;
 }
 
-.home-section:nth-of-type(5) .media-stream {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.custom-cols-2 .collection-grid {
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.home-section:nth-of-type(6) .media-stream {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.custom-cols-3 .collection-grid {
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.home-section:nth-of-type(5) .section-heading,
-.home-section:nth-of-type(6) .section-heading {
+.collection-item {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.collection-item img {
   width: 100%;
-  margin-bottom: 1rem;
+  height: 200px;
+  object-fit: cover;
 }
 
-.home-section:nth-of-type(5) .media-stream .stream-item,
-.home-section:nth-of-type(6) .media-stream .stream-item {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 !important;
-}
-
-@media (max-width: 991.98px) {
-  .home-section:nth-of-type(5) .media-stream,
-  .home-section:nth-of-type(6) .media-stream {
+@media (max-width: 991px) {
+  .custom-cols-2 .collection-grid,
+  .custom-cols-3 .collection-grid {
     grid-template-columns: 1fr;
   }
 }
