@@ -1,6 +1,7 @@
 ---
 title: ARC Lab Students Present at ASC 2025!
 date: 2025-11-17
+summary: "Students from the Lab presented their research at the Annual Meeting of the American Society of Criminology."
 ---
 
 Six students from the Advancing Research in Corrections (ARC) Lab presented their research at the Annual Meeting of the American Society of Criminology. Their work highlights innovative approaches to understanding risk assessment, correctional programming, and justice reform.
@@ -20,5 +21,3 @@ ARC Lab Presenters (alphabetical order):
 - [John Ursino](https://arcorrectionslab.org/author/john-ursino/): "Quantifying miscalibration: Estimating the impact of demographic differences on LS/CMI and ORAS accuracy."
 
 Congratulations to our ARC Lab students for their outstanding contributions to advancing evidence-based correctional and policing research!
-
-<!--more-->
