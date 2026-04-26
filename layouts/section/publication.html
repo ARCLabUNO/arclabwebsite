@@ -11,7 +11,6 @@
       <input type="text" id="pubSearch" placeholder="Search publications...">
     </div>
 
-
     <div class="pub-select-wrap">
       <label for="pubTopicFilter" class="pub-select-label">Filter by topic</label>
       <select id="pubTopicFilter" class="pub-topic-select">
@@ -37,29 +36,68 @@
 
   <div class="pub-card-grid" id="pubCardGrid">
     {{ range .Pages.ByDate.Reverse }}
-      {{ $topic := "corrections" }}
+      {{ $topics := slice }}
+      {{ $tagsJoined := "" }}
 
       {{ with .Params.tags }}
-        {{ $tagsJoined := lower (delimit . " | ") }}
+        {{ $tagsJoined = lower (delimit . " | ") }}
 
         {{ if or (in $tagsJoined "community corrections") (in $tagsJoined "probation") (in $tagsJoined "parole") (in $tagsJoined "pretrial") }}
-          {{ $topic = "community-corrections" }}
-        {{ else if or (in $tagsJoined "reentry") (in $tagsJoined "recidivism") (in $tagsJoined "desistance") }}
-          {{ $topic = "reentry" }}
-        {{ else if or (in $tagsJoined "risk assessment") (in $tagsJoined "classification") (in $tagsJoined "ls/cmi") (in $tagsJoined "strong-r") }}
-          {{ $topic = "risk-assessment" }}
-        {{ else if or (in $tagsJoined "drug treatment courts") (in $tagsJoined "substance use") }}
-          {{ $topic = "drug-treatment-courts" }}
-        {{ else if or (in $tagsJoined "covid-19") (in $tagsJoined "infectious disease") (in $tagsJoined "health") }}
-          {{ $topic = "health-covid" }}
-        {{ else if or (in $tagsJoined "juvenile") (in $tagsJoined "youth") (in $tagsJoined "adolescents") }}
-          {{ $topic = "youth-juvenile-justice" }}
+          {{ $topics = $topics | append "community-corrections" }}
+        {{ end }}
+
+        {{ if or (in $tagsJoined "courts") (in $tagsJoined "court") (in $tagsJoined "drug treatment courts") }}
+          {{ $topics = $topics | append "courts" }}
+        {{ end }}
+
+        {{ if or (in $tagsJoined "cybercrime") (in $tagsJoined "cyber crime") (in $tagsJoined "online offending") }}
+          {{ $topics = $topics | append "cybercrime" }}
+        {{ end }}
+
+        {{ if or (in $tagsJoined "gang membership") (in $tagsJoined "gangs") (in $tagsJoined "gang") }}
+          {{ $topics = $topics | append "gang-membership" }}
+        {{ end }}
+
+        {{ if or (in $tagsJoined "health") (in $tagsJoined "covid-19") (in $tagsJoined "infectious disease") (in $tagsJoined "mental health") }}
+          {{ $topics = $topics | append "health" }}
+        {{ end }}
+
+        {{ if or (in $tagsJoined "institutional corrections") (in $tagsJoined "prisons") (in $tagsJoined "jails") (in $tagsJoined "incarceration") }}
+          {{ $topics = $topics | append "institutional-corrections" }}
+        {{ end }}
+
+        {{ if or (in $tagsJoined "juvenile justice") (in $tagsJoined "juvenile") (in $tagsJoined "youth") (in $tagsJoined "adolescents") }}
+          {{ $topics = $topics | append "juvenile-justice" }}
+        {{ end }}
+
+        {{ if or (in $tagsJoined "methods") (in $tagsJoined "measurement") (in $tagsJoined "methods and measurement") (in $tagsJoined "validation") }}
+          {{ $topics = $topics | append "methods-measurement" }}
+        {{ end }}
+
+        {{ if or (in $tagsJoined "misconduct") (in $tagsJoined "officer misconduct") (in $tagsJoined "institutional misconduct") }}
+          {{ $topics = $topics | append "misconduct" }}
+        {{ end }}
+
+        {{ if or (in $tagsJoined "policing") (in $tagsJoined "police reform") (in $tagsJoined "de-escalation") (in $tagsJoined "police use-of-force") (in $tagsJoined "use of force") }}
+          {{ $topics = $topics | append "policing" }}
+        {{ end }}
+
+        {{ if or (in $tagsJoined "recidivism") (in $tagsJoined "reoffending") }}
+          {{ $topics = $topics | append "recidivism" }}
+        {{ end }}
+
+        {{ if or (in $tagsJoined "reentry") (in $tagsJoined "desistance") (in $tagsJoined "prisoner reentry") }}
+          {{ $topics = $topics | append "reentry" }}
+        {{ end }}
+
+        {{ if or (in $tagsJoined "risk-needs-assessment") (in $tagsJoined "risk assessment") (in $tagsJoined "classification") (in $tagsJoined "ls/cmi") (in $tagsJoined "strong-r") }}
+          {{ $topics = $topics | append "risk-needs-assessment" }}
         {{ end }}
       {{ end }}
 
       <article
         class="pub-card"
-        data-topic="{{ $topic }}"
+        data-topics="{{ delimit ($topics | uniq) "," }}"
         data-search="{{ lower (printf "%s %s %s %s" .Title (.Params.summary | default "") (.Params.publication | default "") (delimit (.Params.tags | default (slice)) " ")) }}"
       >
         {{ $img := .Resources.GetMatch "featured*" }}
@@ -335,9 +373,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     cards.forEach(card => {
       const text = card.dataset.search || '';
-      const topic = card.dataset.topic || '';
+      const topics = (card.dataset.topics || '')
+        .split(',')
+        .map(topic => topic.trim())
+        .filter(Boolean);
+
       const matchesSearch = !activeSearch || text.includes(activeSearch);
-      const matchesTopic = activeTopic === 'all' || topic === activeTopic;
+      const matchesTopic = activeTopic === 'all' || topics.includes(activeTopic);
 
       if (matchesSearch && matchesTopic) {
         card.classList.remove('is-hidden');
