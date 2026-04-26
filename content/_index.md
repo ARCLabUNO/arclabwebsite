@@ -82,7 +82,7 @@ sections:
       spacing:
         padding: ['40px', '0', '48px', '0']
 
-- block: markdown
+  - block: markdown
     content:
       title:
       subtitle: ''
