@@ -2,9 +2,9 @@
 <div class="universal-wrapper pt-3 projects-page">
   <h1>{{ .Title }}</h1>
 
-  {{ with .Content }}
-    <div class="article-style">{{ . }}</div>
-  {{ end }}
+  <p class="project-page-intro">
+    Take a look at what we're working on — from active projects shaping policy and practice to completed work that has contributed to evidence-based corrections.
+  </p>
 
   {{ $pages := .Pages.ByDate.Reverse }}
   {{ $current := where $pages "Params.category" "current" }}
@@ -38,20 +38,20 @@
   max-width: 1200px;
 }
 
-.projects-page .article-style {
-  margin: 1rem 0 2rem;
-  max-width: 700px;
-}
-
-.projects-page .article-style p {
+.projects-page .project-page-intro {
+  margin: 0.75rem 0 2.25rem;
+  max-width: 760px;
   color: #cbd5e1;
   font-size: 1.05rem;
-  line-height: 1.6;
-  margin-bottom: 0;
+  line-height: 1.7;
 }
 
 .projects-page .project-section {
   margin-top: 2.75rem;
+}
+
+.projects-page .project-section:first-of-type {
+  margin-top: 0;
 }
 
 .projects-page .project-section-title {
@@ -213,6 +213,11 @@
 
   .projects-page .project-card-image {
     height: 220px;
+  }
+
+  .projects-page .project-page-intro {
+    font-size: 1rem;
+    margin-bottom: 2rem;
   }
 }
 </style>
