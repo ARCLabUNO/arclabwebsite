@@ -9,14 +9,14 @@ sections:
       title:
       subtitle: ''
       text: |
-        <div style="text-align:center;">
-          <img src="https://arcorrectionslab.org/img/animated_curve.gif" alt="Animated GIF" style="width:100%; max-width:1000px; height:auto; display:block; margin:0 auto;">
+        <div style="text-align:center; width:100%; margin:0; padding:0;">
+          <img src="https://arcorrectionslab.org/img/animated_curve.gif" alt="Animated GIF" style="width:100%; max-width:100%; height:auto; display:block; margin:0 auto;">
         </div>
     design:
       columns: '1'
-      css_class: smaller-image
+      css_class: full-width-gif
       spacing:
-        padding: ['56px', '0', '20px', '0']
+        padding: ['0', '0', '20px', '0']
 
   - block: markdown
     content:
