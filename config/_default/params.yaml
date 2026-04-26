@@ -120,8 +120,3 @@ publications:
 
 sharing_image: 'icon.jpg'
 logo: 'icon.jpg'
-
-markup:
-  goldmark:
-    renderer:
-      unsafe: true
