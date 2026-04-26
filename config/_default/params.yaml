@@ -120,10 +120,3 @@ publications:
 
 sharing_image: 'icon.jpg'
 logo: 'icon.jpg'
-
-# HTML Code
-
-markup:
-  goldmark:
-    renderer:
-      unsafe: true
