@@ -58,7 +58,7 @@ sections:
       subtitle: ''
       text: |
         <div style="text-align:center;">
-          <img src="/media/homyphoto_edited2.jpg" alt="ARC Lab group photo" style="max-width:700px; width:100%; border-radius:12px;">
+          <img src="assets/media/homyphoto_edited2.jpg" alt="ARC Lab group photo" style="max-width:700px; width:100%; border-radius:12px;">
         </div>
 
         The ARC Lab brings together faculty, research staff, and graduate researchers committed to advancing corrections research through collaborative, applied work.
