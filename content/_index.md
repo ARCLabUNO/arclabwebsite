@@ -95,6 +95,7 @@ sections:
           <div class="homepage-card-grid homepage-card-grid-2">
             <div class="homepage-card">
               <a class="homepage-card-link" href="/post/2026-04-16-kimthesis/">
+                <img src="/post/2026-04-16-kimthesis/featured.png" alt="Congratulations Yujin">
                 <div class="homepage-card-body">
                   <p class="homepage-card-kicker">News</p>
                   <h3>Congratulations Yujin!</h3>
@@ -104,6 +105,7 @@ sections:
             </div>
             <div class="homepage-card">
               <a class="homepage-card-link" href="/post/2026-04-13-kobiediss/">
+                <img src="/post/2026-04-13-kobiediss/featured.png" alt="Congratulations Dr. Kobie">
                 <div class="homepage-card-body">
                   <p class="homepage-card-kicker">News</p>
                   <h3>Congratulations Dr. Kobie!</h3>
@@ -113,6 +115,7 @@ sections:
             </div>
             <div class="homepage-card">
               <a class="homepage-card-link" href="/post/2026-03-26-ursinodiss/">
+                <img src="/post/2026-03-26-ursinodiss/featured.png" alt="Congratulations Dr. Ursino">
                 <div class="homepage-card-body">
                   <p class="homepage-card-kicker">News</p>
                   <h3>Congratulations Dr. Ursino!</h3>
@@ -122,6 +125,7 @@ sections:
             </div>
             <div class="homepage-card">
               <a class="homepage-card-link" href="/post/2026-02-06-psafindings/">
+                <img src="/post/2026-02-06-psafindings/featured.png" alt="ARC Lab presents Public Safety Assessment findings">
                 <div class="homepage-card-body">
                   <p class="homepage-card-kicker">News</p>
                   <h3>ARC Lab presents Public Safety Assessment findings</h3>
@@ -149,6 +153,7 @@ sections:
           <div class="homepage-card-grid homepage-card-grid-3">
             <div class="homepage-card">
               <a class="homepage-card-link" href="/projects/2026_ngu/">
+                <img src="/projects/2026_ngu/featured.png" alt="Turning hope into evidence">
                 <div class="homepage-card-body">
                   <p class="homepage-card-kicker">Project</p>
                   <h3>Turning hope into evidence</h3>
@@ -158,6 +163,7 @@ sections:
             </div>
             <div class="homepage-card">
               <a class="homepage-card-link" href="/projects/2025_av_iowa/">
+                <img src="/projects/2025_av_iowa/featured.png" alt="Parole decision making tool">
                 <div class="homepage-card-body">
                   <p class="homepage-card-kicker">Project</p>
                   <h3>Parole decision making tool</h3>
@@ -167,6 +173,7 @@ sections:
             </div>
             <div class="homepage-card">
               <a class="homepage-card-link" href="/projects/2025_ndcs-evaluation/">
+                <img src="/projects/2025_ndcs-evaluation/featured.png" alt="NDCS program evaluation">
                 <div class="homepage-card-body">
                   <p class="homepage-card-kicker">Project</p>
                   <h3>NDCS program evaluation</h3>
