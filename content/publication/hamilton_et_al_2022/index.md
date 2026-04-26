@@ -25,7 +25,7 @@ abstract = "In December 2018, the First Step Act of 2018 was signed into law, wh
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["risk-needs-assessment", "institutional-corrections"]
+tags = ["risk-needs-assessment", "institutional corrections"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""
