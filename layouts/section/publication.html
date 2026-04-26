@@ -19,6 +19,7 @@
         <option value="courts">Courts</option>
         <option value="cybercrime">Cybercrime</option>
         <option value="gang-membership">Gang Membership</option>
+        <option value="grad-student-lead-author">Graduate Student Lead Author</option>
         <option value="health">Health</option>
         <option value="institutional-corrections">Institutional Corrections</option>
         <option value="juvenile-justice">Juvenile Justice</option>
@@ -56,6 +57,10 @@
 
         {{ if or (in $tagsJoined "gang membership") (in $tagsJoined "gangs") (in $tagsJoined "gang") }}
           {{ $topics = $topics | append "gang-membership" }}
+        {{ end }}
+
+        {{ if or (in $tagsJoined "grad student lead author") (in $tagsJoined "graduate student lead") (in $tagsJoined "grad student") }}
+          {{ $topics = $topics | append "grad-student-lead-author" }}
         {{ end }}
 
         {{ if or (in $tagsJoined "health") (in $tagsJoined "covid-19") (in $tagsJoined "infectious disease") (in $tagsJoined "mental health") }}

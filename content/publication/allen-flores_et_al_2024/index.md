@@ -25,7 +25,7 @@ abstract = "The Risk-Needs-Responsivity (RNR) model posits separating lower from
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["institutional corrections", "risk-needs-assessment", "misconduct"]
+tags = ["institutional corrections", "risk-needs-assessment", "misconduct", "grad student lead author"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""
