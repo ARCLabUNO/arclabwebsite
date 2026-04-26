@@ -95,7 +95,7 @@ sections:
           <div class="homepage-card-grid homepage-card-grid-2">
             <div class="homepage-card">
               <a class="homepage-card-link" href="/post/2026-04-16-kimthesis/">
-                <img src="/post/2026-04-16-kimthesis/featured.png" alt="Congratulations Yujin">
+                <img src="/post/2026-04-16-kimthesis/featured.jpeg" alt="Congratulations Yujin">
                 <div class="homepage-card-body">
                   <p class="homepage-card-kicker">News</p>
                   <h3>Congratulations Yujin!</h3>
@@ -105,7 +105,7 @@ sections:
             </div>
             <div class="homepage-card">
               <a class="homepage-card-link" href="/post/2026-04-13-kobiediss/">
-                <img src="/post/2026-04-13-kobiediss/featured.png" alt="Congratulations Dr. Kobie">
+                <img src="/post/2026-04-13-kobiediss/featured.jpeg" alt="Congratulations Dr. Kobie">
                 <div class="homepage-card-body">
                   <p class="homepage-card-kicker">News</p>
                   <h3>Congratulations Dr. Kobie!</h3>
@@ -115,7 +115,7 @@ sections:
             </div>
             <div class="homepage-card">
               <a class="homepage-card-link" href="/post/2026-03-26-ursinodiss/">
-                <img src="/post/2026-03-26-ursinodiss/featured.png" alt="Congratulations Dr. Ursino">
+                <img src="/post/2026-03-26-ursinodiss/featured.jpeg" alt="Congratulations Dr. Ursino">
                 <div class="homepage-card-body">
                   <p class="homepage-card-kicker">News</p>
                   <h3>Congratulations Dr. Ursino!</h3>
@@ -124,12 +124,12 @@ sections:
               </a>
             </div>
             <div class="homepage-card">
-              <a class="homepage-card-link" href="/post/2026-02-06-psafindings/">
-                <img src="/post/2026-02-06-psafindings/featured.png" alt="ARC Lab presents Public Safety Assessment findings">
+              <a class="homepage-card-link" href="/post/2026-02-05-lancasterjailassessment/">
+                <img src="/post/2026-02-05-lancasterjailassessment/featured.png" alt="ARC Lab presents Lancaster Jail Assessment findings">
                 <div class="homepage-card-body">
                   <p class="homepage-card-kicker">News</p>
-                  <h3>ARC Lab presents Public Safety Assessment findings</h3>
-                  <p>ARC shared findings from a recent Public Safety Assessment evaluation.</p>
+                  <h3>Presentation to the Lancaster League of Women Voters!</h3>
+                  <p>ARC presented findings from the Lancaster Jail Assessment to the Lancaster League of Women Voters.</p>
                 </div>
               </a>
             </div>
