@@ -90,7 +90,7 @@ sections:
       count: 4
       offset: 0
       order: desc
-      page_type: news
+      page_type: posts
     design:
       view: card
       columns: '2'
