@@ -11,17 +11,10 @@ sections:
       text: |
         ![Animated ARC graphic](https://arcorrectionslab.org/img/animated_curve.gif)
     design:
-      columns: '1'
-      background:
-        filters:
-          brightness: 1
-        parallax: false
-        position: center
-        size: cover
-        text_color_light: true
+      columns: 1
       css_class: smaller-image
       spacing:
-        padding: ['48px', '0', '24px', '0']
+        padding: ['56px', '0', '32px', '0']
 
   - block: markdown
     content:
@@ -34,9 +27,14 @@ sections:
 
         By leveraging criminological theory alongside rigorous research, assessment, and evaluation, we aim to improve correctional policies, enhance public and institutional safety, and support the successful reintegration of incarcerated individuals into society. Our work is focused on fostering more effective, fair, and transparent correctional systems.
     design:
-      columns: '1'
+      columns: 1
+      align: center
+      background:
+        color:
+          light: '#f8fafc'
+          dark: '#111827'
       spacing:
-        padding: ['8px', '0', '36px', '0']
+        padding: ['40px', '0', '40px', '0']
 
   - block: markdown
     content:
@@ -48,9 +46,10 @@ sections:
 
         ARC is also committed to providing graduate students with hands-on training in data-driven research, specialized skills essential for understanding corrections and reentry, and valuable networking opportunities that strengthen their academic and professional development. Through real-world research and evaluation projects, students are equipped to contribute meaningfully to the field while helping shape future policy and practice.
     design:
-      columns: '1'
+      columns: 1
+      align: center
       spacing:
-        padding: ['0', '0', '40px', '0']
+        padding: ['40px', '0', '48px', '0']
 
   - block: markdown
     content:
@@ -58,13 +57,20 @@ sections:
         The ARC Lab Team
       subtitle: ''
       text: |
-        ![ARC Lab group photo](/media/homyphoto_edited2.jpg)
+        <div style="text-align:center;">
+          <img src="/media/homyphoto_edited2.jpg" alt="ARC Lab group photo" style="max-width:700px; width:100%; border-radius:12px;">
+        </div>
 
         The ARC Lab brings together faculty, research staff, and graduate researchers committed to advancing corrections research through collaborative, applied work.
     design:
-      columns: '1'
+      columns: 1
+      align: center
+      background:
+        color:
+          light: '#f8fafc'
+          dark: '#111827'
       spacing:
-        padding: ['0', '0', '40px', '0']
+        padding: ['40px', '0', '48px', '0']
 
   - block: collection
     content:
@@ -72,20 +78,14 @@ sections:
       subtitle:
       text:
       count: 4
-      filters:
-        author: ''
-        category: ''
-        exclude_featured: false
-        publication_type: ''
-        tag: ''
       offset: 0
       order: desc
       page_type: post
     design:
       view: card
-      columns: '2'
+      columns: 2
       spacing:
-        padding: ['0', '0', '40px', '0']
+        padding: ['40px', '0', '48px', '0']
 
   - block: collection
     content:
@@ -93,18 +93,16 @@ sections:
       subtitle:
       text:
       count: 3
-      filters:
-        author: ''
-        category: ''
-        exclude_featured: false
-        publication_type: ''
-        tag: ''
       offset: 0
       order: desc
       page_type: projects
     design:
       view: card
-      columns: '3'
+      columns: 3
+      background:
+        color:
+          light: '#f8fafc'
+          dark: '#111827'
       spacing:
-        padding: ['0', '0', '48px', '0']
+        padding: ['40px', '0', '56px', '0']
 ---
