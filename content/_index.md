@@ -65,7 +65,7 @@ sections:
       subtitle: ''
       text: |
         <div style="text-align:center; max-width:950px; margin:0 auto;">
-          <h2>Research and collaboration</h2>
+          <h2>Research and Collaboration</h2>
           <p>
             ARC actively collaborates with SCCJ faculty, <a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/nebraska-center-for-justice-research/index.php">Nebraska Center for Justice Research (NCJR)</a>, <a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/juvenile-justice-institute/index.php">Juvenile Justice Institute (JJI)</a> staff, community partners, and state and federal agencies to bridge the gap between research and practice. These partnerships support a multidisciplinary approach and the development of evidence-based solutions that improve both institutional and community outcomes.
           </p>
