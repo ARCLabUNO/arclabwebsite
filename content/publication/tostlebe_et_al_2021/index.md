@@ -9,7 +9,7 @@ authors = ["tostlebe", "David Pyrooz", "Richard Rogers", "Ryan Masters"]
 publication = "*Homicide Studies*"
   
 # Publication types (2 = Journal article; 3 = preprint; 4 = report; 6 = book chapter)
-publication_types = ["2"]
+publication_types = ["article-journal"]
   
 # Date the paper was published.
 date = 2021-01-02T10:00:00Z
@@ -25,7 +25,7 @@ abstract = "Criminologists largely rely on national deidentified data sources to
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["homicide", "data linkage", "National Death Index", "gang membership"]
+tags = ["National Death Index", "gang membership", "methods and measurement"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""
