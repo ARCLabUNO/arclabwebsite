@@ -1,11 +1,13 @@
 ---
-title: Adult and veterans treatment court training and technical assistance (2024-2025)
+title: "Adult and veterans treatment court training and technical assistance (2024-2025)"
 date: 2024-01-01
-categories: ["current"]
+lastmod: 2026-04-25
+category: "current"
+subtitle: ""
+investigators: "Dr. Zachary Hamilton"
+funder: "Bureau of Justice Assistance"
+summary: "Many drug and other specialty courts have eligibility criteria, preventing/limiting the inclusion of individuals with a violent offending history."
 ---
-
-Principal Investigator: Dr. Zachary Hamilton <br>
-Supported By: The Bureau of Justice Assistance
 
 <!--more-->
 
