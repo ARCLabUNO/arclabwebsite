@@ -19,7 +19,7 @@ show_authors: false
   color: #f9fafb;
   padding: 2.25rem;
   border-radius: 14px;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   box-shadow: 0 8px 24px rgba(0,0,0,0.18);
 }
 
@@ -44,6 +44,34 @@ show_authors: false
   color: #e5e7eb;
   font-size: 1.08rem;
   line-height: 1.75;
+  max-width: 42rem;
+}
+
+.arc-module-thesis {
+  margin: 0 0 2rem 0;
+  padding: 1rem 1.1rem;
+  background: linear-gradient(135deg, rgba(96,165,250,0.16), rgba(59,130,246,0.08));
+  border: 1px solid rgba(96,165,250,0.35);
+  border-left: 4px solid #60a5fa;
+  border-radius: 12px;
+  color: #eff6ff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.arc-module-thesis strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #93c5fd;
+}
+
+.arc-module-thesis p {
+  margin: 0;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  font-weight: 600;
 }
 
 .arc-module-section {
@@ -52,6 +80,7 @@ show_authors: false
   background: #1f2937;
   border-radius: 14px;
   border: 1px solid #374151;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
 .arc-module-section h2 {
@@ -67,8 +96,8 @@ show_authors: false
   font-size: 1rem;
 }
 
-.arc-module-section p {
-  margin: 0 0 1rem 0;
+.arc-module-section p:last-child {
+  margin-bottom: 0;
 }
 
 .arc-module-section ul {
@@ -85,66 +114,13 @@ show_authors: false
   border-left: 4px solid #60a5fa;
 }
 
-.arc-module-figures {
-  margin: 2rem 0;
-  padding: 1.5rem;
-  background: #111827;
-  border: 1px solid #374151;
-  border-radius: 14px;
-}
-
-.arc-module-figures h2 {
-  margin: 0 0 0.75rem 0;
-  color: #f9fafb;
-  font-size: 1.45rem;
-}
-
-.arc-module-figures p {
-  color: #e5e7eb;
-  line-height: 1.75;
-}
-
-.arc-module-figure-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.25rem;
-}
-
-.arc-module-figure-card {
-  background: #0f172a;
-  color: #f9fafb;
-  padding: 1rem;
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
-}
-
-.arc-module-figure-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
-  margin-bottom: 0.8rem;
-}
-
-.arc-module-figure-card h3 {
-  margin: 0 0 0.4rem 0;
-  color: #ffffff;
-  font-size: 1.05rem;
-}
-
-.arc-module-figure-card p {
-  margin: 0;
-  color: #d1d5db;
-  line-height: 1.6;
-}
-
 .arc-module-bottom {
   margin-top: 2rem;
   padding: 1.5rem;
   background: linear-gradient(135deg, #111827 0%, #1e293b 100%);
   color: #f9fafb;
   border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.16);
 }
 
 .arc-module-bottom h2 {
@@ -159,6 +135,16 @@ show_authors: false
   line-height: 1.75;
 }
 
+.arc-module-bridge {
+  margin: 2rem 0 1rem 0;
+  padding: 0.9rem 1rem;
+  border-left: 4px solid #60a5fa;
+  background: rgba(31,58,95,0.18);
+  border-radius: 10px;
+  color: #e5e7eb;
+  line-height: 1.7;
+}
+
 @media (max-width: 768px) {
   .arc-module-hero {
     padding: 1.5rem;
@@ -167,71 +153,77 @@ show_authors: false
   .arc-module-hero h2 {
     font-size: 1.65rem;
   }
-
-  .arc-module-figure-grid {
-    grid-template-columns: 1fr;
-  }
 }
 </style>
 
 <div class="arc-module">
 
-  <div class="arc-module-hero">
-    <div class="arc-module-kicker">Module 0 · Start Here</div>
-    <h2>Risk scores shape real decisions.</h2>
-    <p>
-      In corrections, classification, and pretrial settings, risk scores influence decisions
-      about incarceration, supervision, and programming. But one basic issue is often
-      overlooked: <strong>not all risk scores mean the same thing.</strong>
-    </p>
+<div class="arc-module-hero">
+  <div class="arc-module-kicker">Module 0 · Start Here</div>
+  <h2>Risk scores shape real decisions.</h2>
+  <p>
+    In corrections, classification, and pretrial settings, risk scores influence decisions
+    about incarceration, supervision, and programming. But one basic issue is often
+    overlooked: <strong>not all risk scores mean the same thing.</strong>
+  </p>
+</div>
+
+<div class="arc-module-thesis">
+  <strong>Key takeaway</strong>
+  <p>A risk score is only useful if it meaningfully distinguishes between outcomes.</p>
+</div>
+
+<div class="arc-module-section">
+  <h2>Where Risk Scores Show Up</h2>
+  <p>Risk-needs assessment tools are used every day in:</p>
+  <ul>
+    <li><strong>adult and juvenile corrections</strong></li>
+    <li><strong>prison classification</strong></li>
+    <li><strong>pretrial release decisions</strong></li>
+  </ul>
+  <p>They shape decisions about incarceration, supervision, and programming.</p>
+</div>
+
+<div class="arc-module-section">
+  <h2>The Basic Problem</h2>
+  <p>Two tools can both assign a “risk score” and still behave very differently.</p>
+  <p>That matters because a score is only useful if it meaningfully distinguishes between outcomes.</p>
+  <div class="arc-module-key">
+    <strong>The key idea:</strong> not all risk scores carry the same practical meaning.
   </div>
+</div>
 
-  <div class="arc-module-section">
-    <h2>Where Risk Scores Show Up</h2>
-    <p>Risk-needs assessment tools are used every day in:</p>
-    <ul>
-      <li>adult and juvenile corrections</li>
-      <li>prison classification</li>
-      <li>pretrial release decisions</li>
-    </ul>
-    <p>They shape decisions about incarceration, supervision, and programming.</p>
-  </div>
+<div class="arc-module-bridge">
+  The example below shows why two tools can both produce scores while only one clearly separates outcomes.
+</div>
 
-  <div class="arc-module-section">
-    <h2>The Basic Problem</h2>
-    <p>Two tools can both assign a “risk score” and still behave very differently.</p>
-    <p>That matters because a score is only useful if it meaningfully distinguishes between outcomes.</p>
-    <p><strong>The key idea:</strong> not all risk scores carry the same practical meaning.</p>
+{{< risk-score-figure-comparison >}}
 
-  </div>
+<div class="arc-module-section">
+  <h2>Why the Difference Matters</h2>
+  <p>Both tools generate “risk scores.” But only one meaningfully separates outcomes.</p>
+  <p>That difference—how clearly a tool distinguishes between outcomes—is what we mean by <strong>accuracy in practice</strong>.</p>
+</div>
 
-  {{< risk-score-figure-comparison >}}
+<div class="arc-module-section">
+  <h2>Why This Is Easy to Miss</h2>
+  <p>Many tools still in use today are built on empirical foundations that predate the 1980s.</p>
+  <p>At the same time:</p>
+  <ul>
+    <li>these tools are widely used</li>
+    <li>their outputs shape real decisions</li>
+    <li>understanding of how they work—and how to evaluate them—has not kept pace</li>
+  </ul>
+  <p>As a result, risk scores are often interpreted as if they carry the same meaning, even when they do not.</p>
+</div>
 
-  <div class="arc-module-section">
-    <h2>Why the Difference Matters</h2>
-    <p>Both tools generate “risk scores.” But only one meaningfully separates outcomes.</p>
-    <p>That difference—how clearly a tool distinguishes between outcomes—is what we mean by <strong>accuracy in practice</strong>.</p>
-  </div>
-
-  <div class="arc-module-section">
-    <h2>Why This Is Easy to Miss</h2>
-    <p>Many tools still in use today are built on empirical foundations that predate the 1980s.</p>
-    <p>At the same time:</p>
-    <ul>
-      <li>these tools are widely used</li>
-      <li>their outputs shape real decisions</li>
-      <li>understanding of how they work—and how to evaluate them—has not kept pace</li>
-    </ul>
-    <p>As a result, risk scores are often interpreted as if they carry the same meaning, even when they do not.</p>
-  </div>
-
-  <div class="arc-module-bottom">
-    <h2>Bottom Line</h2>
-    <p>
-      Risk scores are widely used—but often poorly understood. Understanding what they
-      represent is a prerequisite for using them well.
-    </p>
-  </div>
+<div class="arc-module-bottom">
+  <h2>Bottom Line</h2>
+  <p>
+    Risk scores are widely used—but often poorly understood. Understanding what they
+    represent is a prerequisite for using them well.
+  </p>
+</div>
 
 </div>
 
