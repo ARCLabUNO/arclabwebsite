@@ -34,6 +34,8 @@ sections:
           <p>
             Our work focuses on analyzing real-world correctional systems using rigorous quantitative and qualitative methods. Rather than studying policy in the abstract, we examine how policies, practices, and programs function in context, using data to evaluate outcomes, identify gaps, and inform more effective, equitable, and transparent approaches to corrections.
           </p>
+
+          <img src="/media/YOUR_IMAGE_NAME.jpg" alt="ARC Lab research in practice" style="max-width:700px; width:100%; height:auto; border-radius:14px; display:block; margin:2rem auto 0 auto; box-shadow:0 10px 30px rgba(0,0,0,0.10);">
         </div>
     design:
       columns: '1'
@@ -44,33 +46,63 @@ sections:
       spacing:
         padding: ['40px', '0', '40px', '0']
 
-  - block: features
+  - block: markdown
     content:
-      title: What We Study
-      text: ARC focuses on key areas within corrections and reentry, with an emphasis on applied, data-driven research.
-      items:
-        - name: Institutional & Community Corrections
-          description: How systems operate and affect populations across custody and supervision.
+      title:
+      subtitle: ''
+      text: |
+        <div style="text-align:center; max-width:1100px; margin:0 auto;">
+          <h2>What We Study</h2>
 
-        - name: Reentry & Desistance
-          description: Outcomes, barriers, and pathways following release.
+          <p style="max-width:760px; margin:0.75rem auto 2rem auto;">
+            ARC focuses on key areas within corrections and reentry, with an emphasis on applied, data-driven research:
+          </p>
 
-        - name: Risk-Needs Assessment
-          description: Development of assessment tools tailored to the operational needs of adult and juvenile justice agencies.
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1.25rem; margin-top:2rem; text-align:left;">
+            
+            <div style="background:#ffffff; border:1px solid #e5e7eb; border-radius:18px; padding:1.35rem 1.25rem; box-shadow:0 8px 24px rgba(15,23,42,0.06);">
+              <h3 style="margin-top:0; margin-bottom:0.6rem; font-size:1.05rem;">Institutional &amp; Community Corrections</h3>
+              <p style="margin:0; color:#374151;">How systems operate and affect populations across custody and supervision.</p>
+            </div>
 
-        - name: Decision-Making
-          description: How choices are shaped by individual, social, and environmental factors over time.
+            <div style="background:#ffffff; border:1px solid #e5e7eb; border-radius:18px; padding:1.35rem 1.25rem; box-shadow:0 8px 24px rgba(15,23,42,0.06);">
+              <h3 style="margin-top:0; margin-bottom:0.6rem; font-size:1.05rem;">Reentry &amp; Desistance</h3>
+              <p style="margin:0; color:#374151;">Outcomes, barriers, and pathways following release.</p>
+            </div>
 
-        - name: Program Evaluation
-          description: Assessing correctional interventions and services.
+            <div style="background:#ffffff; border:1px solid #e5e7eb; border-radius:18px; padding:1.35rem 1.25rem; box-shadow:0 8px 24px rgba(15,23,42,0.06);">
+              <h3 style="margin-top:0; margin-bottom:0.6rem; font-size:1.05rem;">Risk-Needs Assessment</h3>
+              <p style="margin:0; color:#374151;">Development of assessment tools tailored to the operational needs of adult and juvenile justice agencies.</p>
+            </div>
 
-        - name: Restrictive Housing
-          description: Use, conditions, and consequences within correctional settings.
+            <div style="background:#ffffff; border:1px solid #e5e7eb; border-radius:18px; padding:1.35rem 1.25rem; box-shadow:0 8px 24px rgba(15,23,42,0.06);">
+              <h3 style="margin-top:0; margin-bottom:0.6rem; font-size:1.05rem;">Decision-Making</h3>
+              <p style="margin:0; color:#374151;">How choices are shaped by individual, social, and environmental factors over time.</p>
+            </div>
 
-        - name: Gangs & Gang Membership
-          description: Identification, behavior, management, and system-level responses.
+            <div style="background:#ffffff; border:1px solid #e5e7eb; border-radius:18px; padding:1.35rem 1.25rem; box-shadow:0 8px 24px rgba(15,23,42,0.06);">
+              <h3 style="margin-top:0; margin-bottom:0.6rem; font-size:1.05rem;">Program Evaluation</h3>
+              <p style="margin:0; color:#374151;">Assessing correctional interventions and services.</p>
+            </div>
+
+            <div style="background:#ffffff; border:1px solid #e5e7eb; border-radius:18px; padding:1.35rem 1.25rem; box-shadow:0 8px 24px rgba(15,23,42,0.06);">
+              <h3 style="margin-top:0; margin-bottom:0.6rem; font-size:1.05rem;">Restrictive Housing</h3>
+              <p style="margin:0; color:#374151;">Use, conditions, and consequences within correctional settings.</p>
+            </div>
+
+            <div style="background:#ffffff; border:1px solid #e5e7eb; border-radius:18px; padding:1.35rem 1.25rem; box-shadow:0 8px 24px rgba(15,23,42,0.06);">
+              <h3 style="margin-top:0; margin-bottom:0.6rem; font-size:1.05rem;">Gangs &amp; Gang Membership</h3>
+              <p style="margin:0; color:#374151;">Identification, behavior, management, and system-level responses.</p>
+            </div>
+
+          </div>
+
+          <p style="max-width:760px; margin:2rem auto 0 auto;">
+            Across these areas, the lab prioritizes research that is methodologically rigorous and directly relevant to policy and practice.
+          </p>
+        </div>
     design:
-      columns: '3'
+      columns: '1'
       spacing:
         padding: ['40px', '0', '48px', '0']
 
@@ -136,7 +168,46 @@ sections:
             <a class="homepage-section-link" href="/news/">See more news</a>
           </div>
           <div class="homepage-card-grid homepage-card-grid-2">
-            <!-- keep your existing cards -->
+            <div class="homepage-card">
+              <a class="homepage-card-link" href="/post/2026-04-16-kimthesis/">
+                <img src="/post/2026-04-16-kimthesis/featured.jpeg" alt="Congratulations Yujin">
+                <div class="homepage-card-body">
+                  <p class="homepage-card-kicker">News</p>
+                  <h3>Congratulations Yujin!</h3>
+                  <p>Yujin Kim successfully defended her thesis on April 16.</p>
+                </div>
+              </a>
+            </div>
+            <div class="homepage-card">
+              <a class="homepage-card-link" href="/post/2026-04-13-kobiediss/">
+                <img src="/post/2026-04-13-kobiediss/featured.jpeg" alt="Congratulations Dr. Kobie">
+                <div class="homepage-card-body">
+                  <p class="homepage-card-kicker">News</p>
+                  <h3>Congratulations Dr. Kobie!</h3>
+                  <p>Addison Kobie successfully defended her dissertation on April 13.</p>
+                </div>
+              </a>
+            </div>
+            <div class="homepage-card">
+              <a class="homepage-card-link" href="/post/2026-03-26-ursinodiss/">
+                <img src="/post/2026-03-26-ursinodiss/featured.jpeg" alt="Congratulations Dr. Ursino">
+                <div class="homepage-card-body">
+                  <p class="homepage-card-kicker">News</p>
+                  <h3>Congratulations Dr. Ursino!</h3>
+                  <p>John Ursino successfully defended his dissertation on March 26.</p>
+                </div>
+              </a>
+            </div>
+            <div class="homepage-card">
+              <a class="homepage-card-link" href="/post/2026-02-05-lancasterjailassessment/">
+                <img src="/post/2026-02-05-lancasterjailassessment/featured.png" alt="ARC Lab presents Lancaster Jail Assessment findings">
+                <div class="homepage-card-body">
+                  <p class="homepage-card-kicker">News</p>
+                  <h3>Presentation to the Lancaster League of Women Voters</h3>
+                  <p>ARC shared findings from the Lancaster Jail Assessment with community stakeholders.</p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
     design:
@@ -155,7 +226,36 @@ sections:
             <a class="homepage-section-link" href="/projects/">See all projects</a>
           </div>
           <div class="homepage-card-grid homepage-card-grid-3">
-            <!-- keep your existing cards -->
+            <div class="homepage-card">
+              <a class="homepage-card-link" href="/projects/2026_ngu/">
+                <img src="/projects/2026_ngu/featured.png" alt="Turning hope into evidence">
+                <div class="homepage-card-body">
+                  <p class="homepage-card-kicker">Project</p>
+                  <h3>Turning hope into evidence</h3>
+                  <p>A pilot study laying the groundwork for evaluation of the Never Give Up Transitional Living Program.</p>
+                </div>
+              </a>
+            </div>
+            <div class="homepage-card">
+              <a class="homepage-card-link" href="/projects/2025_av_iowa/">
+                <img src="/projects/2025_av_iowa/featured.png" alt="Parole decision making tool">
+                <div class="homepage-card-body">
+                  <p class="homepage-card-kicker">Project</p>
+                  <h3>Parole decision-making tool</h3>
+                  <p>Development and evaluation of a tool designed to support parole decision-making.</p>
+                </div>
+              </a>
+            </div>
+            <div class="homepage-card">
+              <a class="homepage-card-link" href="/projects/2025_ndcs-evaluation/">
+                <img src="/projects/2025_ndcs-evaluation/featured.png" alt="NDCS program evaluation">
+                <div class="homepage-card-body">
+                  <p class="homepage-card-kicker">Project</p>
+                  <h3>NDCS program evaluation</h3>
+                  <p>Research and evaluation support for correctional programming in Nebraska.</p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
     design:
