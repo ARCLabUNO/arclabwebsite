@@ -97,3 +97,13 @@
 .dark .study-card p {
   color: #d1d5db;
 }
+
+
+body[class*="training-modules"] .arc-module-section p {
+  margin: 0 0 1rem 0;
+}
+
+body[class*="training-modules"] .arc-module-section ul {
+  margin: 1rem 0 1rem 1.25rem;
+  padding: 0;
+}
