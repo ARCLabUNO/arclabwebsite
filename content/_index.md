@@ -35,7 +35,7 @@ sections:
             Our work focuses on analyzing real-world correctional systems using rigorous quantitative and qualitative methods. Rather than studying policy in the abstract, we examine how policies, practices, and programs function in context, using data to evaluate outcomes, identify gaps, and inform more effective, equitable, and transparent approaches to corrections.
           </p>
 
-          <img src="/media/YOUR_IMAGE_NAME.jpg" style="max-width:700px; width:100%; height:auto; display:block; margin:2rem auto 0 auto; border-radius:12px;">
+          <img src="/media/YOUR_IMAGE_NAME.jpg" alt="ARC Lab research in practice" style="max-width:700px; width:100%; height:auto; display:block; margin:2rem auto 0 auto; border-radius:12px;">
         </div>
     design:
       columns: '1'
@@ -46,46 +46,63 @@ sections:
       spacing:
         padding: ['40px', '0', '40px', '0']
 
-  - block: features
+  - block: markdown
     content:
-      title: What We Study
-      text: ARC focuses on key areas within corrections and reentry, with an emphasis on applied, data-driven research.
-      items:
-        - name: Institutional and Community Corrections
-          description: How systems operate and affect populations across custody and supervision.
-          icon: building-library
+      title:
+      subtitle: ''
+      text: |
+        <div style="text-align:center; max-width:1000px; margin:0 auto;">
+          <h2>What We Study</h2>
 
-        - name: Reentry and Desistance
-          description: Outcomes, barriers, and pathways following release.
-          icon: arrow-path
+          <p style="max-width:750px; margin:0.5rem auto 2rem auto;">
+            ARC focuses on key areas within corrections and reentry, with an emphasis on applied, data-driven research:
+          </p>
 
-        - name: Risk-Needs Assessment
-          description: Development of assessment tools tailored to the operational needs of adult and juvenile justice agencies.
-          icon: scale
+          <div class="study-grid">
+            <div class="study-card">
+              <h3>Institutional &amp; Community Corrections</h3>
+              <p>How systems operate and affect populations across custody and supervision.</p>
+            </div>
 
-        - name: Decision-Making
-          description: How choices are shaped by individual, social, and environmental factors over time.
-          icon: light-bulb
+            <div class="study-card">
+              <h3>Reentry &amp; Desistance</h3>
+              <p>Outcomes, barriers, and pathways following release.</p>
+            </div>
 
-        - name: Program Evaluation
-          description: Assessing correctional interventions and services.
-          icon: chart-bar
+            <div class="study-card">
+              <h3>Risk-Needs Assessment</h3>
+              <p>Development of assessment tools tailored to the operational needs of adult and juvenile justice agencies.</p>
+            </div>
 
-        - name: Restrictive Housing
-          description: Use, conditions, and consequences within correctional settings.
-          icon: lock-closed
+            <div class="study-card">
+              <h3>Decision-Making</h3>
+              <p>How choices are shaped by individual, social, and environmental factors over time.</p>
+            </div>
 
-        - name: Gangs and Gang Membership
-          description: Identification, behavior, management, and system-level responses.
-          icon: user-group
+            <div class="study-card">
+              <h3>Program Evaluation</h3>
+              <p>Assessing correctional interventions and services.</p>
+            </div>
+
+            <div class="study-card">
+              <h3>Restrictive Housing</h3>
+              <p>Use, conditions, and consequences within correctional settings.</p>
+            </div>
+
+            <div class="study-card">
+              <h3>Gangs &amp; Gang Membership</h3>
+              <p>Identification, behavior, management, and system-level responses.</p>
+            </div>
+          </div>
+
+          <p style="max-width:750px; margin:2rem auto 0 auto;">
+            Across these areas, the lab prioritizes research that is methodologically rigorous and directly relevant to policy and practice.
+          </p>
+        </div>
     design:
-      columns: '2'
-      background:
-        color:
-          light: '#ffffff'
-          dark: '#0f172a'
+      columns: '1'
       spacing:
-        padding: ['48px', '0', '56px', '0']
+        padding: ['40px', '0', '48px', '0']
 
   - block: markdown
     content:

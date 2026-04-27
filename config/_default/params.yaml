@@ -120,3 +120,7 @@ publications:
 
 sharing_image: 'icon.jpg'
 logo: 'icon.jpg'
+
+assets:
+  custom_css:
+    - scss/custom.scss
