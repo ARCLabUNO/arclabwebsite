@@ -88,7 +88,7 @@ sections:
           <h2>Research and Collaboration</h2>
 
           <p>
-            ARC works closely with SCCJ faculty, the <a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/nebraska-center-for-justice-research/index.php">Nebraska Center for Justice Research (NCJR)</a>, the <a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/juvenile-justice-institute/index.php">Juvenile Justice Institute (JJI)</a>, and a range of community, state, and federal partners. These collaborations allow the lab to conduct research using administrative data, collect primary data, evaluate active programs, and contribute to ongoing policy discussions. Much of ARC’s work is embedded in correctional settings, where findings can directly inform correctional policy and practice.
+            ARC works closely with SCCJ faculty, the <a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/nebraska-center-for-justice-research/index.php">Nebraska Center for Justice Research (NCJR)</a>, the <a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/juvenile-justice-institute/index.php">Juvenile Justice Institute (JJI)</a>, and a range of community, state, and federal partners. These collaborations allow the lab to conduct research using administrative data, collect primary data, evaluate active programs, and contribute to ongoing policy discussions.
           </p>
 
           <p>
