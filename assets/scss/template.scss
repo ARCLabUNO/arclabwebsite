@@ -28,15 +28,15 @@
   margin: 0;
 }
 
-/* SECTION HEADINGS — homepage only */
+/* SECTION HEADINGS — homepage only via custom section class */
 
-.home .home-section h2 {
+.homepage-underline h2 {
   position: relative;
   display: inline-block;
   padding-bottom: 6px;
 }
 
-.home .home-section h2::after {
+.homepage-underline h2::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -49,7 +49,7 @@
   transition: width 0.35s ease, opacity 0.2s ease;
 }
 
-.home .home-section:hover h2::after {
+.homepage-underline:hover h2::after {
   width: 60%;
   opacity: 1;
 }

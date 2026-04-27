@@ -39,6 +39,7 @@ sections:
         </div>
     design:
       columns: '1'
+      css_class: homepage-underline
       background:
         color:
           light: '#f8fafc'
@@ -54,6 +55,7 @@ sections:
         {{< study-grid >}}
     design:
       columns: '1'
+      css_class: homepage-underline
       spacing:
         padding: ['40px', '0', '48px', '0']
 
@@ -76,6 +78,7 @@ sections:
         </div>
     design:
       columns: '1'
+      css_class: homepage-underline
       spacing:
         padding: ['40px', '0', '48px', '0']
 
@@ -97,6 +100,7 @@ sections:
         </div>
     design:
       columns: '1'
+      css_class: homepage-underline
       background:
         color:
           light: '#f8fafc'
@@ -159,6 +163,7 @@ sections:
         </div>
     design:
       columns: '1'
+      css_class: homepage-underline
       spacing:
         padding: ['40px', '0', '48px', '0']
 
@@ -207,6 +212,7 @@ sections:
         </div>
     design:
       columns: '1'
+      css_class: homepage-underline
       background:
         color:
           light: '#f8fafc'
