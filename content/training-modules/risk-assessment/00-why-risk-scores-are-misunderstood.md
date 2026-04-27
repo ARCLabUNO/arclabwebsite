@@ -1,6 +1,8 @@
 ---
 title: Why Risk Scores Are Misunderstood
 weight: 0
+_build:
+  list: false
 ---
 
 ## Context
