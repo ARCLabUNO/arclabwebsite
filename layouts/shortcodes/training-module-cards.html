@@ -1,0 +1,99 @@
+<style>
+.training-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.training-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.training-card {
+  background: #111827;
+  color: #f9fafb;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid #1f2937;
+  border-top: 4px solid #1f3a5f;
+}
+
+.training-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+.training-label {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #d1d5db;
+  background: #1f2937;
+  border-radius: 999px;
+}
+
+.training-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #f9fafb;
+}
+
+.training-card p {
+  color: #d1d5db;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.training-card ul {
+  color: #d1d5db;
+  margin-bottom: 1.5rem;
+}
+
+.training-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #1f3a5f;
+  color: #ffffff !important;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.25s ease;
+}
+
+.training-link:hover {
+  background: #162944;
+}
+</style>
+
+<div class="training-container">
+  <h2>Current Series</h2>
+
+  <div class="training-grid">
+    <div class="training-card">
+      <span class="training-label">Available now</span>
+      <h3>Risk Assessment</h3>
+      <p>
+        A series on what risk scores represent, how tools are built and evaluated,
+        and how to interpret their outputs in real decision contexts.
+      </p>
+      <p>
+        The series opens with a basic but often overlooked point:
+        not all risk scores mean the same thing.
+      </p>
+      <ul>
+        <li>what risk scores actually represent</li>
+        <li>how tools are validated</li>
+        <li>what performance metrics do and do not tell you</li>
+        <li>how these tools are used in practice</li>
+      </ul>
+      <a href="/training-modules/risk-assessment/" class="training-link">Start the Series</a>
+    </div>
+  </div>
+</div>
