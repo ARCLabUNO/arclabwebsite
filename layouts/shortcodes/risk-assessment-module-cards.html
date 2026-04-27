@@ -1,0 +1,163 @@
+<style>
+.module-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.module-card {
+  background: #111827;
+  color: #f9fafb;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid #1f2937;
+  border-top: 4px solid #1f3a5f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.module-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+.module-label {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #d1d5db;
+  background: #1f2937;
+  border-radius: 999px;
+}
+
+.module-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.module-card p {
+  color: #d1d5db;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.module-link {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #1f3a5f;
+  color: #fff !important;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.module-link.disabled {
+  background: #374151;
+  pointer-events: none;
+}
+
+.module-badge {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .module-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<div class="module-container">
+  <h2>Modules</h2>
+
+  <div class="module-grid">
+
+    <!-- Module 0 -->
+    <div class="module-card">
+      <div>
+        <span class="module-label">Start Here</span>
+        <h3>Why Risk Scores Are Misunderstood</h3>
+        <p>
+          An introduction to a basic but often overlooked issue: not all risk scores
+          mean the same thing, even when they appear similar.
+        </p>
+      </div>
+      <div>
+        <a href="/training-modules/risk-assessment/00-why-risk-scores-are-misunderstood/" class="module-link">
+          View Module
+        </a>
+      </div>
+    </div>
+
+    <!-- Interpreting Risk Scores -->
+    <div class="module-card">
+      <div>
+        <span class="module-label">In Development</span>
+        <h3>Interpreting Risk Scores</h3>
+        <p>
+          What risk scores actually represent—and how to interpret them in practice.
+        </p>
+      </div>
+      <div>
+        <span class="module-badge">Coming soon</span>
+      </div>
+    </div>
+
+    <!-- Building and Validating Tools -->
+    <div class="module-card">
+      <div>
+        <span class="module-label">In Development</span>
+        <h3>Building and Validating Tools</h3>
+        <p>
+          How risk assessment tools are constructed, tested, and evaluated.
+        </p>
+      </div>
+      <div>
+        <span class="module-badge">Coming soon</span>
+      </div>
+    </div>
+
+    <!-- Understanding Performance Metrics -->
+    <div class="module-card">
+      <div>
+        <span class="module-label">In Development</span>
+        <h3>Understanding Performance Metrics</h3>
+        <p>
+          What common metrics like AUC measure—and what they can obscure.
+        </p>
+      </div>
+      <div>
+        <span class="module-badge">Coming soon</span>
+      </div>
+    </div>
+
+    <!-- Use in Practice -->
+    <div class="module-card">
+      <div>
+        <span class="module-label">In Development</span>
+        <h3>Use in Practice</h3>
+        <p>
+          How risk assessment tools are used in real decision contexts, including pretrial and corrections.
+        </p>
+      </div>
+      <div>
+        <span class="module-badge">Coming soon</span>
+      </div>
+    </div>
+
+  </div>
+</div>
