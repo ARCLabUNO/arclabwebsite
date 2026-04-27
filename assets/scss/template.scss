@@ -185,6 +185,7 @@
 
 /* ========================================
    WHAT WE STUDY — TRUE CHECKERBOARD
+   (for 4-column desktop grid)
 ======================================== */
 
 .study-section .study-card {
@@ -199,70 +200,62 @@
   box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
 }
 
-/* Light mode checkerboard */
-.study-section .study-card:nth-child(4n + 1) {
+/* Light mode checkerboard: row 1 = A B A B, row 2 = B A B A */
+.study-section .study-card:nth-child(8n + 1),
+.study-section .study-card:nth-child(8n + 3),
+.study-section .study-card:nth-child(8n + 6),
+.study-section .study-card:nth-child(8n + 8) {
   background: #f8fafc;
 }
 
-.study-section .study-card:nth-child(4n + 2) {
+.study-section .study-card:nth-child(8n + 2),
+.study-section .study-card:nth-child(8n + 4),
+.study-section .study-card:nth-child(8n + 5),
+.study-section .study-card:nth-child(8n + 7) {
   background: #f1f5f9;
 }
 
-.study-section .study-card:nth-child(4n + 3) {
-  background: #f1f5f9;
-}
-
-.study-section .study-card:nth-child(4n + 4) {
-  background: #f8fafc;
-}
-
-/* Light mode hover, matched to base color */
-.study-section .study-card:nth-child(4n + 1):hover {
+/* Light mode hover matched to each base color */
+.study-section .study-card:nth-child(8n + 1):hover,
+.study-section .study-card:nth-child(8n + 3):hover,
+.study-section .study-card:nth-child(8n + 6):hover,
+.study-section .study-card:nth-child(8n + 8):hover {
   background: #eef2f7;
 }
 
-.study-section .study-card:nth-child(4n + 2):hover {
+.study-section .study-card:nth-child(8n + 2):hover,
+.study-section .study-card:nth-child(8n + 4):hover,
+.study-section .study-card:nth-child(8n + 5):hover,
+.study-section .study-card:nth-child(8n + 7):hover {
   background: #e2e8f0;
-}
-
-.study-section .study-card:nth-child(4n + 3):hover {
-  background: #e2e8f0;
-}
-
-.study-section .study-card:nth-child(4n + 4):hover {
-  background: #eef2f7;
 }
 
 /* Dark mode checkerboard */
-.dark .study-section .study-card:nth-child(4n + 1) {
+.dark .study-section .study-card:nth-child(8n + 1),
+.dark .study-section .study-card:nth-child(8n + 3),
+.dark .study-section .study-card:nth-child(8n + 6),
+.dark .study-section .study-card:nth-child(8n + 8) {
   background: #1f2937;
 }
 
-.dark .study-section .study-card:nth-child(4n + 2) {
+.dark .study-section .study-card:nth-child(8n + 2),
+.dark .study-section .study-card:nth-child(8n + 4),
+.dark .study-section .study-card:nth-child(8n + 5),
+.dark .study-section .study-card:nth-child(8n + 7) {
   background: #243041;
 }
 
-.dark .study-section .study-card:nth-child(4n + 3) {
-  background: #243041;
-}
-
-.dark .study-section .study-card:nth-child(4n + 4) {
-  background: #1f2937;
-}
-
-/* Dark mode hover, matched to base color */
-.dark .study-section .study-card:nth-child(4n + 1):hover {
+/* Dark mode hover matched to each base color */
+.dark .study-section .study-card:nth-child(8n + 1):hover,
+.dark .study-section .study-card:nth-child(8n + 3):hover,
+.dark .study-section .study-card:nth-child(8n + 6):hover,
+.dark .study-section .study-card:nth-child(8n + 8):hover {
   background: #2a3648;
 }
 
-.dark .study-section .study-card:nth-child(4n + 2):hover {
+.dark .study-section .study-card:nth-child(8n + 2):hover,
+.dark .study-section .study-card:nth-child(8n + 4):hover,
+.dark .study-section .study-card:nth-child(8n + 5):hover,
+.dark .study-section .study-card:nth-child(8n + 7):hover {
   background: #2f3d52;
-}
-
-.dark .study-section .study-card:nth-child(4n + 3):hover {
-  background: #2f3d52;
-}
-
-.dark .study-section .study-card:nth-child(4n + 4):hover {
-  background: #2a3648;
 }
