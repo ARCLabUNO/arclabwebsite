@@ -42,7 +42,7 @@ But they do not perform the same way.
 <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 1.5rem; margin-bottom: 1.5rem;">
 
   <div style="flex: 1; min-width: 280px; background: #111827; color: #f9fafb; padding: 1rem; border-radius: 10px;">
-    <img src="/static/images/training/risk-assessment/more-accurate-tool.jpg" alt="More accurate tool showing strong separation" style="width: 100%; border-radius: 6px; margin-bottom: 0.75rem;">
+    <img src="/media/more-accurate-tool.jpg" alt="More accurate tool showing strong separation" style="width: 100%; border-radius: 6px; margin-bottom: 0.75rem;">
     <h4 style="margin-top: 0; margin-bottom: 0.5rem; color: #f9fafb;">More Accurate Tool</h4>
     <p style="margin-bottom: 0; color: #d1d5db;">
       Clear separation between lower- and higher-risk individuals.
@@ -50,7 +50,7 @@ But they do not perform the same way.
   </div>
 
   <div style="flex: 1; min-width: 280px; background: #111827; color: #f9fafb; padding: 1rem; border-radius: 10px;">
-    <img src="/static/images/training/risk-assessment/less-accurate-tool.jpg" alt="Less accurate tool showing weak separation" style="width: 100%; border-radius: 6px; margin-bottom: 0.75rem;">
+    <img src="/media/less-accurate-tool.jpg" alt="Less accurate tool showing weak separation" style="width: 100%; border-radius: 6px; margin-bottom: 0.75rem;">
     <h4 style="margin-top: 0; margin-bottom: 0.5rem; color: #f9fafb;">Less Accurate Tool</h4>
     <p style="margin-bottom: 0; color: #d1d5db;">
       Scores vary, but outcomes are not well distinguished.
