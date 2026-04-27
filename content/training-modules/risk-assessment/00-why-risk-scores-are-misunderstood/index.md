@@ -196,8 +196,7 @@ show_authors: false
     <h2>The Basic Problem</h2>
     <p>Two tools can both assign a “risk score” and still behave very differently.</p>
     <p>That matters because a score is only useful if it meaningfully distinguishes between outcomes.</p>
-
-    <p>The key idea: not all risk scores carry the same practical meaning.</p>
+    <p><strong>The key idea:</strong> not all risk scores carry the same practical meaning.</p>
 
   </div>
 
