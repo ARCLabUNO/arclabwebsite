@@ -44,77 +44,33 @@ sections:
       spacing:
         padding: ['40px', '0', '40px', '0']
 
-  - block: markdown
+  - block: features
     content:
-      title:
-      subtitle: ''
-      text: |
-        <div style="text-align:center; max-width:1000px; margin:0 auto;">
-          <h2>What We Study</h2>
+      title: What We Study
+      text: ARC focuses on key areas within corrections and reentry, with an emphasis on applied, data-driven research.
+      items:
+        - name: Institutional & Community Corrections
+          description: How systems operate and affect populations across custody and supervision.
 
-          <p style="max-width:750px; margin:0.5rem auto 2rem auto;">
-            ARC focuses on key areas within corrections and reentry, with an emphasis on applied, data-driven research:
-          </p>
+        - name: Reentry & Desistance
+          description: Outcomes, barriers, and pathways following release.
 
-          <div class="homepage-card-grid homepage-card-grid-3">
+        - name: Risk-Needs Assessment
+          description: Development of assessment tools tailored to the operational needs of adult and juvenile justice agencies.
 
-            <div class="homepage-card">
-              <div class="homepage-card-body">
-                <h3>Institutional & Community Corrections</h3>
-                <p>How systems operate and affect populations across custody and supervision.</p>
-              </div>
-            </div>
+        - name: Decision-Making
+          description: How choices are shaped by individual, social, and environmental factors over time.
 
-            <div class="homepage-card">
-              <div class="homepage-card-body">
-                <h3>Reentry & Desistance</h3>
-                <p>Outcomes, barriers, and pathways following release.</p>
-              </div>
-            </div>
+        - name: Program Evaluation
+          description: Assessing correctional interventions and services.
 
-            <div class="homepage-card">
-              <div class="homepage-card-body">
-                <h3>Risk-Needs Assessment</h3>
-                <p>Development of assessment tools tailored to the operational needs of adult and juvenile justice agencies.</p>
-              </div>
-            </div>
+        - name: Restrictive Housing
+          description: Use, conditions, and consequences within correctional settings.
 
-            <div class="homepage-card">
-              <div class="homepage-card-body">
-                <h3>Decision-Making</h3>
-                <p>How choices are shaped by individual, social, and environmental factors over time.</p>
-              </div>
-            </div>
-
-            <div class="homepage-card">
-              <div class="homepage-card-body">
-                <h3>Program Evaluation</h3>
-                <p>Assessing correctional interventions and services.</p>
-              </div>
-            </div>
-
-            <div class="homepage-card">
-              <div class="homepage-card-body">
-                <h3>Restrictive Housing</h3>
-                <p>Use, conditions, and consequences within correctional settings.</p>
-              </div>
-            </div>
-
-            <div class="homepage-card">
-              <div class="homepage-card-body">
-                <h3>Gangs & Gang Membership</h3>
-                <p>Identification, behavior, management, and system-level responses.</p>
-              </div>
-            </div>
-
-          </div>
-
-          <p style="max-width:750px; margin:2rem auto 0 auto;">
-            Across these areas, the lab prioritizes research that is methodologically rigorous and directly relevant to policy and practice.
-          </p>
-        </div>
+        - name: Gangs & Gang Membership
+          description: Identification, behavior, management, and system-level responses.
     design:
-      columns: '1'
+      columns: '3'
       spacing:
         padding: ['40px', '0', '48px', '0']
 
