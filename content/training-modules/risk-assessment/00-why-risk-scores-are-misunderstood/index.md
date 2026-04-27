@@ -220,6 +220,14 @@ show_authors: false
     <p>As a result, risk scores are often interpreted as if they carry the same meaning, even when they do not.</p>
   </div>
 
+  <div class="arc-module-bottom">
+    <h2>Bottom Line</h2>
+    <p>
+      Risk scores are widely used—but often poorly understood. Understanding what they
+      represent is a prerequisite for using them well.
+    </p>
+  </div>
+
   <div class="arc-module-section">
     <h2>Where the Series Goes Next</h2>
     <p>This series will examine:</p>
@@ -229,14 +237,6 @@ show_authors: false
       <li>what common metrics like AUC do—and do not—tell you</li>
       <li>how these tools function in real decision contexts</li>
     </ul>
-  </div>
-
-  <div class="arc-module-bottom">
-    <h2>Bottom Line</h2>
-    <p>
-      Risk scores are widely used—but often poorly understood. Understanding what they
-      represent is a prerequisite for using them well.
-    </p>
   </div>
 
 </div>
