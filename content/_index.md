@@ -28,7 +28,7 @@ sections:
           <p style="font-size:1.2rem; margin-top:0.75rem;"><strong>Studying correctional systems as they operate and how they can work better.</strong></p>
 
           <p>
-            The Advancing Research in Corrections (ARC) Lab, based in the <a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/index.php">UNO School of Criminology and Criminal Justice</a>, conducts applied research on institutional corrections, community corrections, and reentry.
+            The Advancing Research in Corrections (ARC) Lab, based in the <a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/index.php">UNO School of Criminology and Criminal Justice</a>, conducts applied and theoretical research on institutional corrections, community corrections, and reentry.
           </p>
 
           <p>
