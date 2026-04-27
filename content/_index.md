@@ -9,18 +9,14 @@ sections:
       title:
       subtitle: ''
       text: |
-        <div style="text-align:center; width:100%; margin:0; padding:0; background:black;">
-          <img src="https://arcorrectionslab.org/img/animated_curve.gif" alt="Animated ARC Lab graphic" style="width:40%; max-width:400px; height:auto; display:block; margin:0 auto;">
+        <div style="text-align:center; width:100%; margin:0; padding:0;">
+          <img src="https://arcorrectionslab.org/img/animated_curve.gif" alt="Animated ARC Lab graphic" style="width:100%; max-width:100%; height:auto; display:block; margin:0 auto;">
         </div>
     design:
       columns: '1'
       css_class: full-width-gif
-      background:
-        color:
-          light: '#000000'
-          dark: '#000000'
       spacing:
-        padding: ['20px', '0', '20px', '0']
+        padding: ['0', '0', '20px', '0']
 
   - block: markdown
     content:
@@ -119,7 +115,46 @@ sections:
             <a class="homepage-section-link" href="/news/">See more news</a>
           </div>
           <div class="homepage-card-grid homepage-card-grid-2">
-            <!-- unchanged -->
+            <div class="homepage-card">
+              <a class="homepage-card-link" href="/post/2026-04-16-kimthesis/">
+                <img src="/post/2026-04-16-kimthesis/featured.jpeg" alt="Congratulations Yujin">
+                <div class="homepage-card-body">
+                  <p class="homepage-card-kicker">News</p>
+                  <h3>Congratulations Yujin!</h3>
+                  <p>Yujin Kim successfully defended her thesis on April 16.</p>
+                </div>
+              </a>
+            </div>
+            <div class="homepage-card">
+              <a class="homepage-card-link" href="/post/2026-04-13-kobiediss/">
+                <img src="/post/2026-04-13-kobiediss/featured.jpeg" alt="Congratulations Dr. Kobie">
+                <div class="homepage-card-body">
+                  <p class="homepage-card-kicker">News</p>
+                  <h3>Congratulations Dr. Kobie!</h3>
+                  <p>Addison Kobie successfully defended her dissertation on April 13.</p>
+                </div>
+              </a>
+            </div>
+            <div class="homepage-card">
+              <a class="homepage-card-link" href="/post/2026-03-26-ursinodiss/">
+                <img src="/post/2026-03-26-ursinodiss/featured.jpeg" alt="Congratulations Dr. Ursino">
+                <div class="homepage-card-body">
+                  <p class="homepage-card-kicker">News</p>
+                  <h3>Congratulations Dr. Ursino!</h3>
+                  <p>John Ursino successfully defended his dissertation on March 26.</p>
+                </div>
+              </a>
+            </div>
+            <div class="homepage-card">
+              <a class="homepage-card-link" href="/post/2026-02-05-lancasterjailassessment/">
+                <img src="/post/2026-02-05-lancasterjailassessment/featured.png" alt="ARC Lab presents Lancaster Jail Assessment findings">
+                <div class="homepage-card-body">
+                  <p class="homepage-card-kicker">News</p>
+                  <h3>Presentation to the Lancaster League of Women Voters</h3>
+                  <p>ARC shared findings from the Lancaster Jail Assessment with community stakeholders.</p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
     design:
@@ -138,7 +173,36 @@ sections:
             <a class="homepage-section-link" href="/projects/">See all projects</a>
           </div>
           <div class="homepage-card-grid homepage-card-grid-3">
-            <!-- unchanged -->
+            <div class="homepage-card">
+              <a class="homepage-card-link" href="/projects/2026_ngu/">
+                <img src="/projects/2026_ngu/featured.png" alt="Turning hope into evidence">
+                <div class="homepage-card-body">
+                  <p class="homepage-card-kicker">Project</p>
+                  <h3>Turning hope into evidence</h3>
+                  <p>A pilot study laying the groundwork for evaluation of the Never Give Up Transitional Living Program.</p>
+                </div>
+              </a>
+            </div>
+            <div class="homepage-card">
+              <a class="homepage-card-link" href="/projects/2025_av_iowa/">
+                <img src="/projects/2025_av_iowa/featured.png" alt="Parole decision making tool">
+                <div class="homepage-card-body">
+                  <p class="homepage-card-kicker">Project</p>
+                  <h3>Parole decision-making tool</h3>
+                  <p>Development and evaluation of a tool designed to support parole decision-making.</p>
+                </div>
+              </a>
+            </div>
+            <div class="homepage-card">
+              <a class="homepage-card-link" href="/projects/2025_ndcs-evaluation/">
+                <img src="/projects/2025_ndcs-evaluation/featured.png" alt="NDCS program evaluation">
+                <div class="homepage-card-body">
+                  <p class="homepage-card-kicker">Project</p>
+                  <h3>NDCS program evaluation</h3>
+                  <p>Research and evaluation support for correctional programming in Nebraska.</p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
     design:
