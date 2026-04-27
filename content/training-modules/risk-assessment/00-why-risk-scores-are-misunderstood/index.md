@@ -67,8 +67,13 @@ show_authors: false
   font-size: 1rem;
 }
 
+.arc-module-section p {
+  margin: 0 0 1rem 0;
+}
+
 .arc-module-section ul {
-  margin: 0.5rem 0 0 1.25rem;
+  margin: 1rem 0 1rem 1.25rem;
+  padding: 0;
 }
 
 .arc-module-key {
