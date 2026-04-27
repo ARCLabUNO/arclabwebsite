@@ -114,6 +114,69 @@ show_authors: false
   border-left: 4px solid #60a5fa;
 }
 
+.arc-module-figures {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #111827;
+  border: 1px solid #374151;
+  border-radius: 14px;
+}
+
+.arc-module-figures-kicker {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #93c5fd;
+  margin-bottom: 0.5rem;
+}
+
+.arc-module-figures h2 {
+  margin: 0 0 0.75rem 0;
+  color: #f9fafb;
+  font-size: 1.45rem;
+}
+
+.arc-module-figures p {
+  color: #e5e7eb;
+  line-height: 1.75;
+}
+
+.arc-module-figure-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+}
+
+.arc-module-figure-card {
+  background: #0f172a;
+  color: #f9fafb;
+  padding: 1rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+.arc-module-figure-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+}
+
+.arc-module-figure-card h3 {
+  margin: 0 0 0.4rem 0;
+  color: #ffffff;
+  font-size: 1.05rem;
+}
+
+.arc-module-figure-card p {
+  margin: 0;
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
 .arc-module-bottom {
   margin-top: 2rem;
   padding: 1.5rem;
@@ -135,16 +198,6 @@ show_authors: false
   line-height: 1.75;
 }
 
-.arc-module-bridge {
-  margin: 2rem 0 1rem 0;
-  padding: 0.9rem 1rem;
-  border-left: 4px solid #60a5fa;
-  background: rgba(31,58,95,0.18);
-  border-radius: 10px;
-  color: #e5e7eb;
-  line-height: 1.7;
-}
-
 @media (max-width: 768px) {
   .arc-module-hero {
     padding: 1.5rem;
@@ -152,6 +205,10 @@ show_authors: false
 
   .arc-module-hero h2 {
     font-size: 1.65rem;
+  }
+
+  .arc-module-figure-grid {
+    grid-template-columns: 1fr;
   }
 }
 </style>
@@ -193,7 +250,25 @@ show_authors: false
   </div>
 </div>
 
-{{< risk-score-figure-comparison >}}
+<div class="arc-module-figures">
+  <div class="arc-module-figures-kicker">See the Difference</div>
+  <h2>Same Score, Different Performance</h2>
+  <p>Both tools below assign a risk score. But they do not perform the same way.</p>
+
+  <div class="arc-module-figure-grid">
+    <div class="arc-module-figure-card">
+      <img src="more_accurate_tool.jpg" alt="More accurate tool showing strong separation">
+      <h3>More Accurate Tool</h3>
+      <p>Clear separation between lower- and higher-risk individuals.</p>
+    </div>
+
+    <div class="arc-module-figure-card">
+      <img src="less_accurate_tool.jpg" alt="Less accurate tool showing weak separation">
+      <h3>Less Accurate Tool</h3>
+      <p>Scores vary, but outcomes are not well distinguished.</p>
+    </div>
+  </div>
+</div>
 
 <div class="arc-module-section">
   <h2>Why the Difference Matters</h2>
