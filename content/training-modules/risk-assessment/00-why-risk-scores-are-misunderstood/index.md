@@ -119,7 +119,7 @@ show_authors: false
   </p>
 </div>
 
-## Where These Tools Are Used
+## Where Risk Scores Show Up
 
 Risk-needs assessment tools are used every day in:
 
@@ -129,7 +129,7 @@ Risk-needs assessment tools are used every day in:
 
 They shape decisions about incarceration, supervision, and programming.
 
-## The Core Problem
+## The Basic Problem
 
 Two tools can both assign a “risk score” and still behave very differently.
 
@@ -139,7 +139,7 @@ That matters because a score is only useful if it meaningfully distinguishes bet
   <strong>The key idea:</strong> not all risk scores carry the same practical meaning.
 </div>
 
-## A Simple Illustration
+## Same Score, Different Performance
 
 Both tools below assign a risk score.
 
@@ -147,19 +147,19 @@ But they do not perform the same way.
 
 <div class="module-figure-grid">
   <div class="module-figure-card">
-    <img src="more-accurate-tool.jpg" alt="More accurate tool showing strong separation">
+    <img src="more_accurate_tool.jpg" alt="More accurate tool showing strong separation">
     <h4>More Accurate Tool</h4>
     <p>Clear separation between lower- and higher-risk individuals.</p>
   </div>
 
   <div class="module-figure-card">
-    <img src="less-accurate-tool.jpg" alt="Less accurate tool showing weak separation">
+    <img src="less_accurate_tool.jpg" alt="Less accurate tool showing weak separation">
     <h4>Less Accurate Tool</h4>
     <p>Scores vary, but outcomes are not well distinguished.</p>
   </div>
 </div>
 
-## What This Means
+## Why the Difference Matters
 
 Both tools generate “risk scores.”
 
@@ -167,7 +167,7 @@ But only one meaningfully separates outcomes.
 
 That difference—how clearly a tool distinguishes between outcomes—is what we mean by **accuracy in practice**.
 
-## Why This Gets Missed
+## Why This Is Easy to Miss
 
 Many tools still in use today are built on empirical foundations that predate the 1980s.
 
@@ -179,7 +179,7 @@ At the same time:
 
 As a result, risk scores are often interpreted as if they carry the same meaning, even when they do not.
 
-## What This Series Covers
+## Where the Series Goes Next
 
 This series will examine:
 
