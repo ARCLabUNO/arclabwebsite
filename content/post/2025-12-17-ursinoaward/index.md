@@ -9,3 +9,5 @@ Doctoral candidate [John Ursino](https://arcorrectionslab.org/author/john-ursino
 John will receive a plaque at the Student Honors Convocation in April 2026.
 
 Congrats, John!
+
+![John Award](johnaward.png)
