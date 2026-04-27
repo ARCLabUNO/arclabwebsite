@@ -35,7 +35,7 @@ sections:
             Our work focuses on analyzing real-world correctional systems using rigorous quantitative and qualitative methods. Rather than studying policy in the abstract, we examine how policies, practices, and programs function in context, using data to evaluate outcomes, identify gaps, and inform more effective, equitable, and transparent approaches to corrections.
           </p>
 
-          <img src="/media/YOUR_IMAGE_NAME.jpg" alt="ARC Lab research in practice" style="max-width:700px; width:100%; height:auto; display:block; margin:2rem auto 0 auto; border-radius:12px;">
+          <img src="/media/YOUR_IMAGE_NAME.jpg" style="max-width:700px; width:100%; height:auto; display:block; margin:2rem auto 0 auto; border-radius:12px;">
         </div>
     design:
       columns: '1'
