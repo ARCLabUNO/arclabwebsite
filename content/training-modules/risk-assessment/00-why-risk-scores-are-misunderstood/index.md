@@ -250,25 +250,7 @@ show_authors: false
   </div>
 </div>
 
-<div class="arc-module-figures">
-  <div class="arc-module-figures-kicker">See the Difference</div>
-  <h2>Same Score, Different Performance</h2>
-  <p>Both tools below assign a risk score. But they do not perform the same way.</p>
-
-  <div class="arc-module-figure-grid">
-    <div class="arc-module-figure-card">
-      <img src="more_accurate_tool.jpg" alt="More accurate tool showing strong separation">
-      <h3>More Accurate Tool</h3>
-      <p>Clear separation between lower- and higher-risk individuals.</p>
-    </div>
-
-    <div class="arc-module-figure-card">
-      <img src="less_accurate_tool.jpg" alt="Less accurate tool showing weak separation">
-      <h3>Less Accurate Tool</h3>
-      <p>Scores vary, but outcomes are not well distinguished.</p>
-    </div>
-  </div>
-</div>
+{{< risk-score-figure-comparison >}}
 
 <div class="arc-module-section">
   <h2>Why the Difference Matters</h2>
