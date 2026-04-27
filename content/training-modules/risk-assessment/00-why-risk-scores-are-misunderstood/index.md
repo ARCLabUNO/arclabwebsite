@@ -49,20 +49,20 @@ show_authors: false
 .arc-module-section {
   margin: 1.75rem 0;
   padding: 1.5rem;
-  background: #e9eef5;
+  background: #1f2937;
   border-radius: 14px;
-  border: 1px solid #d7e0ea;
+  border: 1px solid #374151;
 }
 
 .arc-module-section h2 {
   margin: 0 0 0.75rem 0;
-  color: #0f172a;
+  color: #f9fafb;
   font-size: 1.45rem;
 }
 
 .arc-module-section p,
 .arc-module-section li {
-  color: #334155;
+  color: #e5e7eb;
   line-height: 1.75;
   font-size: 1rem;
 }
@@ -74,24 +74,28 @@ show_authors: false
 .arc-module-key {
   margin-top: 1rem;
   padding: 1rem 1.1rem;
-  background: #dce7f3;
-  color: #10233d;
+  background: #1f3a5f;
+  color: #f9fafb;
   border-radius: 12px;
-  border: 1px solid #c5d6ea;
+  border-left: 4px solid #60a5fa;
 }
 
 .arc-module-figures {
   margin: 2rem 0;
+  padding: 1.5rem;
+  background: #111827;
+  border: 1px solid #374151;
+  border-radius: 14px;
 }
 
 .arc-module-figures h2 {
   margin: 0 0 0.75rem 0;
-  color: #0f172a;
+  color: #f9fafb;
   font-size: 1.45rem;
 }
 
 .arc-module-figures p {
-  color: #334155;
+  color: #e5e7eb;
   line-height: 1.75;
 }
 
@@ -103,7 +107,7 @@ show_authors: false
 }
 
 .arc-module-figure-card {
-  background: #111827;
+  background: #0f172a;
   color: #f9fafb;
   padding: 1rem;
   border-radius: 14px;
@@ -196,6 +200,7 @@ show_authors: false
     <div class="arc-module-key">
       <strong>The key idea:</strong> not all risk scores carry the same practical meaning.
     </div>
+
   </div>
 
   {{< risk-score-figure-comparison >}}
