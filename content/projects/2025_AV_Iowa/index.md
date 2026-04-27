@@ -5,6 +5,10 @@ lastmod: 2026-04-25
 category: "current"
 subtitle: ""
 investigators: "Drs. Zachary Hamilton, Jennifer Tostlebe, and Alex Kigerl (with Drs. David Pyrooz and Stephen Billings)"
+authors:
+  - admin
+  - tostlebe
+  - kigerl
 funder: "The Laura and John Arnold Foundation"
 summary: "Prisons in the United States are overcrowded. When prisons are over capacity it is challenging to effectively manage and rehabilitate prisoners before they return to their communities."
 ---
