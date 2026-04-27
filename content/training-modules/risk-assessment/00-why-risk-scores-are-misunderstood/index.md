@@ -268,7 +268,7 @@ show_authors: false
 <div class="arc-module-bottom">
   <h2>Bottom Line</h2>
   <p>
-    Risk scores are widely used—but often poorly understood. Understanding what they
+    Risk scores are widely used but often poorly understood. Understanding what they
     represent is a prerequisite for using them well.
   </p>
 </div>
