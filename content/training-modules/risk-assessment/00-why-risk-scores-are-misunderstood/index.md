@@ -49,9 +49,9 @@ show_authors: false
 .arc-module-section {
   margin: 1.75rem 0;
   padding: 1.5rem;
-  background: #f8fafc;
+  background: #e9eef5;
   border-radius: 14px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #d7e0ea;
 }
 
 .arc-module-section h2 {
@@ -74,10 +74,10 @@ show_authors: false
 .arc-module-key {
   margin-top: 1rem;
   padding: 1rem 1.1rem;
-  background: #eaf2fb;
+  background: #dce7f3;
   color: #10233d;
   border-radius: 12px;
-  border: 1px solid #d4e3f5;
+  border: 1px solid #c5d6ea;
 }
 
 .arc-module-figures {
@@ -198,23 +198,7 @@ show_authors: false
     </div>
   </div>
 
-  <div class="arc-module-figures">
-    <h2>Same Score, Different Performance</h2>
-    <p>Both tools below assign a risk score. But they do not perform the same way.</p>
-
-    <div class="arc-module-figure-grid">
-      <div class="arc-module-figure-card">
-        <img src="more_accurate_tool.jpg" alt="More accurate tool showing strong separation" />
-        <h3>More Accurate Tool</h3>
-        <p>Clear separation between lower- and higher-risk individuals.</p>
-      </div>
-      <div class="arc-module-figure-card">
-        <img src="less_accurate_tool.jpg" alt="Less accurate tool showing weak separation" />
-        <h3>Less Accurate Tool</h3>
-        <p>Scores vary, but outcomes are not well distinguished.</p>
-      </div>
-    </div>
-  </div>
+  {{< risk-score-figure-comparison >}}
 
   <div class="arc-module-section">
     <h2>Why the Difference Matters</h2>
