@@ -35,7 +35,7 @@ sections:
             Our work focuses on analyzing real-world correctional systems using rigorous quantitative and qualitative methods. Rather than studying policy in the abstract, we examine how policies, practices, and programs function in context, using data to evaluate outcomes, identify gaps, and inform more effective, equitable, and transparent approaches to corrections.
           </p>
 
-          <img src="/media/YOUR_IMAGE_NAME.jpg" alt="ARC Lab research in practice" style="max-width:700px; width:100%; height:auto; display:block; margin:2rem auto 0 auto; border-radius:12px;">
+          <img src="/media/arclogo_aardvark.png" alt="ARC Lab logo" style="max-width:700px; width:100%; height:auto; display:block; margin:2rem auto 0 auto; border-radius:12px;">
         </div>
     design:
       columns: '1'
@@ -51,54 +51,61 @@ sections:
       title:
       subtitle: ''
       text: |
-        <div style="text-align:center; max-width:1000px; margin:0 auto;">
-          <h2>What We Study</h2>
+        <section class="study-section">
+          <div class="study-section-inner">
+            <h2>What We Study</h2>
 
-          <p style="max-width:750px; margin:0.5rem auto 2rem auto;">
-            ARC focuses on key areas within corrections and reentry, with an emphasis on applied, data-driven research:
-          </p>
+            <p class="study-intro">
+              ARC focuses on key areas within corrections and reentry, with an emphasis on applied, data-driven research:
+            </p>
 
-          <div class="study-grid">
-            <div class="study-card">
-              <h3>Institutional &amp; Community Corrections</h3>
-              <p>How systems operate and affect populations across custody and supervision.</p>
+            <div class="study-grid">
+              <div class="study-card">
+                <h3>Institutional &amp; Community Corrections</h3>
+                <p>How systems operate and affect populations across custody and supervision.</p>
+              </div>
+
+              <div class="study-card">
+                <h3>Reentry &amp; Desistance</h3>
+                <p>Outcomes, barriers, and pathways following release.</p>
+              </div>
+
+              <div class="study-card">
+                <h3>Risk-Needs Assessment</h3>
+                <p>Development of assessment tools tailored to the operational needs of adult and juvenile justice agencies.</p>
+              </div>
+
+              <div class="study-card">
+                <h3>Decision-Making</h3>
+                <p>How choices are shaped by individual, social, and environmental factors over time.</p>
+              </div>
+
+              <div class="study-card">
+                <h3>Program Evaluation</h3>
+                <p>Assessing correctional interventions and services.</p>
+              </div>
+
+              <div class="study-card">
+                <h3>Restrictive Housing</h3>
+                <p>Use, conditions, and consequences within correctional settings.</p>
+              </div>
+
+              <div class="study-card">
+                <h3>Gangs &amp; Gang Membership</h3>
+                <p>Identification, behavior, management, and system-level responses.</p>
+              </div>
+
+              <div class="study-card">
+                <h3>Gangs &amp; Decarceration</h3>
+                <p>Update.</p>
+              </div>
             </div>
 
-            <div class="study-card">
-              <h3>Reentry &amp; Desistance</h3>
-              <p>Outcomes, barriers, and pathways following release.</p>
-            </div>
-
-            <div class="study-card">
-              <h3>Risk-Needs Assessment</h3>
-              <p>Development of assessment tools tailored to the operational needs of adult and juvenile justice agencies.</p>
-            </div>
-
-            <div class="study-card">
-              <h3>Decision-Making</h3>
-              <p>How choices are shaped by individual, social, and environmental factors over time.</p>
-            </div>
-
-            <div class="study-card">
-              <h3>Program Evaluation</h3>
-              <p>Assessing correctional interventions and services.</p>
-            </div>
-
-            <div class="study-card">
-              <h3>Restrictive Housing</h3>
-              <p>Use, conditions, and consequences within correctional settings.</p>
-            </div>
-
-            <div class="study-card">
-              <h3>Gangs &amp; Gang Membership</h3>
-              <p>Identification, behavior, management, and system-level responses.</p>
-            </div>
+            <p class="study-outro">
+              Across these areas, the lab prioritizes research that is methodologically rigorous and directly relevant to policy and practice.
+            </p>
           </div>
-
-          <p style="max-width:750px; margin:2rem auto 0 auto;">
-            Across these areas, the lab prioritizes research that is methodologically rigorous and directly relevant to policy and practice.
-          </p>
-        </div>
+        </section>
     design:
       columns: '1'
       spacing:
