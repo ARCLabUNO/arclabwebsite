@@ -233,17 +233,6 @@ show_authors: false
     </p>
   </div>
 
-  <div class="arc-module-section">
-    <h2>Where the Series Goes Next</h2>
-    <p>This series will examine:</p>
-    <ul>
-      <li>what risk scores actually represent</li>
-      <li>how tools are built and validated</li>
-      <li>what common metrics like AUC do—and do not—tell you</li>
-      <li>how these tools function in real decision contexts</li>
-    </ul>
-  </div>
-
 </div>
 
 <!--
