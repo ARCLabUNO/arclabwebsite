@@ -97,18 +97,3 @@
 .dark .study-card p {
   color: #d1d5db;
 }
-
-
-/* Hide metadata + author box ONLY for Training Modules */
-body[class*="training-modules"] .article-metadata,
-body[class*="training-modules"] .article-authors,
-body[class*="training-modules"] .media.author-card,
-body[class*="training-modules"] .share-box,
-body[class*="training-modules"] .article-tags {
-  display: none !important;
-}
-
-/* Tighten layout for modules */
-body[class*="training-modules"] .article-container {
-  max-width: 900px;
-}
