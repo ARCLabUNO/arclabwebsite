@@ -1,0 +1,132 @@
+<style>
+.learning-hub-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.learning-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.learning-card {
+  background: #111827;
+  color: #f9fafb;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid #1f2937;
+  border-top: 4px solid #1f3a5f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.learning-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+.learning-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  color: #f9fafb;
+}
+
+.learning-card p {
+  color: #d1d5db;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.learning-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #1f3a5f;
+  color: #ffffff !important;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.25s ease;
+}
+
+.learning-link:hover {
+  background: #162944;
+}
+
+.learning-badge {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #d1d5db;
+  background: #1f2937;
+  border-radius: 999px;
+}
+
+.learning-link.disabled {
+  background: #374151;
+  cursor: default;
+  pointer-events: none;
+}
+
+@media (max-width: 992px) {
+  .learning-hub-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .learning-card {
+    padding: 1.5rem;
+  }
+}
+</style>
+
+<div class="learning-hub-container">
+  <div class="learning-hub-grid">
+
+    <div class="learning-card">
+      <div>
+        <h3>Training Modules</h3>
+        <p>
+          Short, focused modules on corrections-related topics, including risk assessment
+          and applied research concepts.
+        </p>
+      </div>
+      <div>
+        <a href="/training-modules/" class="learning-link">Explore Training Modules</a>
+      </div>
+    </div>
+
+    <div class="learning-card">
+      <div>
+        <h3>Podcast Search</h3>
+        <p>
+          A searchable tool for instructors and students to find podcast episodes and discussions
+          relevant to corrections, reentry, and criminal justice topics.
+        </p>
+      </div>
+      <div>
+        <span class="learning-badge">Coming Soon</span>
+      </div>
+    </div>
+
+    <div class="learning-card">
+      <div>
+        <h3>Reading Lists</h3>
+        <p>
+          Curated reading lists for instructors, students, and practitioners, organized around
+          key topics in corrections, justice, and reentry.
+        </p>
+      </div>
+      <div>
+        <span class="learning-badge">Coming Soon</span>
+      </div>
+    </div>
+
+  </div>
+</div>
