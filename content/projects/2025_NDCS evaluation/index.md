@@ -5,6 +5,9 @@ lastmod: 2026-04-25
 category: "current"
 subtitle: ""
 investigators: "Drs. Zachary Hamilton and Jennifer Tostlebe"
+authors:
+  - admin
+  - tostlebe
 funder: "The Nebraska Department of Correctional Services"
 summary: "In 2022, Nebraska’s State Legislature modified the previously enacted LB 896 to provide evaluation resources for NDCS programs to ensure the effectiveness of institutional programs serving Nebraska’s incarcerated population."
 ---
