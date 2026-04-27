@@ -28,6 +28,35 @@
   margin: 0;
 }
 
+/* SECTION HEADINGS — upgraded underline */
+
+.homepage-section-header h2,
+.home-section h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.homepage-section-header h2::after,
+.home-section h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background: #2563eb;
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: width 0.35s ease, opacity 0.2s ease;
+}
+
+.homepage-featured:hover h2::after,
+.home-section:hover h2::after {
+  width: 60%;
+  opacity: 1;
+}
+
 /* CTA LINK (clean + dynamic, no arrow) */
 
 .homepage-section-link {
