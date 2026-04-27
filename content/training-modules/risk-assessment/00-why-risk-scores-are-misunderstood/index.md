@@ -243,10 +243,10 @@ show_authors: false
 
 <div class="arc-module-section">
   <h2>The Basic Problem</h2>
-  <p>Two tools can both assign a “risk score” and still behave very differently.</p>
-  <p>That matters because a score is only useful if it meaningfully distinguishes between outcomes.</p>
+  <p>Two tools can assign the same “risk score," but behave very differently.</p>
+  <p>That matters because a risk score is only useful if it meaningfully distinguishes between outcomes.</p>
   <div class="arc-module-key">
-    <strong>The key idea:</strong> not all risk scores carry the same practical meaning.
+    <strong>The idea:</strong> Not all risk scores carry the same practical meaning.
   </div>
 </div>
 
@@ -260,13 +260,8 @@ show_authors: false
 
 <div class="arc-module-section">
   <h2>Why This Is Easy to Miss</h2>
-  <p>Many tools still in use today are built on empirical foundations that predate the 1980s.</p>
-  <p>At the same time:</p>
-  <ul>
-    <li>these tools are widely used</li>
-    <li>their outputs shape real decisions</li>
-    <li>understanding of how they work—and how to evaluate them—has not kept pace</li>
-  </ul>
+  <p>Many risk assessment tools still in use today are built on empirical foundations that predate the 1980s.</p>
+  <p>However, understanding of how these tools work—and how to evaluate them—has not kept pace.</p>
   <p>As a result, risk scores are often interpreted as if they carry the same meaning, even when they do not.</p>
 </div>
 
