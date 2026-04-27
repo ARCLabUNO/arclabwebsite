@@ -193,10 +193,6 @@ show_authors: false
   </div>
 </div>
 
-<div class="arc-module-bridge">
-  The example below shows why two tools can both produce scores while only one clearly separates outcomes.
-</div>
-
 {{< risk-score-figure-comparison >}}
 
 <div class="arc-module-section">
