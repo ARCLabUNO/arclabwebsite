@@ -17,7 +17,7 @@ main:
     url: publication
     weight: 40
   - name: ARC Learning Hub
-    url: resources
+    url: learning-hub
     weight: 50
   - name: Other Resources
     url: resources
