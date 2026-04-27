@@ -5,6 +5,8 @@ lastmod: 2026-04-25
 category: "current"
 subtitle: ""
 investigators: "Dr. Jennifer Tostlebe"
+authors:
+  - tostlebe
 funder: "UNO University Committee on Research and Creative Activity (internal)"
 summary: "Each year, more than 400,000 individuals are released from U.S. prisons, including approximately 2,000 in Nebraska."
 ---
