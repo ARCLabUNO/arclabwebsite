@@ -35,7 +35,7 @@ sections:
             Our work focuses on analyzing real-world correctional systems using rigorous quantitative and qualitative methods. Rather than studying policy in the abstract, we examine how policies, practices, and programs function in context, using data to evaluate outcomes, identify gaps, and inform more effective, equitable, and transparent approaches to corrections.
           </p>
 
-          <img src="/media/YOUR_IMAGE_NAME.jpg" alt="ARC Lab research in practice" style="max-width:700px; width:100%; height:auto; border-radius:14px; display:block; margin:2rem auto 0 auto; box-shadow:0 10px 30px rgba(0,0,0,0.10);">
+          <img src="/media/YOUR_IMAGE_NAME.jpg" alt="ARC Lab research in practice" style="max-width:700px; width:100%; height:auto; display:block; margin:2rem auto 0 auto; border-radius:12px;">
         </div>
     design:
       columns: '1'
@@ -46,65 +46,46 @@ sections:
       spacing:
         padding: ['40px', '0', '40px', '0']
 
-  - block: markdown
+  - block: features
     content:
-      title:
-      subtitle: ''
-      text: |
-        <div style="text-align:center; max-width:1100px; margin:0 auto;">
-          <h2>What We Study</h2>
+      title: What We Study
+      text: ARC focuses on key areas within corrections and reentry, with an emphasis on applied, data-driven research.
+      items:
+        - name: Institutional and Community Corrections
+          description: How systems operate and affect populations across custody and supervision.
+          icon: building-library
 
-          <p style="max-width:760px; margin:0.75rem auto 2rem auto;">
-            ARC focuses on key areas within corrections and reentry, with an emphasis on applied, data-driven research:
-          </p>
+        - name: Reentry and Desistance
+          description: Outcomes, barriers, and pathways following release.
+          icon: arrow-path
 
-          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1.25rem; margin-top:2rem; text-align:left;">
-            
-            <div style="background:#ffffff; border:1px solid #e5e7eb; border-radius:18px; padding:1.35rem 1.25rem; box-shadow:0 8px 24px rgba(15,23,42,0.06);">
-              <h3 style="margin-top:0; margin-bottom:0.6rem; font-size:1.05rem;">Institutional &amp; Community Corrections</h3>
-              <p style="margin:0; color:#374151;">How systems operate and affect populations across custody and supervision.</p>
-            </div>
+        - name: Risk-Needs Assessment
+          description: Development of assessment tools tailored to the operational needs of adult and juvenile justice agencies.
+          icon: scale
 
-            <div style="background:#ffffff; border:1px solid #e5e7eb; border-radius:18px; padding:1.35rem 1.25rem; box-shadow:0 8px 24px rgba(15,23,42,0.06);">
-              <h3 style="margin-top:0; margin-bottom:0.6rem; font-size:1.05rem;">Reentry &amp; Desistance</h3>
-              <p style="margin:0; color:#374151;">Outcomes, barriers, and pathways following release.</p>
-            </div>
+        - name: Decision-Making
+          description: How choices are shaped by individual, social, and environmental factors over time.
+          icon: light-bulb
 
-            <div style="background:#ffffff; border:1px solid #e5e7eb; border-radius:18px; padding:1.35rem 1.25rem; box-shadow:0 8px 24px rgba(15,23,42,0.06);">
-              <h3 style="margin-top:0; margin-bottom:0.6rem; font-size:1.05rem;">Risk-Needs Assessment</h3>
-              <p style="margin:0; color:#374151;">Development of assessment tools tailored to the operational needs of adult and juvenile justice agencies.</p>
-            </div>
+        - name: Program Evaluation
+          description: Assessing correctional interventions and services.
+          icon: chart-bar
 
-            <div style="background:#ffffff; border:1px solid #e5e7eb; border-radius:18px; padding:1.35rem 1.25rem; box-shadow:0 8px 24px rgba(15,23,42,0.06);">
-              <h3 style="margin-top:0; margin-bottom:0.6rem; font-size:1.05rem;">Decision-Making</h3>
-              <p style="margin:0; color:#374151;">How choices are shaped by individual, social, and environmental factors over time.</p>
-            </div>
+        - name: Restrictive Housing
+          description: Use, conditions, and consequences within correctional settings.
+          icon: lock-closed
 
-            <div style="background:#ffffff; border:1px solid #e5e7eb; border-radius:18px; padding:1.35rem 1.25rem; box-shadow:0 8px 24px rgba(15,23,42,0.06);">
-              <h3 style="margin-top:0; margin-bottom:0.6rem; font-size:1.05rem;">Program Evaluation</h3>
-              <p style="margin:0; color:#374151;">Assessing correctional interventions and services.</p>
-            </div>
-
-            <div style="background:#ffffff; border:1px solid #e5e7eb; border-radius:18px; padding:1.35rem 1.25rem; box-shadow:0 8px 24px rgba(15,23,42,0.06);">
-              <h3 style="margin-top:0; margin-bottom:0.6rem; font-size:1.05rem;">Restrictive Housing</h3>
-              <p style="margin:0; color:#374151;">Use, conditions, and consequences within correctional settings.</p>
-            </div>
-
-            <div style="background:#ffffff; border:1px solid #e5e7eb; border-radius:18px; padding:1.35rem 1.25rem; box-shadow:0 8px 24px rgba(15,23,42,0.06);">
-              <h3 style="margin-top:0; margin-bottom:0.6rem; font-size:1.05rem;">Gangs &amp; Gang Membership</h3>
-              <p style="margin:0; color:#374151;">Identification, behavior, management, and system-level responses.</p>
-            </div>
-
-          </div>
-
-          <p style="max-width:760px; margin:2rem auto 0 auto;">
-            Across these areas, the lab prioritizes research that is methodologically rigorous and directly relevant to policy and practice.
-          </p>
-        </div>
+        - name: Gangs and Gang Membership
+          description: Identification, behavior, management, and system-level responses.
+          icon: user-group
     design:
-      columns: '1'
+      columns: '2'
+      background:
+        color:
+          light: '#ffffff'
+          dark: '#0f172a'
       spacing:
-        padding: ['40px', '0', '48px', '0']
+        padding: ['48px', '0', '56px', '0']
 
   - block: markdown
     content:
