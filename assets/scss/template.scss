@@ -182,3 +182,58 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ========================================
+   WHAT WE STUDY — CARD COLOR VARIATION ONLY
+======================================== */
+
+.study-card {
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  border-top: 3px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.study-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+}
+
+/* subtle on-theme variation */
+.study-card:nth-child(4n + 1) {
+  background: #f8fafc;
+  border-top-color: #2563eb;
+}
+
+.study-card:nth-child(4n + 2) {
+  background: #f1f5f9;
+}
+
+.study-card:nth-child(4n + 3) {
+  background: #f0f9ff;
+  border-top-color: #0ea5e9;
+}
+
+.study-card:nth-child(4n + 4) {
+  background: #ffffff;
+}
+
+/* dark mode */
+.dark .study-card:nth-child(4n + 1) {
+  background: #1f2937;
+  border-top-color: #3b82f6;
+}
+
+.dark .study-card:nth-child(4n + 2) {
+  background: #243041;
+}
+
+.dark .study-card:nth-child(4n + 3) {
+  background: #1e3a5f;
+  border-top-color: #38bdf8;
+}
+
+.dark .study-card:nth-child(4n + 4) {
+  background: #1f2937;
+}
