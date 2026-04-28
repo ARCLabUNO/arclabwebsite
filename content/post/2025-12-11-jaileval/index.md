@@ -1,6 +1,8 @@
 ---
 title: ARC Lab Presents Lancaster County Jail Evaluation Findings!
 date: 2025-12-11
+authors:
+  - tostlebe
 summary: "Dr. Zachary Hamilton, Dr. Mark Foxall, and doctoral candidate John Ursino presented their findings from the Lancaster County Jail Evaluation."
 ---
 

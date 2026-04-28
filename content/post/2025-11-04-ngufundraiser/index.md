@@ -1,6 +1,8 @@
 ---
 title: Presentation at the Never Give Up Transitional Living 2025 Fundraiser Event!
 date: 2025-11-04
+authors:
+  - admin
 summary: "Dr. Jenn Tostlebe and doctoral student, Taylor Gonzales, presented on their collaborative partnership with NGU Program Director Shane Reilly."
 ---
 

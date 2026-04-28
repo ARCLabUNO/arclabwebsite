@@ -1,6 +1,8 @@
 ---
 title: Abby Receives GRACA Support!
 date: 2025-10-23
+authors:
+  - tostlebe
 summary: "Doctoral student, Abby Hayes, received UNO Graduate Research and Creative Activity (GRACA) funding."
 ---
 

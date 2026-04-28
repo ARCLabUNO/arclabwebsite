@@ -1,6 +1,8 @@
 ---
 title: John Ursino Receives Helen Hansen Outstanding Graduate Student Award!
 date: 2025-12-17
+authors:
+  - admin
 summary: "Doctoral candidate, John Ursino, was awarded the Helen Hansen Outstanding Graduate Student Award."
 ---
 

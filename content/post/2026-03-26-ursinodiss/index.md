@@ -1,6 +1,8 @@
 ---
 title: Congratulations Dr. Ursino!
 date: 2026-03-26
+authors:
+  - admin
 summary: "Congratulations to John Ursino, who successfully defended his dissertation on March 26th."
 ---
 
