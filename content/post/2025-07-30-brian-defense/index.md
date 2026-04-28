@@ -1,6 +1,8 @@
 ---
 title: Congratulations Dr. Gildea!
 date: 2025-07-30
+authors:
+  - admin
 summary: "Congratulations to Brian Gildea, who successfully defended his dissertation."
 ---
 

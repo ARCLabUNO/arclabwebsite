@@ -1,6 +1,8 @@
 ---
 title: Baylee has accepted an Assistant Professor position!
 date: 2025-03-14
+authors:
+  - admin
 summary: "Baylee Allen-Flores has accepted a position as an Assistant Professor in the Criminology Department at DePaul University!"
 ---
 

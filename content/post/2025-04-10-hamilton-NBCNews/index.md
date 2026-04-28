@@ -1,6 +1,8 @@
 ---
 title: Dr. Zach Hamilton was interviewed by NBC News 9 Colorado!
 date: 2025-04-10
+authors:
+  - tostlebe
 summary: "Dr. Hamilton was interviewed by NBC News 9 Colorado for an investigation into RNA issues within their department of corrections."
 ---
 

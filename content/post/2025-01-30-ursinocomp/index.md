@@ -1,6 +1,8 @@
 ---
 title: Doctoral Student John Ursino advances to candidacy!
 date: 2025-01-30
+authors:
+  - admin
 summary: "Congratulations to John Ursino, who has successfully passed his comprehensive exams."
 ---
 

@@ -1,6 +1,8 @@
 ---
 title: Doctoral Student Sadie Brewer wins MCJA Doctoral Student Poster Award!
 date: 2025-10-06
+authors:
+  - tostlebe
 summary: "Doctoral Student, Sadie Brewer, won the Student Poster Award at the Midwestern Criminal Justice Association conference."
 ---
 

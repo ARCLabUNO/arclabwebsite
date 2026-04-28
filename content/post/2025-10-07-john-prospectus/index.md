@@ -1,6 +1,8 @@
 ---
 title: Congratulations, John!
 date: 2025-10-07
+authors:
+  - admin
 summary: "Congratulations to John Ursino, who successfully defended his dissertation prospectus."
 ---
 

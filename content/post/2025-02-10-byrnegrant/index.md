@@ -1,6 +1,8 @@
 ---
 title: Dr. Zach Hamilton receives a $150,000 Byrne Grant!
 date: 2025-02-10
+authors:
+  - tostlebe
 summary: "Congrats to Zachary Hamilton, who received a Byrne Grant in partnership with the National Association for Drug Court Professionals to create a violence risk assessment."
 ---
 
