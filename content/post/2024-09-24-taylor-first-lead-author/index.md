@@ -1,6 +1,8 @@
 ---
 title: Taylor Gonzales has her First Lead-Authored Paper Published
 date: 2024-09-24
+authors:
+  - tostlebe
 summary: "Congrats to Taylor Gonzales on her first lead-authored publication in Criminal Justice and Behavior."
 ---
 
