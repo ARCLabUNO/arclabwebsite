@@ -1,6 +1,8 @@
 ---
 title: The Iowa Delinquency Assessment 2.0 is Launched!
 date: 2024-11-01
+authors:
+  - tostlebe
 summary: "Congratulations to Dr. Zach Hamilton for his juvenile justice assessment going live."
 ---
 
