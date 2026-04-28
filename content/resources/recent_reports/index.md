@@ -23,6 +23,7 @@ A running list of major reports on corrections, reentry, and the broader crimina
 * [Capital Punishment, 2023 – Statistical Tables](https://bjs.ojp.gov/document/cp23st.pdf)
 * [Probation and Parole in the United States, 2023](https://bjs.ojp.gov/library/publications/probation-and-parole-united-states-2023)
 * [Jail Inmates in 2023 – Statistical Tables](https://bjs.ojp.gov/library/publications/jail-inmates-2023-statistical-tables)
+* [2018 Update on Prisoner Recidivism: A 9-Year Follow-up Period (2005-2014)](https://bjs.ojp.gov/content/pub/pdf/18upr9yfup0514.pdf)
 * [Time Served in State Prison, 2018](https://bjs.ojp.gov/library/publications/time-served-state-prison-2018)
 * [Additional BJS publications](https://bjs.ojp.gov/library)
 
@@ -35,6 +36,14 @@ A running list of major reports on corrections, reentry, and the broader crimina
 * [Impact Report: COVID-19 Testing in State Prisons](https://counciloncj.org/impact-report-covid-19-testing-in-state-prisons/)
 * [Impact Report: COVID-19 and Prisons: December 2020 Update](https://counciloncj.org/impact-report-covid-19-and-prisons/)
 * [Impact Report: COVID-19 and Jails: December 2020 Update](https://counciloncj.org/impact-report-covid-19-and-jails/)
+
+## The Criminologist
+
+* [The Myth that Most People Recidivate](https://asc41.org/wp-content/uploads/ASC-Criminologist-2025-03.pdf)
+
+## Council of State Governments Justice Center
+
+* [50 States, 1 Goal: Examining State-Level Recidivism Trends in the Second Chance Act Era](https://csgjusticecenter.org/publications/50-states-1-goal/)
 
 ## National Institute of Justice
 
