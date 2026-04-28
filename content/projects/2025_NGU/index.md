@@ -7,6 +7,7 @@ subtitle: ""
 investigators: "Dr. Jennifer Tostlebe"
 authors:
   - tostlebe
+  - gonzales
 funder: "Sherwood Foundation"
 summary: "Critical to a successful reentry experience are obtaining quality employment, securing a prosocial place to live, developing a community support network, getting drug treatment (as needed), and changing one’s identity."
 ---
