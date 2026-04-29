@@ -211,6 +211,43 @@ show_authors: false
     grid-template-columns: 1fr;
   }
 }
+
+.arc-module-next {
+  margin-top: 1.75rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.arc-module-next a {
+  display: block;
+  padding: 1rem 1.2rem;
+  background: #0f172a;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  max-width: 320px;
+}
+
+.arc-module-next a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+  border-color: #60a5fa;
+}
+
+.arc-module-next span {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #93c5fd;
+  margin-bottom: 0.25rem;
+}
+
+.arc-module-next strong {
+  color: #f9fafb;
+  font-size: 0.95rem;
+}
 </style>
 
 <div class="arc-module">
@@ -275,8 +312,9 @@ show_authors: false
 
 </div>
 
-<!--
----
-
-👉 Next: [Interpreting Risk Scores](/training-modules/risk-assessment/)
--->
+<div class="arc-module-next">
+  <a href="/training-modules/risk-assessment/01-risk-score-represents/">
+    <span>Next Module</span>
+    <strong>What a Risk Score Represents →</strong>
+  </a>
+</div>
