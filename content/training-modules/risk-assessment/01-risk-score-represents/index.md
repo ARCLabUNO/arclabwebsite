@@ -219,15 +219,14 @@ show_authors: false
     <li><strong>Higher scores</strong> → higher rates (~50%)</li>
   </ul>
   <p>
-    The score does not predict an individual outcome—it reflects what tends to happen
-    among similar cases.
+    The score does not predict an individual outcome. It tells you what tends to happen among people with similar scores.
   </p>
 </div>
 
 <div class="arc-module-bottom">
   <h2>Bottom Line</h2>
   <p>
-    A risk score represents a group-level probability, not an individual prediction.
+    Risk scores are group-level probabilities—not exact predictions.
   </p>
 </div>
 
