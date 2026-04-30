@@ -1,8 +1,6 @@
 ---
 title: Presentation of findings of the Lancaster Jail Project!
 date: 2025-08-08
-authors:
-  - tostlebe
 summary: "Dr. Zach Hamilton and PhD Candidate, John Ursino presented the findings of the Lancaster Jail Project."
 ---
 

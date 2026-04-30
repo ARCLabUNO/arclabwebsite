@@ -1,8 +1,6 @@
 ---
 title: ARC Students Receive Travel Funding for ASC!
 date: 2025-10-28
-authors:
-  - tostlebe
 summary: "Sarah Al Falatah, Taylor Gonzales, Abigail Hayes, Yujin Kim, and John Ursino received money from the Student Conference Travel Fund (SCTF) for the annual meeting of the American Society of Criminology (ASC)."
 ---
 

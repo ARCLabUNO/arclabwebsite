@@ -1,8 +1,6 @@
 ---
 title: Taylor Gonzales and Abby Hayes Advance to Candidacy!
 date: 2026-02-01
-authors:
-  - tostlebe
 summary: "Congratulations to Taylor Gonzales and Abby Hayes who successfully passed their Systems Comprehensive Examination!"
 ---
 

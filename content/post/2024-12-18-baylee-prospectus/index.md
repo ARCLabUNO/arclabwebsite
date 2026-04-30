@@ -1,8 +1,6 @@
 ---
 title: Congratulations Baylee!
 date: 2024-12-18
-authors:
-  - admin
 summary: "Congratulations to Baylee Allen-Flores, who successfully defended her dissertation prospectus."
 ---
 

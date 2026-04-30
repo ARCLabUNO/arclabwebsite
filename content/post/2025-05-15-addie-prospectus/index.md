@@ -1,8 +1,6 @@
 ---
 title: Congratulations Addie!
 date: 2025-05-15
-authors:
-  - admin
 summary: "Congratulations to Addison Kobie, who successfully defended her dissertation prospectus."
 ---
 

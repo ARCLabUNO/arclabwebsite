@@ -1,8 +1,6 @@
 ---
 title: John Ursino has his First Lead-Authored Paper Published
 date: 2025-07-23
-authors:
-  - admin
 summary: "Congratulations to John Ursino on his first lead-authored publication!"
 ---
 

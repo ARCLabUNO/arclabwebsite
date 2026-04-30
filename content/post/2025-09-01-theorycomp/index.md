@@ -1,8 +1,6 @@
 ---
 title: Congrats to Doctoral Students Sarah, Taylor, and Abby!
 date: 2025-09-01
-authors:
-  - tostlebe
 summary: "Congratulations to Sarah Al Falatah, Taylor Gonzales, and Abby Hayes who successfully passed their Theory Comprehensive Examinations!"
 ---
 

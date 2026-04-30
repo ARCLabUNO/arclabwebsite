@@ -1,8 +1,6 @@
 ---
 title: Dr. Zach Hamilton featured on The Criminology Academy Podcast!
 date: 2025-03-31
-authors:
-  - tostlebe
 summary: "Dr. Zach Hamilton was a guest on The Criminology Academy podcast to talk about his work on risk-needs assessments."
 ---
 

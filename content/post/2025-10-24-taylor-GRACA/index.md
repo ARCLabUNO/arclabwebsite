@@ -1,8 +1,6 @@
 ---
 title: Taylor Receives GRACA Support!
 date: 2025-10-23
-authors:
-  - tostlebe
 summary: "Doctoral student, Taylor Gonzales, received UNO Graduate Research and Creative Activity (GRACA) funding."
 ---
 

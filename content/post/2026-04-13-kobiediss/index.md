@@ -1,8 +1,6 @@
 ---
 title: Congratulations Dr. Kobie!
 date: 2026-04-13
-authors:
-  - admin
 summary: "Congratulations to Addison Kobie, who successfully defended her dissertation on April 13th."
 ---
 

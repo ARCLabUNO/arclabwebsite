@@ -1,8 +1,6 @@
 ---
 title: Dr. Jenn Tostlebe receives a $33,000 Sherwood Foundation Grant!
 date: 2024-12-05
-authors:
-  - admin
 summary: "Congratulations to Dr. Tostlebe, who received a Sherwood Foundation Grant."
 ---
 

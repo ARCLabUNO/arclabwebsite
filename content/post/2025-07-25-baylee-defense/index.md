@@ -1,8 +1,6 @@
 ---
 title: Congratulations Dr. Allen-Flores!
 date: 2025-07-25
-authors:
-  - admin
 summary: "Congratulations to Baylee Allen-Flores, who successfully defended her dissertation."
 ---
 

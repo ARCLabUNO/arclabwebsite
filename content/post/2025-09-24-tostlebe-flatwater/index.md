@@ -1,8 +1,6 @@
 ---
 title: Dr. Jenn Tostlebe was interviewed by Flatwater Free Press!
 date: 2025-09-24
-authors:
-  - admin
 summary: "Dr. Tostlebe was interviewed by Flatwater Free Press about social support in prison."
 ---
 

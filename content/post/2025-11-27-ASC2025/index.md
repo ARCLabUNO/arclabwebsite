@@ -1,9 +1,6 @@
 ---
 title: ARC Lab Students Present at ASC 2025!
 date: 2025-11-17
-authors:
-  - admin
-  - tostlebe
 summary: "Students from the Lab presented their research at the Annual Meeting of the American Society of Criminology."
 ---
 

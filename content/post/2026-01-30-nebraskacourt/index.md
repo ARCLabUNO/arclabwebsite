@@ -1,8 +1,6 @@
 ---
 title: Nebraska Court Improvement Project Webinar
 date: 2026-01-30
-authors:
-  - tostlebe
 summary: "Dr. Zachary Hamilton and Monica Miles-Steffens presented a webinar for the Nebraska Court Improvement Project sharing the results of the Juvenile Risk Assessment Validation Study for Nebraska Juvenile Probation."
 ---
 
