@@ -52,6 +52,10 @@
           {{ $topics = $topics | append "courts" }}
         {{ end }}
 
+        {{ if or (in $tagsJoined "criminological theory") (in $tagsJoined "theory") }}
+          {{ $topics = $topics | append "criminological-theory" }}
+        {{ end }}
+
         {{ if or (in $tagsJoined "cybercrime") (in $tagsJoined "cyber crime") (in $tagsJoined "online offending") }}
           {{ $topics = $topics | append "cybercrime" }}
         {{ end }}
@@ -98,10 +102,6 @@
 
         {{ if or (in $tagsJoined "risk-needs-assessment") (in $tagsJoined "risk assessment") (in $tagsJoined "classification") (in $tagsJoined "ls/cmi") (in $tagsJoined "strong-r") }}
           {{ $topics = $topics | append "risk-needs-assessment" }}
-        {{ end }}
-  
-        {{ if or (in $tagsJoined "criminological theory") (in $tagsJoined "theory") }}
-          {{ $topics = $topics | append "criminological-theory" }}
         {{ end }}
       {{ end }}
 
