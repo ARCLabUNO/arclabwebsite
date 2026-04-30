@@ -25,7 +25,7 @@ abstract = "This study examines how the COVID-19 pandemic shaped the daily work 
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["community corrections", "health", "infectious disease"]
+tags = ["community corrections", "health", "infectious disease", "criminological theory"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""
