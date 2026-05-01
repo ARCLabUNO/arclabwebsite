@@ -149,6 +149,16 @@ show_authors: false
   box-shadow: 0 8px 22px rgba(0,0,0,0.18);
 }
 
+/* APPROACHES */
+
+.arc-module-approach {
+  margin-top: 1rem;
+}
+
+.arc-module-approach:first-of-type {
+  margin-top: 0.75rem;
+}
+
 /* BOTTOM */
 
 .arc-module-bottom {
@@ -172,20 +182,6 @@ show_authors: false
   line-height: 1.75;
 }
 
-.arc-module-section ul,
-.arc-module-section ol {
-  margin: 1rem 0 1rem 1.25rem;
-  padding: 0;
-}
-
-.arc-module-approaches > li {
-  margin-bottom: 1rem;
-}
-
-.arc-module-approaches > li:last-child {
-  margin-bottom: 0;
-}
-
 .arc-module-nav-bottom {
   margin-top: 1.5rem;
 }
@@ -196,20 +192,19 @@ show_authors: false
 .arc-module-back:focus,
 .arc-module-back:active {
   display: inline-block;
-  padding: 0.65rem 1rem;
-  border-radius: 10px;
-  background: #1f2937;
-  color: #f9fafb;
+  padding: 0.6rem 1.2rem;
+  background: #1f3a5f;
+  color: #fff !important;
+  border-radius: 6px;
   text-decoration: none;
-  font-weight: 700;
-  border: 1px solid #374151;
-  transition: all 0.2s ease;
+  font-weight: 500;
+  border: none;
 }
 
 .arc-module-back:hover,
 .arc-module-back:focus {
-  background: #111827;
-  color: #ffffff;
+  background: #27496d;
+  color: #fff !important;
   text-decoration: none;
 }
 </style>
@@ -264,24 +259,22 @@ show_authors: false
   <h2>Two Common Approaches</h2>
   <p>There are two common ways to combine items into a score:</p>
 
-  <ol class="arc-module-approaches">
-    <li>
-      <strong>Burgess-style scoring</strong> (e.g., LS/CMI; ORAS)
-      <ul>
-        <li>Items are typically binary (0/1)</li>
-        <li>Each item contributes equally</li>
-        <li>Simple and easy to hand score</li>
-      </ul>
-    </li>
+  <div class="arc-module-approach">
+    <p><strong>1. Burgess-style scoring</strong> (e.g., LS/CMI; ORAS)</p>
+    <ul>
+      <li>Items are typically binary (0/1)</li>
+      <li>Each item contributes equally</li>
+      <li>Simple and easy to hand score</li>
+    </ul>
+  </div>
 
-    <li>
-      <strong>Statistically weighted scoring</strong> (e.g., COMPAS; STRONG-R)
-      <ul>
-        <li>Items can have different weights</li>
-        <li>Weights reflect relationships with outcomes (e.g., recidivism)</li>
-      </ul>
-    </li>
-  </ol>
+  <div class="arc-module-approach">
+    <p><strong>2. Statistically weighted scoring</strong> (e.g., COMPAS; STRONG-R)</p>
+    <ul>
+      <li>Items can have different weights</li>
+      <li>Weights reflect relationships with outcomes (e.g., recidivism)</li>
+    </ul>
+  </div>
 </div>
 
 <div class="arc-module-section">
@@ -306,8 +299,8 @@ show_authors: false
 <div class="arc-module-nav-bottom">
   <a class="arc-module-back" href="/training-modules/lessons-in-risk-foundations/">← Back to Modules</a>
 </div>
-</div>
 
+</div>
 
 <!--
 ---
