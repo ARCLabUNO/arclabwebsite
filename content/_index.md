@@ -140,22 +140,22 @@ sections:
               </a>
             </div>
             <div class="homepage-card">
+              <a class="homepage-card-link" href="/post/2026-04-08-invitedpresentation/">
+                <img src="/post/2026-04-08-invitedpresentation/featured.png" alt="Invited Guest Presentation">
+                <div class="homepage-card-body">
+                  <p class="homepage-card-kicker">News</p>
+                  <h3>Are Gangs Unique or Just One Piece of the Puzzle?</h3>
+                  <p>Dr. Tostlebe delivered an invited presentation at Texas A&M–San Antonio examining the position of gangs within the wider spectrum of criminal groups.</p>
+                </div>
+              </a>
+            </div>
+            <div class="homepage-card">
               <a class="homepage-card-link" href="/post/2026-03-26-ursinodiss/">
                 <img src="/post/2026-03-26-ursinodiss/featured.jpeg" alt="Congratulations Dr. Ursino">
                 <div class="homepage-card-body">
                   <p class="homepage-card-kicker">News</p>
                   <h3>Congratulations Dr. Ursino!</h3>
                   <p>John Ursino successfully defended his dissertation on March 26.</p>
-                </div>
-              </a>
-            </div>
-            <div class="homepage-card">
-              <a class="homepage-card-link" href="/post/2026-02-05-lancasterjailassessment/">
-                <img src="/post/2026-02-05-lancasterjailassessment/featured.png" alt="ARC Lab presents Lancaster Jail Assessment findings">
-                <div class="homepage-card-body">
-                  <p class="homepage-card-kicker">News</p>
-                  <h3>Presentation to the Lancaster League of Women Voters</h3>
-                  <p>ARC shared findings from the Lancaster Jail Assessment with community stakeholders.</p>
                 </div>
               </a>
             </div>
