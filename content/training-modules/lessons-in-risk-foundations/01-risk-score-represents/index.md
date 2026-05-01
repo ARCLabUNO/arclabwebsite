@@ -231,3 +231,10 @@ show_authors: false
 </div>
 
 </div>
+
+<div class="arc-module-next">
+  <a href="/training-modules/lessons-in-risk-foundations/02-risk-score-built/">
+    <span>Next Module</span>
+    <strong>How Risk Scores Are Built →</strong>
+  </a>
+</div>
