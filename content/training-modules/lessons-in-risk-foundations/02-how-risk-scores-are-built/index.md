@@ -96,7 +96,8 @@ show_authors: false
   font-size: 1rem;
 }
 
-.arc-module-section ul {
+.arc-module-section ul,
+.arc-module-section ol {
   margin: 1rem 0 1rem 1.25rem;
   padding: 0;
 }
@@ -109,8 +110,6 @@ show_authors: false
   border-radius: 12px;
   border-left: 4px solid #60a5fa;
 }
-
-/* FIGURE BLOCK */
 
 .arc-module-figures {
   margin: 2rem 0;
@@ -149,8 +148,6 @@ show_authors: false
   box-shadow: 0 8px 22px rgba(0,0,0,0.18);
 }
 
-/* BOTTOM */
-
 .arc-module-bottom {
   margin-top: 2rem;
   padding: 1.5rem;
@@ -170,6 +167,26 @@ show_authors: false
   margin: 0;
   color: #dbe4ee;
   line-height: 1.75;
+}
+
+.arc-module-nav-bottom {
+  margin-top: 1.5rem;
+}
+
+.arc-module-back {
+  display: inline-block;
+  padding: 0.65rem 1rem;
+  border-radius: 10px;
+  background: #e5e7eb;
+  color: #111827;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.arc-module-back:hover {
+  background: #d1d5db;
+  text-decoration: none;
 }
 </style>
 
@@ -217,7 +234,23 @@ show_authors: false
   </p>
 </div>
 
-{{< risk-score-built-figure >}}
+<div class="arc-module-figures">
+  <div class="arc-module-figures-kicker">Illustration</div>
+  <h2>How risk scores are built</h2>
+  <p>
+    Risk scores are constructed by combining information from multiple items into a
+    single value. The same inputs can be combined in different ways.
+  </p>
+
+  <div class="arc-module-figure-single">
+    <img src="risk_score_built.png" alt="Diagram showing risk scores are built from multiple items">
+  </div>
+
+  <p style="margin-top: 1rem;">
+    Different tools use different scoring rules—some treat all items equally, while
+    others weight items based on their relationship to outcomes.
+  </p>
+</div>
 
 <div class="arc-module-section">
   <h2>Two Common Approaches</h2>
@@ -260,6 +293,10 @@ show_authors: false
     Risk scores are built from a set of items. The way those items are combined shapes
     what the score means and how well it performs.
   </p>
+</div>
+
+<div class="arc-module-nav-bottom">
+  <a class="arc-module-back" href="/training-modules/lessons-in-risk-foundations/">← Back to Modules</a>
 </div>
 
 </div>
