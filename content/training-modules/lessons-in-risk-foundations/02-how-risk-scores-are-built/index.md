@@ -177,7 +177,7 @@ show_authors: false
 
 <div class="arc-module-hero">
   <div class="arc-module-kicker">Module 2 · Risk Tool Lessons</div>
-  <h2>How risk scores are built</h2>
+  <h2>Where risk scores come from.</h2>
   <p>
     In the last module, we saw that a risk score reflects what tends to happen among people
     with similar scores. So where do those scores come from? They are built from a set of
