@@ -11,13 +11,28 @@ Before getting into tools, applications, or policy decisions, the goal here is t
 
 ### What this series covers
 
-|  |  |
-|--|--|
-| • Scores as probabilities | • Why AUC is not enough |
-| • How scores are built | • Calibration (predicted vs. observed) |
-| • Same score ≠ same person | • Base rates |
-| • Separation (accuracy) | • Cut points in practice |
-| • What AUC measures |  |
+<div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+
+<div>
+
+- Scores as probabilities  
+- How scores are built  
+- Same score ≠ same person  
+- Separation (accuracy)  
+- What AUC measures  
+
+</div>
+
+<div>
+
+- Why AUC is not enough  
+- Calibration (predicted vs. observed)  
+- Base rates  
+- Cut points in practice  
+
+</div>
+
+</div>
 
 ---
 
