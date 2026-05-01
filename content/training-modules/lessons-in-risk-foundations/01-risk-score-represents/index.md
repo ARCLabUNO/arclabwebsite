@@ -209,7 +209,7 @@ show_authors: false
   </p>
 </div>
 
-{{< risk-score-distribution-figure >}}
+{{< risk-score-built-figure >}}
 
 <div class="arc-module-section">
   <h2>How to Read the Figure</h2>
@@ -231,3 +231,10 @@ show_authors: false
 </div>
 
 </div>
+
+
+<!--
+---
+
+👉 Next: [How Risk Scores Are Built](/training-modules/risk-assessment/02-how-risk-scores-are-built/)
+-->
