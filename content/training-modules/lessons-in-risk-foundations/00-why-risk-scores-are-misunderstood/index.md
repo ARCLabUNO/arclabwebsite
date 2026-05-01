@@ -313,7 +313,7 @@ show_authors: false
 </div>
 
 <div class="arc-module-next">
-  <a href="/training-modules/risk-assessment/01-risk-score-represents/">
+  <a href="/training-modules/lessons-in-risk-foundations/01-risk-score-represents/">
     <span>Next Module</span>
     <strong>What a Risk Score Represents →</strong>
   </a>
