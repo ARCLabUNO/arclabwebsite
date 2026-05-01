@@ -3,12 +3,19 @@ title: Lessons in Risk – Foundations
 view: 1
 ---
 
-<style>
 .risk-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: column;
   gap: 0.5rem 1.5rem;
   margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .risk-grid {
+    grid-template-columns: 1fr;
+    grid-auto-flow: row; /* back to normal on mobile */
+  }
 }
 
 .risk-grid div {
