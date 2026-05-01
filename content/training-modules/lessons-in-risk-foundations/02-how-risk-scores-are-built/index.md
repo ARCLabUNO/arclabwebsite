@@ -171,6 +171,47 @@ show_authors: false
   color: #dbe4ee;
   line-height: 1.75;
 }
+
+.arc-module-section ul,
+.arc-module-section ol {
+  margin: 1rem 0 1rem 1.25rem;
+  padding: 0;
+}
+
+.arc-module-approaches > li {
+  margin-bottom: 1rem;
+}
+
+.arc-module-approaches > li:last-child {
+  margin-bottom: 0;
+}
+
+.arc-module-nav-bottom {
+  margin-top: 1.5rem;
+}
+
+.arc-module-back,
+.arc-module-back:visited,
+.arc-module-back:hover,
+.arc-module-back:focus,
+.arc-module-back:active {
+  display: inline-block;
+  padding: 0.65rem 1rem;
+  border-radius: 10px;
+  background: #1f2937;
+  color: #f9fafb;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid #374151;
+  transition: all 0.2s ease;
+}
+
+.arc-module-back:hover,
+.arc-module-back:focus {
+  background: #111827;
+  color: #ffffff;
+  text-decoration: none;
+}
 </style>
 
 <div class="arc-module">
@@ -223,7 +264,7 @@ show_authors: false
   <h2>Two Common Approaches</h2>
   <p>There are two common ways to combine items into a score:</p>
 
-  <ol>
+  <ol class="arc-module-approaches">
     <li>
       <strong>Burgess-style scoring</strong> (e.g., LS/CMI; ORAS)
       <ul>
@@ -262,7 +303,11 @@ show_authors: false
   </p>
 </div>
 
+<div class="arc-module-nav-bottom">
+  <a class="arc-module-back" href="/training-modules/lessons-in-risk-foundations/">← Back to Modules</a>
 </div>
+</div>
+
 
 <!--
 ---
