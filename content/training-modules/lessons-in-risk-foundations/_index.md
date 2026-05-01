@@ -3,6 +3,7 @@ title: Lessons in Risk – Foundations
 view: 1
 ---
 
+<style>
 .risk-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -11,15 +12,15 @@ view: 1
   margin-top: 1rem;
 }
 
+.risk-grid div {
+  color: #d1d5db;
+}
+
 @media (max-width: 768px) {
   .risk-grid {
     grid-template-columns: 1fr;
-    grid-auto-flow: row; /* back to normal on mobile */
+    grid-auto-flow: row;
   }
-}
-
-.risk-grid div {
-  color: #d1d5db;
 }
 </style>
 
