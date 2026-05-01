@@ -31,15 +31,28 @@
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
 }
 
+/* BASE LABEL */
 .module-label {
   display: inline-block;
   margin-bottom: 0.75rem;
   padding: 0.35rem 0.7rem;
   font-size: 0.8rem;
   font-weight: 600;
-  color: #d1d5db;
-  background: #1f2937;
   border-radius: 999px;
+}
+
+/* LIVE MODULES */
+.module-label.live {
+  color: #93c5fd;
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(96, 165, 250, 0.35);
+}
+
+/* IN DEVELOPMENT */
+.module-label.dev {
+  color: #9ca3af;
+  background: rgba(75, 85, 99, 0.25);
+  border: 1px solid rgba(156, 163, 175, 0.25);
 }
 
 .module-card h3 {
@@ -61,6 +74,10 @@
   border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
+}
+
+.module-link:hover {
+  background: #27496d;
 }
 
 .module-link.disabled {
@@ -89,7 +106,7 @@
     <!-- Module 0 -->
     <div class="module-card">
       <div>
-        <span class="module-label">Start Here</span>
+        <span class="module-label live">Start Here</span>
         <h3>Why Risk Scores Are Misunderstood</h3>
         <p>
           An introduction to a basic but often overlooked issue: not all risk scores
@@ -103,10 +120,10 @@
       </div>
     </div>
 
-    <!-- Interpreting Risk Scores -->
+    <!-- Module 1 -->
     <div class="module-card">
       <div>
-        <span class="module-label">Module 1</span>
+        <span class="module-label live">Module 1</span>
         <h3>What a Risk Score Represents</h3>
         <p>
           What risk scores actually mean—and how to interpret them in practice.
@@ -119,11 +136,11 @@
       </div>
     </div>
 
-    <!-- Building and Validating Tools -->
+    <!-- Module 2 -->
     <div class="module-card">
       <div>
-        <span class="module-label">Module 2</span>
-        <h3>How Risk Scores are Built</h3>
+        <span class="module-label live">Module 2</span>
+        <h3>How Risk Scores Are Built</h3>
         <p>
           How risk assessment tools are constructed.
         </p>
@@ -135,10 +152,10 @@
       </div>
     </div>
 
-    <!-- Understanding Performance Metrics -->
+    <!-- Module 3 -->
     <div class="module-card">
       <div>
-        <span class="module-label">In Development</span>
+        <span class="module-label dev">In Development</span>
         <h3>Understanding Performance Metrics</h3>
         <p>
           What common metrics like AUC measure—and what they can obscure.
@@ -149,10 +166,10 @@
       </div>
     </div>
 
-    <!-- Use in Practice -->
+    <!-- Module 4 -->
     <div class="module-card">
       <div>
-        <span class="module-label">In Development</span>
+        <span class="module-label dev">In Development</span>
         <h3>Use in Practice</h3>
         <p>
           How risk assessment tools are used in real decision contexts, including pretrial and corrections.
