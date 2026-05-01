@@ -234,7 +234,7 @@ show_authors: false
 <div class="arc-module">
 
 <div class="arc-module-hero">
-  <div class="arc-module-kicker">Module 1 · Risk Scores</div>
+  <div class="arc-module-kicker">Module 1 · Risk Score Foundations</div>
   <h2>What a risk score represents</h2>
   <p>
     A risk score is often treated like a label—low, moderate, or high. But that is not
