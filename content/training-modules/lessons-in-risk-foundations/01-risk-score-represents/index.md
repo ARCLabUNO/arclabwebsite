@@ -172,15 +172,42 @@ show_authors: false
   line-height: 1.75;
 }
 
-/* NEXT MODULE BUTTON */
+/* NAV ROW */
 
-.arc-module-next {
-  margin-top: 1.75rem;
+.arc-module-nav-row {
+  margin-top: 2rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: stretch;
 }
 
-.arc-module-next a {
+/* BACK BUTTON */
+
+.arc-module-back,
+.arc-module-back:visited,
+.arc-module-back:hover,
+.arc-module-back:focus,
+.arc-module-back:active {
+  display: flex;
+  align-items: center;
+  padding: 0.9rem 1.2rem;
+  background: #1f3a5f;
+  color: #fff !important;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+  white-space: nowrap;
+}
+
+.arc-module-back:hover {
+  background: #27496d;
+}
+
+/* NEXT BUTTON */
+
+.arc-module-next-link {
   display: block;
   padding: 1rem 1.2rem;
   background: #0f172a;
@@ -191,13 +218,13 @@ show_authors: false
   max-width: 320px;
 }
 
-.arc-module-next a:hover {
+.arc-module-next-link:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 22px rgba(0,0,0,0.18);
   border-color: #60a5fa;
 }
 
-.arc-module-next span {
+.arc-module-next-link span {
   display: block;
   font-size: 0.7rem;
   letter-spacing: 0.08em;
@@ -206,27 +233,22 @@ show_authors: false
   margin-bottom: 0.25rem;
 }
 
-.arc-module-next strong {
+.arc-module-next-link strong {
   color: #f9fafb;
   font-size: 0.95rem;
 }
 
+/* MOBILE */
+
 @media (max-width: 768px) {
-  .arc-module-hero {
-    padding: 1.5rem;
+  .arc-module-nav-row {
+    flex-direction: column;
   }
 
-  .arc-module-hero h2 {
-    font-size: 1.65rem;
-  }
-
-  .arc-module-next {
-    justify-content: stretch;
-  }
-
-  .arc-module-next a {
+  .arc-module-next-link,
+  .arc-module-back {
     width: 100%;
-    max-width: none;
+    justify-content: center;
   }
 }
 </style>
@@ -288,11 +310,15 @@ show_authors: false
   </p>
 </div>
 
-</div>
+<div class="arc-module-nav-row">
+  <a class="arc-module-back" href="/training-modules/lessons-in-risk-foundations/">
+    ← Back to Modules
+  </a>
 
-<div class="arc-module-next">
-  <a href="/training-modules/lessons-in-risk-foundations/02-how-risk-scores-are-built/">
+  <a class="arc-module-next-link" href="/training-modules/lessons-in-risk-foundations/02-how-risk-scores-are-built/">
     <span>Next Module</span>
     <strong>How Risk Scores Are Built →</strong>
   </a>
+</div>
+
 </div>
