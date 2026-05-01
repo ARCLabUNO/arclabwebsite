@@ -21,4 +21,4 @@ Before getting into tools, applications, or policy decisions, the goal here is t
 
 ---
 
-{{< risk-assessment-module-cards >}}
+{{< risk-assessment-foundations-module-cards >}}
