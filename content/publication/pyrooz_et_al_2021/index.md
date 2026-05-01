@@ -25,7 +25,7 @@ abstract = "Reentry experiences for the 600,000 people released annually from fe
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["gang-membership", "recidivism", "institutional corrections", "criminological theory"]
+tags = ["gang-membership", "recidivism", "institutional corrections", "criminological theory", "reentry"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""
