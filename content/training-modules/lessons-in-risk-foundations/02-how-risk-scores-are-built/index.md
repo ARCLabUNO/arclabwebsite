@@ -182,23 +182,34 @@ show_authors: false
   line-height: 1.75;
 }
 
-.arc-module-nav-bottom {
-  margin-top: 1.5rem;
+/* NAV ROW */
+
+.arc-module-nav-row {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: stretch;
 }
+
+/* BACK BUTTON */
 
 .arc-module-back,
 .arc-module-back:visited,
 .arc-module-back:hover,
 .arc-module-back:focus,
 .arc-module-back:active {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.2rem;
   background: #1f3a5f;
   color: #fff !important;
-  border-radius: 6px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: 500;
   border: none;
+  white-space: nowrap;
 }
 
 .arc-module-back:hover,
@@ -206,6 +217,52 @@ show_authors: false
   background: #27496d;
   color: #fff !important;
   text-decoration: none;
+}
+
+/* NEXT BUTTON */
+
+.arc-module-next-link {
+  display: block;
+  padding: 1rem 1.2rem;
+  background: #0f172a;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  max-width: 320px;
+}
+
+.arc-module-next-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+  border-color: #60a5fa;
+}
+
+.arc-module-next-link span {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #93c5fd;
+  margin-bottom: 0.25rem;
+}
+
+.arc-module-next-link strong {
+  color: #f9fafb;
+  font-size: 0.95rem;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .arc-module-nav-row {
+    flex-direction: column;
+  }
+
+  .arc-module-next-link,
+  .arc-module-back {
+    width: 100%;
+  }
 }
 </style>
 
@@ -272,7 +329,7 @@ show_authors: false
     <p><strong>2. Statistically weighted scoring</strong> (e.g., COMPAS; STRONG-R)</p>
     <ul>
       <li>Items can have different weights</li>
-      <li>Weights reflect relationships with outcomes (e.g., recidivism)</li>
+      <li>Weights reflect relationships with outcomes, such as recidivism</li>
     </ul>
   </div>
 </div>
@@ -295,7 +352,6 @@ show_authors: false
     what the score means and how well it performs.
   </p>
 </div>
-
 
 <div class="arc-module-nav-row">
   <a class="arc-module-back" href="/training-modules/lessons-in-risk-foundations/">
