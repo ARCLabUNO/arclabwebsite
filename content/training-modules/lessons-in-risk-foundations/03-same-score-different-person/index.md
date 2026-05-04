@@ -1,7 +1,7 @@
 ---
-title: How Risk Scores Are Built
-weight: 2
-lastmod: 2026-05-01
+title: Same Score, Different Person
+weight: 3
+lastmod: 2026-05-04
 show_date: false
 show_reading_time: false
 show_share: false
@@ -149,16 +149,6 @@ show_authors: false
   box-shadow: 0 8px 22px rgba(0,0,0,0.18);
 }
 
-/* APPROACHES */
-
-.arc-module-approach {
-  margin-top: 1rem;
-}
-
-.arc-module-approach:first-of-type {
-  margin-top: 0.75rem;
-}
-
 /* BOTTOM */
 
 .arc-module-bottom {
@@ -212,90 +202,74 @@ show_authors: false
 <div class="arc-module">
 
 <div class="arc-module-hero">
-  <div class="arc-module-kicker">Module 2 · Risk Tool Lessons</div>
-  <h2>Where risk scores come from.</h2>
+  <div class="arc-module-kicker">Module 3 · Risk Tool Lessons</div>
+  <h2>Same score. Different profiles.</h2>
   <p>
-    In the last module, we saw that a risk score reflects what tends to happen among people
-    with similar scores. So where do those scores come from? They are built from a set of
-    factors, or “items,” that are combined into a single score.
+    Two people can have the same risk score and still be very different. This happens
+    because risk scores combine multiple factors into a single number.
   </p>
 </div>
 
 <div class="arc-module-thesis">
   <strong>Key takeaway</strong>
-  <p>Risk scores are built from multiple items, and how those items are combined matters.</p>
+  <p>Risk scores summarize information—they do not fully represent it.</p>
 </div>
 
 <div class="arc-module-section">
-  <h2>What Goes Into a Risk Score</h2>
+  <h2>Same Score Does Not Mean Same Person</h2>
   <p>
-    Each item captures something about a person. Common examples include:
+    The figure below shows a simple example. Both individuals receive the same total score,
+    but they get there in different ways.
   </p>
   <ul>
-    <li><strong>prior history</strong></li>
-    <li><strong>age</strong></li>
-    <li><strong>substance use</strong></li>
-    <li><strong>employment</strong></li>
-    <li><strong>peer associations</strong></li>
+    <li>One person has greater prior history</li>
+    <li>The other has more recent needs, such as substance use or employment</li>
   </ul>
-  <p>
-    These items are then combined into a single score.
-  </p>
   <div class="arc-module-key">
-    <strong>The idea:</strong> A risk score is built by combining information across multiple items.
+    <strong>The idea:</strong> Different pathways can produce the same score.
   </div>
 </div>
 
+{{< same-score-different-person-figure >}}
+
 <div class="arc-module-section">
-  <h2>From Items to a Score</h2>
+  <h2>Why This Happens</h2>
   <p>
-    The figure below shows a simplified example of how items are combined into a score.
+    Risk tools combine several factors into one total score. That total score can be useful,
+    but it also compresses information.
   </p>
-</div>
-
-{{< risk-score-built-figure >}}
-
-<div class="arc-module-section">
-  <h2>Two Common Approaches</h2>
-  <p>There are two common ways to combine items into a score:</p>
-
-  <div class="arc-module-approach">
-    <p><strong>1. Burgess-style scoring</strong> (e.g., LS/CMI; ORAS)</p>
-    <ul>
-      <li>Items are typically binary (0/1)</li>
-      <li>Each item contributes equally</li>
-      <li>Simple and easy to hand score</li>
-    </ul>
-  </div>
-
-  <div class="arc-module-approach">
-    <p><strong>2. Statistically weighted scoring</strong> (e.g., COMPAS; STRONG-R)</p>
-    <ul>
-      <li>Items can have different weights</li>
-      <li>Weights reflect relationships with outcomes (e.g., recidivism)</li>
-    </ul>
-  </div>
+  <p>
+    Because the same score maps to the same predicted probability of recidivism, two people
+    with the same score may be treated as equally “risky,” even when their underlying
+    profiles are very different.
+  </p>
 </div>
 
 <div class="arc-module-section">
   <h2>Why This Matters</h2>
-  <p>
-    The same inputs can produce different scores depending on how they are combined.
-  </p>
-  <p>
-    Burgess-style tools emphasize simplicity and transparency. Weighted approaches often
-    achieve higher predictive accuracy, though the magnitude of that improvement varies.
-  </p>
+  <ul>
+    <li>Individuals with the same score may need different interventions</li>
+    <li>A single number can hide meaningful differences</li>
+    <li>Interpretation requires looking beyond the total score</li>
+  </ul>
 </div>
 
 <div class="arc-module-bottom">
   <h2>Bottom Line</h2>
   <p>
-    Risk scores are built from a set of items. The way those items are combined shapes
-    what the score means and how well it performs.
+    Same score does not mean same person. Risk scores summarize information, but they do
+    not fully represent the individual profiles behind the number.
   </p>
 </div>
 
+<div class="arc-module-nav-bottom">
+  <a class="arc-module-back" href="/training-modules/lessons-in-risk-foundations/">← Back to Modules</a>
+</div>
+
+</div>
+
+<!--
+---
 
 <div class="arc-module-nav-row">
   <a class="arc-module-back" href="/training-modules/lessons-in-risk-foundations/">
@@ -309,3 +283,4 @@ show_authors: false
 </div>
 
 </div>
+-->
