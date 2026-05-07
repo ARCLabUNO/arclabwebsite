@@ -329,14 +329,11 @@ show_authors: false
   </p>
 </div>
 
-<div class="arc-module-nav-bottom">
-  <a class="arc-module-back" href="/training-modules/lessons-in-risk-foundations/">← Back to Modules</a>
-</div>
 
-</div>
-
-<!--
----
+<div class="arc-module-nav-row">
+  <a class="arc-module-back" href="/training-modules/lessons-in-risk-foundations/">
+    ← Back to Modules
+  </a>
 
   <a class="arc-module-next-link" href="/training-modules/lessons-in-risk-foundations/04-accuracy/">
     <span>Next Module</span>
@@ -345,4 +342,3 @@ show_authors: false
 </div>
 
 </div>
--->
