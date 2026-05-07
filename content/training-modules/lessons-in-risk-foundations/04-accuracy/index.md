@@ -1,7 +1,7 @@
 ---
-title: Same Score, Different Person
-weight: 3
-lastmod: 2026-05-04
+title: What “Accuracy” Really Means
+weight: 4
+lastmod: 2026-05-06
 show_date: false
 show_reading_time: false
 show_share: false
@@ -149,16 +149,6 @@ show_authors: false
   box-shadow: 0 8px 22px rgba(0,0,0,0.18);
 }
 
-/* APPROACHES */
-
-.arc-module-approach {
-  margin-top: 1rem;
-}
-
-.arc-module-approach:first-of-type {
-  margin-top: 0.75rem;
-}
-
 /* BOTTOM */
 
 .arc-module-bottom {
@@ -182,34 +172,23 @@ show_authors: false
   line-height: 1.75;
 }
 
-/* NAV ROW */
-
-.arc-module-nav-row {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  align-items: stretch;
+.arc-module-nav-bottom {
+  margin-top: 1.5rem;
 }
-
-/* BACK BUTTON */
 
 .arc-module-back,
 .arc-module-back:visited,
 .arc-module-back:hover,
 .arc-module-back:focus,
 .arc-module-back:active {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.9rem 1.2rem;
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
   background: #1f3a5f;
   color: #fff !important;
-  border-radius: 10px;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
   border: none;
-  white-space: nowrap;
 }
 
 .arc-module-back:hover,
@@ -218,114 +197,71 @@ show_authors: false
   color: #fff !important;
   text-decoration: none;
 }
-
-/* NEXT BUTTON */
-
-.arc-module-next-link {
-  display: block;
-  padding: 1rem 1.2rem;
-  background: #0f172a;
-  border: 1px solid #374151;
-  border-radius: 12px;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  max-width: 320px;
-}
-
-.arc-module-next-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
-  border-color: #60a5fa;
-}
-
-.arc-module-next-link span {
-  display: block;
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #93c5fd;
-  margin-bottom: 0.25rem;
-}
-
-.arc-module-next-link strong {
-  color: #f9fafb;
-  font-size: 0.95rem;
-}
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-  .arc-module-nav-row {
-    flex-direction: column;
-  }
-
-  .arc-module-next-link,
-  .arc-module-back {
-    width: 100%;
-  }
-}
 </style>
 
 <div class="arc-module">
 
 <div class="arc-module-hero">
-  <div class="arc-module-kicker">Module 3 · Risk Tool Lessons</div>
-  <h2>Same score. Different profiles.</h2>
+  <div class="arc-module-kicker">Module 4 · Risk Tool Lessons</div>
+  <h2>Accuracy is meaningful separation.</h2>
   <p>
-    Two people can have the same risk score and still be very different. This happens
-    because risk scores combine multiple factors into a single number.
+    When people talk about a “more accurate” risk assessment tool, what do they mean?
+    It is not just about getting individual cases right. A stronger tool separates
+    lower- and higher-risk individuals more clearly.
   </p>
 </div>
 
 <div class="arc-module-thesis">
   <strong>Key takeaway</strong>
-  <p>Risk scores summarize information—they do not fully represent it.</p>
+  <p>Accuracy is about how well a tool separates outcomes—not just how often it is “right.”</p>
 </div>
 
 <div class="arc-module-section">
-  <h2>Same Score Does Not Mean Same Person</h2>
+  <h2>Two Tools Can Behave Differently</h2>
   <p>
-    The figure below shows a simple example. Both individuals receive the same total score,
-    but they get there in different ways.
+    Both tools in the figure below assign risk scores. But they behave very differently.
   </p>
   <ul>
-    <li>One person has greater prior history</li>
-    <li>The other has more recent needs, such as substance use or employment</li>
+    <li>One creates greater separation between lower- and higher-risk individuals</li>
+    <li>The other compresses people into a narrower range of probabilities</li>
   </ul>
   <div class="arc-module-key">
-    <strong>The idea:</strong> Different pathways can produce the same score.
+    <strong>The idea:</strong> The difference is separation.
   </div>
 </div>
 
-{{< same-score-different-person-figure >}}
+{{< accuracy-separation-figure >}}
 
 <div class="arc-module-section">
-  <h2>Why This Happens</h2>
+  <h2>How to Read the Figure</h2>
   <p>
-    Risk tools combine several factors into one total score. That total score can be useful,
-    but it also compresses information.
+    The same score can correspond to very different predicted probabilities depending on
+    the tool.
   </p>
+  <ul>
+    <li>At a score of 20, one tool corresponds to about 20% risk, while the other corresponds to about 40%</li>
+    <li>At a score of 80, one tool corresponds to about 75% risk, while the other corresponds to about 45%</li>
+  </ul>
   <p>
-    Because the same score maps to the same predicted probability of recidivism, two people
-    with the same score may be treated as equally “risky,” even when their underlying
-    profiles are very different.
+    A stronger tool spreads people out meaningfully across risk levels. A weaker tool
+    groups people closer together, even when outcomes differ.
   </p>
 </div>
 
 <div class="arc-module-section">
   <h2>Why This Matters</h2>
   <ul>
-    <li>Individuals with the same score may need different interventions</li>
-    <li>A single number can hide meaningful differences</li>
-    <li>Interpretation requires looking beyond the total score</li>
+    <li>Better separation supports more informed decisions</li>
+    <li>Poor separation limits how useful a tool can be</li>
+    <li>Two tools can look similar on the surface but behave very differently</li>
   </ul>
 </div>
 
 <div class="arc-module-bottom">
   <h2>Bottom Line</h2>
   <p>
-    Same score does not mean same person. Risk scores summarize information, but they do
-    not fully represent the individual profiles behind the number.
+    Think of accuracy as meaningful separation. A useful risk tool does not just assign
+    scores—it meaningfully distinguishes between different levels of risk.
   </p>
 </div>
 
@@ -338,9 +274,14 @@ show_authors: false
 <!--
 ---
 
-  <a class="arc-module-next-link" href="/training-modules/lessons-in-risk-foundations/04-accuracy/">
+<div class="arc-module-nav-row">
+  <a class="arc-module-back" href="/training-modules/lessons-in-risk-foundations/">
+    ← Back to Modules
+  </a>
+
+  <a class="arc-module-next-link" href="/training-modules/lessons-in-risk-foundations/03-same-score-different-person/">
     <span>Next Module</span>
-    <strong>What "Accuracy" Really means →</strong>
+    <strong>Same Score, Different Person →</strong>
   </a>
 </div>
 
