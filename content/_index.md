@@ -121,6 +121,17 @@ sections:
           <div class="homepage-card-grid homepage-card-grid-2">
             <div class="homepage-card">
               <a class="homepage-card-link" href="/post/2026-04-16-kimthesis/">
+                <img src="/post/2026-05-07-graduation/featured.jpeg" alt="ARC Lab Celebrates Three Graduates Crossing the Stage">
+                <div class="homepage-card-body">
+                  <p class="homepage-card-kicker">News</p>
+                  <h3>ARC Lab Celebrates Three Graduates Crossing the Stage</h3>
+                  <p>On May 7th, three ARC Lab students walked across the stage.</p>
+                </div>
+              </a>
+            </div>
+          <div class="homepage-card-grid homepage-card-grid-2">
+            <div class="homepage-card">
+              <a class="homepage-card-link" href="/post/2026-04-16-kimthesis/">
                 <img src="/post/2026-04-16-kimthesis/featured.jpeg" alt="Congratulations Yujin">
                 <div class="homepage-card-body">
                   <p class="homepage-card-kicker">News</p>
@@ -146,16 +157,6 @@ sections:
                   <p class="homepage-card-kicker">News</p>
                   <h3>Are Gangs Unique or Just One Piece of the Puzzle?</h3>
                   <p>Dr. Tostlebe delivered an invited presentation at Texas A&M–San Antonio examining the position of gangs within the wider spectrum of criminal groups.</p>
-                </div>
-              </a>
-            </div>
-            <div class="homepage-card">
-              <a class="homepage-card-link" href="/post/2026-03-26-ursinodiss/">
-                <img src="/post/2026-03-26-ursinodiss/featured.jpeg" alt="Congratulations Dr. Ursino">
-                <div class="homepage-card-body">
-                  <p class="homepage-card-kicker">News</p>
-                  <h3>Congratulations Dr. Ursino!</h3>
-                  <p>John Ursino successfully defended his dissertation on March 26.</p>
                 </div>
               </a>
             </div>
