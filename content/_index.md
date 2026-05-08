@@ -119,47 +119,10 @@ sections:
             <a class="homepage-section-link" href="/news/">See more news</a>
           </div>
           <div class="homepage-card-grid homepage-card-grid-2">
-            <div class="homepage-card">
-              <a class="homepage-card-link" href="/post/2026-05-07-graduation/">
-                <img src="/post/2026-05-07-graduation/featured.jpeg" alt="ARC Lab Celebrates Three Graduates Crossing the Stage">
-                <div class="homepage-card-body">
-                  <p class="homepage-card-kicker">News</p>
-                  <h3>ARC Lab Celebrates Three Graduates Crossing the Stage</h3>
-                  <p>On May 7th, three ARC Lab students walked across the stage.</p>
-                </div>
-              </a>
-            </div>
-          <div class="homepage-card-grid homepage-card-grid-2">
-            <div class="homepage-card">
-              <a class="homepage-card-link" href="/post/2026-04-16-kimthesis/">
-                <img src="/post/2026-04-16-kimthesis/featured.jpeg" alt="Congratulations Yujin">
-                <div class="homepage-card-body">
-                  <p class="homepage-card-kicker">News</p>
-                  <h3>Congratulations Yujin!</h3>
-                  <p>Yujin Kim successfully defended her thesis on April 16.</p>
-                </div>
-              </a>
-            </div>
-            <div class="homepage-card">
-              <a class="homepage-card-link" href="/post/2026-04-13-kobiediss/">
-                <img src="/post/2026-04-13-kobiediss/featured.jpeg" alt="Congratulations Dr. Kobie">
-                <div class="homepage-card-body">
-                  <p class="homepage-card-kicker">News</p>
-                  <h3>Congratulations Dr. Kobie!</h3>
-                  <p>Addison Kobie successfully defended her dissertation on April 13.</p>
-                </div>
-              </a>
-            </div>
-            <div class="homepage-card">
-              <a class="homepage-card-link" href="/post/2026-04-08-invitedpresentation/">
-                <img src="/post/2026-04-08-invitedpresentation/featured.png" alt="Invited Guest Presentation">
-                <div class="homepage-card-body">
-                  <p class="homepage-card-kicker">News</p>
-                  <h3>Are Gangs Unique or Just One Piece of the Puzzle?</h3>
-                  <p>Dr. Tostlebe delivered an invited presentation at Texas A&M–San Antonio examining the position of gangs within the wider spectrum of criminal groups.</p>
-                </div>
-              </a>
-            </div>
+            <div class="homepage-card"><a class="homepage-card-link" href="/post/2026-05-07-graduation/"><img src="/post/2026-05-07-graduation/featured.jpeg" alt="ARC Lab Celebrates Three Graduates Crossing the Stage"><div class="homepage-card-body"><p class="homepage-card-kicker">News</p><h3>ARC Lab Celebrates Three Graduates Crossing the Stage</h3><p>On May 7th, three ARC Lab students walked across the stage.</p></div></a></div>
+            <div class="homepage-card"><a class="homepage-card-link" href="/post/2026-04-16-kimthesis/"><img src="/post/2026-04-16-kimthesis/featured.jpeg" alt="Congratulations Yujin"><div class="homepage-card-body"><p class="homepage-card-kicker">News</p><h3>Congratulations Yujin!</h3><p>Yujin Kim successfully defended her thesis on April 16.</p></div></a></div>
+            <div class="homepage-card"><a class="homepage-card-link" href="/post/2026-04-13-kobiediss/"><img src="/post/2026-04-13-kobiediss/featured.jpeg" alt="Congratulations Dr. Kobie"><div class="homepage-card-body"><p class="homepage-card-kicker">News</p><h3>Congratulations Dr. Kobie!</h3><p>Addison Kobie successfully defended her dissertation on April 13.</p></div></a></div>
+            <div class="homepage-card"><a class="homepage-card-link" href="/post/2026-04-08-invitedpresentation/"><img src="/post/2026-04-08-invitedpresentation/featured.png" alt="Invited Guest Presentation"><div class="homepage-card-body"><p class="homepage-card-kicker">News</p><h3>Are Gangs Unique or Just One Piece of the Puzzle?</h3><p>Dr. Tostlebe delivered an invited presentation at Texas A&amp;M–San Antonio examining gangs within the wider spectrum of criminal groups.</p></div></a></div>
           </div>
         </div>
     design:
