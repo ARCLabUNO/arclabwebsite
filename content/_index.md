@@ -118,6 +118,7 @@ sections:
             <h2>Latest News</h2>
             <a class="homepage-section-link" href="/news/">See more news</a>
           </div>
+
           <div class="homepage-card-grid homepage-card-grid-2">
             <div class="homepage-card">
               <a class="homepage-card-link" href="/post/2026-05-07-graduation/">
@@ -129,7 +130,7 @@ sections:
                 </div>
               </a>
             </div>
-          <div class="homepage-card-grid homepage-card-grid-2">
+
             <div class="homepage-card">
               <a class="homepage-card-link" href="/post/2026-04-16-kimthesis/">
                 <img src="/post/2026-04-16-kimthesis/featured.jpeg" alt="Congratulations Yujin">
@@ -140,6 +141,7 @@ sections:
                 </div>
               </a>
             </div>
+
             <div class="homepage-card">
               <a class="homepage-card-link" href="/post/2026-04-13-kobiediss/">
                 <img src="/post/2026-04-13-kobiediss/featured.jpeg" alt="Congratulations Dr. Kobie">
@@ -150,6 +152,7 @@ sections:
                 </div>
               </a>
             </div>
+
             <div class="homepage-card">
               <a class="homepage-card-link" href="/post/2026-04-08-invitedpresentation/">
                 <img src="/post/2026-04-08-invitedpresentation/featured.png" alt="Invited Guest Presentation">
