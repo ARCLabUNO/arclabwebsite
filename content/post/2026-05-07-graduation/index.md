@@ -1,6 +1,6 @@
 ---
 title: "ARC Lab Celebrates Three Graduates Crossing the Stage"
-date: 2026-04-16
+date: 2026-05-07
 summary: "Years of work came to a head on May 7th as Dr. Addison Kobie, Dr. John Ursino, and Yujin Kim, MA crossed the stage, backed by their fellow ARC Lab students."
 ---
 
