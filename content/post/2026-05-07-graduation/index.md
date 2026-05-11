@@ -16,6 +16,8 @@ Following graduation, Dr. Ursino has accepted a Research Specialist position wit
 
 A simple milestone, but an important one—congratulations to all.
 
+![Yujin Kim, Dr. John Ursino, and ARC Lab Students](students.jpeg)
+
 ![Yujin Kim and MA Advisor Dr. Zach Hamilton](kim_and_hamilton.jpeg)
 
 ![Yujin Kim and Dr. John Ursino](kim_and_ursino.jpeg)
