@@ -12,7 +12,7 @@ publication = "*University of Nebraska Omaha*"
 publication_types = ["report"]
   
 # Date the paper was published.
-date = 2025-05-25T10:00:00Z
+date = 2025-09-25T10:00:00Z
   
 # Date this page was created.
 publishdate = 2026-05-11T10:00:00Z
