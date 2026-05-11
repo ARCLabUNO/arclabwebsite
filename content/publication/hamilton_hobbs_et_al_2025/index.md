@@ -46,7 +46,7 @@ url_code = ""
   
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-links = [{name = "Report", url="https://nebraskajudicial.gov/sites/default/files/Probation/juvenile/Final-RAI-Validation-Report-9_25_25.pdf", icon = "unlock-alt", icon_pack = "fas"}, {name = "Research Brief", url="https://nebraskajudicial.gov/sites/default/files/Probation/juvenile/RAI-Valdiation-Study-Brief-Final-9-25-25.pdf", icon = "unlock-alt", icon_pack = "fas"}]
+links = [{name = "Report", url="https://nebraskajudicial.gov/sites/default/files/Probation/juvenile/Final-RAI-Validation-Report-9_25_25.pdf", icon = "unlock-alt", icon_pack = "fas"}, {name = "Research Brief", url="https://nebraskajudicial.gov/sites/default/files/Probation/juvenile/RAI-Valdiation-Study-Brief-Final-9-25-25.pdf", icon = "unlock-alt", icon_pack = "fas"}, {name = "NE Judicial Branch Website", url="https://nebraskajudicial.gov/probation/juvenile-probation-services-division"}]
   
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder.
