@@ -1,7 +1,7 @@
 ---
-title: What “Accuracy” Really Means
-weight: 4
-lastmod: 2026-05-06
+title: What AUC Actually Measures
+weight: 5
+lastmod: 2026-05-11
 show_date: false
 show_reading_time: false
 show_share: false
@@ -202,79 +202,87 @@ show_authors: false
 <div class="arc-module">
 
 <div class="arc-module-hero">
-  <div class="arc-module-kicker">Module 4 · Risk Tool Lessons</div>
-  <h2>Accuracy is meaningful separation.</h2>
+  <div class="arc-module-kicker">Module 5 · Risk Tool Lessons</div>
+  <h2>AUC is about ranking.</h2>
   <p>
-    When people talk about a “more accurate” risk assessment tool, what do they mean?
-    It is not just about getting individual cases right. A stronger tool separates
-    lower- and higher-risk individuals more clearly.
+    Assessment tools are often described using something called “AUC.” AUC stands for
+    “Area Under the Curve,” but conceptually it answers a simple question: how often does
+    the tool correctly rank people?
   </p>
 </div>
 
 <div class="arc-module-thesis">
   <strong>Key takeaway</strong>
-  <p>Accuracy is about how well a tool separates outcomes—not just how often it is “right.”</p>
+  <p>AUC measures ranking—not how risk scores behave in practice.</p>
 </div>
 
 <div class="arc-module-section">
-  <h2>Two Tools Can Behave Differently</h2>
+  <h2>What AUC Means</h2>
   <p>
-    Both tools in the figure below assign risk scores. But they behave very differently.
+    Imagine randomly picking two people from two groups:
   </p>
   <ul>
-    <li>One creates greater separation between lower- and higher-risk individuals</li>
-    <li>The other compresses people into a narrower range of probabilities</li>
+    <li>one person who reoffended</li>
+    <li>one person who did not reoffend</li>
   </ul>
+  <p>
+    The AUC is the probability that the tool assigns a higher score to the person who
+    reoffends.
+  </p>
   <div class="arc-module-key">
-    <strong>The idea:</strong> The difference is separation.
+    <strong>The idea:</strong> AUC asks how well the tool orders people from lower to higher risk.
   </div>
 </div>
 
-{{< accuracy-separation-figure >}}
+{{< auc-ranking-figure >}}
 
 <div class="arc-module-section">
-  <h2>How to Read the Figure</h2>
-  <p>
-    The same score can correspond to very different predicted probabilities depending on
-    the tool.
-  </p>
+  <h2>How to Read AUC Values</h2>
   <ul>
-    <li>At a score of 20, one tool corresponds to about 20% risk, while the other corresponds to about 40%</li>
-    <li>At a score of 80, one tool corresponds to about 75% risk, while the other corresponds to about 45%</li>
+    <li><strong>AUC = 0.50</strong> → no better than chance</li>
+    <li><strong>AUC = 0.75</strong> → correctly ranks pairs 75% of the time</li>
+    <li><strong>AUC = 1.00</strong> → perfect separation</li>
   </ul>
-  <p>
-    A stronger tool spreads people out meaningfully across risk levels. A weaker tool
-    groups people closer together, even when outcomes differ.
-  </p>
 </div>
 
 <div class="arc-module-section">
-  <h2>Why This Matters</h2>
-  <ul>
-    <li>Better separation supports more informed decisions</li>
-    <li>Poor separation limits how useful a tool can be</li>
-    <li>Two tools can look similar on the surface but behave very differently</li>
-  </ul>
+  <h2>What AUC Is Not About</h2>
+  <p>
+    AUC is not about exact probabilities. It is also not about individual predictions.
+  </p>
+  <p>
+    It tells you how well the tool ranks people from lower to higher risk, not whether a
+    specific score corresponds to a useful or well-separated probability in practice.
+  </p>
 </div>
 
 <div class="arc-module-bottom">
   <h2>Bottom Line</h2>
   <p>
-    Think of accuracy as meaningful separation. A useful risk tool does not just assign
-    scores—it meaningfully distinguishes between different levels of risk.
+    AUC measures ranking. It tells you how often a tool orders people correctly, but it
+    does not fully explain how risk scores behave in real decision settings.
   </p>
 </div>
 
+<div class="arc-module-nav-bottom">
+  <a class="arc-module-back" href="/training-modules/lessons-in-risk-foundations/">← Back to Modules</a>
+</div>
+
+</div>
+
+<!--
+---
 
 <div class="arc-module-nav-row">
   <a class="arc-module-back" href="/training-modules/lessons-in-risk-foundations/">
     ← Back to Modules
   </a>
 
-  <a class="arc-module-next-link" href="/training-modules/lessons-in-risk-foundations/05-auc/">
+  <a class="arc-module-next-link" href="/training-modules/lessons-in-risk-foundations/03-same-score-different-person/">
     <span>Next Module</span>
-    <strong>What AUC Actually Measures →</strong>
+    <strong>Same Score, Different Person →</strong>
   </a>
 </div>
 
 </div>
+-->
