@@ -197,6 +197,63 @@ show_authors: false
   color: #fff !important;
   text-decoration: none;
 }
+
+.arc-module-nav-row {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.arc-module-next-link,
+.arc-module-next-link:visited,
+.arc-module-next-link:hover,
+.arc-module-next-link:focus,
+.arc-module-next-link:active {
+  display: inline-block;
+  padding: 0.75rem 1.2rem;
+  background: #0f172a;
+  color: #fff !important;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: right;
+}
+
+.arc-module-next-link:hover,
+.arc-module-next-link:focus {
+  background: #1f3a5f;
+  border-color: #60a5fa;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.arc-module-next-link span {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #93c5fd;
+  margin-bottom: 0.25rem;
+}
+
+.arc-module-next-link strong {
+  display: block;
+  color: #f9fafb;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .arc-module-nav-row {
+    flex-direction: column;
+  }
+
+  .arc-module-next-link {
+    text-align: left;
+  }
+}
 </style>
 
 <div class="arc-module">
