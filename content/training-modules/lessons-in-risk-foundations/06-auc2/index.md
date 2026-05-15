@@ -1,7 +1,7 @@
 ---
-title: What AUC Actually Measures
-weight: 5
-lastmod: 2026-05-11
+title: Same AUC, Different Behavior
+weight: 6
+lastmod: 2026-05-15
 show_date: false
 show_reading_time: false
 show_share: false
@@ -172,8 +172,12 @@ show_authors: false
   line-height: 1.75;
 }
 
-.arc-module-nav-bottom {
+.arc-module-nav-row {
   margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: stretch;
 }
 
 .arc-module-back,
@@ -194,16 +198,6 @@ show_authors: false
 .arc-module-back:hover,
 .arc-module-back:focus {
   background: #27496d;
-  color: #fff !important;
-  text-decoration: none;
-}
-
-.arc-module-nav-row {
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  align-items: stretch;
 }
 
 .arc-module-next-link,
@@ -226,8 +220,6 @@ show_authors: false
 .arc-module-next-link:focus {
   background: #1f3a5f;
   border-color: #60a5fa;
-  color: #fff !important;
-  text-decoration: none;
 }
 
 .arc-module-next-link span {
@@ -259,77 +251,71 @@ show_authors: false
 <div class="arc-module">
 
 <div class="arc-module-hero">
-  <div class="arc-module-kicker">Module 5 · Risk Tool Lessons</div>
-  <h2>AUC is about ranking.</h2>
+  <div class="arc-module-kicker">Module 6 · Risk Tool Lessons</div>
+  <h2>Same AUC does not mean same tool.</h2>
   <p>
-    Assessment tools are often described using something called “AUC.” AUC stands for
-    “Area Under the Curve,” but conceptually it answers a simple question: how often does
-    the tool correctly rank people?
+    In the last module, we saw that AUC measures how well a tool ranks people from
+    lower to higher risk. But two tools can have the same AUC and still behave very differently.
   </p>
 </div>
 
 <div class="arc-module-thesis">
   <strong>Key takeaway</strong>
-  <p>AUC measures ranking—not how risk scores behave in practice.</p>
+  <p>AUC measures ranking—not how scores map to real-world decisions.</p>
 </div>
 
 <div class="arc-module-section">
-  <h2>What AUC Means</h2>
+  <h2>Same Ranking Ability, Different Scores</h2>
   <p>
-    Imagine randomly picking two people from two groups:
+    Both tools in the figure below have the same AUC. That means they are equally good
+    at ranking individuals from lower to higher risk.
   </p>
-  <ul>
-    <li>one person who reoffended</li>
-    <li>one person who did not reoffend</li>
-  </ul>
+
   <p>
-    The AUC is the probability that the tool assigns a higher score to the person who
-    reoffends.
+    But their scores behave very differently in practice.
   </p>
+
   <div class="arc-module-key">
-    <strong>The idea:</strong> AUC asks how well the tool orders people from lower to higher risk.
+    <strong>The idea:</strong> Two tools can rank equally well while producing very different risk estimates.
   </div>
 </div>
 
-{{< auc-ranking-figure >}}
+{{< same-auc-different-behavior-figure >}}
 
 <div class="arc-module-section">
-  <h2>How to Read AUC Values</h2>
+  <h2>How the Scores Differ</h2>
+
   <ul>
-    <li><strong>AUC = 0.50</strong> → no better than chance</li>
-    <li><strong>AUC = 0.75</strong> → correctly ranks pairs 75% of the time</li>
-    <li><strong>AUC = 1.00</strong> → perfect separation</li>
+    <li>At a score of 20, one tool corresponds to about 20% risk while the other corresponds to about 40%</li>
+    <li>At a score of 80, one tool corresponds to about 75% risk while the other corresponds to about 45%</li>
   </ul>
+
+  <p>
+    The tools have the same ranking ability, but they produce very different risk estimates.
+  </p>
 </div>
 
 <div class="arc-module-section">
-  <h2>What AUC Is Not About</h2>
-  <p>
-    AUC is not about exact probabilities. It is also not about individual predictions.
-  </p>
-  <p>
-    It tells you how well the tool ranks people from lower to higher risk, not whether a
-    specific score corresponds to a useful or well-separated probability in practice.
-  </p>
+  <h2>Why This Matters</h2>
+
+  <ul>
+    <li>Decisions are based on scores and probabilities—not just ranking</li>
+    <li>Tools with the same AUC can lead to different classifications</li>
+    <li>Policy outcomes can differ even when AUC is identical</li>
+  </ul>
 </div>
 
 <div class="arc-module-bottom">
   <h2>Bottom Line</h2>
   <p>
-    AUC measures ranking. It tells you how often a tool orders people correctly, but it
-    does not fully explain how risk scores behave in real decision settings.
+    AUC is useful, but it does not tell you everything about how a tool performs.
+    Two tools can rank people equally well while behaving very differently in practice.
   </p>
 </div>
-
 
 <div class="arc-module-nav-row">
   <a class="arc-module-back" href="/training-modules/lessons-in-risk-foundations/">
     ← Back to Modules
-  </a>
-
-  <a class="arc-module-next-link" href="/training-modules/lessons-in-risk-foundations/03-same-score-different-person/">
-    <span>Next Module</span>
-    <strong>Same Score, Different Person →</strong>
   </a>
 </div>
 
