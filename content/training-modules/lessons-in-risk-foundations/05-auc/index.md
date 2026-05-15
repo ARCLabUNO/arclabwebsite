@@ -327,9 +327,9 @@ show_authors: false
     ← Back to Modules
   </a>
 
-  <a class="arc-module-next-link" href="/training-modules/lessons-in-risk-foundations/03-same-score-different-person/">
+  <a class="arc-module-next-link" href="/training-modules/lessons-in-risk-foundations/06-auc2/">
     <span>Next Module</span>
-    <strong>Same Score, Different Person →</strong>
+    <strong>Same AUC, Different Behavior →</strong>
   </a>
 </div>
 
