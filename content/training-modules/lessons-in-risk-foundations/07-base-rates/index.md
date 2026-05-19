@@ -1,7 +1,7 @@
 ---
 title: Base Rates Change Everything
 weight: 7
-lastmod: 2026-05-18
+lastmod: 2026-05-06
 show_date: false
 show_reading_time: false
 show_share: false
@@ -211,7 +211,7 @@ show_authors: false
 
 <div class="arc-module-hero">
   <div class="arc-module-kicker">Module 7 · Risk Tool Lessons</div>
-  <h2>Same score. Different population.</h2>
+  <h2>Same tool. Same score. Different population.</h2>
   <p>
     A risk assessment tool does not operate in a vacuum. Its predictions depend heavily
     on the outcome’s base rate: how common the outcome is for a population.
@@ -220,37 +220,50 @@ show_authors: false
 
 <div class="arc-module-thesis">
   <strong>Key takeaway</strong>
-  <p>Risk scores are not universal constants. They are tied to populations and outcomes.</p>
+  <p>Risk scores are not universal constants—they are tied to populations and outcomes.</p>
 </div>
 
 <div class="arc-module-section">
   <h2>What a Base Rate Means</h2>
+
   <p>
-    A base rate is simply how common an outcome is in a population. For risk assessment,
-    that outcome is often recidivism.
+    A base rate is simply how common an outcome is for a population.
   </p>
+
   <p>
     The base rate of a probation population will likely be lower than the base rate of a
     parole population.
   </p>
+
   <div class="arc-module-key">
-    <strong>The idea:</strong> The same score can mean different things when the underlying outcome rate differs.
+    <strong>The idea:</strong> The same score can correspond to very different probabilities across populations.
   </div>
+</div>
+
+<div class="arc-module-section">
+  <h2>Same Tool, Different Meaning</h2>
+
+  <p>
+    The figure below shows a simple example.
+  </p>
+
+  <p>
+    Both groups use the same risk tool. Both individuals receive the same score.
+    But the predicted probabilities are very different because the underlying outcome
+    rates differ across populations.
+  </p>
 </div>
 
 {{< base-rates-change-everything-figure >}}
 
 <div class="arc-module-section">
-  <h2>How to Read the Figure</h2>
-  <p>
-    Both groups use the same risk tool. Both individuals receive the same score. But the
-    predicted probabilities are very different because the underlying outcome rates differ
-    across populations.
-  </p>
+  <h2>How the Scores Differ</h2>
+
   <ul>
     <li>In one population, a score of 50 might correspond to about 15% risk</li>
     <li>In another population, the exact same score might correspond to about 45% risk</li>
   </ul>
+
   <p>
     Same tool. Same score. Different population.
   </p>
@@ -258,6 +271,7 @@ show_authors: false
 
 <div class="arc-module-section">
   <h2>Why This Matters</h2>
+
   <ul>
     <li>Risk estimates depend on the sample the tool was developed on</li>
     <li>Tools may behave differently across jurisdictions</li>
@@ -267,18 +281,22 @@ show_authors: false
 
 <div class="arc-module-section">
   <h2>Why Revalidation Matters</h2>
+
   <p>
     This is one reason tools often need revalidation and recalibration when moved to new
-    settings. If a state or agency has adopted a tool developed elsewhere, it should be
-    evaluated regularly.
+    settings.
+  </p>
+
+  <p>
+    If your state or agency has adopted a tool developed elsewhere, has it been evaluated recently?
   </p>
 </div>
 
 <div class="arc-module-bottom">
   <h2>Bottom Line</h2>
   <p>
-    Base rates change everything. Risk scores are not universal constants; they are tied
-    to populations, outcomes, and the settings where they are used.
+    Risk scores are not universal constants. They are tied to populations, outcomes,
+    and the settings where they are used.
   </p>
 </div>
 
