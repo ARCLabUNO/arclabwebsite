@@ -172,12 +172,8 @@ show_authors: false
   line-height: 1.75;
 }
 
-.arc-module-nav-row {
+.arc-module-nav-bottom {
   margin-top: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  align-items: stretch;
 }
 
 .arc-module-back,
@@ -198,6 +194,16 @@ show_authors: false
 .arc-module-back:hover,
 .arc-module-back:focus {
   background: #27496d;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.arc-module-nav-row {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: stretch;
 }
 
 .arc-module-next-link,
@@ -220,6 +226,8 @@ show_authors: false
 .arc-module-next-link:focus {
   background: #1f3a5f;
   border-color: #60a5fa;
+  color: #fff !important;
+  text-decoration: none;
 }
 
 .arc-module-next-link span {
@@ -305,17 +313,14 @@ show_authors: false
   </ul>
 </div>
 
-<div class="arc-module-bottom">
-  <h2>Bottom Line</h2>
-  <p>
-    AUC is useful, but it does not tell you everything about how a tool performs.
-    Two tools can rank people equally well while behaving very differently in practice.
-  </p>
-</div>
-
 <div class="arc-module-nav-row">
   <a class="arc-module-back" href="/training-modules/lessons-in-risk-foundations/">
     ← Back to Modules
+  </a>
+
+  <a class="arc-module-next-link" href="/training-modules/lessons-in-risk-foundations/06-auc2/">
+    <span>Next Module</span>
+    <strong>Same AUC, Different Behavior →</strong>
   </a>
 </div>
 
