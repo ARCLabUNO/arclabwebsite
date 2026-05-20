@@ -318,9 +318,9 @@ show_authors: false
     ← Back to Modules
   </a>
 
-  <a class="arc-module-next-link" href="/training-modules/lessons-in-risk-foundations/06-auc2/">
+  <a class="arc-module-next-link" href="/training-modules/lessons-in-risk-foundations/07-base-rates/">
     <span>Next Module</span>
-    <strong>Same AUC, Different Behavior →</strong>
+    <strong>Base Rates Change Everything →</strong>
   </a>
 </div>
 
