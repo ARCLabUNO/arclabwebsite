@@ -3,6 +3,8 @@ title: Lessons in Risk – Foundations
 view: 1
 ---
 
+Developed by: Professor and ARC Lab Director, [Zachary Hamilton](https://arcorrectionslab.org/author/zachary-hamilton/)
+
 This series focuses on the foundations of risk assessment—what risk scores represent, how they are constructed, and how they should (and should not) be interpreted.
 
 Before getting into tools, applications, or policy decisions, the goal here is to establish a clear understanding of the core concepts that everything else depends on.
