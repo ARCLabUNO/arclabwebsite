@@ -28,8 +28,9 @@ Before getting into tools, applications, or policy decisions, the goal here is t
 <div>
 
 - Why AUC is not enough  
-- Calibration (predicted vs. observed)  
 - Base rates  
+- Calibration (predicted vs. observed)  
+- Predictive Shrinkage
 - Cut points in practice  
 
 </div>
