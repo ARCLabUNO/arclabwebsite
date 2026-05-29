@@ -1,5 +1,5 @@
 ---
-title: Lessons in Risk – Application
+title: Lessons in Risk – Application and Decision-Making
 view: 3
 ---
 
