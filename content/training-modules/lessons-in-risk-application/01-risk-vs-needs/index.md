@@ -1,6 +1,6 @@
 ---
 title: Risk vs Needs Assessments
-weight: 10
+weight: 1
 lastmod: 2026-05-28
 show_date: false
 show_reading_time: false
