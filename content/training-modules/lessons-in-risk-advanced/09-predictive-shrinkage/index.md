@@ -1,6 +1,6 @@
 ---
 title: Predictive Shrinkage
-weight: 9
+weight: 3
 lastmod: 2026-05-25
 show_date: false
 show_reading_time: false
@@ -293,7 +293,7 @@ show_authors: false
 </div>
 
 <div class="arc-module-nav-row">
-  <a class="arc-module-back" href="/training-modules/lessons-in-risk-foundations/">
+  <a class="arc-module-back" href="/training-modules/lessons-in-risk-advanced/">
     ← Back to Modules
   </a>
 </div>
