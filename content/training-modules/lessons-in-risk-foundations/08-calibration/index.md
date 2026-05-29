@@ -339,11 +339,6 @@ show_authors: false
   <a class="arc-module-back" href="/training-modules/lessons-in-risk-foundations/">
     ← Back to Modules
   </a>
-
-  <a class="arc-module-next-link" href="/training-modules/lessons-in-risk-foundations/09-predictive-shrinkage/">
-    <span>Next Module</span>
-    <strong>Predictive Shrinkage →</strong>
-  </a>
 </div>
 
 </div>
