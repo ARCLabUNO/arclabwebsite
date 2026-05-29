@@ -1,6 +1,6 @@
 ---
 title: Lessons in Risk – Advanced Topics
-view: 5
+view: 1
 ---
 
 Developed by: Professor and ARC Lab Director, [Zachary Hamilton](https://arcorrectionslab.org/author/zachary-hamilton/)

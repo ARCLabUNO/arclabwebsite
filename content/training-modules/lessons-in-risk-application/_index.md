@@ -1,6 +1,6 @@
 ---
 title: Lessons in Risk – Application and Decision-Making
-view: 3
+view: 1
 ---
 
 Developed by: Professor and ARC Lab Director, [Zachary Hamilton](https://arcorrectionslab.org/author/zachary-hamilton/)
