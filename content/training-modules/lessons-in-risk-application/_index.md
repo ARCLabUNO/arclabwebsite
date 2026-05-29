@@ -9,27 +9,14 @@ Developed by: Professor and ARC Lab Director, [Zachary Hamilton](https://arcorre
 
 ### What this series covers
 
-<div style="display: flex; gap: 2rem; flex-wrap: wrap;">
-
-<div>
-
 - Risk vs. needs assessments
 - Domains
 - Supervision intensity
 - Programming assignment
-
-</div>
-
-<div>
-
 - Responsivity
 - Static vs. dynamic risk factors
 - Reassessment over time
 - Decision thresholds
-
-</div>
-
-</div>
 
 ---
 
