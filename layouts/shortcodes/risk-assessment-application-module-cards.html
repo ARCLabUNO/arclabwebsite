@@ -1,0 +1,125 @@
+<style>
+.module-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.module-card {
+  background: #111827;
+  color: #f9fafb;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid #1f2937;
+  border-top: 4px solid #1f3a5f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.module-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+/* BASE LABEL */
+.module-label {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 999px;
+}
+
+/* LIVE MODULES */
+.module-label.live {
+  color: #93c5fd;
+  background: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(96, 165, 250, 0.35);
+}
+
+/* IN DEVELOPMENT */
+.module-label.dev {
+  color: #9ca3af;
+  background: rgba(75, 85, 99, 0.25);
+  border: 1px solid rgba(156, 163, 175, 0.25);
+}
+
+.module-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.module-card p {
+  color: #d1d5db;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.module-link {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #1f3a5f;
+  color: #fff !important;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.module-link:hover {
+  background: #27496d;
+}
+
+.module-link.disabled {
+  background: #374151;
+  pointer-events: none;
+}
+
+.module-badge {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .module-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<div class="module-container">
+  <h2>Modules</h2>
+
+  <div class="module-grid">
+
+    <!-- Module 1 -->
+    <div class="module-card">
+      <div>
+        <span class="module-label live">Module 1</span>
+        <h3>Risk vs. Needs Assessments</h3>
+        <p>
+          Risk and needs assessments are related, but they answer different questions.
+        </p>
+      </div>
+
+      <div>
+        <a href="/training-modules/lessons-in-risk-application/01-risk-vs-needs/"
+           class="module-link">
+          View Module
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
