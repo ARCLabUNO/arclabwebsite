@@ -25,7 +25,7 @@ abstract = "This study examines how undocumented item-level missingness during s
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["gang-membership", "psychopathic traits", "selection", "facilitation", "criminological theory"]
+tags = ["psychopathic traits", "health", "methods and measurement"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""
