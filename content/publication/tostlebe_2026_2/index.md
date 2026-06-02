@@ -1,0 +1,60 @@
++++
+# Paper title
+title = "Know your (secondary) data inside and out: Missing data and measurement in the Youth Psychopathic Traits Inventory from the Pathways to Desistance dataset (Forthcoming)"
+  
+# Authors
+authors = ["tostlebe"]
+  
+# Publication
+publication = "*Crime & Delinquency*"
+  
+# Publication types (2 = Journal article; 3 = preprint; 4 = report; 6 = book chapter)
+publication_types = ["article-journal"]
+  
+# Date the paper was published.
+date = 2026-06-01T10:00:00Z
+  
+# Date this page was created.
+publishdate = 2026-06-01T10:00:00Z
+  
+# Project summary to display on homepage.
+summary = "This study examines how undocumented item-level missingness during scale construction of the Youth Psychopathic Traits Inventory (YPI) within the Pathways to Desistance dataset accessed through ICPSR can shape the measurement properties and downstream use of the measure in secondary analysis."
+  
+# Abstract
+abstract = "This study examines how undocumented item-level missingness during scale construction of the Youth Psychopathic Traits Inventory (YPI) within the Pathways to Desistance dataset accessed through ICPSR can shape the measurement properties and downstream use of the measure in secondary analysis. Patterns of item absence/nonresponse in the YPI are documented and the measure is reconstructed using a prorated scoring approach. Summated and prorated versions of the YPI are compared using descriptive and correlational analyses and incorporated into mixed-effects models predicting self-reported offending. Public summated YPI scores include values that fall outside the possible range of the scale because missing items are implicitly scored as zero. However, summated and prorated measures are nearly identical in their distributions and correlated at near-perfect levels in the between- and within-person components. Mixed-effects models produce substantively equivalent estimates across scoring approaches. These findings should not be taken as evidence that scoring irregularities are trivial; rather, they demonstrate the importance of evaluating and correcting for or ruling out such concerns. This process is supported through evaluation of secondary data by secondary analysts, alongside transparent documentation practices by data curators that support validity and replicability in criminological research."
+  
+# Tags: can be used for filtering projects.
+# Example: `tags = ["machine-learning", "deep-learning"]`
+tags = ["gang-membership", "psychopathic traits", "selection", "facilitation", "criminological theory"]
+  
+# Optional external URL for project (replaces project detail page).
+external_link = ""
+  
+# Slides (optional).
+#   Associate this project with Markdown slides.
+#   Simply enter your slide deck's filename without extension.
+#   E.g. `slides = "example-slides"` references
+#   `content/slides/example-slides.md`.
+#   Otherwise, set `slides = ""`.
+slides = ""
+  
+# Links (optional).
+url_pdf = ""
+url_slides = ""
+url_video = ""
+url_code = ""
+  
+# Custom links (optional).
+#   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
+# links = [{name = "Preprint", url="https://www.researchgate.net/publication/396842600_Selection_and_facilitation_Is_the_gang_membership-psychopathic_traits_link_a_product_of_individual_differences_social_influences_or_both", icon = "unlock-alt", icon_pack = "fas"}, {name = "DOI", url="https://doi.org/10.1177/00224278251381350"}]
+  
+# Featured image
+# To use, add an image named `featured.jpg/png` to your project's folder.
+[image]
+  # Caption (optional)
+  caption = ""
+  
+  # Focal point (optional)
+  # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
+  focal_point = "Center"
++++
