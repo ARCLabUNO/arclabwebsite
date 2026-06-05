@@ -312,6 +312,10 @@ show_authors: false
 <div class="arc-module-nav-row">
   <a class="arc-module-back" href="/training-modules/lessons-in-risk-application/">
     ← Back to Modules
+
+  <a class="arc-module-next-link" href="/training-modules/lessons-in-risk-foundations/03-criminal-history/">
+    <span>Next Module</span>
+    <strong>Is Criminal History a Need? →</strong>
   </a>
 </div>
 
