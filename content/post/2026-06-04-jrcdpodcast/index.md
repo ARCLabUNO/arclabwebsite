@@ -1,7 +1,7 @@
 ---
 title: "JRCD Author Interview with Dr. Tostlebe"
 date: 2026-06-05
-summary: ""
+summary: "Excited to share my interview on the new Journal of Research in Crime and Delinquency (JRCD) YouTube channel!"
 ---
 
 <!--more-->
