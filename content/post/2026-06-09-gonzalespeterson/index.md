@@ -2,6 +2,7 @@
 title: "Taylor Gonzales Named 2026 Ruth D. Peterson Fellow"
 date: 2026-06-09
 summary: "Taylor Gonzales was named a 2026 Ruth D. Peterson Fellow by the American Society of Criminology. This prestigious fellowship recognizes outstanding doctoral students from underrepresented racial and ethnic groups who demonstrate exceptional promise in criminology and criminal justice scholarship."
+author: gonzales
 ---
 
 <!--more-->
