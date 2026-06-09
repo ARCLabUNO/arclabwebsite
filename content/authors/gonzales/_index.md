@@ -83,7 +83,7 @@ user_groups:
   - Grad Students
 ---
 
-Taylor Gonzales is a Doctoral Candidate in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests center around corrections, recidivism, reentry, and program evaluation. Taylor's work has appeared in Criminal Justice and Behavior and Trauma Care, among other journals.
+Taylor Gonzales is a Doctoral Candidate in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests center around corrections, recidivism, reentry, and program evaluation. Taylor's work has appeared in Criminal Justice and Behavior and Trauma Care, among other journals. In 2026, Taylor was named as a Ruth D. Peterson Fellow by the American Society of Criminology.
 
 Taylor is currently working on several projects at the intersection of corrections, organizational practice, and reentry.
 
