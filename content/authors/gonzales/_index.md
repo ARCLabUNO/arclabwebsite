@@ -85,13 +85,12 @@ user_groups:
 
 Taylor Gonzales is a Doctoral Candidate in the School of Criminology and Criminal Justice at the University of Nebraska Omaha. Her research interests center around corrections, recidivism, reentry, and program evaluation. In 2026, Taylor was named as a Ruth D. Peterson Fellow by the *American Society of Criminology*.
 
-Taylor is currently working on several projects at the intersection of corrections, organizational practice, and reentry.
-
 Her **dissertation** examines the Never Give Up (NGU) Transitional Living Program—a community-based reentry program for returning male citizens in Omaha, Nebraska. Rather than asking simply whether the program "works," Taylor's dissertation uses systematic review of program documents and administrative records; day-to-day and programming-specific observations; and semi-structured interviews with administrators, staff, and participants to open up the organizational processes that shape what reentry interventions become in practice, examining how program rules and services are implemented on the ground, how staff exercise discretion under conditions of constraint, and how participants experience and interpret program expectations over time. NGU is a distinctive setting: founded and led by a formerly incarcerated individual, its lived-experience-informed model challenges the professionalized, bureaucratic authority typical of reentry settings. This work builds on a researcher-practitioner partnership that Taylor and Dr. Jenn Tostlebe previously established with NGU leadership (manuscript under review).
 
 Taylor is also:
 1) Working alongside doctoral student, Cait Jordan, on a qualitative study of parole decision-making in Iowa. Drawing on interviews with Department of Corrections staff and parole board members, the project investigates how release decisions are made, how discretion is exercised within formal institutional structures, and what factors shape determinations of readiness for release from prison.
-2) Collaborating with Dr. Tostlebe on a manuscript examining the relationship between self-control and recidivism;
+2) Collaborating with Dr. Tostlebe on a manuscript examining the relationship between self-control and recidivism among men recently released from the Texas Department of Criminal Justice;
 3) Collaborating with Dr. Zachary Hamilton on a manuscript examining how risk and need scores shift across four time points—from six months prior to release through 18 months post-release—and assessing how those changes affect recidivism risk; and
+4) Conducting a meta-analysis on reentry programming.
 
 Taylor's work has appeared in *Criminal Justice & Behavior* and *Criminal Justice Review*, among other journals.
