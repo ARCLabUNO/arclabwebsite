@@ -1,5 +1,5 @@
 ---
-title: Same AUC, Different Behavior
+title: Why AUC Is Not Enough
 weight: 6
 lastmod: 2026-05-15
 show_date: false

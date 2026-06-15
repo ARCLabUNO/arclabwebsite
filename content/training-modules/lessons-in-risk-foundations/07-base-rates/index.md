@@ -1,5 +1,5 @@
 ---
-title: Base Rates Change Everything
+title: Base Rates
 weight: 7
 lastmod: 2026-05-06
 show_date: false

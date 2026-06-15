@@ -1,5 +1,5 @@
 ---
-title: Calibration
+title: Calibration (predicted vs. observed)
 weight: 8
 lastmod: 2026-05-21
 show_date: false

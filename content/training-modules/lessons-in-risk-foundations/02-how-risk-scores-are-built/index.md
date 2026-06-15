@@ -1,5 +1,5 @@
 ---
-title: How Risk Scores Are Built
+title: How Scores Are Built
 weight: 2
 lastmod: 2026-05-01
 show_date: false

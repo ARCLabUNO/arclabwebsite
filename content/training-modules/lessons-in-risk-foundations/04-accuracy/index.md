@@ -1,5 +1,5 @@
 ---
-title: What “Accuracy” Really Means
+title: Separation (Accuracy)
 weight: 4
 lastmod: 2026-05-06
 show_date: false

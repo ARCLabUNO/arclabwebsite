@@ -1,5 +1,5 @@
 ---
-title: What AUC Actually Measures
+title: What AUC Measures
 weight: 5
 lastmod: 2026-05-11
 show_date: false
