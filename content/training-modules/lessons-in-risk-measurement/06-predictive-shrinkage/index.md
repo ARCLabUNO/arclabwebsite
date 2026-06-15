@@ -1,6 +1,6 @@
 ---
 title: Predictive Shrinkage
-weight: 3
+weight: 6
 lastmod: 2026-05-25
 show_date: false
 show_reading_time: false

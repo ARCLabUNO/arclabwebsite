@@ -11,7 +11,6 @@ Developed by: Professor and ARC Lab Director, [Zachary Hamilton](https://arcorre
 
 - Updating a tool
 - Transportability
-- Predictive shrinkage
 - Overfitting
 - Bias (general)
 - Gender differences
