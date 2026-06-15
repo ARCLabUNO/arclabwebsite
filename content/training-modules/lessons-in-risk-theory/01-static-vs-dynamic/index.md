@@ -1,6 +1,6 @@
 ---
 title: Static vs Dynamic Risk Factors
-weight: 2
+weight: 1
 lastmod: 2026-06-01
 show_date: false
 show_reading_time: false

@@ -1,6 +1,6 @@
 ---
 title: Criminal History Predicts Risk—But Is It a Need?
-weight: 3
+weight: 2
 lastmod: 2026-06-05
 show_date: false
 show_reading_time: false
