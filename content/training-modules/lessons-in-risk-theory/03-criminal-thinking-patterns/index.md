@@ -1,6 +1,6 @@
 ---
-title: Criminal History Predicts Risk—But Is It a Need?
-weight: 2
+title: Criminal Thinking Patterns
+weight: 3
 lastmod: 2026-06-05
 show_date: false
 show_reading_time: false
@@ -211,95 +211,88 @@ show_authors: false
 
 <div class="arc-module-hero">
   <div class="arc-module-kicker">Module 3 · Risk Application</div>
-  <h2>Strong predictor does not mean good intervention target.</h2>
+  <h2>Criminal thinking is changeable.</h2>
   <p>
-    One of the strongest predictors of future offending is criminal history. That finding
-    has been replicated for decades. But there is an important distinction: strong
-    predictor does not mean good intervention target.
+    One of the most important criminogenic needs is criminal thinking. But this concept
+    is often misunderstood. Criminal thinking does not refer to intelligence, and it does
+    not mean someone is inherently “criminal.”
   </p>
 </div>
 
 <div class="arc-module-thesis">
   <strong>Key takeaway</strong>
-  <p>Criminal history helps estimate risk, but not what to change.</p>
+  <p>Unlike criminal history, criminal thinking patterns tell us something we can potentially change.</p>
 </div>
 
 <div class="arc-module-section">
-  <h2>Why Criminal History Predicts Risk</h2>
+  <h2>What Criminal Thinking Means</h2>
 
   <p>
-    Criminal history is useful because it captures accumulated risk exposure over time.
-    People with more extensive criminal histories reoffend at higher rates.
+    Criminal thinking refers to patterns of thinking that support, justify, or facilitate
+    offending.
   </p>
 
   <p>
-    That makes criminal history very useful for prediction.
+    Examples include:
   </p>
+
+  <ul>
+    <li>minimizing harm</li>
+    <li>blaming others</li>
+    <li>entitlement</li>
+    <li>rationalizing behavior</li>
+    <li>impulsive decision-making</li>
+  </ul>
 
   <div class="arc-module-key">
-    <strong>The idea:</strong> Criminal history predicts risk, but it is commonly measured as a static factor.
+    <strong>The idea:</strong> Criminal thinking is not about intelligence; it is about thinking patterns that can support offending.
   </div>
 </div>
 
-{{< criminal-history-risk-need-figure >}}
+{{< criminal-thinking-patterns-figure >}}
 
 <div class="arc-module-section">
-  <h2>Why It Is Not a Direct Intervention Target</h2>
+  <h2>Why These Patterns Matter</h2>
 
   <p>
-    Criminal history is commonly measured as a static factor. We cannot:
+    These thinking patterns matter because they are associated with higher rates of
+    recidivism.
+  </p>
+
+  <p>
+    Unlike criminal history, however, they can change.
+  </p>
+
+  <p>
+    That makes them both:
   </p>
 
   <ul>
-    <li>change prior arrests</li>
-    <li>change prior convictions</li>
-    <li>change age at first arrest</li>
+    <li>predictors of future offending</li>
+    <li>intervention targets</li>
   </ul>
-
-  <p>
-    That makes criminal history much less useful for intervention.
-  </p>
 </div>
 
 <div class="arc-module-section">
-  <h2>What Can Be Targeted</h2>
+  <h2>Why This Matters for Treatment</h2>
 
   <p>
-    By contrast, factors such as substance use, peer associations, and criminal thinking
-    patterns may be somewhat less predictive than criminal history alone, but they can
-    change and become targets for intervention.
+    This is one reason cognitive-behavioral interventions play such a central role in
+    modern correctional practice.
   </p>
-</div>
-
-<div class="arc-module-section">
-  <h2>What Belongs in an Assessment?</h2>
-
-  <p>
-    Notice the lower-left corner of the figure. Many characteristics can be measured.
-    Very few help predict recidivism or guide intervention.
-  </p>
-
-  <p>
-    This is an important lesson in assessment development: just because something can be
-    measured does not mean it belongs in an assessment.
-  </p>
-</div>
-
-<div class="arc-module-section">
-  <h2>Why This Matters</h2>
 
   <ul>
-    <li>Prediction and intervention serve different purposes</li>
-    <li>Strong predictors are not automatically treatment targets</li>
-    <li>Effective correctional practice requires both risk and needs assessment</li>
+    <li>Some risk factors can be changed</li>
+    <li>Criminal thinking patterns are among the most important intervention targets</li>
+    <li>Effective treatment often focuses on changing how people interpret situations, decisions, and consequences</li>
   </ul>
 </div>
 
 <div class="arc-module-bottom">
   <h2>Bottom Line</h2>
   <p>
-    Criminal history helps estimate risk, but not what to change. Strong predictors are
-    not automatically good treatment targets.
+    Unlike criminal history, criminal thinking patterns tell us something we can potentially
+    change. They can help predict future offending and guide intervention.
   </p>
 </div>
 
@@ -307,9 +300,9 @@ show_authors: false
   <a class="arc-module-back" href="/training-modules/lessons-in-risk-theory/">
     ← Back to Modules
 
-  <a class="arc-module-next-link" href="/training-modules/lessons-in-risk-theory/03-criminal-thinking-patterns/">
+  <a class="arc-module-next-link" href="/training-modules/lessons-in-risk-theory/04-peers/">
     <span>Next Module</span>
-    <strong>Criminal Thinking →</strong>
+    <strong>Peers →</strong>
   </a>
 </div>
 
