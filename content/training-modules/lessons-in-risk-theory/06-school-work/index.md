@@ -1,7 +1,7 @@
 ---
-title: Substance Use
-weight: 5
-lastmod: 2026-06-05
+title: School, Work, and Stability
+weight: 6
+lastmod: 2026-06-26
 show_date: false
 show_reading_time: false
 show_share: false
@@ -259,104 +259,109 @@ show_authors: false
 <div class="arc-module">
 
 <div class="arc-module-hero">
-  <div class="arc-module-kicker">Module 5 · Risk Application</div>
-  <h2>Some needs are more actionable than others.</h2>
+  <div class="arc-module-kicker">Module 6 · Theory &amp; Dynamics</div>
+  <h2>School and work create stability.</h2>
   <p>
-    Not all criminogenic needs are equally responsive to intervention. Substance use is
-    one of the few domains where we have strong evidence that treatment can reduce need
-    levels—and sometimes reduce risk as well.
+    Many people talk about education and employment as if they are the same thing.
+    Risk and needs assessments often treat them differently.
   </p>
 </div>
 
 <div class="arc-module-thesis">
   <strong>Key takeaway</strong>
-  <p>Substance use matters because it predicts risk and is one of the few domains where meaningful change is possible.</p>
+  <p>School and work matter because they create stability, strengthen bonds to conventional institutions, and increase what people have to lose if they return to crime.</p>
 </div>
 
 <div class="arc-module-section">
-  <h2>Why Substance Use Appears in Needs Assessments</h2>
+  <h2>School and Work Across the Life Course</h2>
 
   <p>
-    The figure below shows three reasons substance use appears in nearly every major
-    needs assessment.
+    The figure below shows why education and employment are treated differently in many
+    risk and needs assessments.
   </p>
 
+  <p>
+    For youth, school is often the primary conventional institution. Assessment items
+    frequently focus on:
+  </p>
+
+  <ul>
+    <li>school attendance</li>
+    <li>academic performance</li>
+    <li>disciplinary problems</li>
+    <li>attachment to school</li>
+    <li>educational goals</li>
+  </ul>
+
   <div class="arc-module-key">
-    <strong>The idea:</strong> Substance use is important because it can create instability, shape behavior, and respond to treatment.
+    <strong>The idea:</strong> School and employment are measured differently, but often serve similar functions.
   </div>
 </div>
 
-{{< substance-use-criminogenic-needs-figure >}}
+{{< school-work-stability-figure >}}
 
 <div class="arc-module-section">
-  <h2>Substance Use Can Create Instability</h2>
+  <h2>Employment Becomes the Primary Institution</h2>
 
   <p>
-    First, substance use often creates instability.
-  </p>
-
-  <p>
-    It can contribute to:
+    For adults, employment often becomes the primary conventional institution. Assessment
+    items frequently focus on:
   </p>
 
   <ul>
-    <li>employment problems</li>
-    <li>housing instability</li>
-    <li>supervision violations</li>
-    <li>association with antisocial peers</li>
+    <li>employment history</li>
+    <li>job stability</li>
+    <li>employability</li>
+    <li>income</li>
+    <li>work-related attitudes</li>
   </ul>
 </div>
 
 <div class="arc-module-section">
-  <h2>Different Substances Can Influence Behavior Differently</h2>
+  <h2>Why These Domains Matter</h2>
 
   <p>
-    Second, different substances can influence behavior in different ways.
+    Even though these domains are measured differently, they often serve similar functions.
   </p>
 
   <p>
-    For example:
+    Both can provide:
   </p>
 
   <ul>
-    <li>alcohol is often associated with violence and aggression</li>
-    <li>stimulants can increase impulsive and erratic behavior</li>
-    <li>opioids are frequently associated with acquisitive crime and economic motivation</li>
+    <li>structure and routine</li>
+    <li>accountability</li>
+    <li>future orientation</li>
+    <li>connections to prosocial institutions</li>
   </ul>
 
   <p>
-    The relationship between substance use and crime is not always the same.
-  </p>
-</div>
-
-<div class="arc-module-section">
-  <h2>Substance Use Is Treatable</h2>
-
-  <p>
-    Third, substance use is one of the most treatable criminogenic needs.
-  </p>
-
-  <p>
-    Unlike criminal history, substance use can change. Successful treatment and recovery
-    can reduce need levels, improve stability, and contribute to reductions in risk.
+    When problems in school or employment accumulate, instability often increases.
+    As instability increases, so does risk.
   </p>
 </div>
 
 <div class="arc-module-section">
   <h2>Why This Matters</h2>
 
+  <p>
+    This is one reason difficulties in school and employment are considered criminogenic needs.
+    Unlike criminal history, they can change. And because they can change, they become
+    potential targets for intervention.
+  </p>
+
   <ul>
-    <li>Substance use affects far more than drug offending</li>
-    <li>Different substances can influence different offending patterns</li>
-    <li>Effective treatment can change one of the most important criminogenic needs</li>
+    <li>Education and employment are related but not identical</li>
+    <li>Assessments measure them differently across the life course</li>
+    <li>Improvements in school or work can contribute to reductions in need levels and risk</li>
   </ul>
 </div>
 
 <div class="arc-module-bottom">
   <h2>Bottom Line</h2>
   <p>
-    Substance use is important not only because it predicts risk, but because it is one
-    of the few domains where meaningful change is possible.
+    School and work matter because they create stability, strengthen bonds to conventional
+    institutions, and increase what people have to lose if they return to crime.
   </p>
 </div>
 
@@ -364,9 +369,9 @@ show_authors: false
   <a class="arc-module-back" href="/training-modules/lessons-in-risk-theory/">
     ← Back to Modules
 
-  <a class="arc-module-next-link" href="/training-modules/lessons-in-risk-theory/06-school-work/">
+  <a class="arc-module-next-link" href="/training-modules/lessons-in-risk-theory/07-social-support/">
     <span>Next Module</span>
-    <strong>School, Work, and Stability →</strong>
+    <strong>Social Support →</strong>
   </a>
 </div>
 
