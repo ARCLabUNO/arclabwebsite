@@ -1,8 +1,8 @@
 ---
-title: "Nebraska Department of Correctional Services program evaluation (2022-2026)"
-date: 2025-05-05
-lastmod: 2026-04-25
-category: "completed"
+title: "Nebraska Department of Correctional Services program evaluation (2026-2030)"
+date: 2026-07-01
+lastmod: 2026-07-01
+category: "current"
 subtitle: ""
 investigators: "Drs. Zachary Hamilton and Jennifer Tostlebe"
 authors:
