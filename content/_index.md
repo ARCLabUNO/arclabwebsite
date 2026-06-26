@@ -148,7 +148,7 @@ sections:
                 <div class="homepage-card-body">
                   <p class="homepage-card-kicker">Project</p>
                   <h3>NDCS program evaluation</h3>
-                  <p>Research and evaluation support for correctional programming in Nebraska.</p>
+                  <p>Evaluating Nebraska Department of Correctional Services programming to improve implementation and outcomes.</p>
                 </div>
               </a>
             </div>
