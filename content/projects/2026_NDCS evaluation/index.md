@@ -14,7 +14,7 @@ summary: "This four-year partnership between the University of Nebraska Omaha an
 
 <!--more-->
 
-The Advancing Research in Corrections (ARC) Lab at the University of Nebraska Omaha is conducting a second phase of its evaluation partnership with the Nebraska Department of Correctional Services (NDCS) to assess the quality, implementation, and effectiveness of structured programming within Nebraska's correctional facilities.
+The Advancing Research in Corrections (ARC) Lab is conducting a second phase of its evaluation partnership with the Nebraska Department of Correctional Services (NDCS) to assess the quality, implementation, and effectiveness of structured programming within Nebraska's correctional facilities.
 
 Structured programming includes clinical treatment, non-clinical programs, and other evidence-informed interventions designed to improve institutional behavior, promote rehabilitation, and reduce recidivism. Building on the initial evaluation conducted beginning in 2022, this project continues to examine program delivery, implementation fidelity, participant outcomes, and overall program effectiveness. Findings will support continuous quality improvement, strengthen evidence-based decision-making, and provide actionable recommendations for enhancing programming across NDCS facilities.
 
