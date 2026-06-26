@@ -143,6 +143,16 @@ sections:
           </div>
           <div class="homepage-card-grid homepage-card-grid-3">
             <div class="homepage-card">
+              <a class="homepage-card-link" href="/projects/2026_ndcs-evaluation/">
+                <img src="/projects/2026_ndcs-evaluation/featured.png" alt="NDCS program evaluation">
+                <div class="homepage-card-body">
+                  <p class="homepage-card-kicker">Project</p>
+                  <h3>NDCS program evaluation</h3>
+                  <p>Research and evaluation support for correctional programming in Nebraska.</p>
+                </div>
+              </a>
+            </div>
+            <div class="homepage-card">
               <a class="homepage-card-link" href="/projects/2026_ngu/">
                 <img src="/projects/2026_ngu/featured.png" alt="Turning hope into evidence">
                 <div class="homepage-card-body">
@@ -159,16 +169,6 @@ sections:
                   <p class="homepage-card-kicker">Project</p>
                   <h3>Parole decision-making tool</h3>
                   <p>Development and evaluation of a tool designed to support parole decision-making.</p>
-                </div>
-              </a>
-            </div>
-            <div class="homepage-card">
-              <a class="homepage-card-link" href="/projects/2025_ndcs-evaluation/">
-                <img src="/projects/2025_ndcs-evaluation/featured.png" alt="NDCS program evaluation">
-                <div class="homepage-card-body">
-                  <p class="homepage-card-kicker">Project</p>
-                  <h3>NDCS program evaluation</h3>
-                  <p>Research and evaluation support for correctional programming in Nebraska.</p>
                 </div>
               </a>
             </div>
