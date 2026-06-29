@@ -55,7 +55,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:tgaonzles@unomaha.edu'
+    link: 'mailto:tgonzales@unomaha.edu'
   - icon: x-twitter
     icon_pack: fab
     link: https://x.com/TGonzales_CJ
