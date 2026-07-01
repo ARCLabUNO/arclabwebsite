@@ -1,6 +1,6 @@
 +++
 # Paper title
-title = "Know your (secondary) data inside and out: Missing data and measurement in the Youth Psychopathic Traits Inventory from the Pathways to Desistance dataset (Forthcoming)"
+title = "Know your (secondary) data inside and out: Missing data and measurement in the Youth Psychopathic Traits Inventory from the Pathways to Desistance dataset"
   
 # Authors
 authors = ["tostlebe"]
