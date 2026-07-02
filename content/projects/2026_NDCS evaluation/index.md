@@ -1,5 +1,5 @@
 ---
-title: "Nebraska Department of Correctional Services program evaluation (2026-2030)"
+title: "Nebraska Department of Correctional Services program evaluation (2026-2028)"
 date: 2026-06-25
 lastmod: 2026-06-25
 category: "current"
@@ -9,7 +9,7 @@ authors:
   - admin
   - tostlebe
 funder: "The Nebraska Department of Correctional Services"
-summary: "This four-year partnership between the University of Nebraska Omaha and the Nebraska Department of Correctional Services evaluates the implementation, quality, and effectiveness of structured programming to support evidence-based improvements across Nebraska's correctional facilities."
+summary: "This two-year partnership between the University of Nebraska Omaha and the Nebraska Department of Correctional Services evaluates the implementation, quality, and effectiveness of structured programming to support evidence-based improvements across Nebraska's correctional facilities."
 ---
 
 <!--more-->
@@ -20,4 +20,4 @@ Structured programming includes clinical treatment, non-clinical programs, and o
 
 While the original evaluation was initiated in response to Nebraska Legislative Bill 896, this second grant cycle expands the ongoing collaboration between UNO and NDCS by continuing to generate rigorous evidence that informs policy, practice, and future program development.
 
-This is a four-year evaluation project funded by the Nebraska Department of Correctional Services.
+This is a two-year evaluation project funded by the Nebraska Department of Correctional Services.
