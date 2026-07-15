@@ -1,6 +1,6 @@
 +++
 # Paper title
-title = "Beyond risk factors: A mixed-methods study of interpersonal dynamics in suicide attempts and reattempts from police narratives"
+title = "Beyond risk factors: A mixed-methods study of interpersonal dynamics in suicide attempts and reattempts from police narratives (Forthcoming)"
   
 # Authors
 authors = ["Sarah Al Falatah", "tostlebe", "Sadaf Hashimi"]
