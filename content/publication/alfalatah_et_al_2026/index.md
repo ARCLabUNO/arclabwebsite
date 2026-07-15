@@ -25,7 +25,7 @@ abstract = "Each year, approximately 1.5 million Americans attempt suicide, and 
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["health", "police", "suicide"]
+tags = ["health", "police", "suicide", "grad student lead author"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""
