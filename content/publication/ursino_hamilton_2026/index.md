@@ -46,7 +46,7 @@ url_code = ""
   
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-# links = [{name = "DOI", url="https://doi.org/10.1016/j.jcrimjus.2025.102480"}]
+links = [{name = "DOI", url="https://doi.org/10.1080/07418825.2026.2702811"}]
   
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder.
