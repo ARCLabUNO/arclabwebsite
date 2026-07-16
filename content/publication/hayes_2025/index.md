@@ -1,6 +1,6 @@
 +++
 # Paper title
-title = "Book review. K.C. Carceral and Michael G. Flaherty's *The Cage of Days: Time and Temporal Experience in Prison*"
+title = "Book review. K.C. Carceral and Michael G. Flaherty's The Cage of Days: Time and Temporal Experience in Prison"
   
 # Authors
 authors = ["hayes"]
