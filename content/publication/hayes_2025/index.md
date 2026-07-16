@@ -9,7 +9,7 @@ authors = ["hayes"]
 publication = "*Rutgers' Criminal Law and Criminal Justice Books*"
   
 # Publication types (2 = Journal article; 3 = preprint; 4 = report; 6 = book chapter)
-publication_types = ["book-review"]
+publication_types = ["Book Review"]
   
 # Date the paper was published.
 date = 2025-10-01T10:00:00Z
