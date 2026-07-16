@@ -25,7 +25,7 @@ summary = "Prisons do not simply confine bodies, they confiscate time."
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
-tags = ["institutional corrections"]
+tags = ["institutional corrections", "grad"]
   
 # Optional external URL for project (replaces project detail page).
 external_link = ""
