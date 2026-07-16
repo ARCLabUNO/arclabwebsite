@@ -1,6 +1,6 @@
 +++
 # Paper title
-title = "Unraveling decarceration policy and how it affects correctional populations (Forthcoming)"
+title = "Unraveling decarceration policy and how it affects correctional populations"
   
 # Authors
 authors = ["ursino", "admin"]
