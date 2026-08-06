@@ -12,7 +12,7 @@ publication = "*Health & Justice*"
 publication_types = ["article-journal"]
   
 # Date the paper was published.
-date = 2026-07-15T10:00:00Z
+date = 2026-08-06T10:00:00Z
   
 # Date this page was created.
 publishdate = 2026-07-15T10:00:00Z
@@ -46,7 +46,7 @@ url_code = ""
   
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-# links = [{name = "Preprint", url="https://www.researchgate.net/publication/405747436_Know_your_secondary_data_inside_and_out_Missing_data_and_measurement_in_the_Youth_Psychopathic_Traits_Inventory_from_the_Pathways_to_Desistance_dataset", icon = "unlock-alt", icon_pack = "fas"}, {name = "DOI", url="https://doi.org/10.1177/00111287261460006"}]
+links = [{name = "DOI", url="https://doi.org/10.1186/s40352-026-00443-y", icon = "unlock-alt", icon_pack = "fas"}]
   
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder.
