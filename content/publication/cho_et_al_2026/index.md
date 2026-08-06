@@ -1,6 +1,6 @@
 +++
 # Paper title
-title = "Longitudinal patterns of compliance in drug treatment courts: A group-based trajectory modeling approach (Forthcoming)"
+title = "Longitudinal patterns of compliance in drug treatment courts: A group-based trajectory modeling approach"
   
 # Authors
 authors = ["Ahram Cho", "gonzales", "Alex Updegrove"]
@@ -12,16 +12,16 @@ publication = "*Crime & Delinquency*"
 publication_types = ["article-journal"]
   
 # Date the paper was published.
-date = 2026-07-09T10:00:00Z
+date = 2026-08-03T10:00:00Z
   
 # Date this page was created.
 publishdate = 2026-07-09T10:00:00Z
   
 # Project summary to display on homepage.
-# summary = "Drug treatment courts (DTCs) offer a community-based alternative sanction that prioritizes combining substance use treatment and judicial oversight to support the recovery of system-involved individuals who have substance use issues."
+summary = "Drug treatment courts (DTCs) rely on structured supervision and treatment to curb substance use among justice-involved individuals. Using group-based trajectory modeling, this study identifies early-phase patterns of in-program substance use among 320 adult DTC participants, measured through positive drug tests across the first 90 days."
   
 # Abstract
-# abstract = "Drug treatment courts (DTCs) offer a community-based alternative sanction that prioritizes combining substance use treatment and judicial oversight to support the recovery of system-involved individuals who have substance use issues. While the goal of treatment is to curb participants’ propensity to use substances, treatment impact may vary in participant relapse in this setting. The current study utilized official DTC records (N = 320) from a southwestern program across 10 years to identify program and individual characteristics associated with substance use patterns during the first 90 days of admission. Using group-based trajectory modeling, three in-program substance use group trajectories emerged: abstainers, non-responders, and responders. Analysis of variance and post hoc tests revealed that poor overall program compliance across multiple DTC components was correlated with trajectory group membership. Thus, the findings indicate that adherence to some program requirements may influence in-program substance use. Policy implications and future research directions for improving DTC efficacy for subgroups are discussed."
+abstract = "Drug treatment courts (DTCs) rely on structured supervision and treatment to curb substance use among justice-involved individuals. Using group-based trajectory modeling, this study identifies early-phase patterns of in-program substance use among 320 adult DTC participants, measured through positive drug tests across the first 90 days. Three distinct trajectories emerged: abstainers, responders, and non-responders. Logistic regression analyses revealed that abstainers had significantly higher odds of program graduation compared to non-responders. In contrast, responders—despite reductions in substance use—did not have higher odds of completion, suggesting that early behavioral improvement alone may be insufficient for successful program outcomes. These findings highlight early compliance monitoring as an indicator of treatment responsiveness that can inform more efficient, individualized interventions tailored to participants."
   
 # Tags: can be used for filtering projects.
 # Example: `tags = ["machine-learning", "deep-learning"]`
@@ -46,7 +46,7 @@ url_code = ""
   
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-# links = [{name = "DOI", url="https://doi.org/10.1177/07340168261445422"}]
+links = [{name = "DOI", url="https://doi.org/10.1177/00111287261473206"}]
   
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder.
