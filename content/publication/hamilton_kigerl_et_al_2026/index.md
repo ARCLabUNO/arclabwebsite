@@ -1,6 +1,6 @@
 +++
 # Paper title
-title = "Criminal history's expiration date: Evidence of prediction decay"
+title = "Criminal history's expiration date: Evidence of prediction decay (Forthcoming)"
   
 # Authors
 authors = ["admin", "kigerl", "tostlebe", "ursino"]
