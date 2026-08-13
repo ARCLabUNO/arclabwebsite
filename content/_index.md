@@ -97,7 +97,7 @@ sections:
         </div>
     design:
       columns: '1'
-      css_class: homepage-underline
+      css_class: homepage-underline homepage-collaboration
       background:
         color:
           light: '#f8fafc'

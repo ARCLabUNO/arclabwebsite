@@ -390,3 +390,57 @@
   }
 
 }
+
+/* =========================================================
+   RESEARCH & COLLABORATION — EDITORIAL RULE
+========================================================= */
+
+.homepage-collaboration .article-style {
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.homepage-collaboration h2 {
+  text-align: center;
+}
+
+
+/* The existing inner div becomes the editorial container */
+
+.homepage-collaboration .article-style > div {
+  max-width: 800px;
+
+  margin-left: auto !important;
+  margin-right: auto !important;
+
+  padding-left: 1.35rem;
+
+  border-left: 2px solid #2dd4bf;
+
+  text-align: left !important;
+}
+
+
+/* Heading should NOT be inside the vertical rule treatment */
+
+.homepage-collaboration .article-style > div > h2 {
+  width: calc(100% + 1.35rem);
+
+  margin-left: -1.35rem;
+
+  margin-bottom: 1.5rem;
+
+  text-align: center;
+
+  border-left: 0;
+}
+
+
+/* Body copy */
+
+.homepage-collaboration .article-style > div > p {
+  text-align: left;
+
+  line-height: 1.75;
+}
