@@ -3,7 +3,10 @@
 <div class="universal-wrapper pt-3 visualizations-page">
 
   <div class="visualizations-header">
-    <div class="visualizations-kicker">ARC LAB · INTERACTIVE RESEARCH</div>
+
+    <div class="visualizations-kicker">
+      ARC LAB · INTERACTIVE RESEARCH
+    </div>
 
     <h1>{{ .Title }}</h1>
 
@@ -13,7 +16,9 @@
       patterns, and explore results from different perspectives beyond the
       published figures.
     </p>
+
   </div>
+
 
   <div class="visualization-grid">
 
@@ -25,11 +30,12 @@
 
 </div>
 
+
 <style>
 
-/* ================================
+/* =================================
    PAGE
-================================ */
+================================= */
 
 .visualizations-page {
   max-width: 1200px;
@@ -77,9 +83,9 @@
 }
 
 
-/* ================================
+/* =================================
    GRID
-================================ */
+================================= */
 
 .visualization-grid {
   display: grid;
@@ -93,9 +99,9 @@
 }
 
 
-/* ================================
+/* =================================
    CARD
-================================ */
+================================= */
 
 .visualization-card {
   position: relative;
@@ -129,7 +135,19 @@
     box-shadow 0.2s ease;
 }
 
-/* subtle accent line */
+.visualization-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #526b89;
+
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.28);
+}
+
+
+/* =================================
+   TOP ACCENT
+================================= */
 
 .visualization-card::before {
   content: "";
@@ -150,19 +168,10 @@
     );
 }
 
-.visualization-card:hover {
-  transform: translateY(-4px);
 
-  border-color: #526b89;
-
-  box-shadow:
-    0 14px 32px rgba(0, 0, 0, 0.28);
-}
-
-
-/* ================================
+/* =================================
    THUMBNAIL
-================================ */
+================================= */
 
 .visualization-card-image-link {
   display: block;
@@ -197,41 +206,40 @@
 }
 
 
-/* ================================
+/* =================================
    PUBLICATION LABEL
-================================ */
+   Styled to resemble the ARC
+   Projects "Current" badge
+================================= */
 
 .visualization-card-label {
   display: inline-flex;
   align-items: center;
-
   align-self: flex-start;
 
   margin-bottom: 0.8rem;
 
-  padding: 0.42rem 0.7rem;
+  padding: 0.35rem 0.7rem;
 
-  background: #315f8f;
-  color: #ffffff;
+  background: transparent;
 
-  border: 1px solid #4e7eae;
-  border-radius: 4px;
+  color: #9fb9d3;
+
+  border: 1px solid #52708f;
+  border-radius: 999px;
 
   font-size: 0.74rem;
-  font-weight: 800;
-  line-height: 1;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.05em;
 
-  letter-spacing: 0.07em;
   text-transform: uppercase;
-
-  box-shadow:
-    0 2px 6px rgba(0, 0, 0, 0.12);
 }
 
 
-/* ================================
+/* =================================
    TITLE
-================================ */
+================================= */
 
 .visualization-card-title {
   margin: 0 0 0.65rem;
@@ -254,9 +262,9 @@
 }
 
 
-/* ================================
+/* =================================
    AUTHORS
-================================ */
+================================= */
 
 .visualization-card-authors {
   margin: 0 0 0.45rem;
@@ -268,9 +276,9 @@
 }
 
 
-/* ================================
+/* =================================
    JOURNAL
-================================ */
+================================= */
 
 .visualization-card-publication {
   margin: 0 0 1rem;
@@ -282,9 +290,9 @@
 }
 
 
-/* ================================
+/* =================================
    SUMMARY
-================================ */
+================================= */
 
 .visualization-card-summary {
   margin: 0 0 1.35rem;
@@ -296,9 +304,9 @@
 }
 
 
-/* ================================
+/* =================================
    BUTTON AREA
-================================ */
+================================= */
 
 .visualization-card-footer {
   margin-top: auto;
@@ -307,9 +315,9 @@
 }
 
 
-/* ================================
+/* =================================
    LAUNCH BUTTON
-================================ */
+================================= */
 
 .visualization-launch {
   display: inline-flex;
@@ -359,9 +367,9 @@
 }
 
 
-/* ================================
+/* =================================
    MOBILE
-================================ */
+================================= */
 
 @media (max-width: 768px) {
 
