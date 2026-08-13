@@ -29,10 +29,7 @@
   color: #d9e8f5;
 }
 
-
-/* ========================================
-   SECTION HEADINGS — HOMEPAGE ONLY
-======================================== */
+/* SECTION HEADINGS — homepage only via custom section class */
 
 .homepage-underline h2 {
   position: relative;
@@ -49,15 +46,12 @@
   width: 0;
   height: 3px;
 
-  /* ARC teal */
+  /* ARC TEAL */
   background: #2dd4bf;
 
   opacity: 0;
   transform: translateX(-50%);
-
-  transition:
-    width 0.35s ease,
-    opacity 0.2s ease;
+  transition: width 0.35s ease, opacity 0.2s ease;
 }
 
 .homepage-underline:hover h2::after {
@@ -65,34 +59,15 @@
   opacity: 1;
 }
 
-
-/* ========================================
-   MAIN HOMEPAGE BODY TEXT
-======================================== */
-
-.homepage-underline p {
-  color: #ffffff;
-}
-
-
-/* ========================================
-   CTA LINK
-   clean + dynamic, no arrow
-======================================== */
+/* CTA LINK (clean + dynamic, no arrow) */
 
 .homepage-section-link {
   position: relative;
-
   font-weight: 600;
-
   text-decoration: none;
-
   padding-bottom: 2px;
-
   color: #7fc8e8 !important;
-
-  transition:
-    color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .homepage-section-link:hover {
@@ -101,33 +76,22 @@
 
 .homepage-section-link::after {
   content: "";
-
   position: absolute;
-
   left: 0;
   bottom: 0;
-
   width: 100%;
   height: 2px;
-
   background-color: currentColor;
-
   transform: scaleX(0);
-
   transform-origin: left;
-
-  transition:
-    transform 0.25s ease;
+  transition: transform 0.25s ease;
 }
 
 .homepage-section-link:hover::after {
   transform: scaleX(1);
 }
 
-
-/* ========================================
-   GRID
-======================================== */
+/* GRID */
 
 .homepage-card-grid {
   display: grid;
@@ -135,103 +99,63 @@
 }
 
 .homepage-card-grid-2 {
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .homepage-card-grid-3 {
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-
-/* ========================================
-   CARD
-======================================== */
+/* CARD */
 
 .homepage-card {
   background: #ffffff;
-
   border-radius: 14px;
-
-  border:
-    1px solid rgba(15, 23, 42, 0.08);
-
-  box-shadow:
-    0 8px 24px rgba(15, 23, 42, 0.06);
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
-
   display: flex;
-
   flex-direction: column;
-
   height: 100%;
 }
 
 .homepage-card:hover {
-  transform:
-    translateY(-4px);
-
-  box-shadow:
-    0 12px 28px rgba(15, 23, 42, 0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
 }
 
 .homepage-card-link {
   display: flex;
-
   flex-direction: column;
-
   height: 100%;
-
   text-decoration: none;
-
   color: inherit;
 }
 
-
-/* ========================================
-   IMAGE
-======================================== */
+/* IMAGE */
 
 .homepage-card img {
   width: 100%;
-
   height: 200px;
-
   object-fit: cover;
-
   display: block;
 }
 
-
-/* ========================================
-   BODY
-======================================== */
+/* BODY */
 
 .homepage-card-body {
   padding: 1.25rem;
-
   display: flex;
-
   flex-direction: column;
-
   flex-grow: 1;
 }
 
 .homepage-card-kicker {
   font-size: 0.75rem;
-
   font-weight: 700;
-
   text-transform: uppercase;
-
   letter-spacing: 0.05em;
-
   margin-bottom: 0.5rem;
 
   /* ARC blue */
@@ -242,25 +166,20 @@
 
 .homepage-card-body h3 {
   margin-top: 0;
-
   margin-bottom: 0.6rem;
 
   /* ARC navy-blue */
   color: #1f3a5f;
 
   font-size: 1.15rem;
-
   line-height: 1.3;
 }
 
 .homepage-card-body p {
   margin: 0;
-
   line-height: 1.55;
-
   color: #4b5563;
 }
-
 
 /* keeps cards visually even */
 
@@ -268,16 +187,11 @@
   margin-top: auto;
 }
 
-
-/* ========================================
-   DARK MODE — HOMEPAGE CARDS
-======================================== */
+/* DARK MODE */
 
 .dark .homepage-card {
   background: #1f2937;
-
-  border-color:
-    rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
 .dark .homepage-card-kicker {
@@ -292,20 +206,14 @@
   color: #d1d5db;
 }
 
-
-/* ========================================
-   MOBILE
-======================================== */
+/* MOBILE */
 
 @media (max-width: 991.98px) {
-
   .homepage-card-grid-2,
   .homepage-card-grid-3 {
     grid-template-columns: 1fr;
   }
-
 }
-
 
 /* ========================================
    WHAT WE STUDY — TRUE CHECKERBOARD
@@ -314,34 +222,17 @@
 
 .study-section .study-card {
   border-radius: 14px;
-
-  border:
-    1px solid rgba(15, 23, 42, 0.08);
-
-  box-shadow:
-    0 8px 24px rgba(15, 23, 42, 0.06);
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background-color 0.2s ease;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .study-section .study-card:hover {
-  transform:
-    translateY(-4px);
-
-  box-shadow:
-    0 12px 28px rgba(15, 23, 42, 0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
 }
 
-
-/* ========================================
-   LIGHT MODE CHECKERBOARD
-
-   row 1 = A B A B
-   row 2 = B A B A
-======================================== */
+/* Light mode checkerboard: row 1 = A B A B, row 2 = B A B A */
 
 .study-section .study-card:nth-child(8n + 1),
 .study-section .study-card:nth-child(8n + 3),
@@ -357,10 +248,7 @@
   background: #f1f5f9;
 }
 
-
-/* ========================================
-   LIGHT MODE HOVER
-======================================== */
+/* Light mode hover matched to each base color */
 
 .study-section .study-card:nth-child(8n + 1):hover,
 .study-section .study-card:nth-child(8n + 3):hover,
@@ -376,10 +264,7 @@
   background: #e2e8f0;
 }
 
-
-/* ========================================
-   STUDY CARD TEXT
-======================================== */
+/* Study card text */
 
 .study-section .study-card h3 {
   color: #1f3a5f;
@@ -389,10 +274,7 @@
   color: #4b5563;
 }
 
-
-/* ========================================
-   DARK MODE CHECKERBOARD
-======================================== */
+/* Dark mode checkerboard */
 
 .dark .study-section .study-card:nth-child(8n + 1),
 .dark .study-section .study-card:nth-child(8n + 3),
@@ -408,10 +290,7 @@
   background: #243041;
 }
 
-
-/* ========================================
-   DARK MODE HOVER
-======================================== */
+/* Dark mode hover matched to each base color */
 
 .dark .study-section .study-card:nth-child(8n + 1):hover,
 .dark .study-section .study-card:nth-child(8n + 3):hover,
@@ -427,10 +306,7 @@
   background: #2f3d52;
 }
 
-
-/* ========================================
-   DARK MODE STUDY TEXT
-======================================== */
+/* Dark mode study text */
 
 .dark .study-section .study-card h3 {
   color: #d9e8f5;
