@@ -4,48 +4,99 @@ date: 2026-04-26
 type: landing
 
 sections:
+
+  # =========================================================
+  # HERO GRAPHIC
+  # =========================================================
+
   - block: markdown
     content:
       title:
       subtitle: ''
       text: |
-        <div style="text-align:center; width:100%; margin:0; padding:0;">
-          <img src="https://arcorrectionslab.org/img/animated_curve_blue.gif" alt="Animated ARC Lab graphic" style="width:100%; max-width:100%; height:auto; display:block; margin:0 auto;">
+        <div class="arc-home-hero-graphic">
+          <img
+            src="https://arcorrectionslab.org/img/animated_curve_blue.gif"
+            alt="Animated ARC Lab graphic"
+          >
         </div>
     design:
       columns: '1'
-      css_class: full-width-gif
+      css_class: arc-home-hero
       spacing:
         padding: ['0', '0', '20px', '0']
 
+
+  # =========================================================
+  # INTRO
+  # =========================================================
+
   - block: markdown
     content:
       title:
       subtitle: ''
       text: |
-        <div style="text-align:center; max-width:900px; margin:0 auto;">
-          <h1>Advancing Research in Corrections Lab</h1>
-          <p style="font-size:1.2rem; margin-top:0.75rem;"><strong>Studying correctional systems as they operate and how they can work better.</strong></p>
 
-          <p>
-            The Advancing Research in Corrections (ARC) Lab, based in the <a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/index.php">UNO School of Criminology and Criminal Justice</a>, conducts applied and theoretical research on institutional corrections, community corrections, and reentry.
-          </p>
+        <div class="arc-home-intro">
 
-          <p>
-            Our work focuses on analyzing real-world correctional systems using rigorous quantitative and qualitative methods. Rather than studying policy in the abstract, we examine how policies, practices, and programs function in context, using data to evaluate outcomes, identify gaps, and inform more effective, equitable, and transparent approaches to corrections.
-          </p>
+          <div class="arc-home-intro-inner">
 
-          <img src="/media/arclogo_aardvark.png" alt="ARC Lab logo" style="max-width:200px; width:100%; height:auto; display:block; margin:2rem auto 0 auto; border-radius:12px;">
+            <p>
+              The Advancing Research in Corrections (ARC) Lab, based in the
+              <a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/index.php">
+                UNO School of Criminology and Criminal Justice
+              </a>,
+              conducts applied and theoretical research on institutional corrections,
+              community corrections, and reentry.
+            </p>
+
+            <p>
+              Our work focuses on analyzing real-world correctional systems using
+              rigorous quantitative and qualitative methods. Rather than studying
+              policy in the abstract, we examine how policies, practices, and
+              programs function in context, using data to evaluate outcomes,
+              identify gaps, and inform more effective, equitable, and transparent
+              approaches to corrections.
+            </p>
+
+            <div class="arc-home-actions">
+
+              <a
+                href="/publication/"
+                class="arc-home-button arc-home-button-primary"
+              >
+                Explore Our Research
+              </a>
+
+              <a
+                href="/people/"
+                class="arc-home-button arc-home-button-secondary"
+              >
+                Meet the Lab
+              </a>
+
+            </div>
+
+            <img
+              src="/media/arclogo_aardvark.png"
+              alt="ARC Lab logo"
+              class="arc-home-aardvark"
+            >
+
+          </div>
+
         </div>
+
     design:
       columns: '1'
-      css_class: homepage-underline
-      background:
-        color:
-          light: '#f8fafc'
-          dark: '#111827'
+      css_class: homepage-intro
       spacing:
         padding: ['40px', '0', '40px', '0']
+
+
+  # =========================================================
+  # WHAT WE STUDY
+  # =========================================================
 
   - block: markdown
     content:
@@ -55,52 +106,127 @@ sections:
         {{< study-grid >}}
     design:
       columns: '1'
-      css_class: homepage-underline
+      css_class: homepage-study
       spacing:
         padding: ['40px', '0', '48px', '0']
+
+
+  # =========================================================
+  # THE ARC LAB TEAM
+  # =========================================================
 
   - block: markdown
     content:
       title:
       subtitle: ''
       text: |
-        <div style="text-align:center; max-width:950px; margin:0 auto;">
-          <h2>The ARC Lab Team</h2>
-          <img src="/media/homyphoto_edited2.jpg" alt="ARC Lab group photo" style="max-width:850px; width:100%; height:auto; border-radius:12px; display:block; margin:1.5rem auto;">
 
-          <p>
-            ARC brings together faculty, research staff, and graduate researchers working on shared questions about correctional policy, practice, and outcomes. The lab operates as a collaborative research environment where projects are developed, analyzed, and carried forward across teams.
-          </p>
+        <div class="arc-team-section">
 
-          <p>
-            Lab members contribute to ongoing research, engage with applied data, and participate in work that connects academic research to policy and practice in corrections.
-          </p>
+          <h2 class="arc-editorial-heading">
+            The ARC Lab Team
+          </h2>
+
+          <div class="arc-editorial-rule"></div>
+
+          <div class="arc-team-layout">
+
+            <div>
+
+              <img
+                src="/media/homyphoto_edited2.jpg"
+                alt="ARC Lab group photo"
+                class="arc-team-image"
+              >
+
+            </div>
+
+            <div class="arc-team-copy">
+
+              <p>
+                ARC brings together faculty, research staff, and graduate
+                researchers working on shared questions about correctional
+                policy, practice, and outcomes. The lab operates as a
+                collaborative research environment where projects are developed,
+                analyzed, and carried forward across teams.
+              </p>
+
+              <p>
+                Lab members contribute to ongoing research, engage with applied
+                data, and participate in work that connects academic research
+                to policy and practice in corrections.
+              </p>
+
+              <p>
+                <a
+                  href="/people/"
+                  class="arc-inline-link"
+                >
+                  Meet the team →
+                </a>
+              </p>
+
+            </div>
+
+          </div>
+
         </div>
+
     design:
       columns: '1'
-      css_class: homepage-underline
+      css_class: homepage-team
       spacing:
         padding: ['40px', '0', '48px', '0']
+
+
+  # =========================================================
+  # RESEARCH & COLLABORATION
+  # =========================================================
 
   - block: markdown
     content:
       title:
       subtitle: ''
       text: |
-        <div style="text-align:center; max-width:950px; margin:0 auto;">
-          <h2>Research and Collaboration</h2>
 
-          <p>
-            ARC works closely with SCCJ faculty, the <a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/nebraska-center-for-justice-research/index.php">Nebraska Center for Justice Research (NCJR)</a>, the <a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/juvenile-justice-institute/index.php">Juvenile Justice Institute (JJI)</a>, and a range of community, state, and federal partners. These collaborations allow the lab to conduct research using administrative data, collect primary data, evaluate active programs, and contribute to ongoing policy discussions.
-          </p>
+        <div class="arc-collab-section">
 
-          <p>
-            Graduate students in the lab are involved in this work as part of ongoing projects, gaining experience with applied data, research design, and evaluation in real-world correctional contexts.
-          </p>
+          <h2 class="arc-editorial-heading">
+            Research &amp; Collaboration
+          </h2>
+
+          <div class="arc-editorial-rule"></div>
+
+          <div class="arc-collab-copy">
+
+            <p>
+              ARC works closely with SCCJ faculty, the
+              <a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/nebraska-center-for-justice-research/index.php">
+                Nebraska Center for Justice Research (NCJR)
+              </a>,
+              the
+              <a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/juvenile-justice-institute/index.php">
+                Juvenile Justice Institute (JJI)
+              </a>,
+              and a range of community, state, and federal partners. These
+              collaborations allow the lab to conduct research using
+              administrative data, collect primary data, evaluate active
+              programs, and contribute to ongoing policy discussions.
+            </p>
+
+            <p>
+              Graduate students in the lab are involved in this work as part of
+              ongoing projects, gaining experience with applied data, research
+              design, and evaluation in real-world correctional contexts.
+            </p>
+
+          </div>
+
         </div>
+
     design:
       columns: '1'
-      css_class: homepage-underline
+      css_class: homepage-collaboration
       background:
         color:
           light: '#f8fafc'
@@ -108,75 +234,232 @@ sections:
       spacing:
         padding: ['40px', '0', '48px', '0']
 
-  - block: markdown
-    content:
-      title:
-      subtitle: ''
-      text: |
-        <div class="homepage-featured">
-          <div class="homepage-section-header">
-            <h2>Latest News</h2>
-            <a class="homepage-section-link" href="/news/">See more news</a>
-          </div>
-          <div class="homepage-card-grid homepage-card-grid-2">
-            <div class="homepage-card"><a class="homepage-card-link" href="/post/2026-06-09-gonzalespeterson/"><img src="/post/2026-06-09-gonzalespeterson/featured.png" alt="Taylor Gonzales Named 2026 Ruth D. Peterson Fellow"><div class="homepage-card-body"><p class="homepage-card-kicker">News</p><h3>Taylor Gonzales Named 2026 Ruth D. Peterson Fellow</h3><p>This prestigious fellowship recognizes outstanding doctoral students from underrepresented racial and ethnic groups who demonstrate exceptional promise in criminology and criminal justice scholarship.</p></div></a></div>
-            <div class="homepage-card"><a class="homepage-card-link" href="/post/2026-06-04-jrcdpodcast/"><img src="/post/2026-06-04-jrcdpodcast/featured.png" alt="JRCD Author Interview"><div class="homepage-card-body"><p class="homepage-card-kicker">News</p><h3>JRCD Author Interview with Dr. Tostlebe</h3><p>Excited to share my interview on the new Journal of Research in Crime and Delinquency (JRCD) YouTube channel!</p></div></a></div>
-            <div class="homepage-card"><a class="homepage-card-link" href="/post/2026-05-07-graduation/"><img src="/post/2026-05-07-graduation/featured.jpeg" alt="ARC Lab Celebrates Three Graduates Crossing the Stage"><div class="homepage-card-body"><p class="homepage-card-kicker">News</p><h3>ARC Lab Celebrates Three Graduates Crossing the Stage</h3><p>On May 7th, three ARC Lab students walked across the stage.</p></div></a></div>
-            <div class="homepage-card"><a class="homepage-card-link" href="/post/2026-04-16-kimthesis/"><img src="/post/2026-04-16-kimthesis/featured.jpeg" alt="Congratulations Yujin"><div class="homepage-card-body"><p class="homepage-card-kicker">News</p><h3>Congratulations Yujin!</h3><p>Yujin Kim successfully defended her thesis on April 16.</p></div></a></div>
-          </div>
-        </div>
-    design:
-      columns: '1'
-      css_class: homepage-underline
-      spacing:
-        padding: ['40px', '0', '48px', '0']
+
+  # =========================================================
+  # LATEST NEWS — AUTOMATIC
+  # =========================================================
 
   - block: markdown
     content:
       title:
       subtitle: ''
       text: |
-        <div class="homepage-featured">
-          <div class="homepage-section-header">
-            <h2>Featured Projects</h2>
-            <a class="homepage-section-link" href="/projects/">See all projects</a>
+
+        <div class="arc-news-section">
+
+          <div class="arc-news-header">
+
+            <h2>
+              Latest News
+            </h2>
+
+            <a
+              class="arc-news-more"
+              href="/news/"
+            >
+              See all news →
+            </a>
+
           </div>
-          <div class="homepage-card-grid homepage-card-grid-3">
-            <div class="homepage-card">
-              <a class="homepage-card-link" href="/projects/2026_ndcs-evaluation/">
-                <img src="/projects/2026_ndcs-evaluation/featured.png" alt="NDCS program evaluation">
-                <div class="homepage-card-body">
-                  <p class="homepage-card-kicker">Project</p>
-                  <h3>NDCS program evaluation</h3>
-                  <p>Evaluating Nebraska Department of Correctional Services programming to improve implementation and outcomes.</p>
+
+
+          <div class="arc-news-list">
+
+            {{ $posts := where site.RegularPages "Section" "post" }}
+            {{ $posts = $posts.ByDate.Reverse }}
+
+            {{ range first 5 $posts }}
+
+              <article class="arc-news-item">
+
+                <div class="arc-news-date">
+                  {{ .Date.Format "Jan 2" }}<br>
+                  {{ .Date.Format "2006" }}
                 </div>
-              </a>
-            </div>
-            <div class="homepage-card">
-              <a class="homepage-card-link" href="/projects/2026_ngu/">
-                <img src="/projects/2026_ngu/featured.png" alt="Turning hope into evidence">
-                <div class="homepage-card-body">
-                  <p class="homepage-card-kicker">Project</p>
-                  <h3>Turning hope into evidence</h3>
-                  <p>A pilot study laying the groundwork for evaluation of the Never Give Up Transitional Living Program.</p>
+
+
+                <div>
+
+                  <h3 class="arc-news-title">
+
+                    <a href="{{ .RelPermalink }}">
+                      {{ .Title }}
+                    </a>
+
+                  </h3>
+
+
+                  {{ with .Summary }}
+
+                    <p class="arc-news-description">
+                      {{ . | plainify | truncate 180 }}
+                    </p>
+
+                  {{ end }}
+
                 </div>
-              </a>
-            </div>
-            <div class="homepage-card">
-              <a class="homepage-card-link" href="/projects/2025_av_iowa/">
-                <img src="/projects/2025_av_iowa/featured.png" alt="Parole decision making tool">
-                <div class="homepage-card-body">
-                  <p class="homepage-card-kicker">Project</p>
-                  <h3>Parole decision-making tool</h3>
-                  <p>Development and evaluation of a tool designed to support parole decision-making.</p>
-                </div>
-              </a>
-            </div>
+
+              </article>
+
+            {{ end }}
+
           </div>
+
         </div>
+
     design:
       columns: '1'
-      css_class: homepage-underline
+      css_class: homepage-news
+      spacing:
+        padding: ['40px', '0', '48px', '0']
+
+
+  # =========================================================
+  # FEATURED PROJECTS
+  # =========================================================
+
+  - block: markdown
+    content:
+      title:
+      subtitle: ''
+      text: |
+
+        <div class="homepage-featured">
+
+          <div class="homepage-section-header">
+
+            <h2>
+              Featured Projects
+            </h2>
+
+            <a
+              class="homepage-section-link"
+              href="/projects/"
+            >
+              See all projects →
+            </a>
+
+          </div>
+
+
+          <div class="homepage-card-grid homepage-card-grid-3">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="homepage-card">
+
+              <a
+                class="homepage-card-link"
+                href="/projects/2026_ndcs-evaluation/"
+              >
+
+                <img
+                  src="/projects/2026_ndcs-evaluation/featured.png"
+                  alt="NDCS program evaluation"
+                >
+
+                <div class="homepage-card-body">
+
+                  <p class="homepage-card-kicker">
+                    Project
+                  </p>
+
+                  <h3>
+                    NDCS program evaluation
+                  </h3>
+
+                  <p>
+                    Evaluating Nebraska Department of Correctional Services
+                    programming to improve implementation and outcomes.
+                  </p>
+
+                </div>
+
+              </a>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="homepage-card">
+
+              <a
+                class="homepage-card-link"
+                href="/projects/2026_ngu/"
+              >
+
+                <img
+                  src="/projects/2026_ngu/featured.png"
+                  alt="Turning hope into evidence"
+                >
+
+                <div class="homepage-card-body">
+
+                  <p class="homepage-card-kicker">
+                    Project
+                  </p>
+
+                  <h3>
+                    Turning hope into evidence
+                  </h3>
+
+                  <p>
+                    A pilot study laying the groundwork for evaluation of the
+                    Never Give Up Transitional Living Program.
+                  </p>
+
+                </div>
+
+              </a>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="homepage-card">
+
+              <a
+                class="homepage-card-link"
+                href="/projects/2025_av_iowa/"
+              >
+
+                <img
+                  src="/projects/2025_av_iowa/featured.png"
+                  alt="Parole decision making tool"
+                >
+
+                <div class="homepage-card-body">
+
+                  <p class="homepage-card-kicker">
+                    Project
+                  </p>
+
+                  <h3>
+                    Parole decision-making tool
+                  </h3>
+
+                  <p>
+                    Development and evaluation of a tool designed to support
+                    parole decision-making.
+                  </p>
+
+                </div>
+
+              </a>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+    design:
+      columns: '1'
+      css_class: homepage-projects
       background:
         color:
           light: '#f8fafc'
