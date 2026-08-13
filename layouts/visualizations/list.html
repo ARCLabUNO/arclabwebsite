@@ -1,0 +1,136 @@
+{{ define "main" }}
+
+<div class="universal-wrapper pt-3 visualizations-page">
+
+  <h1>{{ .Title }}</h1>
+
+  <p class="visualization-page-intro">
+    Explore ARC Lab research through interactive data tools designed to make our
+    findings easier to examine and understand. Dive into the data, compare
+    patterns, and explore results from different perspectives beyond the
+    published figures.
+  </p>
+
+  {{ $pages := .Pages.ByDate.Reverse }}
+
+  <div class="visualization-card-grid">
+    {{ range $pages }}
+      {{ partial "visualization-card.html" . }}
+    {{ end }}
+  </div>
+
+</div>
+
+<style>
+.visualizations-page {
+  max-width: 1200px;
+}
+
+.visualization-page-intro {
+  margin: 0.75rem 0 2.25rem;
+  max-width: 760px;
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.visualization-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.visualization-card {
+  background: #111827;
+  color: #f9fafb;
+  border: 1px solid #1f2937;
+  border-top: 4px solid #1f3a5f;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.22);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.visualization-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.28);
+}
+
+.visualization-card-image-link {
+  display: block;
+  width: 100%;
+}
+
+.visualization-card-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.visualization-card-body {
+  padding: 1.25rem 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.visualization-card-title {
+  font-size: 1.25rem;
+  line-height: 1.35;
+  margin: 0 0 0.75rem;
+}
+
+.visualization-card-title a {
+  color: #f9fafb;
+  text-decoration: none;
+}
+
+.visualization-card-title a:hover {
+  color: #cbd5e1;
+}
+
+.visualization-card-summary {
+  color: #e5e7eb;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.visualization-card-footer {
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+
+.visualization-launch {
+  display: inline-block;
+  background: #1f3a5f;
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.visualization-launch:hover {
+  background: #162944;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .visualization-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visualization-card-image {
+    height: 220px;
+  }
+}
+</style>
+
+{{ end }}

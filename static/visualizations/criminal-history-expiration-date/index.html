@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explore the Data — Criminal History's Expiration Date</title>
+<style>
+  :root {
+    --bg: #0a0f18;
+    --bg2: #0d1420;
+    --panel: rgba(255,255,255,0.045);
+    --panel-hover: rgba(255,255,255,0.075);
+    --border: rgba(255,255,255,0.12);
+    --border-soft: rgba(255,255,255,0.08);
+    --text: #dfe4ee;
+    --muted: #97a1b3;
+    --muted2: #6b7385;
+    --accent: #eb6834;
+    --accent2: #5598e7;
+    /* Fixed-order categorical series palette (validated: CVD-safe adjacent pairs,
+       dark-mode lightness/chroma/contrast, all PASS against this page's #0a0f18
+       surface — see dataviz skill's validate_palette.js). Never reassigned by
+       filter state; a group keeps its color whether or not others are toggled off. */
+    --s1: #3987e5; /* blue   */
+    --s2: #d95926; /* orange */
+    --s3: #199e70; /* green  */
+    --s4: #c98500; /* gold   */
+    --s5: #d55181; /* pink   */
+    --ref: #aab4c8; /* neutral gray, population reference line (not a categorical hue) */
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: radial-gradient(circle at 85% -10%, #1c3050 0%, #0d1420 40%, #0a0f18 100%);
+    background-attachment: fixed;
+    color: var(--text);
+    line-height: 1.5;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+
+  /* ---- hero ---- */
+  .hero { padding: 84px 0 46px; text-align: left; max-width: 880px; }
+  .kicker {
+    font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase;
+    font-weight: 800; color: #86b6ef; margin-bottom: 18px;
+  }
+  .kicker .oa { color: #6bd39a; margin-left: 10px; padding-left: 10px; border-left: 1px solid var(--border); }
+  h1 { font-size: 42px; font-weight: 800; line-height: 1.16; letter-spacing: -0.01em; }
+  h1 .accent { color: var(--accent); }
+  .hero-sub { font-size: 19px; color: var(--muted); margin-top: 18px; max-width: 720px; line-height: 1.55; }
+
+  /* ---- stat row ---- */
+  .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 0 0 56px; }
+  .stat-tile {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 14px;
+    padding: 20px 20px 18px;
+  }
+  .stat-tile .value { font-size: 34px; font-weight: 800; letter-spacing: -0.01em; color: #fff; }
+  .stat-tile .label { font-size: 14.5px; color: var(--muted); margin-top: 6px; line-height: 1.4; }
+
+  /* ---- section shell ---- */
+  section.block { margin-bottom: 64px; }
+  .block-heading { font-size: 26px; font-weight: 800; margin-bottom: 8px; }
+  .block-sub { font-size: 16px; color: var(--muted); margin-bottom: 26px; max-width: 760px; line-height: 1.55; }
+
+  /* ---- explorer panel ---- */
+  .explorer {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 18px;
+    padding: 26px 28px 30px;
+  }
+
+  /* filter row: dimension tabs + view toggle, one row above the chart */
+  .control-row {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+    gap: 14px; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border-soft);
+  }
+  .tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tab {
+    font: inherit; font-size: 14.5px; font-weight: 700; color: var(--muted);
+    background: transparent; border: 1px solid transparent; border-radius: 9px;
+    padding: 8px 14px; cursor: pointer; transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+  .tab:hover { background: var(--panel-hover); color: var(--text); }
+  .tab:focus-visible { outline: 2px solid var(--accent2); outline-offset: 2px; }
+  .tab.active { background: rgba(85,152,231,0.16); border-color: rgba(85,152,231,0.45); color: #fff; }
+
+  .view-toggle {
+    display: inline-flex; background: rgba(255,255,255,0.05); border: 1px solid var(--border);
+    border-radius: 10px; padding: 3px;
+  }
+  .view-toggle button {
+    font: inherit; font-size: 14px; font-weight: 700; color: var(--muted);
+    background: transparent; border: none; border-radius: 8px; padding: 8px 16px; cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+  .view-toggle button:focus-visible { outline: 2px solid var(--accent2); outline-offset: 2px; }
+  .view-toggle button.active { background: var(--accent); color: #1a0f08; }
+
+  /* legend */
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 10px; margin-bottom: 18px; }
+  .legend-chip {
+    display: inline-flex; align-items: center; gap: 8px; font: inherit; font-size: 14.5px; font-weight: 700;
+    color: var(--text); background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+    border-radius: 20px; padding: 6px 14px 6px 10px; cursor: pointer; transition: opacity 0.15s ease, background 0.15s ease;
+  }
+  .legend-chip:hover { background: var(--panel-hover); }
+  .legend-chip:focus-visible { outline: 2px solid var(--accent2); outline-offset: 2px; }
+  .legend-chip .swatch { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+  .legend-chip.off { opacity: 0.38; }
+  .legend-chip.off .swatch { background: transparent !important; border: 2px solid currentColor; }
+  .legend-chip .pop-swatch { width: 14px; height: 2px; border-top: 2px dashed var(--ref); border-radius: 0; }
+
+  /* chart */
+  .chart-shell { position: relative; }
+  .chart-shell svg { width: 100%; height: auto; display: block; overflow: visible; }
+  .axis-label { font-size: 12.5px; fill: var(--muted2); }
+
+  .tooltip {
+    position: absolute; pointer-events: none; z-index: 20;
+    background: #10192a; border: 1px solid var(--border); border-radius: 10px;
+    padding: 10px 14px; font-size: 13.5px; min-width: 150px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+    opacity: 0; transition: opacity 0.1s ease;
+  }
+  .tooltip.on { opacity: 1; }
+  .tooltip .t-year { font-weight: 800; color: #fff; margin-bottom: 6px; font-size: 13px; letter-spacing: 0.02em; }
+  .tooltip .t-row { display: flex; align-items: center; gap: 8px; padding: 2px 0; }
+  .tooltip .t-key { width: 14px; height: 2px; flex-shrink: 0; }
+  .tooltip .t-val { font-weight: 800; color: #fff; }
+  .tooltip .t-name { color: var(--muted); }
+
+  .chart-footnote { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; margin-top: 16px; }
+  .footnote-text { font-size: 13.5px; color: var(--muted2); max-width: 620px; line-height: 1.5; }
+  .pop-toggle { display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--muted); cursor: pointer; user-select: none; white-space: nowrap; }
+  .pop-toggle input { accent-color: var(--accent2); width: 15px; height: 15px; }
+
+  .table-toggle-row { margin-top: 18px; }
+  .table-toggle {
+    font: inherit; font-size: 13.5px; font-weight: 700; color: var(--accent2);
+    background: transparent; border: none; cursor: pointer; padding: 4px 0;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .table-toggle:focus-visible { outline: 2px solid var(--accent2); outline-offset: 2px; }
+  .table-toggle .chev { transition: transform 0.2s ease; display: inline-block; }
+  .table-toggle.open .chev { transform: rotate(90deg); }
+
+  .data-table-wrap { display: none; margin-top: 14px; overflow-x: auto; border: 1px solid var(--border-soft); border-radius: 10px; }
+  .data-table-wrap.open { display: block; }
+  table.data-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  table.data-table caption { text-align: left; padding: 10px 14px; font-size: 12.5px; color: var(--muted2); caption-side: top; }
+  table.data-table th, table.data-table td {
+    padding: 9px 14px; text-align: right; font-variant-numeric: tabular-nums;
+    border-bottom: 1px solid var(--border-soft); white-space: nowrap;
+  }
+  table.data-table th { color: var(--muted); font-weight: 700; text-align: right; }
+  table.data-table th:first-child, table.data-table td:first-child { text-align: left; color: var(--text); font-weight: 700; }
+  table.data-table tbody tr:hover { background: rgba(255,255,255,0.03); }
+
+  /* ---- methodology ---- */
+  .method-card {
+    background: rgba(255,255,255,0.03); border: 1px solid var(--border-soft); border-radius: 14px;
+    padding: 22px 26px;
+  }
+  .method-card p { font-size: 15px; color: var(--muted); line-height: 1.65; margin-bottom: 12px; }
+  .method-card p:last-child { margin-bottom: 0; }
+  .method-card strong { color: var(--text); }
+  .method-card code { font-size: 13.5px; background: rgba(255,255,255,0.06); padding: 1px 6px; border-radius: 5px; color: #c9d4e8; }
+
+  /* ---- footer ---- */
+  footer { border-top: 1px solid var(--border-soft); padding: 30px 0 60px; }
+  footer .cite { font-size: 14.5px; color: var(--muted); line-height: 1.6; max-width: 720px; }
+  footer .cite .journal { font-style: italic; color: var(--muted); }
+  footer .oa-pill {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 16px;
+    background: rgba(107, 211, 154, 0.12); border: 1px solid rgba(107, 211, 154, 0.35);
+    color: #6bd39a; font-size: 14px; font-weight: 700; padding: 6px 14px; border-radius: 30px;
+  }
+
+  @media (max-width: 720px) {
+    .stats-row { grid-template-columns: repeat(2, 1fr); }
+    h1 { font-size: 32px; }
+    .hero { padding: 56px 0 36px; }
+    .control-row { flex-direction: column; align-items: flex-start; }
+  }
+
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+
+  .fig-kicker {
+    font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 800;
+    color: #86b6ef; margin-bottom: 10px;
+  }
+  .sub-figure { margin-top: 34px; }
+  .sub-heading { font-size: 19px; font-weight: 800; margin-bottom: 6px; }
+  .sub-sub { font-size: 14.5px; color: var(--muted); margin-bottom: 18px; max-width: 720px; line-height: 1.5; }
+
+  /* "why this matters" interpretive callouts */
+  .insight {
+    margin-top: 18px; background: rgba(235,104,52,0.08); border-left: 3px solid var(--accent);
+    border-radius: 0 10px 10px 0; padding: 14px 20px;
+  }
+  .insight .insight-label {
+    display: block; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;
+    font-weight: 800; color: var(--accent); margin-bottom: 7px;
+  }
+  .insight p { font-size: 14.5px; color: var(--muted); line-height: 1.62; max-width: 780px; }
+  .insight strong { color: var(--text); }
+
+  /* convergence-figure specific bits */
+  .conv-summary { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-bottom: 20px; }
+  .conv-summary caption { text-align: left; padding-bottom: 8px; font-size: 12.5px; color: var(--muted2); caption-side: top; }
+  .conv-summary th, .conv-summary td {
+    padding: 8px 14px; text-align: right; font-variant-numeric: tabular-nums;
+    border-bottom: 1px solid var(--border-soft); white-space: nowrap;
+  }
+  .conv-summary th { color: var(--muted); font-weight: 700; }
+  .conv-summary th:first-child, .conv-summary td:first-child { text-align: left; }
+  .conv-summary td:first-child { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--text); }
+  .conv-summary .swatch-sm { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="kicker">CRIMINAL HISTORY'S EXPIRATION DATE<span class="oa">DATA EXPLORER</span></div>
+    <h1>How fast does a criminal charge's <span class="accent">predictive power</span> actually fade?</h1>
+    <p class="hero-sub">Explore the decay pattern behind a 16.6-million-person, 40-year study of recidivism risk — how the model is built, how the pattern holds across groups, and how it converges back to baseline over time.</p>
+  </header>
+
+  <section class="stats-row" aria-label="Key findings">
+    <div class="stat-tile"><div class="value">28%</div><div class="label">Predicted recidivism risk in year 1 after a charge</div></div>
+    <div class="stat-tile"><div class="value">&minus;51%</div><div class="label">Drop in that risk by year 7</div></div>
+    <div class="stat-tile"><div class="value">9&ndash;10</div><div class="label">Years until risk converges to the population baseline</div></div>
+    <div class="stat-tile"><div class="value">63%</div><div class="label">Of people charged were never charged again</div></div>
+  </section>
+
+  <section class="block">
+    <div class="fig-kicker">FIGURE 1</div>
+    <h2 class="block-heading">Why the model matters: GLM vs. GLMM</h2>
+    <p class="block-sub">One person can rack up several charges over the study's 40 years — the average is 4.28 per person. A standard model (GLM) treats every person-year as independent and ignores that clustering; a mixed model (GLMM) accounts for it with a random effect per person. Modeling that clustering changes the picture substantially.</p>
+
+    <div class="explorer">
+      <div class="control-row">
+        <div class="tabs" id="fig1-tabs" role="tablist" aria-label="Choose a dimension" style="display:none;"></div>
+        <div class="view-toggle" id="fig1-view-toggle" role="group" aria-label="Choose a view">
+          <button type="button" data-view="prob" class="active">Probability</button>
+          <button type="button" data-view="rr">Relative risk</button>
+        </div>
+      </div>
+
+      <div class="legend" id="fig1-legend"></div>
+
+      <div class="chart-shell">
+        <svg id="fig1-chart" viewBox="0 0 1060 400" role="img" aria-label="GLM vs GLMM decay chart"></svg>
+        <div class="tooltip" id="fig1-tooltip">
+          <div class="t-year" id="fig1-tt-year"></div>
+          <div id="fig1-tt-rows"></div>
+        </div>
+      </div>
+
+      <div class="chart-footnote">
+        <label class="pop-toggle"><input type="checkbox" id="fig1-pop-toggle" checked> Show population average</label>
+        <div class="footnote-text" id="fig1-source-note"></div>
+      </div>
+
+      <div class="insight">
+        <span class="insight-label">Why this matters</span>
+        <p>The widely repeated claim that roughly <strong>two-thirds of people released from prison reoffend</strong> traces back to older cohort studies that treat every charge as an independent, uncorrelated event. Those models can't tell one person with ten charges apart from ten different people with one charge each — a small share of highly active "frequent fliers" ends up inflating the apparent share of the whole population that reoffends, and slows the apparent decay of risk over time. The GLMM corrects for this by explicitly modeling each person's charges as clustered together, and the result is a <strong>lower starting risk and a faster decline</strong> — a more accurate picture of how risk actually behaves for a typical person. That gap is most visible above in the <strong>probability</strong> view; switching to relative risk rescales both curves to the same starting point, which is useful for comparing decay <em>shape</em> but hides just how different the two models' real-world intercepts are.</p>
+      </div>
+
+      <div class="table-toggle-row">
+        <button type="button" class="table-toggle" id="fig1-table-toggle" aria-expanded="false">
+          <span class="chev">&#9656;</span> View this data as a table
+        </button>
+      </div>
+      <div class="data-table-wrap" id="fig1-table-wrap">
+        <table class="data-table">
+          <caption id="fig1-table-caption"></caption>
+          <thead><tr id="fig1-table-head"></tr></thead>
+          <tbody id="fig1-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="fig-kicker">FIGURE 2</div>
+    <h2 class="block-heading">Compare decay curves across groups</h2>
+    <p class="block-sub">Every dimension below shows the same underlying pattern: groups start at different levels of risk, but risk fades at a similar rate for almost everyone. Switch views to see it both ways — as raw year-1 probability, or normalized so every line starts at the same point.</p>
+
+    <div class="explorer">
+      <div class="control-row">
+        <div class="tabs" id="fig2-tabs" role="tablist" aria-label="Choose a dimension">
+          <!-- tab buttons injected by JS -->
+        </div>
+        <div class="view-toggle" id="fig2-view-toggle" role="group" aria-label="Choose a view">
+          <button type="button" data-view="prob" class="active">Probability</button>
+          <button type="button" data-view="rr">Relative risk</button>
+        </div>
+      </div>
+
+      <div class="legend" id="fig2-legend"></div>
+
+      <div class="chart-shell">
+        <svg id="fig2-chart" viewBox="0 0 1060 400" role="img" aria-label="Decay curve chart"></svg>
+        <div class="tooltip" id="fig2-tooltip">
+          <div class="t-year" id="fig2-tt-year"></div>
+          <div id="fig2-tt-rows"></div>
+        </div>
+      </div>
+
+      <div class="chart-footnote">
+        <label class="pop-toggle"><input type="checkbox" id="fig2-pop-toggle" checked> Show population average</label>
+        <div class="footnote-text" id="fig2-source-note"></div>
+      </div>
+
+      <div class="table-toggle-row">
+        <button type="button" class="table-toggle" id="fig2-table-toggle" aria-expanded="false">
+          <span class="chev">&#9656;</span> View this data as a table
+        </button>
+      </div>
+      <div class="data-table-wrap" id="fig2-table-wrap">
+        <table class="data-table">
+          <caption id="fig2-table-caption"></caption>
+          <thead><tr id="fig2-table-head"></tr></thead>
+          <tbody id="fig2-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="fig-kicker">FIGURE 3</div>
+    <h2 class="block-heading">Convergence to the general population base rate</h2>
+    <p class="block-sub">Each state's decay curve eventually meets the ordinary background rate of a new charge in that state's general population &mdash; the point where a prior charge stops meaningfully elevating someone's risk. The dashed line marks each state's real base rate; the marker on each curve is that state's real, published convergence year.</p>
+
+    <div class="explorer">
+      <table class="conv-summary">
+        <caption>State base rates &amp; convergence years — Table 7</caption>
+        <thead><tr><th scope="col">State</th><th scope="col">Base rate</th><th scope="col">Convergence year</th><th scope="col">95% CI</th></tr></thead>
+        <tbody id="conv-summary-body"></tbody>
+      </table>
+
+      <div class="legend" id="conv-legend"></div>
+
+      <div class="chart-shell">
+        <svg id="conv-chart" viewBox="0 0 1060 400" role="img" aria-label="State convergence to base rate chart"></svg>
+        <div class="tooltip" id="conv-tooltip">
+          <div class="t-year" id="conv-tt-year"></div>
+          <div id="conv-tt-rows"></div>
+        </div>
+      </div>
+
+      <div class="chart-footnote">
+        <label class="pop-toggle"><input type="checkbox" id="conv-pop-toggle" checked> Show population average</label>
+        <div class="footnote-text" id="conv-source-note"></div>
+      </div>
+
+      <div class="table-toggle-row">
+        <button type="button" class="table-toggle" id="conv-table-toggle" aria-expanded="false">
+          <span class="chev">&#9656;</span> View this data as a table
+        </button>
+      </div>
+      <div class="data-table-wrap" id="conv-table-wrap">
+        <table class="data-table">
+          <caption id="conv-table-caption"></caption>
+          <thead><tr id="conv-table-head"></tr></thead>
+          <tbody id="conv-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="sub-figure">
+      <h3 class="sub-heading">Does this pattern hold across historical periods?</h3>
+      <p class="sub-sub">The study spans 1980&ndash;2020. Comparing charges from 1980&ndash;2000 to charges from 2001&ndash;2020 (each restricted to a common 20-year follow-up window) shows more recent charges start at lower baseline risk <em>and</em> fade faster.</p>
+      <div class="explorer">
+        <div class="control-row">
+          <div class="tabs" id="fig3b-tabs" role="tablist" aria-label="Choose a dimension" style="display:none;"></div>
+          <div class="view-toggle" id="fig3b-view-toggle" role="group" aria-label="Choose a view">
+            <button type="button" data-view="prob" class="active">Probability</button>
+            <button type="button" data-view="rr">Relative risk</button>
+          </div>
+        </div>
+
+        <div class="legend" id="fig3b-legend"></div>
+
+        <div class="chart-shell">
+          <svg id="fig3b-chart" viewBox="0 0 1060 400" role="img" aria-label="Historical period decay chart"></svg>
+          <div class="tooltip" id="fig3b-tooltip">
+            <div class="t-year" id="fig3b-tt-year"></div>
+            <div id="fig3b-tt-rows"></div>
+          </div>
+        </div>
+
+        <div class="chart-footnote">
+          <label class="pop-toggle"><input type="checkbox" id="fig3b-pop-toggle" checked> Show population average</label>
+          <div class="footnote-text" id="fig3b-source-note"></div>
+        </div>
+
+        <div class="insight">
+          <span class="insight-label">Why this matters</span>
+          <p>Both the starting point and the decay rate shift with the era a charge was filed in: charges from <strong>2001&ndash;2020 start lower and fade faster</strong> than charges from 1980&ndash;2000. That's consistent with recidivism risk genuinely declining over the study period, not just an artifact of which years happen to be in the sample. Practically, it means <strong>estimates built on more contemporary data are likely a more accurate picture of current recidivism risk</strong> than estimates anchored to older cohorts — a risk model trained mostly on 1980s&ndash;90s charges will tend to overstate both how likely someone is to reoffend today and how long that elevated risk lasts.</p>
+        </div>
+
+        <div class="table-toggle-row">
+          <button type="button" class="table-toggle" id="fig3b-table-toggle" aria-expanded="false">
+            <span class="chev">&#9656;</span> View this data as a table
+          </button>
+        </div>
+        <div class="data-table-wrap" id="fig3b-table-wrap">
+          <table class="data-table">
+            <caption id="fig3b-table-caption"></caption>
+            <thead><tr id="fig3b-table-head"></tr></thead>
+            <tbody id="fig3b-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 class="block-heading">How these curves were built</h2>
+    <div class="method-card">
+      <p><strong>Figure 1 (GLM vs. GLMM):</strong> Table 2 reports both specifications' lookback odds ratios (GLM 0.44, GLMM 0.39, each per 1-SD/4.85-year increase in lookback), converted here into an illustrative per-year decay rate. Year-1 starting probabilities (GLM &ldquo;exceeding 20%,&rdquo; GLMM &ldquo;approximately 5%&rdquo;) are taken directly from the paper's own description of Figure 4. The GLMM's lower, steeper curve reflects a subject-specific (conditional) prediction once each person's repeat charges are modeled as clustered rather than independent &mdash; the paper retains the GLMM for every subsequent analysis for this reason.</p>
+      <p><strong>Figure 2 (group comparisons):</strong> decay rate derived from the published interaction-model coefficients in Tables 3&ndash;5 and Appendix Tables E-1/E-2. Year-1 starting probability: each group's real published odds ratio applied multiplicatively, in odds-space, onto the study's year-1 population probability of 28%: <code>odds_group = odds_reference &times; OR</code>, then converted back to a probability. Where the paper reports a genuine null (violent vs. non-violent offense type), the lines are drawn essentially on top of each other.</p>
+      <p><strong>Figure 3 (convergence):</strong> base rates and convergence years are Table 7's real, published values, not illustrative &mdash; unchanged from the paper. Because the convergence analysis is estimated on a different scale (population-average GLMM predictions, the same lower-baseline specification as Figure 1's GLMM curve) than Figure 2's charts (anchored to the 28% observed population curve for cross-group comparability), each state's curve here is scaled so it passes exactly through that state's own real base rate at its own real convergence year, using the same real per-state decay-rate multiplier from Table 3 as Figure 2's states chart. The historical-period comparison uses Table 6: year-1 probability from the additive model's main-effect odds ratio (0.31) applied the same way as every Figure 2 dimension; decay rate from the interaction model's odds ratios (reference-period slope 0.54, interaction term 0.67), estimated on Washington data only.</p>
+      <p>All charts on this page are <strong>illustrative</strong>: built from real, published model estimates, but not literally the paper's fitted values at every year for every subgroup. They're meant to make the paper's findings something you can see and compare yourself.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="kicker" style="margin-bottom:14px;">CRIMINAL HISTORY'S EXPIRATION DATE<span class="oa">OPEN ACCESS</span></div>
+    <div class="cite">
+      Hamilton, Z., Kigerl, A., Tostlebe, J. J., &amp; Ursino, J. &mdash; <strong>Evidence of prediction decay</strong>. School of Criminology and Criminal Justice, University of Nebraska Omaha.<br>
+      Published in <span class="journal">Criminology</span>, the flagship, peer-reviewed journal of the American Society of Criminology.
+    </div>
+    <div class="oa-pill">&#10003; Free to read on publication</div>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  'use strict';
+
+  // ---- shared decay-curve model -------------------------------------------------
+  // Every group (population included) is modeled as:
+  //   probability(t) = p1 * exp(-k * (t - 1))     [phase: "probability"]
+  //   relativeRisk(t) = exp(-k * (t - 1))          [phase: "rr"]
+  // p1 = illustrative year-1 probability (%), k = decay constant, t = lookback year.
+  const K0 = 0.119; // population-average decay constant (fit so RR(7) = 0.49, matching the paper)
+
+  // ---- shared geometry (every chart on the page uses the same viewBox) ----------
+  const XMAX = 25;
+  const W = 1060, H = 400, padL = 52, padR = 28, padT = 24, padB = 44;
+  const plotW = W - padL - padR, plotH = H - padT - padB;
+  const TABLE_YEARS = [1,2,3,5,7,10,15,20,25];
+
+  function resolveColor(c){
+    if (c.indexOf('var(') !== 0) return c;
+    const name = c.slice(4, -1).trim();
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  function probAt(p1, k, t){ return p1 * Math.exp(-k * (t - 1)); }
+  function rrAt(k, t){ return Math.exp(-k * (t - 1)); }
+
+  function xPix(t){ return padL + (t / XMAX) * plotW; }
+  function yPixProb(p, probYMax){ return padT + (1 - p / probYMax) * plotH; }
+  function yPixRel(rr){ return padT + (1 - rr) * plotH; }
+
+  function stepFor(probYMax){
+    if (probYMax <= 12) return 2;
+    if (probYMax <= 30) return 5;
+    return 10;
+  }
+
+  // generic curve path from raw (p1, k) — used for groups and for population/reference lines
+  function curvePath(p1, k, view, probYMax){
+    let d = '';
+    for (let t = 1; t <= XMAX; t += 0.25){
+      const val = view === 'prob' ? probAt(p1, k, t) : rrAt(k, t);
+      const y = view === 'prob' ? yPixProb(val, probYMax) : yPixRel(val);
+      d += (t === 1 ? 'M' : 'L') + ' ' + xPix(t).toFixed(2) + ' ' + y.toFixed(2) + ' ';
+    }
+    return d;
+  }
+  function pathFor(group, view, probYMax){ return curvePath(group.p1, group.k, view, probYMax); }
+
+  function valueAt(group, view, t){
+    return view === 'prob' ? probAt(group.p1, group.k, t) : rrAt(group.k, t);
+  }
+
+  function fmtVal(v, view){
+    return view === 'prob' ? v.toFixed(1) + '%' : v.toFixed(2) + '×';
+  }
+
+  const POP = { label: 'Population average', p1: 28.0, k: K0 };
+
+  const DIMENSIONS = [
+    {
+      key: 'states', tabLabel: 'States', chartTitle: 'By state',
+      source: 'Source: Table 3 (interaction model), FL = reference. Year-1 % from the same table’s OR column applied onto the 28% population baseline.',
+      probYMax: 40,
+      groups: [
+        { key:'WA', label:'Washington', p1:34.4, k:K0*0.92, color:'var(--s1)' },
+        { key:'FL', label:'Florida',    p1:28.0, k:K0*1.00, color:'var(--s2)' },
+        { key:'AK', label:'Alaska',     p1:28.0, k:K0*1.05, color:'var(--s3)' },
+        { key:'TX', label:'Texas',      p1:29.8, k:K0*0.84, color:'var(--s4)' },
+        { key:'AZ', label:'Arizona',    p1:24.6, k:K0*0.82, color:'var(--s5)' },
+      ]
+    },
+    {
+      key: 'race', tabLabel: 'Race & ethnicity', chartTitle: 'By race & ethnicity',
+      source: 'Source: Table 4 additive model (year-1 %) and Appendix Table E-1 interaction model (decay rate), White = reference.',
+      probYMax: 50,
+      groups: [
+        { key:'white',    label:'White',    p1:28.0, k:K0*1.00, color:'var(--s1)' },
+        { key:'black',    label:'Black',    p1:40.4, k:K0*1.06, color:'var(--s2)' },
+        { key:'hispanic', label:'Hispanic', p1:30.2, k:K0*1.13, color:'var(--s3)' },
+        { key:'other',    label:'Other',    p1:24.8, k:K0*1.03, color:'var(--s4)' },
+      ]
+    },
+    {
+      key: 'sex', tabLabel: 'Sex', chartTitle: 'By sex',
+      source: 'Source: Table 4 additive model (year-1 %) and Appendix Table E-1 interaction model (decay rate), Female = reference.',
+      probYMax: 40,
+      groups: [
+        { key:'female', label:'Female', p1:28.0, k:K0*1.00, color:'var(--s2)' },
+        { key:'male',   label:'Male',   p1:33.1, k:K0*0.91, color:'var(--s1)' },
+      ]
+    },
+    {
+      key: 'age', tabLabel: 'Age', chartTitle: 'By age',
+      source: 'Source: Table 4 interaction model (retained model), 18–24 = reference.',
+      probYMax: 40,
+      groups: [
+        { key:'a1824', label:'Age 18–24', p1:28.0, k:K0*1.00, color:'var(--s1)' },
+        { key:'a2534', label:'Age 25–34', p1:12.9, k:K0*1.02, color:'var(--s3)' },
+        { key:'a35p',  label:'Age 35+',    p1:3.7,  k:K0*1.25, color:'var(--s2)' },
+      ]
+    },
+    {
+      key: 'offense', tabLabel: 'Offense type', chartTitle: 'By offense type',
+      source: 'Source: Table 5 additive model (year-1 %), Non-Violent = reference. Appendix Table E-2 interaction OR = 1.00 — a genuine true null, the one dimension with no measured decay-rate difference.',
+      probYMax: 40,
+      groups: [
+        { key:'nonviolent', label:'Non-violent', p1:28.0, k:K0*1.00,  color:'var(--s1)' },
+        { key:'violent',    label:'Violent',     p1:26.8, k:K0*1.015, color:'var(--s2)' },
+      ]
+    },
+    {
+      key: 'incarceration', tabLabel: 'Incarceration', chartTitle: 'By incarceration exposure',
+      source: 'Source: prose-quoted summary OR = 0.64 ("decreases the odds of recidivism by 36%") applied to year-1 %; Appendix Table E-2 interaction model for decay rate. Not incarcerated = reference.',
+      probYMax: 40,
+      groups: [
+        { key:'notincar', label:'Not incarcerated', p1:28.0, k:K0*1.00, color:'var(--s1)' },
+        { key:'incar',    label:'Incarcerated',     p1:19.9, k:K0*0.90, color:'var(--s2)' },
+      ]
+    },
+  ];
+
+  // ---- Figure 1: GLM vs. GLMM (H1) -----------------------------------------------
+  // k = -ln(OR) / 4.85 (Table 2 lookback ORs are per 1-SD/4.85-yr). p1 from Figure 4's
+  // prose ("exceeding 20%" GLM; "approximately 5%" GLMM).
+  const GLM_GLMM_DIM = {
+    key: 'glm_glmm', tabLabel: 'GLM vs. GLMM', chartTitle: 'GLM vs. GLMM (H1)',
+    source: 'Source: Table 2 lookback odds ratios (GLM 0.44, GLMM 0.39, per 1-SD/4.85-yr increase in lookback), converted to an illustrative per-year decay rate. Year-1 % from the paper’s own description of Figure 4 (“exceeding 20%” for GLM; “approximately 5%” for GLMM).',
+    probYMax: 25,
+    groups: [
+      { key: 'glm',  label: 'GLM (ignores clustering)',        p1: 22.0, k: 0.1693, color: 'var(--s2)' },
+      { key: 'glmm', label: 'GLMM (accounts for clustering)',  p1: 5.0,  k: 0.1941, color: 'var(--s1)' },
+    ]
+  };
+
+  // ---- Figure 3b: historical period (cohort effect) ------------------------------
+  // Table 6: additive-model main effect OR = 0.31 for year-1 %; interaction-model ORs
+  // (reference-period slope 0.54, interaction term 0.67) for decay rate. WA data only.
+  const PERIOD_DIM = {
+    key: 'period', tabLabel: 'Historical period', chartTitle: 'By charge era',
+    source: 'Source: Table 6 (Washington data). Year-1 % from the additive model’s main-effect odds ratio (0.31), applied onto the 28% population baseline the same way as every Figure 2 dimension (1980–2000 = reference). Decay rate from the interaction model’s odds ratios (0.54 reference-period slope × 0.67 interaction term for 2001–2020).',
+    probYMax: 30,
+    groups: [
+      { key: 'pre2000',  label: 'Charged 1980–2000', p1: 28.0,  k: 0.1271, color: 'var(--s1)' },
+      { key: 'post2000', label: 'Charged 2001–2020', p1: 10.76, k: 0.2096, color: 'var(--s2)' },
+    ]
+  };
+
+  // ---- reusable explorer factory: powers Figure 1, Figure 2, and Figure 3b -------
+  function createExplorer(cfg){
+    const prefix = cfg.prefix;
+    const dimensions = cfg.dimensions;
+    const showTabsUI = !!cfg.showTabs;
+    function id(suffix){ return document.getElementById(prefix + '-' + suffix); }
+
+    let currentDimIdx = cfg.defaultDimIdx || 0;
+    let currentView = 'prob'; // 'prob' | 'rr'
+    let showPop = true;
+    let hidden = new Set(); // group keys toggled off, per current dimension
+
+    const tabsEl = id('tabs');
+    const legendEl = id('legend');
+    const svg = id('chart');
+    const tooltip = id('tooltip');
+    const ttYear = id('tt-year');
+    const ttRows = id('tt-rows');
+    const sourceNote = id('source-note');
+    const popToggle = id('pop-toggle');
+    const tableToggle = id('table-toggle');
+    const tableWrap = id('table-wrap');
+
+    if (showTabsUI){
+      dimensions.forEach(function(dim, i){
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'tab' + (i === currentDimIdx ? ' active' : '');
+        btn.textContent = dim.tabLabel;
+        btn.setAttribute('role', 'tab');
+        btn.setAttribute('aria-selected', i === currentDimIdx ? 'true' : 'false');
+        btn.addEventListener('click', function(){
+          if (i === currentDimIdx) return;
+          currentDimIdx = i;
+          hidden = new Set();
+          Array.from(tabsEl.children).forEach(function(b, j){
+            b.classList.toggle('active', j === i);
+            b.setAttribute('aria-selected', j === i ? 'true' : 'false');
+          });
+          render();
+        });
+        tabsEl.appendChild(btn);
+      });
+    }
+
+    id('view-toggle').querySelectorAll('button').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        const v = btn.getAttribute('data-view');
+        if (v === currentView) return;
+        currentView = v;
+        id('view-toggle').querySelectorAll('button').forEach(function(b){ b.classList.toggle('active', b === btn); });
+        morphToView();
+      });
+    });
+
+    popToggle.addEventListener('change', function(){
+      showPop = popToggle.checked;
+      render();
+    });
+
+    tableToggle.addEventListener('click', function(){
+      const open = tableWrap.classList.toggle('open');
+      tableToggle.classList.toggle('open', open);
+      tableToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (open) buildTable();
+    });
+
+    function render(){
+      const dim = dimensions[currentDimIdx];
+      let html = '';
+
+      if (currentView === 'prob'){
+        const step = stepFor(dim.probYMax);
+        for (let gy = 0; gy <= dim.probYMax + 0.001; gy += step){
+          const y = yPixProb(gy, dim.probYMax);
+          html += `<line x1="${padL}" y1="${y.toFixed(2)}" x2="${W-padR}" y2="${y.toFixed(2)}" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>`;
+          html += `<text x="${padL-12}" y="${(y+4).toFixed(2)}" class="axis-label" text-anchor="end">${Math.round(gy)}%</text>`;
+        }
+      } else {
+        [0, 0.5, 1].forEach(function(rr){
+          const y = yPixRel(rr);
+          html += `<line x1="${padL}" y1="${y.toFixed(2)}" x2="${W-padR}" y2="${y.toFixed(2)}" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>`;
+          html += `<text x="${padL-12}" y="${(y+4).toFixed(2)}" class="axis-label" text-anchor="end">${rr.toFixed(1)}×</text>`;
+        });
+      }
+      [1,5,10,15,20,25].forEach(function(gx){
+        html += `<text x="${xPix(gx).toFixed(2)}" y="${H-padB+24}" class="axis-label" text-anchor="middle">${gx===1?'Year 1':'Yr '+gx}</text>`;
+      });
+      html += `<line x1="${padL}" y1="${(padT+plotH).toFixed(2)}" x2="${W-padR}" y2="${(padT+plotH).toFixed(2)}" stroke="rgba(255,255,255,0.28)" stroke-width="1.2"/>`;
+
+      if (showPop){
+        const d = currentView === 'prob' ? curvePath(POP.p1, POP.k, 'prob', dim.probYMax) : curvePath(POP.p1, POP.k, 'rr', dim.probYMax);
+        html += `<path id="${prefix}-pop-line" d="${d}" fill="none" stroke="var(--ref)" stroke-width="2" stroke-dasharray="6,5" opacity="0.65" stroke-linecap="round"/>`;
+      }
+
+      dim.groups.forEach(function(g){
+        const d = pathFor(g, currentView, dim.probYMax);
+        const col = resolveColor(g.color);
+        const isHidden = hidden.has(g.key);
+        const endVal = valueAt(g, currentView, XMAX);
+        const endY = currentView === 'prob' ? yPixProb(endVal, dim.probYMax) : yPixRel(endVal);
+        html += `<g class="series" data-key="${g.key}" style="opacity:${isHidden ? 0.12 : 1}; transition: opacity 0.25s ease;">`;
+        html += `<path id="${prefix}-line-${g.key}" d="${d}" fill="none" stroke="${col}" stroke-width="2" stroke-linecap="round"/>`;
+        html += `<circle cx="${xPix(XMAX).toFixed(2)}" cy="${endY.toFixed(2)}" r="5" fill="${col}" stroke="#0a0f18" stroke-width="2"/>`;
+        html += `</g>`;
+      });
+
+      html += `<line id="${prefix}-crosshair" x1="0" y1="${padT}" x2="0" y2="${padT+plotH}" stroke="rgba(255,255,255,0.35)" stroke-width="1" style="opacity:0;"/>`;
+      html += `<rect id="${prefix}-hitrect" x="${padL}" y="${padT}" width="${plotW}" height="${plotH}" fill="transparent" style="cursor:crosshair;"/>`;
+
+      svg.innerHTML = html;
+
+      let legendHtml = '';
+      dim.groups.forEach(function(g){
+        const isHidden = hidden.has(g.key);
+        legendHtml += `<button type="button" class="legend-chip${isHidden ? ' off' : ''}" data-key="${g.key}" style="color:${resolveColor(g.color)};" aria-pressed="${!isHidden}">`
+          + `<span class="swatch" style="background:${resolveColor(g.color)};"></span>`
+          + `<span style="color:var(--text);">${g.label}</span></button>`;
+      });
+      if (showPop){
+        legendHtml += `<span class="legend-chip" style="cursor:default; color:var(--ref);"><span class="pop-swatch"></span><span style="color:var(--muted);">Population average</span></span>`;
+      }
+      legendEl.innerHTML = legendHtml;
+      legendEl.querySelectorAll('.legend-chip[data-key]').forEach(function(chip){
+        chip.addEventListener('click', function(){
+          const key = chip.getAttribute('data-key');
+          if (hidden.has(key)) hidden.delete(key); else hidden.add(key);
+          const isHidden = hidden.has(key);
+          chip.classList.toggle('off', isHidden);
+          chip.setAttribute('aria-pressed', String(!isHidden));
+          const seriesEl = svg.querySelector(`.series[data-key="${key}"]`);
+          if (seriesEl) seriesEl.style.opacity = isHidden ? 0.12 : 1;
+        });
+      });
+
+      sourceNote.textContent = dim.source;
+
+      attachHover(dim);
+      if (tableWrap.classList.contains('open')) buildTable();
+    }
+
+    function morphToView(){
+      const dim = dimensions[currentDimIdx];
+      dim.groups.forEach(function(g){
+        const el = document.getElementById(prefix + '-line-' + g.key);
+        if (el) el.style.transition = 'd 0.9s cubic-bezier(0.4,0,0.2,1)';
+      });
+      const popLine = document.getElementById(prefix + '-pop-line');
+      if (popLine) popLine.style.transition = 'd 0.9s cubic-bezier(0.4,0,0.2,1)';
+
+      requestAnimationFrame(function(){
+        dim.groups.forEach(function(g){
+          const el = document.getElementById(prefix + '-line-' + g.key);
+          if (el) el.style.d = 'path("' + pathFor(g, currentView, dim.probYMax) + '")';
+          const endVal = valueAt(g, currentView, XMAX);
+          const endY = currentView === 'prob' ? yPixProb(endVal, dim.probYMax) : yPixRel(endVal);
+          const seriesEl = svg.querySelector(`.series[data-key="${g.key}"]`);
+          if (seriesEl){
+            const circle = seriesEl.querySelector('circle');
+            if (circle){ circle.style.transition = 'cy 0.9s cubic-bezier(0.4,0,0.2,1)'; circle.setAttribute('cy', endY.toFixed(2)); }
+          }
+        });
+        if (popLine) popLine.style.d = 'path("' + curvePath(POP.p1, POP.k, currentView, dim.probYMax) + '")';
+      });
+
+      setTimeout(render, 950);
+    }
+
+    function attachHover(dim){
+      const hitrect = document.getElementById(prefix + '-hitrect');
+      const crosshair = document.getElementById(prefix + '-crosshair');
+      if (!hitrect) return;
+
+      function onMove(evt){
+        const rect = svg.getBoundingClientRect();
+        const scaleX = W / rect.width;
+        const clientX = (evt.touches ? evt.touches[0].clientX : evt.clientX);
+        const clientY = (evt.touches ? evt.touches[0].clientY : evt.clientY);
+        const localX = (clientX - rect.left) * scaleX;
+        let t = ((localX - padL) / plotW) * XMAX;
+        t = Math.max(1, Math.min(XMAX, t));
+
+        const px = xPix(t);
+        crosshair.setAttribute('x1', px.toFixed(2));
+        crosshair.setAttribute('x2', px.toFixed(2));
+        crosshair.style.opacity = 1;
+
+        const rows = dim.groups
+          .filter(function(g){ return !hidden.has(g.key); })
+          .map(function(g){ return { label: g.label, color: resolveColor(g.color), val: valueAt(g, currentView, t) }; });
+        if (showPop) rows.push({ label: POP.label, color: resolveColor('var(--ref)'), val: valueAt(POP, currentView, t), dashed: true });
+        rows.sort(function(a,b){ return b.val - a.val; });
+
+        ttYear.textContent = 'Year ' + (Math.round(t*10)/10);
+        ttRows.innerHTML = rows.map(function(r){
+          return `<div class="t-row"><span class="t-key" style="background:${r.dashed ? 'transparent' : r.color}; border-top:${r.dashed ? '2px dashed '+r.color : 'none'};"></span>`
+            + `<span class="t-val">${fmtVal(r.val, currentView)}</span> <span class="t-name">${r.label}</span></div>`;
+        }).join('');
+
+        tooltip.classList.add('on');
+        const tw = tooltip.offsetWidth || 160;
+        let leftPx = (clientX - rect.left) + 16;
+        if (leftPx + tw > rect.width) leftPx = (clientX - rect.left) - tw - 16;
+        tooltip.style.left = leftPx + 'px';
+        tooltip.style.top = Math.max(0, (clientY - rect.top) - 10) + 'px';
+      }
+      function onLeave(){
+        crosshair.style.opacity = 0;
+        tooltip.classList.remove('on');
+      }
+      hitrect.addEventListener('pointermove', onMove);
+      hitrect.addEventListener('pointerleave', onLeave);
+      hitrect.addEventListener('touchmove', onMove, { passive: true });
+      hitrect.addEventListener('touchend', onLeave);
+    }
+
+    function buildTable(){
+      const dim = dimensions[currentDimIdx];
+      const caption = id('table-caption');
+      const head = id('table-head');
+      const body = id('table-body');
+
+      caption.textContent = dim.chartTitle + ' — ' + (currentView === 'prob' ? 'illustrative year-1-anchored probability by lookback year' : 'relative risk (year 1 = 1.00) by lookback year');
+
+      let headHtml = '<th scope="col">Year</th>';
+      dim.groups.forEach(function(g){ headHtml += `<th scope="col">${g.label}</th>`; });
+      if (showPop) headHtml += `<th scope="col">Population avg.</th>`;
+      head.innerHTML = headHtml;
+
+      let bodyHtml = '';
+      TABLE_YEARS.forEach(function(yr){
+        bodyHtml += `<tr><th scope="row">Year ${yr}</th>`;
+        dim.groups.forEach(function(g){
+          bodyHtml += `<td>${fmtVal(valueAt(g, currentView, yr), currentView)}</td>`;
+        });
+        if (showPop) bodyHtml += `<td>${fmtVal(valueAt(POP, currentView, yr), currentView)}</td>`;
+        bodyHtml += '</tr>';
+      });
+      body.innerHTML = bodyHtml;
+    }
+
+    render();
+  }
+
+  createExplorer({ prefix: 'fig1',  dimensions: [GLM_GLMM_DIM], showTabs: false });
+  createExplorer({ prefix: 'fig2',  dimensions: DIMENSIONS,     showTabs: true  });
+  createExplorer({ prefix: 'fig3b', dimensions: [PERIOD_DIM],   showTabs: false });
+
+  // ---- Figure 3 (main): convergence to the general population base rate ---------
+  // Table 7's real base rates/convergence years are estimated on the GLMM
+  // population-average scale (~5% baseline, per Figure 4), not the 28%-anchored
+  // scale Figure 2 uses. Each state's curve is rescaled — p1' = base * exp(k*(conv-1))
+  // — to pass exactly through its own real (base rate, convergence year) point, while
+  // k stays the real per-state multiplier from Table 3. See methodology card.
+  function initConvergenceChart(){
+    const CONV_PROB_YMAX = 10;
+    const STATES = [
+      { key:'WA', label:'Washington', p1:9.54, k:K0*0.92, base:4.03, conv:8.87,  ci:[8.58,9.16],   color:'var(--s1)' },
+      { key:'FL', label:'Florida',    p1:7.82, k:K0*1.00, base:3.84, conv:6.98,  ci:[6.92,7.02],   color:'var(--s2)' },
+      { key:'AK', label:'Alaska',     p1:8.61, k:K0*1.05, base:3.11, conv:9.15,  ci:[8.65,9.51],   color:'var(--s3)' },
+      { key:'TX', label:'Texas',      p1:7.12, k:K0*0.84, base:2.43, conv:11.75, ci:[11.66,11.83], color:'var(--s4)' },
+      { key:'AZ', label:'Arizona',    p1:5.36, k:K0*0.82, base:2.10, conv:10.61, ci:[10.37,10.83], color:'var(--s5)' },
+    ];
+    const POP_CONV = { key:'population', label:'Population average', p1:8.40, k:K0, base:3.07, conv:9.46, ci:[9.33,9.59], color:'var(--ref)' };
+
+    let hidden = new Set();
+    let showPop = true;
+
+    const legendEl = document.getElementById('conv-legend');
+    const svg = document.getElementById('conv-chart');
+    const tooltip = document.getElementById('conv-tooltip');
+    const ttYear = document.getElementById('conv-tt-year');
+    const ttRows = document.getElementById('conv-tt-rows');
+    const sourceNote = document.getElementById('conv-source-note');
+    const popToggle = document.getElementById('conv-pop-toggle');
+    const tableToggle = document.getElementById('conv-table-toggle');
+    const tableWrap = document.getElementById('conv-table-wrap');
+    const summaryBody = document.getElementById('conv-summary-body');
+
+    sourceNote.textContent = 'Base rates & convergence years: Table 7 (real, published values). Curves rescaled onto Table 7’s probability scale as described in the methodology below; the underlying per-state decay-rate multiplier is unchanged from Table 3.';
+
+    function buildSummary(){
+      const rows = STATES.concat([POP_CONV]);
+      summaryBody.innerHTML = rows.map(function(r){
+        return `<tr><td><span class="swatch-sm" style="background:${resolveColor(r.color)};"></span>${r.label}</td>`
+          + `<td>${r.base.toFixed(2)}%</td><td>${r.conv.toFixed(2)}</td><td>${r.ci[0].toFixed(2)}–${r.ci[1].toFixed(2)}</td></tr>`;
+      }).join('');
+    }
+    buildSummary();
+
+    function render(){
+      let html = '';
+      const step = stepFor(CONV_PROB_YMAX);
+      for (let gy = 0; gy <= CONV_PROB_YMAX + 0.001; gy += step){
+        const y = yPixProb(gy, CONV_PROB_YMAX);
+        html += `<line x1="${padL}" y1="${y.toFixed(2)}" x2="${W-padR}" y2="${y.toFixed(2)}" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>`;
+        html += `<text x="${padL-12}" y="${(y+4).toFixed(2)}" class="axis-label" text-anchor="end">${Math.round(gy)}%</text>`;
+      }
+      [1,5,10,15,20,25].forEach(function(gx){
+        html += `<text x="${xPix(gx).toFixed(2)}" y="${H-padB+24}" class="axis-label" text-anchor="middle">${gx===1?'Year 1':'Yr '+gx}</text>`;
+      });
+      html += `<line x1="${padL}" y1="${(padT+plotH).toFixed(2)}" x2="${W-padR}" y2="${(padT+plotH).toFixed(2)}" stroke="rgba(255,255,255,0.28)" stroke-width="1.2"/>`;
+
+      const visible = STATES.filter(function(s){ return !hidden.has(s.key); });
+      const withPop = showPop ? visible.concat([POP_CONV]) : visible;
+
+      withPop.forEach(function(s){
+        const col = resolveColor(s.color);
+        const baseY = yPixProb(s.base, CONV_PROB_YMAX);
+        const isPop = s.key === 'population';
+
+        let g = `<g class="series" data-key="${s.key}">`;
+
+        // dashed base-rate reference line (flat, full width)
+        g += `<line x1="${padL}" y1="${baseY.toFixed(2)}" x2="${W-padR}" y2="${baseY.toFixed(2)}" stroke="${col}" stroke-width="1.5" stroke-dasharray="${isPop ? '6,5' : '3,4'}" opacity="${isPop ? 0.45 : 0.3}"/>`;
+
+        // decay curve
+        const d = curvePath(s.p1, s.k, 'prob', CONV_PROB_YMAX);
+        g += `<path d="${d}" fill="none" stroke="${col}" stroke-width="2" stroke-linecap="round" ${isPop ? 'stroke-dasharray="6,5" opacity="0.75"' : ''}/>`;
+
+        // convergence marker + 95% CI whisker
+        const cx = xPix(s.conv), cy = baseY;
+        const wx1 = xPix(s.ci[0]), wx2 = xPix(s.ci[1]);
+        g += `<line x1="${wx1.toFixed(2)}" y1="${cy.toFixed(2)}" x2="${wx2.toFixed(2)}" y2="${cy.toFixed(2)}" stroke="${col}" stroke-width="2" opacity="0.9"/>`;
+        g += `<line x1="${wx1.toFixed(2)}" y1="${(cy-5).toFixed(2)}" x2="${wx1.toFixed(2)}" y2="${(cy+5).toFixed(2)}" stroke="${col}" stroke-width="2" opacity="0.9"/>`;
+        g += `<line x1="${wx2.toFixed(2)}" y1="${(cy-5).toFixed(2)}" x2="${wx2.toFixed(2)}" y2="${(cy+5).toFixed(2)}" stroke="${col}" stroke-width="2" opacity="0.9"/>`;
+        g += `<circle cx="${cx.toFixed(2)}" cy="${cy.toFixed(2)}" r="5.5" fill="${col}" stroke="#0a0f18" stroke-width="2"/>`;
+
+        g += `</g>`;
+        html += g;
+      });
+
+      html += `<line id="conv-crosshair" x1="0" y1="${padT}" x2="0" y2="${padT+plotH}" stroke="rgba(255,255,255,0.35)" stroke-width="1" style="opacity:0;"/>`;
+      html += `<rect id="conv-hitrect" x="${padL}" y="${padT}" width="${plotW}" height="${plotH}" fill="transparent" style="cursor:crosshair;"/>`;
+
+      svg.innerHTML = html;
+
+      let legendHtml = '';
+      STATES.forEach(function(s){
+        const isHidden = hidden.has(s.key);
+        legendHtml += `<button type="button" class="legend-chip${isHidden ? ' off' : ''}" data-key="${s.key}" style="color:${resolveColor(s.color)};" aria-pressed="${!isHidden}">`
+          + `<span class="swatch" style="background:${resolveColor(s.color)};"></span>`
+          + `<span style="color:var(--text);">${s.label}</span></button>`;
+      });
+      if (showPop){
+        legendHtml += `<span class="legend-chip" style="cursor:default; color:var(--ref);"><span class="pop-swatch"></span><span style="color:var(--muted);">Population average</span></span>`;
+      }
+      legendEl.innerHTML = legendHtml;
+      legendEl.querySelectorAll('.legend-chip[data-key]').forEach(function(chip){
+        chip.addEventListener('click', function(){
+          const key = chip.getAttribute('data-key');
+          if (hidden.has(key)) hidden.delete(key); else hidden.add(key);
+          render();
+        });
+      });
+
+      attachHover(withPop);
+      if (tableWrap.classList.contains('open')) buildTable();
+    }
+
+    function attachHover(seriesList){
+      const hitrect = document.getElementById('conv-hitrect');
+      const crosshair = document.getElementById('conv-crosshair');
+      if (!hitrect) return;
+
+      function onMove(evt){
+        const rect = svg.getBoundingClientRect();
+        const scaleX = W / rect.width;
+        const clientX = (evt.touches ? evt.touches[0].clientX : evt.clientX);
+        const clientY = (evt.touches ? evt.touches[0].clientY : evt.clientY);
+        const localX = (clientX - rect.left) * scaleX;
+        let t = ((localX - padL) / plotW) * XMAX;
+        t = Math.max(1, Math.min(XMAX, t));
+
+        const px = xPix(t);
+        crosshair.setAttribute('x1', px.toFixed(2));
+        crosshair.setAttribute('x2', px.toFixed(2));
+        crosshair.style.opacity = 1;
+
+        const rows = seriesList.map(function(s){
+          return { label: s.label, color: resolveColor(s.color), val: probAt(s.p1, s.k, t), dashed: s.key === 'population' };
+        }).sort(function(a,b){ return b.val - a.val; });
+
+        ttYear.textContent = 'Year ' + (Math.round(t*10)/10);
+        ttRows.innerHTML = rows.map(function(r){
+          return `<div class="t-row"><span class="t-key" style="background:${r.dashed ? 'transparent' : r.color}; border-top:${r.dashed ? '2px dashed '+r.color : 'none'};"></span>`
+            + `<span class="t-val">${fmtVal(r.val, 'prob')}</span> <span class="t-name">${r.label}</span></div>`;
+        }).join('');
+
+        tooltip.classList.add('on');
+        const tw = tooltip.offsetWidth || 160;
+        let leftPx = (clientX - rect.left) + 16;
+        if (leftPx + tw > rect.width) leftPx = (clientX - rect.left) - tw - 16;
+        tooltip.style.left = leftPx + 'px';
+        tooltip.style.top = Math.max(0, (clientY - rect.top) - 10) + 'px';
+      }
+      function onLeave(){
+        crosshair.style.opacity = 0;
+        tooltip.classList.remove('on');
+      }
+      hitrect.addEventListener('pointermove', onMove);
+      hitrect.addEventListener('pointerleave', onLeave);
+      hitrect.addEventListener('touchmove', onMove, { passive: true });
+      hitrect.addEventListener('touchend', onLeave);
+    }
+
+    function buildTable(){
+      const caption = document.getElementById('conv-table-caption');
+      const head = document.getElementById('conv-table-head');
+      const body = document.getElementById('conv-table-body');
+      const rows = showPop ? STATES.concat([POP_CONV]) : STATES;
+
+      caption.textContent = 'Convergence to base rate — illustrative probability by lookback year, rescaled onto Table 7’s real base rates & convergence years';
+
+      let headHtml = '<th scope="col">Year</th>';
+      rows.forEach(function(s){ headHtml += `<th scope="col">${s.label}</th>`; });
+      head.innerHTML = headHtml;
+
+      let bodyHtml = '';
+      TABLE_YEARS.forEach(function(yr){
+        bodyHtml += `<tr><th scope="row">Year ${yr}</th>`;
+        rows.forEach(function(s){
+          bodyHtml += `<td>${fmtVal(probAt(s.p1, s.k, yr), 'prob')}</td>`;
+        });
+        bodyHtml += '</tr>';
+      });
+      body.innerHTML = bodyHtml;
+    }
+
+    popToggle.addEventListener('change', function(){
+      showPop = popToggle.checked;
+      render();
+    });
+    tableToggle.addEventListener('click', function(){
+      const open = tableWrap.classList.toggle('open');
+      tableToggle.classList.toggle('open', open);
+      tableToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (open) buildTable();
+    });
+
+    render();
+  }
+
+  initConvergenceChart();
+
+  window.__explorerReady = true;
+})();
+</script>
+</body>
+</html>

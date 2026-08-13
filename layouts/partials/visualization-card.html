@@ -1,0 +1,54 @@
+{{ $img := .Resources.GetMatch "featured*" }}
+{{ $link := .Params.external_link | default .RelPermalink }}
+
+<article class="visualization-card">
+
+  {{ if $img }}
+    <a href="{{ $link }}"
+       class="visualization-card-image-link"
+       {{ if .Params.external_link }}target="_blank" rel="noopener"{{ end }}>
+      <img
+        src="{{ $img.RelPermalink }}"
+        alt="{{ .Title }}"
+        class="visualization-card-image">
+    </a>
+  {{ end }}
+
+  <div class="visualization-card-body">
+
+    <h2 class="visualization-card-title">
+      <a href="{{ $link }}"
+         {{ if .Params.external_link }}target="_blank" rel="noopener"{{ end }}>
+        {{ .Title }}
+      </a>
+    </h2>
+
+    {{ with .Params.authors }}
+      <div class="visualization-card-authors">
+        {{ . }}
+      </div>
+    {{ end }}
+
+    <div class="visualization-card-publication">
+      {{ with .Params.journal }}<em>{{ . }}</em>{{ end }}
+      {{ if and .Params.journal .Params.year }} · {{ end }}
+      {{ with .Params.year }}{{ . }}{{ end }}
+    </div>
+
+    {{ with .Params.summary }}
+      <p class="visualization-card-summary">
+        {{ . }}
+      </p>
+    {{ end }}
+
+    <div class="visualization-card-footer">
+      <a href="{{ $link }}"
+         class="visualization-launch"
+         {{ if .Params.external_link }}target="_blank" rel="noopener"{{ end }}>
+        Explore the visualization →
+      </a>
+    </div>
+
+  </div>
+
+</article>
