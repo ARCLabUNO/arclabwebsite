@@ -1,134 +1,490 @@
-<!-- Custom Resources Card Layout (Dark Cards + Navy Buttons) -->
+<!-- Custom Resources Card Layout -->
 <style>
+
+/* =================================
+   RESOURCES
+================================= */
+
 .resources-container {
   max-width: 1200px;
+
   margin: 2rem auto;
+
   padding: 0 1rem;
 }
 
+
 .resources-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
   gap: 2rem;
+
   margin-top: 2rem;
+
+  align-items: stretch;
 }
+
+
+/* =================================
+   CARD
+================================= */
 
 .resource-card {
-  background: #111827; /* deep charcoal, not pure black */
-  color: #f9fafb;
-  border-radius: 10px;
-  padding: 2rem;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.25);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  text-align: center;
-  border: 1px solid #1f2937;
-  border-top: 4px solid #1f3a5f; /* ARC navy accent */
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  min-width: 0;
+
+  background:
+    linear-gradient(
+      145deg,
+      #1a2940 0%,
+      #0f1622 100%
+    );
+
+  color: #f1f5f9;
+
+  border:
+    1px solid #33465f;
+
+  border-radius:
+    12px;
+
+  padding:
+    2rem;
+
+  text-align:
+    center;
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.18);
+
+  overflow:
+    hidden;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
+
+
+/* BLUE → TEAL ACCENT */
+
+.resource-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #3b82f6 0%,
+      #2dd4bf 100%
+    );
+}
+
 
 .resource-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 28px rgba(0,0,0,0.35);
+  transform:
+    translateY(-5px);
+
+  border-color:
+    #526b89;
+
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.28);
 }
 
-/* ICONS */
+
+/* =================================
+   ICON
+================================= */
+
 .resource-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #9ca3af; /* muted gray instead of emoji colors */
-  filter: grayscale(100%) brightness(1.2); /* removes yellow tones */
-  transition: transform 0.25s ease;
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width:
+    68px;
+
+  height:
+    68px;
+
+  margin:
+    0 auto 1.25rem;
+
+  background:
+    rgba(45, 212, 191, 0.10);
+
+  color:
+    #5eead4;
+
+  border:
+    1px solid rgba(45, 212, 191, 0.45);
+
+  border-radius:
+    12px;
+
+  font-size:
+    2rem;
+
+  line-height:
+    1;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
+
 
 .resource-card:hover .resource-icon {
-  transform: scale(1.1);
+  transform:
+    translateY(-2px) scale(1.05);
+
+  background:
+    rgba(45, 212, 191, 0.16);
+
+  border-color:
+    #2dd4bf;
 }
 
-/* HEADINGS */
+
+/* =================================
+   HEADINGS
+================================= */
+
 .resource-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #f9fafb;
+  margin:
+    0 0 0.9rem;
+
+  color:
+    #f1f5f9;
+
+  font-size:
+    1.5rem;
+
+  font-weight:
+    800;
+
+  line-height:
+    1.3;
 }
 
-/* TEXT */
+
+/* =================================
+   TEXT
+================================= */
+
 .resource-card p {
-  color: #d1d5db;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  min-height: 60px;
+  color:
+    #c3cfdd;
+
+  line-height:
+    1.6;
+
+  margin:
+    0 0 1.5rem;
+
+  min-height:
+    60px;
+
+  font-size:
+    0.98rem;
 }
 
-/* BUTTON */
+
+/* =================================
+   BUTTON
+================================= */
+
 .resource-link {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: #1f3a5f; /* ARC navy */
-  color: #ffffff !important;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 500;
-  transition: all 0.25s ease;
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    0.65rem 1rem;
+
+  background:
+    #315f8f;
+
+  color:
+    #ffffff !important;
+
+  border:
+    1px solid #4e7eae;
+
+  border-radius:
+    5px;
+
+  font-size:
+    0.9rem;
+
+  font-weight:
+    800;
+
+  line-height:
+    1.2;
+
+  text-decoration:
+    none !important;
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.16);
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
+
 
 .resource-link:hover {
-  background: #162944;
+  background:
+    #3d73a8;
+
+  border-color:
+    #69a0d2;
+
+  color:
+    #ffffff !important;
+
+  text-decoration:
+    none !important;
+
+  transform:
+    translateY(-1px);
+
+  box-shadow:
+    0 5px 12px rgba(0, 0, 0, 0.22);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .resources-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
 
-  .resource-card {
-    padding: 1.5rem;
-  }
+/* =================================
+   REMOVE UNDERLINES
+================================= */
+
+.resources-container a,
+.resources-container a:hover,
+.resources-container a:focus,
+.resources-container a:active {
+  text-decoration:
+    none !important;
 }
 
-/* Hide auto-generated Hugo content */
+
+/* =================================
+   HIDE AUTO-GENERATED CONTENT
+================================= */
+
 .resources-container ~ .article-style,
 .resources-container ~ .stream-container,
 .resources-container ~ ul,
 .resources-container ~ .page-body > *:not(.resources-container) {
-  display: none !important;
+  display:
+    none !important;
 }
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+
+  .resources-grid {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      1.5rem;
+  }
+
+  .resource-card {
+    padding:
+      1.5rem;
+  }
+
+}
+
 </style>
 
+
 <div class="resources-container">
+
   <div class="resources-grid">
 
-    <!-- Podcasts -->
+
+    <!-- =================================
+         PODCASTS
+    ================================= -->
+
     <div class="resource-card">
-      <div class="resource-icon">🎧</div>
-      <h3>Podcasts</h3>
-      <p>A curated collection of podcasts covering corrections, reentry, and the broader criminal justice system.</p>
-      <a href="/resources/podcasts/" class="resource-link">Explore Podcasts</a>
+
+      <div>
+
+        <div class="resource-icon">
+          🎧
+        </div>
+
+        <h3>
+          Podcasts
+        </h3>
+
+        <p>
+          A curated collection of podcasts covering corrections,
+          reentry, and the broader criminal justice system.
+        </p>
+
+      </div>
+
+      <div>
+
+        <a
+          href="/resources/podcasts/"
+          class="resource-link"
+        >
+          Explore Podcasts
+        </a>
+
+      </div>
+
     </div>
 
-    <!-- Organizations -->
+
+    <!-- =================================
+         ORGANIZATIONS
+    ================================= -->
+
     <div class="resource-card">
-      <div class="resource-icon">🤝</div>
-      <h3>Other Organizations</h3>
-      <p>A running list of organizations working to advance knowledge in corrections, reentry, and public safety.</p>
-      <a href="/resources/other_organizations/" class="resource-link">View Organizations</a>
+
+      <div>
+
+        <div class="resource-icon">
+          🤝
+        </div>
+
+        <h3>
+          Other Organizations
+        </h3>
+
+        <p>
+          A running list of organizations working to advance knowledge
+          in corrections, reentry, and public safety.
+        </p>
+
+      </div>
+
+      <div>
+
+        <a
+          href="/resources/other_organizations/"
+          class="resource-link"
+        >
+          View Organizations
+        </a>
+
+      </div>
+
     </div>
 
-    <!-- Reports -->
+
+    <!-- =================================
+         REPORTS
+    ================================= -->
+
     <div class="resource-card">
-      <div class="resource-icon">📄</div>
-      <h3>Recent Reports</h3>
-      <p>Major research reports and publications from the last decade on corrections and reentry outcomes.</p>
-      <a href="/resources/recent_reports/" class="resource-link">Browse Reports</a>
+
+      <div>
+
+        <div class="resource-icon">
+          📄
+        </div>
+
+        <h3>
+          Recent Reports
+        </h3>
+
+        <p>
+          Major research reports and publications from the last decade
+          on corrections and reentry outcomes.
+        </p>
+
+      </div>
+
+      <div>
+
+        <a
+          href="/resources/recent_reports/"
+          class="resource-link"
+        >
+          Browse Reports
+        </a>
+
+      </div>
+
     </div>
 
-    <!-- Data -->
+
+    <!-- =================================
+         OPEN DATA
+    ================================= -->
+
     <div class="resource-card">
-      <div class="resource-icon">🗄️</div>
-      <h3>Open Source Data</h3>
-      <p>Freely available datasets related to institutional corrections, community supervision, and reentry for research use.</p>
-      <a href="/resources/open_source_data/" class="resource-link">Access Data</a>
+
+      <div>
+
+        <div class="resource-icon">
+          🗄️
+        </div>
+
+        <h3>
+          Open Source Data
+        </h3>
+
+        <p>
+          Freely available datasets related to institutional corrections,
+          community supervision, and reentry for research use.
+        </p>
+
+      </div>
+
+      <div>
+
+        <a
+          href="/resources/open_source_data/"
+          class="resource-link"
+        >
+          Access Data
+        </a>
+
+      </div>
+
     </div>
+
 
   </div>
+
 </div>
