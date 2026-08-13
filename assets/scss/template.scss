@@ -26,6 +26,7 @@
 
 .homepage-section-header h2 {
   margin: 0;
+  color: #d9e8f5;
 }
 
 /* SECTION HEADINGS — homepage only via custom section class */
@@ -34,6 +35,7 @@
   position: relative;
   display: inline-block;
   padding-bottom: 6px;
+  color: #d9e8f5;
 }
 
 .homepage-underline h2::after {
@@ -43,7 +45,10 @@
   bottom: 0;
   width: 0;
   height: 3px;
-  background: #2563eb;
+
+  /* ARC TEAL */
+  background: #2dd4bf;
+
   opacity: 0;
   transform: translateX(-50%);
   transition: width 0.35s ease, opacity 0.2s ease;
@@ -61,7 +66,12 @@
   font-weight: 600;
   text-decoration: none;
   padding-bottom: 2px;
+  color: #7fc8e8 !important;
   transition: color 0.2s ease;
+}
+
+.homepage-section-link:hover {
+  color: #2dd4bf !important;
 }
 
 .homepage-section-link::after {
@@ -147,12 +157,20 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.5rem;
-  opacity: 0.6;
+
+  /* ARC blue */
+  color: #315f8f;
+
+  opacity: 1;
 }
 
 .homepage-card-body h3 {
   margin-top: 0;
   margin-bottom: 0.6rem;
+
+  /* ARC navy-blue */
+  color: #1f3a5f;
+
   font-size: 1.15rem;
   line-height: 1.3;
 }
@@ -160,9 +178,11 @@
 .homepage-card-body p {
   margin: 0;
   line-height: 1.55;
+  color: #4b5563;
 }
 
 /* keeps cards visually even */
+
 .homepage-card-body p:last-child {
   margin-top: auto;
 }
@@ -172,6 +192,18 @@
 .dark .homepage-card {
   background: #1f2937;
   border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark .homepage-card-kicker {
+  color: #5eead4;
+}
+
+.dark .homepage-card-body h3 {
+  color: #d9e8f5;
+}
+
+.dark .homepage-card-body p {
+  color: #d1d5db;
 }
 
 /* MOBILE */
@@ -201,6 +233,7 @@
 }
 
 /* Light mode checkerboard: row 1 = A B A B, row 2 = B A B A */
+
 .study-section .study-card:nth-child(8n + 1),
 .study-section .study-card:nth-child(8n + 3),
 .study-section .study-card:nth-child(8n + 6),
@@ -216,6 +249,7 @@
 }
 
 /* Light mode hover matched to each base color */
+
 .study-section .study-card:nth-child(8n + 1):hover,
 .study-section .study-card:nth-child(8n + 3):hover,
 .study-section .study-card:nth-child(8n + 6):hover,
@@ -230,7 +264,18 @@
   background: #e2e8f0;
 }
 
+/* Study card text */
+
+.study-section .study-card h3 {
+  color: #1f3a5f;
+}
+
+.study-section .study-card p {
+  color: #4b5563;
+}
+
 /* Dark mode checkerboard */
+
 .dark .study-section .study-card:nth-child(8n + 1),
 .dark .study-section .study-card:nth-child(8n + 3),
 .dark .study-section .study-card:nth-child(8n + 6),
@@ -246,6 +291,7 @@
 }
 
 /* Dark mode hover matched to each base color */
+
 .dark .study-section .study-card:nth-child(8n + 1):hover,
 .dark .study-section .study-card:nth-child(8n + 3):hover,
 .dark .study-section .study-card:nth-child(8n + 6):hover,
@@ -258,4 +304,14 @@
 .dark .study-section .study-card:nth-child(8n + 5):hover,
 .dark .study-section .study-card:nth-child(8n + 7):hover {
   background: #2f3d52;
+}
+
+/* Dark mode study text */
+
+.dark .study-section .study-card h3 {
+  color: #d9e8f5;
+}
+
+.dark .study-section .study-card p {
+  color: #d1d5db;
 }

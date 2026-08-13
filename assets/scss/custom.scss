@@ -30,72 +30,144 @@
   margin-top: 2rem;
 }
 
+
 /* GRID */
 
 .study-grid {
   display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+  grid-template-columns:
+    repeat(auto-fit, minmax(240px, 1fr)) !important;
+
   gap: 1.5rem;
+
   margin-top: 2rem;
 
-  /* prevents weird theme interference */
   width: 100%;
 }
+
 
 /* CARDS */
 
 .study-card {
   background: #ffffff;
+
   border: 1px solid #e5e7eb;
+
   border-radius: 18px;
+
   padding: 1.4rem 1.3rem;
+
   box-sizing: border-box;
 
   display: flex;
+
   flex-direction: column;
+
   justify-content: flex-start;
 
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
-  /* prevents giant card issue */
+  box-shadow:
+    0 8px 24px rgba(15, 23, 42, 0.06);
+
   min-height: 140px;
 }
+
 
 /* TITLE */
 
 .study-card h3 {
   margin-top: 0;
   margin-bottom: 0.55rem;
+
+  color: #1f3a5f;
+
   font-size: 1.05rem;
   line-height: 1.3;
 }
+
 
 /* TEXT */
 
 .study-card p {
   margin: 0;
+
   color: #4b5563;
+
   line-height: 1.5;
+
   font-size: 0.95rem;
 }
+
 
 /* HOVER */
 
 .study-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12);
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 16px 32px rgba(15, 23, 42, 0.12);
 }
 
-/* DARK MODE SUPPORT */
+
+/* DARK MODE */
 
 .dark .study-card {
-  background: #111827;
-  border-color: #374151;
+  background:
+    #111827;
+
+  border-color:
+    #374151;
+}
+
+.dark .study-card h3 {
+  color:
+    #d9e8f5;
 }
 
 .dark .study-card p {
-  color: #d1d5db;
+  color:
+    #d1d5db;
+}
+
+
+/* =========================================================
+   GENERAL HOMEPAGE COLOR REFINEMENTS
+========================================================= */
+
+/* Section headings */
+
+.homepage-underline h1,
+.homepage-underline h2,
+.homepage-underline h3 {
+  color:
+    #d9e8f5;
+}
+
+
+/* General section text */
+
+.homepage-underline p {
+  color:
+    #c3cfdd;
+}
+
+
+/* Homepage links */
+
+.homepage-underline a,
+.homepage-featured a {
+  color:
+    #7fc8e8;
+}
+
+.homepage-underline a:hover,
+.homepage-featured a:hover {
+  color:
+    #2dd4bf;
 }
 
 
@@ -104,112 +176,183 @@
 ========================================================= */
 
 .arc-news-section {
-  max-width: 1050px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  max-width:
+    1050px;
+
+  margin:
+    0 auto;
+
+  padding:
+    1.5rem;
+
+  background:
+    transparent;
+
+  border:
+    1px solid #33465f;
+
+  border-radius:
+    12px;
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.18);
 }
 
 .arc-news-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
-  margin-bottom: 1.4rem;
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    baseline;
+
+  gap:
+    1rem;
+
+  margin-bottom:
+    1.4rem;
 }
 
 .arc-news-header h2 {
-  margin: 0;
+  margin:
+    0;
 
-  color: #f1f5f9;
+  color:
+    #d9e8f5;
 
-  font-size: 1.8rem;
-  font-weight: 800;
+  font-size:
+    1.8rem;
+
+  font-weight:
+    800;
 }
 
 .arc-news-more {
-  color: #7fc8e8 !important;
+  color:
+    #7fc8e8 !important;
 
-  font-size: 0.9rem;
-  font-weight: 700;
+  font-size:
+    0.9rem;
 
-  text-decoration: none !important;
-  white-space: nowrap;
+  font-weight:
+    700;
+
+  text-decoration:
+    none !important;
+
+  white-space:
+    nowrap;
 }
 
 .arc-news-more:hover {
-  color: #2dd4bf !important;
+  color:
+    #2dd4bf !important;
 }
 
 .arc-news-list {
-  border-top: 1px solid #33465f;
+  border-top:
+    1px solid #33465f;
 }
 
 .arc-news-item {
-  display: grid;
+  display:
+    grid;
 
   grid-template-columns:
     92px minmax(0, 1fr);
 
-  column-gap: 1.25rem;
+  column-gap:
+    1.25rem;
 
-  padding: 0.9rem 0;
+  padding:
+    0.9rem 0;
 
   border-bottom:
     1px solid rgba(51, 70, 95, 0.68);
 }
 
 .arc-news-date {
-  color: #5eead4;
+  color:
+    #5eead4;
 
-  font-size: 0.8rem;
-  font-weight: 800;
+  font-size:
+    0.8rem;
 
-  line-height: 1.4;
+  font-weight:
+    800;
 
-  letter-spacing: 0.04em;
+  line-height:
+    1.4;
 
-  text-transform: uppercase;
+  letter-spacing:
+    0.04em;
+
+  text-transform:
+    uppercase;
 }
 
 .arc-news-title {
-  margin: 0 0 0.22rem;
+  margin:
+    0 0 0.22rem;
 
-  color: #d9e8f5;
+  color:
+    #d9e8f5;
 
-  font-size: 1rem;
-  font-weight: 700;
+  font-size:
+    1rem;
 
-  line-height: 1.45;
+  font-weight:
+    700;
+
+  line-height:
+    1.45;
 }
 
 .arc-news-title a {
-  color: inherit !important;
+  color:
+    inherit !important;
 
-  text-decoration: none !important;
+  text-decoration:
+    none !important;
 }
 
 .arc-news-title a:hover {
-  color: #7fc8e8 !important;
+  color:
+    #7fc8e8 !important;
 }
 
 .arc-news-description {
-  margin: 0;
+  margin:
+    0;
 
-  color: #9aa8bd;
+  color:
+    #9aa8bd;
 
-  font-size: 0.88rem;
+  font-size:
+    0.88rem;
 
-  line-height: 1.5;
+  line-height:
+    1.5;
 }
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
 @media (max-width: 650px) {
 
   .arc-news-header {
-    align-items: flex-start;
+    align-items:
+      flex-start;
 
-    flex-direction: column;
+    flex-direction:
+      column;
 
-    gap: 0.4rem;
+    gap:
+      0.4rem;
   }
 
   .arc-news-item {
@@ -220,121 +363,4 @@
       0.85rem;
   }
 
-}
-
-/* =========================================================
-   ARC HOMEPAGE — COLOR-ONLY REFRESH
-========================================================= */
-
-
-/* ---------------------------------------------------------
-   GENERAL TEXT
---------------------------------------------------------- */
-
-.homepage-underline h1,
-.homepage-underline h2,
-.homepage-underline h3 {
-  color: #d9e8f5;
-}
-
-.homepage-underline p {
-  color: #c3cfdd;
-}
-
-
-/* ---------------------------------------------------------
-   LINKS
---------------------------------------------------------- */
-
-.homepage-underline a,
-.homepage-featured a {
-  color: #7fc8e8;
-}
-
-.homepage-underline a:hover,
-.homepage-featured a:hover {
-  color: #2dd4bf;
-}
-
-
-/* ---------------------------------------------------------
-   MOVING UNDERLINE / ACCENT
---------------------------------------------------------- */
-
-.homepage-underline::after {
-  background-color: #2dd4bf !important;
-}
-
-
-/* ---------------------------------------------------------
-   NEWS — KEEP THE BOX
---------------------------------------------------------- */
-
-.arc-news-section {
-  background: transparent;
-
-  border: 1px solid #33465f;
-  border-radius: 12px;
-
-  box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.18);
-
-  padding: 1.5rem;
-}
-
-
-/* News heading */
-
-.arc-news-header h2 {
-  color: #d9e8f5;
-}
-
-.arc-news-more {
-  color: #7fc8e8 !important;
-}
-
-.arc-news-more:hover {
-  color: #2dd4bf !important;
-}
-
-
-/* News list */
-
-.arc-news-list {
-  border-top:
-    1px solid #33465f;
-}
-
-.arc-news-item {
-  border-bottom:
-    1px solid rgba(51, 70, 95, 0.68);
-}
-
-
-/* Date */
-
-.arc-news-date {
-  color: #5eead4;
-}
-
-
-/* Title */
-
-.arc-news-title {
-  color: #d9e8f5;
-}
-
-.arc-news-title a {
-  color: inherit !important;
-}
-
-.arc-news-title a:hover {
-  color: #7fc8e8 !important;
-}
-
-
-/* Description */
-
-.arc-news-description {
-  color: #9aa8bd;
 }
