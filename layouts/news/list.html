@@ -1,73 +1,669 @@
 {{ define "main" }}
-<main style="max-width: 1150px; margin: 0 auto; padding: 3rem 1.25rem;">
 
-  <header style="margin-bottom: 2rem;">
-    <h1 style="font-size: 2.5rem; margin: 0 0 0.5rem;">{{ .Title }}</h1>
+<main class="news-page">
+
+  <header class="news-header">
+
+    <div class="news-kicker">
+      ARC LAB · LATEST UPDATES
+    </div>
+
+    <h1>
+      {{ .Title }}
+    </h1>
+
     {{ with .Content }}
-      <div style="font-size: 1.05rem; opacity: 0.8;">{{ . }}</div>
+      <div class="news-intro">
+        {{ . }}
+      </div>
     {{ end }}
+
   </header>
+
 
   {{ $posts := where site.RegularPages "Section" "post" }}
   {{ $posts = $posts.ByDate.Reverse }}
 
+
   {{ if gt (len $posts) 0 }}
 
-    {{ range first 1 $posts }}
-      {{ $img := .Resources.GetMatch "*featured*" }}
-      {{ if not $img }}{{ $img = .Resources.GetMatch "{cover,thumbnail,hero}*" }}{{ end }}
-      {{ if not $img }}{{ $img = .Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}{{ end }}
 
-      <article style="margin-bottom: 2rem; border-radius: 18px; overflow: hidden; box-shadow: 0 12px 32px rgba(0,0,0,0.12); background: #111827; color: #ffffff;">
-        <a href="{{ .RelPermalink }}" style="display: grid; grid-template-columns: 1.2fr 1fr; text-decoration: none; color: inherit;">
+    <!-- =================================
+         FEATURED STORY
+    ================================= -->
+
+    {{ range first 1 $posts }}
+
+      {{ $img := .Resources.GetMatch "*featured*" }}
+
+      {{ if not $img }}
+        {{ $img = .Resources.GetMatch "{cover,thumbnail,hero}*" }}
+      {{ end }}
+
+      {{ if not $img }}
+        {{ $img = .Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}
+      {{ end }}
+
+
+      <article class="news-featured">
+
+        <a
+          href="{{ .RelPermalink }}"
+          class="news-featured-link"
+        >
+
           {{ with $img }}
-            <img src="{{ .RelPermalink }}" alt="{{ $.Title }}" style="width: 100%; height: 100%; min-height: 340px; object-fit: cover; display: block;">
+
+            <div class="news-featured-image-wrap">
+
+              <img
+                src="{{ .RelPermalink }}"
+                alt="{{ $.Title }}"
+                class="news-featured-image"
+              >
+
+            </div>
+
           {{ end }}
-          <div style="padding: 2rem;">
-            <div style="font-size: 0.9rem; opacity: 0.75; margin-bottom: 0.6rem;">
+
+
+          <div class="news-featured-content">
+
+            <div class="news-date">
               {{ .Date.Format "January 2, 2006" }}
             </div>
-            <h2 style="font-size: 2rem; line-height: 1.2; margin: 0 0 0.9rem;">
+
+            <h2 class="news-featured-title">
               {{ .Title }}
             </h2>
-            <p style="font-size: 1.05rem; line-height: 1.6; margin: 0; opacity: 0.9;">
-              {{ with .Summary }}{{ . | plainify | truncate 220 }}{{ end }}
+
+            <p class="news-featured-summary">
+
+              {{ with .Summary }}
+                {{ . | plainify | truncate 220 }}
+              {{ end }}
+
             </p>
+
+            <div class="news-read-more">
+              Read More →
+            </div>
+
           </div>
+
         </a>
+
       </article>
+
     {{ end }}
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-      {{ range after 1 $posts }}
-        {{ $img := .Resources.GetMatch "*featured*" }}
-        {{ if not $img }}{{ $img = .Resources.GetMatch "{cover,thumbnail,hero}*" }}{{ end }}
-        {{ if not $img }}{{ $img = .Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}{{ end }}
 
-        <article style="border-radius: 18px; overflow: hidden; box-shadow: 0 10px 28px rgba(0,0,0,0.1); background: #111827; color: #ffffff;">
-          <a href="{{ .RelPermalink }}" style="display: block; text-decoration: none; color: inherit; height: 100%;">
+    <!-- =================================
+         NEWS GRID
+    ================================= -->
+
+    <div class="news-grid">
+
+      {{ range after 1 $posts }}
+
+        {{ $img := .Resources.GetMatch "*featured*" }}
+
+        {{ if not $img }}
+          {{ $img = .Resources.GetMatch "{cover,thumbnail,hero}*" }}
+        {{ end }}
+
+        {{ if not $img }}
+          {{ $img = .Resources.GetMatch "*.{jpg,jpeg,png,webp}" }}
+        {{ end }}
+
+
+        <article class="news-card">
+
+          <a
+            href="{{ .RelPermalink }}"
+            class="news-card-link"
+          >
+
             {{ with $img }}
-              <img src="{{ .RelPermalink }}" alt="{{ $.Title }}" style="width: 100%; height: 220px; object-fit: cover; display: block;">
+
+              <div class="news-card-image-wrap">
+
+                <img
+                  src="{{ .RelPermalink }}"
+                  alt="{{ $.Title }}"
+                  class="news-card-image"
+                >
+
+              </div>
+
             {{ end }}
-            <div style="padding: 1.15rem;">
-              <div style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 0.5rem;">
+
+
+            <div class="news-card-body">
+
+              <div class="news-date">
                 {{ .Date.Format "January 2, 2006" }}
               </div>
-              <h2 style="font-size: 1.2rem; line-height: 1.3; margin: 0 0 0.7rem;">
+
+              <h2 class="news-card-title">
                 {{ .Title }}
               </h2>
-              <p style="font-size: 0.95rem; line-height: 1.55; margin: 0; opacity: 0.9;">
-                {{ with .Summary }}{{ . | plainify | truncate 130 }}{{ end }}
+
+              <p class="news-card-summary">
+
+                {{ with .Summary }}
+                  {{ . | plainify | truncate 130 }}
+                {{ end }}
+
               </p>
+
+              <div class="news-read-more">
+                Read More →
+              </div>
+
             </div>
+
           </a>
+
         </article>
+
       {{ end }}
+
     </div>
 
+
   {{ else }}
-    <p>No posts found.</p>
+
+    <p class="news-empty">
+      No posts found.
+    </p>
+
   {{ end }}
 
 </main>
+
+
+<style>
+
+/* =================================
+   PAGE
+================================= */
+
+.news-page {
+  max-width: 1150px;
+
+  margin: 0 auto;
+
+  padding: 3rem 1.25rem;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.news-header {
+  max-width: 850px;
+
+  margin-bottom: 2.5rem;
+}
+
+.news-kicker {
+  display: inline-block;
+
+  margin-bottom: 0.85rem;
+
+  color: #2dd4bf;
+
+  font-size: 0.78rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.news-header h1 {
+  margin: 0 0 0.6rem;
+
+  color: #f1f5f9;
+
+  font-size: 2.5rem;
+
+  font-weight: 800;
+
+  line-height: 1.15;
+}
+
+.news-intro {
+  color: #9aa8bd;
+
+  font-size: 1.05rem;
+
+  line-height: 1.7;
+
+  opacity: 1;
+}
+
+
+/* =================================
+   FEATURED STORY
+================================= */
+
+.news-featured {
+  position: relative;
+
+  margin-bottom: 2rem;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #1a2940 0%,
+      #0f1622 100%
+    );
+
+  color: #f1f5f9;
+
+  border: 1px solid #33465f;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.2);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* BLUE → TEAL ACCENT */
+
+.news-featured::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #3b82f6 0%,
+      #2dd4bf 100%
+    );
+
+  z-index: 3;
+}
+
+
+.news-featured:hover {
+  transform: translateY(-4px);
+
+  border-color: #526b89;
+
+  box-shadow:
+    0 15px 34px rgba(0, 0, 0, 0.28);
+}
+
+
+.news-featured-link {
+  display: grid;
+
+  grid-template-columns:
+    1.2fr 1fr;
+
+  min-height: 340px;
+
+  color: inherit;
+
+  text-decoration: none;
+}
+
+
+/* =================================
+   FEATURED IMAGE
+================================= */
+
+.news-featured-image-wrap {
+  overflow: hidden;
+
+  min-height: 340px;
+}
+
+.news-featured-image {
+  width: 100%;
+
+  height: 100%;
+
+  min-height: 340px;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.news-featured:hover .news-featured-image {
+  transform: scale(1.02);
+
+  filter: brightness(1.05);
+}
+
+
+/* =================================
+   FEATURED CONTENT
+================================= */
+
+.news-featured-content {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 2rem;
+}
+
+
+.news-date {
+  margin-bottom: 0.6rem;
+
+  color: #67d8c9;
+
+  font-size: 0.82rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.05em;
+
+  text-transform: uppercase;
+}
+
+
+.news-featured-title {
+  margin:
+    0 0 0.9rem;
+
+  color: #f1f5f9;
+
+  font-size: 2rem;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+
+.news-featured-summary {
+  margin:
+    0 0 1.2rem;
+
+  color: #c3cfdd;
+
+  font-size: 1.05rem;
+
+  line-height: 1.6;
+}
+
+
+/* =================================
+   NEWS GRID
+================================= */
+
+.news-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(280px, 1fr)
+    );
+
+  gap: 1.5rem;
+}
+
+
+/* =================================
+   NEWS CARD
+================================= */
+
+.news-card {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background:
+    linear-gradient(
+      145deg,
+      #1a2940 0%,
+      #0f1622 100%
+    );
+
+  color: #f1f5f9;
+
+  border:
+    1px solid #33465f;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* BLUE → TEAL ACCENT */
+
+.news-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #3b82f6 0%,
+      #2dd4bf 100%
+    );
+
+  z-index: 2;
+}
+
+
+.news-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #526b89;
+
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.27);
+}
+
+
+/* =================================
+   CARD IMAGE
+================================= */
+
+.news-card-image-wrap {
+  overflow: hidden;
+}
+
+.news-card-image {
+  width: 100%;
+
+  height: 220px;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+}
+
+
+.news-card:hover .news-card-image {
+  transform: scale(1.02);
+
+  filter: brightness(1.05);
+}
+
+
+/* =================================
+   CARD BODY
+================================= */
+
+.news-card-body {
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1;
+
+  padding:
+    1.15rem;
+}
+
+
+.news-card-title {
+  margin:
+    0 0 0.7rem;
+
+  color: #f1f5f9;
+
+  font-size: 1.2rem;
+
+  font-weight: 750;
+
+  line-height: 1.3;
+}
+
+
+.news-card-summary {
+  margin:
+    0 0 1rem;
+
+  color: #c3cfdd;
+
+  font-size: 0.95rem;
+
+  line-height: 1.55;
+}
+
+
+/* =================================
+   READ MORE
+================================= */
+
+.news-read-more {
+  margin-top: auto;
+
+  color: #7fc8e8;
+
+  font-size: 0.92rem;
+
+  font-weight: 800;
+}
+
+
+.news-featured .news-read-more {
+  color: #5eead4;
+}
+
+
+.news-card:hover .news-read-more,
+.news-featured:hover .news-read-more {
+  color: #99f6e4;
+}
+
+
+/* =================================
+   EMPTY STATE
+================================= */
+
+.news-empty {
+  color: #9aa8bd;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 850px) {
+
+  .news-featured-link {
+    grid-template-columns: 1fr;
+  }
+
+  .news-featured-image-wrap,
+  .news-featured-image {
+    min-height: 260px;
+
+    height: 260px;
+  }
+
+  .news-featured-content {
+    padding: 1.5rem;
+  }
+
+  .news-featured-title {
+    font-size: 1.65rem;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .news-page {
+    padding:
+      2.25rem 1rem;
+  }
+
+  .news-header h1 {
+    font-size: 2rem;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+
+    gap: 1.5rem;
+  }
+
+  .news-card-image {
+    height: 220px;
+  }
+
+}
+
+</style>
+
 {{ end }}
