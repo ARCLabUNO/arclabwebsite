@@ -46,8 +46,8 @@ url_code = ""
   
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-links = [name = "Data Explorer", url = "/explorers/criminal-history-expiration-date/", icon = "chart-line", icon_pack = "fas"]
-# links = [{name = "DOI", url="https://doi.org/10.1111/1745-9125.12316", icon = "unlock-alt", icon_pack = "fas"}]
+links = [{name = "Data Explorer", url = "/explorers/criminal-history-expiration-date/", icon = "chart-line", icon_pack = "fas"}]
+# links = [{name = "DOI", url="https://doi.org/10.1111/1745-9125.12316", icon = "unlock-alt", icon_pack = "fas"}, {name = "Replication Materials", url = "https://github.com/YOUR-USERNAME/YOUR-REPOSITORY", icon = "github", icon_pack = "fab"}]
   
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder.
