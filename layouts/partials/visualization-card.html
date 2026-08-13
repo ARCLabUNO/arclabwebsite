@@ -3,6 +3,7 @@
 
 <article class="visualization-card">
 
+
   {{ if $img }}
 
     <a
@@ -67,9 +68,11 @@
       {{ if and .Params.journal .Params.year }}
         ({{ .Params.year }})
       {{ else }}
+
         {{ with .Params.year }}
           {{ . }}
         {{ end }}
+
       {{ end }}
 
     </p>
@@ -86,12 +89,17 @@
   {{ end }}
 
 
-  <a
-    href="{{ $link }}"
-    class="visualization-launch"
-    {{ if .Params.external_link }}target="_blank" rel="noopener"{{ end }}
-  >
-    Launch Tool →
-  </a>
+  <div class="visualization-card-footer">
+
+    <a
+      href="{{ $link }}"
+      class="visualization-launch"
+      {{ if .Params.external_link }}target="_blank" rel="noopener"{{ end }}
+    >
+      Launch Tool &rarr;
+    </a>
+
+  </div>
+
 
 </article>
