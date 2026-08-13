@@ -1,19 +1,19 @@
 <style>
 
 /* =========================================================
-   ARC LAB — INDIVIDUAL AUTHOR PAGES
-   Editorial profile treatment
+   ARC LAB — INDIVIDUAL AUTHOR PAGE
+   Editorial, restrained treatment
 ========================================================= */
 
 
 /* ---------------------------------------------------------
-   PROFILE HEADER
+   PROFILE
 --------------------------------------------------------- */
 
 #profile {
-  max-width: 820px;
-  margin: 0 auto 3rem;
   text-align: center;
+
+  margin-bottom: 2.75rem;
 }
 
 
@@ -22,21 +22,12 @@
 --------------------------------------------------------- */
 
 #profile .avatar {
-  width: 220px !important;
-  height: 220px !important;
-
-  aspect-ratio: 1 / 1;
-
-  object-fit: cover;
-
   border-radius: 50% !important;
 
   border: 2px solid rgba(0, 0, 0, 0.6);
 
   box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.28);
-
-  margin-bottom: 1.25rem;
+    0 6px 18px rgba(0, 0, 0, 0.26);
 }
 
 
@@ -45,21 +36,27 @@
 --------------------------------------------------------- */
 
 #profile .portrait-title h2 {
-  margin: 0 0 0.35rem;
+  margin:
+    0.9rem 0 0.3rem;
 
   color: #d9e8f5;
 
   font-size: 2rem;
+
   font-weight: 700;
+
   line-height: 1.2;
 
   letter-spacing: -0.02em;
 }
 
+
 #profile .portrait-title h2 a {
   color: #d9e8f5 !important;
+
   text-decoration: none !important;
 }
+
 
 #profile .portrait-title h2 a:hover {
   color: #ffffff !important;
@@ -71,22 +68,30 @@
 --------------------------------------------------------- */
 
 #profile .portrait-title h3 {
-  margin: 0.2rem 0;
+  margin:
+    0.15rem 0;
 
   color: #8fa9c3;
 
-  font-size: 1rem;
+  font-size: 0.98rem;
+
   font-weight: 400;
+
   line-height: 1.45;
 }
 
+
 #profile .portrait-title h3 a {
   color: #7fc8e8 !important;
+
   text-decoration: none !important;
 }
 
+
 #profile .portrait-title h3 a:hover {
   color: #2dd4bf !important;
+
+  text-decoration: none !important;
 }
 
 
@@ -95,35 +100,41 @@
 --------------------------------------------------------- */
 
 #profile .network-icon {
+  margin:
+    0.8rem 0 0;
+
+  padding: 0;
+
   display: flex;
 
   justify-content: center;
+
   flex-wrap: wrap;
 
   gap: 0.45rem;
-
-  margin: 1rem 0 0;
-  padding: 0;
 }
+
 
 #profile .network-icon li {
   margin: 0 !important;
   padding: 0 !important;
 }
 
+
 #profile .network-icon a {
   color: #7f8b99 !important;
+
   text-decoration: none !important;
 
   transition:
-    color 0.15s ease,
-    transform 0.15s ease;
+    color 0.15s ease;
 }
+
 
 #profile .network-icon a:hover {
   color: #2dd4bf !important;
+
   text-decoration: none !important;
-  transform: translateY(-1px);
 }
 
 
@@ -131,30 +142,39 @@
    BIO
 --------------------------------------------------------- */
 
-#profile ~ .article-style {
+/*
+   Jennifer's actual bio is rendered as normal profile
+   content immediately after the header. Keep it text-
+   forward and readable.
+*/
+
+#profile-page .article-style {
   max-width: 820px;
 
   margin:
-    0 auto 3rem;
+    0 auto 2.75rem;
 
-  color: #c3cfdd;
+  color: #c5d1dd;
 
-  font-size: 1.04rem;
+  font-size: 1.02rem;
 
-  line-height: 1.8;
+  line-height: 1.78;
 }
 
-#profile ~ .article-style p {
+
+#profile-page .article-style p {
   margin-bottom: 1rem;
 }
 
-#profile ~ .article-style a {
+
+#profile-page .article-style a {
   color: #7fc8e8;
 
   text-decoration: none;
 }
 
-#profile ~ .article-style a:hover {
+
+#profile-page .article-style a:hover {
   color: #2dd4bf;
 
   text-decoration: underline;
@@ -162,34 +182,41 @@
 
 
 /* ---------------------------------------------------------
-   INTERESTS + EDUCATION
+   INTERESTS / EDUCATION HEADINGS
 --------------------------------------------------------- */
 
-.section-subheading {
+#profile-page .section-subheading {
   position: relative;
 
-  margin: 0 0 1rem;
+  margin:
+    0 0 1rem;
 
-  padding-bottom: 0.55rem;
+  padding-bottom:
+    0.55rem;
 
   color: #f1f5f9;
 
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 
   font-weight: 700;
 
   line-height: 1.25;
 }
 
-.section-subheading::after {
+
+/* Small centered editorial accent */
+
+#profile-page .section-subheading::after {
   content: "";
 
   position: absolute;
 
   left: 0;
+
   bottom: 0;
 
-  width: 34px;
+  width: 30px;
+
   height: 2px;
 
   background: #2dd4bf;
@@ -198,225 +225,240 @@
 }
 
 
-/* Interests */
+/* ---------------------------------------------------------
+   INTERESTS
+--------------------------------------------------------- */
 
-.ul-interests {
-  padding-left: 0;
+#profile-page .ul-interests {
+  margin: 0;
+
+  padding: 0;
 
   list-style: none;
 }
 
-.ul-interests li {
-  position: relative;
 
-  margin-bottom: 0.55rem;
+#profile-page .ul-interests li {
+  margin-bottom:
+    0.5rem;
 
-  padding-left: 1rem;
+  color:
+    #c3cfdd;
 
-  color: #c3cfdd;
-
-  line-height: 1.5;
+  line-height:
+    1.5;
 }
 
-.ul-interests li::before {
+
+/* ---------------------------------------------------------
+   EDUCATION
+--------------------------------------------------------- */
+
+#profile-page .ul-edu {
+  margin: 0;
+
+  padding: 0;
+}
+
+
+#profile-page .ul-edu li {
+  margin-bottom:
+    0.9rem;
+}
+
+
+#profile-page .ul-edu .fa-li {
+  color:
+    #7f8b99;
+}
+
+
+#profile-page .ul-edu .course {
+  margin:
+    0;
+
+  color:
+    #d9e8f5;
+
+  font-weight:
+    600;
+
+  line-height:
+    1.4;
+}
+
+
+#profile-page .ul-edu .institution {
+  margin:
+    0.15rem 0 0;
+
+  color:
+    #8fa9c3;
+
+  line-height:
+    1.4;
+}
+
+
+/* =========================================================
+   LATEST
+========================================================= */
+
+#profile-page .content-widget-hr {
+  max-width: 900px;
+
+  margin:
+    3.25rem auto 0;
+
+  padding-top:
+    1.5rem;
+
+  border-top:
+    1px solid #33465f;
+}
+
+
+/* Latest heading */
+
+#profile-page .content-widget-hr h3 {
+  margin:
+    0 0 1rem;
+
+  color:
+    #f1f5f9;
+
+  font-size:
+    1.25rem;
+
+  font-weight:
+    700;
+
+  line-height:
+    1.25;
+}
+
+
+/* accent beneath Latest */
+
+#profile-page .content-widget-hr h3::after {
   content: "";
 
-  position: absolute;
+  display: block;
 
-  left: 0;
-  top: 0.68em;
+  width: 30px;
 
-  width: 4px;
-  height: 4px;
+  height: 2px;
+
+  margin-top: 0.55rem;
 
   background: #2dd4bf;
 
-  border-radius: 50%;
+  border-radius: 999px;
 }
 
 
-/* Education */
+/* Latest list */
 
-.ul-edu {
-  padding-left: 0;
-}
-
-.ul-edu li {
-  margin-bottom: 1rem;
-}
-
-.ul-edu .fa-li {
-  color: #2dd4bf;
-}
-
-.ul-edu .description .course {
+#profile-page .content-widget-hr ul {
   margin: 0;
 
-  color: #d9e8f5;
+  padding: 0;
 
-  font-weight: 600;
-
-  line-height: 1.4;
-}
-
-.ul-edu .description .institution {
-  margin: 0.15rem 0 0;
-
-  color: #8fa9c3;
-
-  line-height: 1.4;
+  list-style: none;
 }
 
 
-/* ---------------------------------------------------------
-   LATEST
---------------------------------------------------------- */
-
-/*
-  Give the existing Latest section an editorial
-  "selected work" appearance without rebuilding it.
-*/
-
-.author-profile-latest,
-.stream-container {
-  max-width: 1000px;
-
-  margin:
-    3.5rem auto 0;
-}
-
-
-/* Heading */
-
-.author-profile-latest .section-subheading,
-.stream-container .section-subheading {
-  margin-bottom: 1.5rem;
-
-  font-size: 1.25rem;
-
-  color: #f1f5f9;
-}
-
-
-/* Individual latest items */
-
-.stream-container .article-metadata,
-.stream-container .media,
-.stream-container article {
-  border-bottom:
-    1px solid #33465f;
+#profile-page .content-widget-hr li {
+  margin: 0;
 
   padding:
-    0 0 1.35rem;
+    0.85rem 0;
 
-  margin-bottom:
-    1.35rem;
+  border-bottom:
+    1px solid rgba(51, 70, 95, 0.7);
 }
 
 
-/* Publication / post title */
-
-.stream-container h3,
-.stream-container h4,
-.stream-container .media-heading {
-  margin: 0 0 0.35rem;
-
-  color: #d9e8f5;
-
-  font-size: 1.15rem;
-
-  font-weight: 700;
-
-  line-height: 1.35;
-}
-
-.stream-container h3 a,
-.stream-container h4 a,
-.stream-container .media-heading a {
-  color: inherit !important;
-
-  text-decoration: none !important;
-}
-
-.stream-container h3 a:hover,
-.stream-container h4 a:hover,
-.stream-container .media-heading a:hover {
-  color: #7fc8e8 !important;
+#profile-page .content-widget-hr li:last-child {
+  border-bottom: 0;
 }
 
 
-/* Date / metadata */
+/* Latest titles */
 
-.stream-container .article-metadata,
-.stream-container .pub-publication {
-  color: #8fa9c3;
+#profile-page .content-widget-hr li a {
+  display: block;
 
-  font-size: 0.88rem;
+  color:
+    #cfddea !important;
 
-  line-height: 1.45;
+  font-size:
+    0.98rem;
+
+  font-weight:
+    500;
+
+  line-height:
+    1.5;
+
+  text-decoration:
+    none !important;
+
+  transition:
+    color 0.15s ease,
+    padding-left 0.15s ease;
 }
 
 
-/* Summary / excerpt */
+#profile-page .content-widget-hr li a:hover {
+  color:
+    #7fc8e8 !important;
 
-.stream-container p {
-  color: #b7c4d5;
+  padding-left:
+    0.25rem;
 
-  line-height: 1.6;
-}
-
-
-/* Links inside Latest */
-
-.stream-container a {
-  text-decoration: none !important;
-}
-
-.stream-container a:hover {
-  text-decoration: none !important;
+  text-decoration:
+    none !important;
 }
 
 
 /* ---------------------------------------------------------
-   GENERAL LINK CLEANUP
+   LINK CLEANUP
 --------------------------------------------------------- */
 
-#profile a,
-.people-widget a {
-  text-decoration: none !important;
+#profile-page a {
+  text-decoration:
+    none !important;
 }
 
 
 /* ---------------------------------------------------------
-   RESPONSIVE
+   MOBILE
 --------------------------------------------------------- */
 
 @media (max-width: 768px) {
 
-  #profile {
-    margin-bottom: 2.25rem;
-  }
-
-  #profile .avatar {
-    width: 180px !important;
-    height: 180px !important;
-  }
-
   #profile .portrait-title h2 {
-    font-size: 1.75rem;
+    font-size:
+      1.75rem;
   }
 
-  #profile ~ .article-style {
-    font-size: 1rem;
+  #profile-page .article-style {
+    font-size:
+      1rem;
+
+    line-height:
+      1.7;
   }
 
-  .section-subheading {
-    margin-top: 1.5rem;
+  #profile-page .section-subheading {
+    margin-top:
+      1.5rem;
   }
 
-  .author-profile-latest,
-  .stream-container {
-    margin-top: 2.75rem;
+  #profile-page .content-widget-hr {
+    margin-top:
+      2.5rem;
   }
 
 }
