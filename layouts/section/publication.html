@@ -1,234 +1,565 @@
 {{ define "main" }}
+
 <div class="universal-wrapper pt-3">
+
   <h1>{{ .Title }}</h1>
 
   {{ with .Content }}
     <div class="article-style">{{ . }}</div>
   {{ end }}
 
+
+  <!-- =================================
+       CONTROLS
+  ================================= -->
+
   <div class="pub-controls">
+
     <div class="pub-search">
-      <input type="text" id="pubSearch" placeholder="Search publications...">
+      <input
+        type="text"
+        id="pubSearch"
+        placeholder="Search publications..."
+      >
     </div>
+
 
     <div class="pub-select-wrap">
-      <label for="pubTopicFilter" class="pub-select-label">Filter by topic</label>
-      <select id="pubTopicFilter" class="pub-topic-select">
-        <option value="all">All Topics</option>
-        <option value="community-corrections">Community Corrections</option>
-        <option value="courts">Courts</option>
-        <option value="criminological-theory">Criminological Theory</option>
-        <option value="cybercrime">Cybercrime</option>
-        <option value="gang-membership">Gang Membership</option>
-        <option value="grad-student-lead-author">Graduate Student Lead Author</option>
-        <option value="health">Health</option>
-        <option value="institutional-corrections">Institutional Corrections</option>
-        <option value="juvenile-justice">Juvenile Justice</option>
-        <option value="methods-measurement">Methods and Measurement</option>
-        <option value="misconduct">Misconduct</option>
-        <option value="policing">Policing</option>
-        <option value="recidivism">Recidivism</option>
-        <option value="reentry">Reentry</option>
-        <option value="risk-needs-assessment">Risk-Needs-Assessment</option>
+
+      <label
+        for="pubTopicFilter"
+        class="pub-select-label"
+      >
+        Filter by topic
+      </label>
+
+      <select
+        id="pubTopicFilter"
+        class="pub-topic-select"
+      >
+
+        <option value="all">
+          All Topics
+        </option>
+
+        <option value="community-corrections">
+          Community Corrections
+        </option>
+
+        <option value="courts">
+          Courts
+        </option>
+
+        <option value="criminological-theory">
+          Criminological Theory
+        </option>
+
+        <option value="cybercrime">
+          Cybercrime
+        </option>
+
+        <option value="gang-membership">
+          Gang Membership
+        </option>
+
+        <option value="grad-student-lead-author">
+          Graduate Student Lead Author
+        </option>
+
+        <option value="health">
+          Health
+        </option>
+
+        <option value="institutional-corrections">
+          Institutional Corrections
+        </option>
+
+        <option value="juvenile-justice">
+          Juvenile Justice
+        </option>
+
+        <option value="methods-measurement">
+          Methods and Measurement
+        </option>
+
+        <option value="misconduct">
+          Misconduct
+        </option>
+
+        <option value="policing">
+          Policing
+        </option>
+
+        <option value="recidivism">
+          Recidivism
+        </option>
+
+        <option value="reentry">
+          Reentry
+        </option>
+
+        <option value="risk-needs-assessment">
+          Risk-Needs-Assessment
+        </option>
+
       </select>
+
     </div>
 
-    <div class="pub-results-count" id="pubResultsCount"></div>
+
+    <div
+      class="pub-results-count"
+      id="pubResultsCount"
+    ></div>
+
   </div>
 
-  <div class="pub-card-grid" id="pubCardGrid">
+
+  <!-- =================================
+       PUBLICATION GRID
+  ================================= -->
+
+  <div
+    class="pub-card-grid"
+    id="pubCardGrid"
+  >
+
     {{ range .Pages.ByDate.Reverse }}
+
       {{ $topics := slice }}
       {{ $tagsJoined := "" }}
 
       {{ with .Params.tags }}
+
         {{ $tagsJoined = lower (delimit . " | ") }}
 
-        {{ if or (in $tagsJoined "community corrections") (in $tagsJoined "probation") (in $tagsJoined "parole") (in $tagsJoined "pretrial") }}
+
+        {{ if or
+          (in $tagsJoined "community corrections")
+          (in $tagsJoined "probation")
+          (in $tagsJoined "parole")
+          (in $tagsJoined "pretrial")
+        }}
           {{ $topics = $topics | append "community-corrections" }}
         {{ end }}
 
-        {{ if or (in $tagsJoined "courts") (in $tagsJoined "court") (in $tagsJoined "drug treatment courts") }}
+
+        {{ if or
+          (in $tagsJoined "courts")
+          (in $tagsJoined "court")
+          (in $tagsJoined "drug treatment courts")
+        }}
           {{ $topics = $topics | append "courts" }}
         {{ end }}
 
-        {{ if or (in $tagsJoined "criminological theory") (in $tagsJoined "theory") }}
+
+        {{ if or
+          (in $tagsJoined "criminological theory")
+          (in $tagsJoined "theory")
+        }}
           {{ $topics = $topics | append "criminological-theory" }}
         {{ end }}
 
-        {{ if or (in $tagsJoined "cybercrime") (in $tagsJoined "cyber crime") (in $tagsJoined "online offending") }}
+
+        {{ if or
+          (in $tagsJoined "cybercrime")
+          (in $tagsJoined "cyber crime")
+          (in $tagsJoined "online offending")
+        }}
           {{ $topics = $topics | append "cybercrime" }}
         {{ end }}
 
-        {{ if or (in $tagsJoined "gang membership") (in $tagsJoined "gangs") (in $tagsJoined "gang") }}
+
+        {{ if or
+          (in $tagsJoined "gang membership")
+          (in $tagsJoined "gangs")
+          (in $tagsJoined "gang")
+        }}
           {{ $topics = $topics | append "gang-membership" }}
         {{ end }}
 
-        {{ if or (in $tagsJoined "grad student lead author") (in $tagsJoined "graduate student lead") (in $tagsJoined "grad student") }}
+
+        {{ if or
+          (in $tagsJoined "grad student lead author")
+          (in $tagsJoined "graduate student lead")
+          (in $tagsJoined "grad student")
+        }}
           {{ $topics = $topics | append "grad-student-lead-author" }}
         {{ end }}
 
-        {{ if or (in $tagsJoined "health") (in $tagsJoined "covid-19") (in $tagsJoined "infectious disease") (in $tagsJoined "mental health") }}
+
+        {{ if or
+          (in $tagsJoined "health")
+          (in $tagsJoined "covid-19")
+          (in $tagsJoined "infectious disease")
+          (in $tagsJoined "mental health")
+        }}
           {{ $topics = $topics | append "health" }}
         {{ end }}
 
-        {{ if or (in $tagsJoined "institutional corrections") (in $tagsJoined "prisons") (in $tagsJoined "jails") (in $tagsJoined "incarceration") }}
+
+        {{ if or
+          (in $tagsJoined "institutional corrections")
+          (in $tagsJoined "prisons")
+          (in $tagsJoined "jails")
+          (in $tagsJoined "incarceration")
+        }}
           {{ $topics = $topics | append "institutional-corrections" }}
         {{ end }}
 
-        {{ if or (in $tagsJoined "juvenile justice") (in $tagsJoined "juvenile") (in $tagsJoined "youth") (in $tagsJoined "adolescents") }}
+
+        {{ if or
+          (in $tagsJoined "juvenile justice")
+          (in $tagsJoined "juvenile")
+          (in $tagsJoined "youth")
+          (in $tagsJoined "adolescents")
+        }}
           {{ $topics = $topics | append "juvenile-justice" }}
         {{ end }}
 
-        {{ if or (in $tagsJoined "methods") (in $tagsJoined "measurement") (in $tagsJoined "methods and measurement") (in $tagsJoined "validation") }}
+
+        {{ if or
+          (in $tagsJoined "methods")
+          (in $tagsJoined "measurement")
+          (in $tagsJoined "methods and measurement")
+          (in $tagsJoined "validation")
+        }}
           {{ $topics = $topics | append "methods-measurement" }}
         {{ end }}
 
-        {{ if or (in $tagsJoined "misconduct") (in $tagsJoined "officer misconduct") (in $tagsJoined "institutional misconduct") }}
+
+        {{ if or
+          (in $tagsJoined "misconduct")
+          (in $tagsJoined "officer misconduct")
+          (in $tagsJoined "institutional misconduct")
+        }}
           {{ $topics = $topics | append "misconduct" }}
         {{ end }}
 
-        {{ if or (in $tagsJoined "policing") (in $tagsJoined "police reform") (in $tagsJoined "de-escalation") (in $tagsJoined "police use-of-force") (in $tagsJoined "use of force") }}
+
+        {{ if or
+          (in $tagsJoined "policing")
+          (in $tagsJoined "police reform")
+          (in $tagsJoined "de-escalation")
+          (in $tagsJoined "police use-of-force")
+          (in $tagsJoined "use of force")
+        }}
           {{ $topics = $topics | append "policing" }}
         {{ end }}
 
-        {{ if or (in $tagsJoined "recidivism") (in $tagsJoined "reoffending") }}
+
+        {{ if or
+          (in $tagsJoined "recidivism")
+          (in $tagsJoined "reoffending")
+        }}
           {{ $topics = $topics | append "recidivism" }}
         {{ end }}
 
-        {{ if or (in $tagsJoined "reentry") (in $tagsJoined "desistance") (in $tagsJoined "prisoner reentry") }}
+
+        {{ if or
+          (in $tagsJoined "reentry")
+          (in $tagsJoined "desistance")
+          (in $tagsJoined "prisoner reentry")
+        }}
           {{ $topics = $topics | append "reentry" }}
         {{ end }}
 
-        {{ if or (in $tagsJoined "risk-needs-assessment") (in $tagsJoined "risk assessment") (in $tagsJoined "classification") (in $tagsJoined "ls/cmi") (in $tagsJoined "strong-r") }}
+
+        {{ if or
+          (in $tagsJoined "risk-needs-assessment")
+          (in $tagsJoined "risk assessment")
+          (in $tagsJoined "classification")
+          (in $tagsJoined "ls/cmi")
+          (in $tagsJoined "strong-r")
+        }}
           {{ $topics = $topics | append "risk-needs-assessment" }}
         {{ end }}
+
       {{ end }}
+
 
       <article
         class="pub-card"
         data-topics="{{ delimit ($topics | uniq) "," }}"
         data-search="{{ lower (printf "%s %s %s %s" .Title (.Params.summary | default "") (.Params.publication | default "") (delimit (.Params.tags | default (slice)) " ")) }}"
       >
+
+
         {{ $img := .Resources.GetMatch "featured*" }}
+
         {{ if $img }}
-          <a href="{{ .RelPermalink }}" class="pub-card-image-link">
-            <img src="{{ $img.RelPermalink }}" alt="{{ .Title }}" class="pub-card-image">
+
+          <a
+            href="{{ .RelPermalink }}"
+            class="pub-card-image-link"
+          >
+
+            <img
+              src="{{ $img.RelPermalink }}"
+              alt="{{ .Title }}"
+              class="pub-card-image"
+            >
+
           </a>
+
         {{ end }}
 
+
         <div class="pub-card-body">
+
+
           <h2 class="pub-card-title">
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+
+            <a href="{{ .RelPermalink }}">
+              {{ .Title }}
+            </a>
+
           </h2>
+
 
           <div class="pub-card-authors">
             {{ partial "page_metadata_authors" . }}
           </div>
 
+
           <p class="pub-card-meta">
-            {{ with .Params.publication }}{{ . | markdownify }}{{ end }}
-            {{ with .Date }} <span class="pub-dot">•</span> {{ .Format "2006" }}{{ end }}
+
+            {{ with .Params.publication }}
+              {{ . | markdownify }}
+            {{ end }}
+
+            {{ with .Date }}
+              <span class="pub-dot">•</span>
+              {{ .Format "2006" }}
+            {{ end }}
+
           </p>
 
+
           {{ with .Params.summary }}
-            <p class="pub-card-summary">{{ . }}</p>
+
+            <p class="pub-card-summary">
+              {{ . }}
+            </p>
+
           {{ end }}
 
+
           <div class="pub-card-links">
+
             {{ partial "page_links" (dict "page" . "is_list" 1) }}
+
           </div>
+
 
           <div class="pub-card-footer">
-            <a href="{{ .RelPermalink }}" class="pub-read-more">Read More</a>
+
+            <a
+              href="{{ .RelPermalink }}"
+              class="pub-read-more"
+            >
+              Read More
+            </a>
+
           </div>
+
+
         </div>
+
       </article>
+
     {{ end }}
+
   </div>
 
-  <div class="pub-no-results" id="pubNoResults">
+
+  <div
+    class="pub-no-results"
+    id="pubNoResults"
+  >
     No publications match your current search or topic filter.
   </div>
+
 </div>
 
+
 <style>
+
+/* =================================
+   CONTROLS
+================================= */
+
 .pub-controls {
   margin: 2rem 0 2.5rem;
+
   padding: 1.25rem;
+
   background: #111827;
-  border: 1px solid #1f2937;
+
+  border: 1px solid #33465f;
   border-radius: 12px;
+
   display: grid;
   gap: 1rem;
 }
 
 .pub-search input {
   width: 100%;
+
   padding: 0.85rem 1rem;
+
   border-radius: 8px;
-  border: 1px solid #374151;
-  background: #1f2937;
+
+  border: 1px solid #374b63;
+
+  background: #1a2940;
+
   color: #f9fafb;
+
   font-size: 1rem;
+}
+
+.pub-search input::placeholder {
+  color: #94a3b8;
 }
 
 .pub-search input:focus,
 .pub-topic-select:focus {
   outline: none;
-  border-color: #1f3a5f;
-  box-shadow: 0 0 0 3px rgba(31, 58, 95, 0.25);
+
+  border-color: #4b9f78;
+
+  box-shadow:
+    0 0 0 3px rgba(111, 207, 151, 0.15);
 }
 
 .pub-select-wrap {
   display: flex;
   flex-direction: column;
+
   gap: 0.4rem;
+
   max-width: 320px;
 }
 
 .pub-select-label {
-  color: #cbd5e1;
+  color: #d1dce8;
+
   font-size: 0.92rem;
   font-weight: 600;
 }
 
 .pub-topic-select {
   padding: 0.8rem 1rem;
+
   border-radius: 8px;
-  border: 1px solid #374151;
-  background: #1f2937;
+
+  border: 1px solid #374b63;
+
+  background: #1a2940;
+
   color: #f9fafb;
+
   font-size: 0.96rem;
 }
 
 .pub-results-count {
-  color: #cbd5e1;
+  color: #b7c4d5;
+
   font-size: 0.92rem;
 }
 
+
+/* =================================
+   PUBLICATION GRID
+================================= */
+
 .pub-card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
   gap: 2rem;
+
   margin-top: 2rem;
 }
 
+
+/* =================================
+   PUBLICATION CARD
+================================= */
+
 .pub-card {
-  background: #111827;
+  position: relative;
+
+  background:
+    linear-gradient(
+      145deg,
+      #1a2940 0%,
+      #152235 100%
+    );
+
   color: #f9fafb;
-  border: 1px solid #1f2937;
-  border-top: 4px solid #1f3a5f;
+
+  border: 1px solid #33465f;
   border-radius: 12px;
+
   overflow: hidden;
-  box-shadow: 0 6px 22px rgba(0,0,0,0.22);
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.18);
+
   display: flex;
   flex-direction: column;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* blue → green accent */
+
+.pub-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #4d91d9 0%,
+      #6fcf97 100%
+    );
+
+  z-index: 2;
+}
+
+.pub-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #526b89;
+
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.28);
 }
 
 .pub-card.is-hidden {
   display: none;
 }
+
+
+/* =================================
+   IMAGE
+================================= */
 
 .pub-card-image-link {
   display: block;
@@ -237,63 +568,130 @@
 .pub-card-image {
   width: 100%;
   height: 220px;
+
   object-fit: cover;
+
   display: block;
+
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
 }
 
+.pub-card-image-link:hover .pub-card-image {
+  transform: scale(1.02);
+
+  filter: brightness(1.06);
+}
+
+
+/* =================================
+   CARD BODY
+================================= */
+
 .pub-card-body {
-  padding: 1.25rem 1.25rem 1.5rem;
+  padding: 1.35rem 1.35rem 1.5rem;
+
   display: flex;
   flex-direction: column;
+
   height: 100%;
 }
 
+
+/* =================================
+   TITLE
+================================= */
+
 .pub-card-title {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+
   line-height: 1.35;
+
   margin: 0 0 0.75rem;
 }
 
 .pub-card-title a {
-  color: #f9fafb;
+  color: #ffffff;
+
   text-decoration: none;
 }
 
 .pub-card-title a:hover {
-  color: #cbd5e1;
+  color: #a9d2f4;
 }
 
+
+/* =================================
+   AUTHORS
+================================= */
+
 .pub-card-authors {
-  color: #d1d5db;
+  color: #dce6f1;
+
   margin: 0 0 0.5rem;
-  font-size: 0.98rem;
+
+  font-size: 0.96rem;
+
+  line-height: 1.5;
 }
 
 .pub-card-authors a {
-  color: #d1d5db;
+  color: #dce6f1;
+
   text-decoration: none;
 }
 
 .pub-card-authors a:hover {
-  color: #ffffff;
+  color: #9fe0bb;
+
   text-decoration: underline;
 }
 
+
+/* =================================
+   JOURNAL + YEAR
+================================= */
+
 .pub-card-meta {
-  color: #93c5fd;
-  margin: 0 0 0.85rem;
+  color: #7fc8e8;
+
+  margin: 0 0 0.95rem;
+
   font-size: 0.95rem;
+
+  font-weight: 600;
+
+  line-height: 1.5;
 }
 
 .pub-dot {
-  opacity: 0.7;
+  color: #6fcf97;
+
+  opacity: 0.9;
+
+  padding: 0 0.15rem;
 }
 
+
+/* =================================
+   SUMMARY
+================================= */
+
 .pub-card-summary {
-  color: #e5e7eb;
-  line-height: 1.6;
+  color: #c3cfdd;
+
+  line-height: 1.65;
+
   margin: 0 0 1rem;
+
+  font-size: 0.96rem;
 }
+
+
+/* =================================
+   CUSTOM LINKS
+================================= */
 
 .pub-card-links {
   margin: 0 0 1rem;
@@ -303,52 +701,121 @@
 .pub-card-links .btn-page-header,
 .pub-card-links .btn-links {
   display: inline-flex;
+
   align-items: center;
+
   gap: 0.35rem;
+
   margin: 0 0.5rem 0.5rem 0;
+
   border-radius: 999px;
+
   padding: 0.45rem 0.8rem;
+
   font-size: 0.9rem;
-  font-weight: 500;
+
+  font-weight: 600;
+
   text-decoration: none;
-  background: #1f2937;
-  color: #dbeafe !important;
-  border: 1px solid #374151;
+
+  background: rgba(111, 207, 151, 0.1);
+
+  color: #82d9a5 !important;
+
+  border: 1px solid #4b9f78;
+
   box-shadow: none;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
 }
 
 .pub-card-links .btn:hover,
 .pub-card-links .btn-page-header:hover,
 .pub-card-links .btn-links:hover {
-  background: #273449;
+  background: rgba(111, 207, 151, 0.2);
+
+  color: #a5e8be !important;
+
+  border-color: #69bd93;
+
   text-decoration: none;
 }
 
+
+/* =================================
+   READ MORE
+================================= */
+
 .pub-card-footer {
   margin-top: auto;
+
   padding-top: 0.5rem;
 }
 
 .pub-read-more {
-  display: inline-block;
-  background: #1f3a5f;
-  color: #fff !important;
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.62rem 0.95rem;
+
+  background: #2e7d5b;
+
+  color: #ffffff !important;
+
+  border: 1px solid #4b9f78;
+
+  border-radius: 5px;
+
+  font-size: 0.9rem;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+
   text-decoration: none;
-  border-radius: 999px;
-  padding: 0.5rem 0.9rem;
-  font-size: 0.92rem;
-  font-weight: 600;
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.16);
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .pub-read-more:hover {
-  background: #162944;
+  background: #39966c;
+
+  border-color: #69bd93;
+
+  color: #ffffff !important;
+
   text-decoration: none;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 12px rgba(0, 0, 0, 0.22);
 }
+
+
+/* =================================
+   NO RESULTS
+================================= */
 
 .pub-no-results {
   display: none;
+
   margin-top: 2rem;
+
   color: #cbd5e1;
+
   text-align: center;
 }
 
@@ -356,7 +823,13 @@
   display: block;
 }
 
+
+/* =================================
+   MOBILE
+================================= */
+
 @media (max-width: 768px) {
+
   .pub-card-grid {
     grid-template-columns: 1fr;
   }
@@ -364,65 +837,154 @@
   .pub-select-wrap {
     max-width: 100%;
   }
+
 }
+
 </style>
 
+
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const searchInput = document.getElementById('pubSearch');
-  const topicSelect = document.getElementById('pubTopicFilter');
-  const cards = document.querySelectorAll('.pub-card');
-  const resultsCount = document.getElementById('pubResultsCount');
-  const noResults = document.getElementById('pubNoResults');
 
-  let activeSearch = '';
-  let activeTopic = 'all';
+document.addEventListener(
+  'DOMContentLoaded',
+  function() {
 
-  function updateResults() {
-    let visibleCount = 0;
+    const searchInput =
+      document.getElementById('pubSearch');
 
-    cards.forEach(card => {
-      const text = card.dataset.search || '';
-      const topics = (card.dataset.topics || '')
-        .split(',')
-        .map(topic => topic.trim())
-        .filter(Boolean);
+    const topicSelect =
+      document.getElementById('pubTopicFilter');
 
-      const matchesSearch = !activeSearch || text.includes(activeSearch);
-      const matchesTopic = activeTopic === 'all' || topics.includes(activeTopic);
+    const cards =
+      document.querySelectorAll('.pub-card');
 
-      if (matchesSearch && matchesTopic) {
-        card.classList.remove('is-hidden');
-        visibleCount += 1;
-      } else {
-        card.classList.add('is-hidden');
+    const resultsCount =
+      document.getElementById('pubResultsCount');
+
+    const noResults =
+      document.getElementById('pubNoResults');
+
+
+    let activeSearch = '';
+    let activeTopic = 'all';
+
+
+    function updateResults() {
+
+      let visibleCount = 0;
+
+
+      cards.forEach(
+        card => {
+
+          const text =
+            card.dataset.search || '';
+
+          const topics =
+            (card.dataset.topics || '')
+              .split(',')
+              .map(topic => topic.trim())
+              .filter(Boolean);
+
+
+          const matchesSearch =
+            !activeSearch ||
+            text.includes(activeSearch);
+
+
+          const matchesTopic =
+            activeTopic === 'all' ||
+            topics.includes(activeTopic);
+
+
+          if (
+            matchesSearch &&
+            matchesTopic
+          ) {
+
+            card.classList.remove(
+              'is-hidden'
+            );
+
+            visibleCount += 1;
+
+          } else {
+
+            card.classList.add(
+              'is-hidden'
+            );
+
+          }
+
+        }
+      );
+
+
+      if (resultsCount) {
+
+        resultsCount.textContent =
+          'Showing ' +
+          visibleCount +
+          ' publication' +
+          (visibleCount === 1 ? '' : 's');
+
       }
-    });
 
-    if (resultsCount) {
-      resultsCount.textContent = 'Showing ' + visibleCount + ' publication' + (visibleCount === 1 ? '' : 's');
+
+      if (noResults) {
+
+        noResults.classList.toggle(
+          'show',
+          visibleCount === 0
+        );
+
+      }
+
     }
 
-    if (noResults) {
-      noResults.classList.toggle('show', visibleCount === 0);
+
+    if (searchInput) {
+
+      searchInput.addEventListener(
+        'input',
+        function() {
+
+          activeSearch =
+            this.value
+              .trim()
+              .toLowerCase();
+
+          updateResults();
+
+        }
+      );
+
     }
-  }
 
-  if (searchInput) {
-    searchInput.addEventListener('input', function() {
-      activeSearch = this.value.trim().toLowerCase();
-      updateResults();
-    });
-  }
 
-  if (topicSelect) {
-    topicSelect.addEventListener('change', function() {
-      activeTopic = this.value;
-      updateResults();
-    });
-  }
+    if (topicSelect) {
 
-  updateResults();
-});
+      topicSelect.addEventListener(
+        'change',
+        function() {
+
+          activeTopic =
+            this.value;
+
+          updateResults();
+
+        }
+      );
+
+    }
+
+
+    updateResults();
+
+  }
+);
+
 </script>
+
+
 {{ end }}
