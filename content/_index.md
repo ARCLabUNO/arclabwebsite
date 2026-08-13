@@ -85,15 +85,27 @@ sections:
       subtitle: ''
       text: |
         <div style="text-align:center; max-width:950px; margin:0 auto;">
+
           <h2>Research and Collaboration</h2>
 
-          <p>
-            ARC works closely with SCCJ faculty, the <a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/nebraska-center-for-justice-research/index.php">Nebraska Center for Justice Research (NCJR)</a>, the <a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/juvenile-justice-institute/index.php">Juvenile Justice Institute (JJI)</a>, and a range of community, state, and federal partners. These collaborations allow the lab to conduct research using administrative data, collect primary data, evaluate active programs, and contribute to ongoing policy discussions.
-          </p>
+          <div style="
+            max-width:800px;
+            margin:1.5rem auto 0;
+            padding-left:1.35rem;
+            border-left:2px solid #2dd4bf;
+            text-align:left;
+          ">
 
-          <p>
-            Graduate students in the lab are involved in this work as part of ongoing projects, gaining experience with applied data, research design, and evaluation in real-world correctional contexts.
-          </p>
+            <p style="margin:0 0 1rem; line-height:1.75;">
+              ARC works closely with SCCJ faculty, the <a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/nebraska-center-for-justice-research/index.php">Nebraska Center for Justice Research (NCJR)</a>, the <a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/juvenile-justice-institute/index.php">Juvenile Justice Institute (JJI)</a>, and a range of community, state, and federal partners. These collaborations allow the lab to conduct research using administrative data, collect primary data, evaluate active programs, and contribute to ongoing policy discussions.
+            </p>
+
+            <p style="margin:0; line-height:1.75;">
+              Graduate students in the lab are involved in this work as part of ongoing projects, gaining experience with applied data, research design, and evaluation in real-world correctional contexts.
+            </p>
+
+          </div>
+
         </div>
     design:
       columns: '1'
