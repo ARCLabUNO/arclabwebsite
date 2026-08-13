@@ -1,0 +1,57 @@
+<div class="arc-news-section">
+
+  <div class="arc-news-header">
+
+    <h2>Latest News</h2>
+
+    <a
+      class="arc-news-more"
+      href="/news/"
+    >
+      See all news →
+    </a>
+
+  </div>
+
+
+  <div class="arc-news-list">
+
+    {{ $posts := where site.RegularPages "Section" "post" }}
+    {{ $posts = $posts.ByDate.Reverse }}
+
+    {{ range first 5 $posts }}
+
+      <article class="arc-news-item">
+
+        <div class="arc-news-date">
+          {{ .Date.Format "Jan 2" }}<br>
+          {{ .Date.Format "2006" }}
+        </div>
+
+        <div>
+
+          <h3 class="arc-news-title">
+
+            <a href="{{ .RelPermalink }}">
+              {{ .Title }}
+            </a>
+
+          </h3>
+
+          {{ with .Summary }}
+
+            <p class="arc-news-description">
+              {{ . | plainify | truncate 180 }}
+            </p>
+
+          {{ end }}
+
+        </div>
+
+      </article>
+
+    {{ end }}
+
+  </div>
+
+</div>
