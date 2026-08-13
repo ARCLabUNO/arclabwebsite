@@ -1,0 +1,263 @@
+<style>
+
+/* =========================================
+   ARC LAB — PEOPLE
+   Clean editorial treatment
+========================================= */
+
+
+/* -----------------------------------------
+   GROUP HEADINGS
+----------------------------------------- */
+
+.people-widget > .col-md-12 {
+  margin-top: 2.5rem;
+}
+
+.people-widget > .col-md-12 h2 {
+  position: relative;
+
+  margin-bottom: 1.5rem !important;
+  padding-bottom: 0.65rem;
+
+  color: #f1f5f9;
+
+  font-size: 1.55rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.people-widget > .col-md-12 h2::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 52px;
+  height: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #3b82f6 0%,
+      #2dd4bf 100%
+    );
+
+  border-radius: 999px;
+}
+
+
+/* -----------------------------------------
+   PERSON
+----------------------------------------- */
+
+.people-widget .people-person {
+  position: relative;
+
+  transition:
+    transform 0.2s ease;
+}
+
+.people-widget .people-person:hover {
+  transform: translateY(-3px);
+}
+
+
+/* -----------------------------------------
+   PORTRAIT
+----------------------------------------- */
+
+.people-widget .people-person .avatar {
+  display: block;
+
+  width: 180px !important;
+  height: 180px !important;
+
+  margin:
+    0 auto 1rem;
+
+  object-fit: cover;
+
+  border:
+    3px solid transparent;
+
+  /*
+    Creates a blue -> teal ring around the
+    circular image without adding a card.
+  */
+  background:
+    linear-gradient(#0f1622, #0f1622) padding-box,
+    linear-gradient(
+      135deg,
+      #3b82f6,
+      #2dd4bf
+    ) border-box;
+
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* portrait hover */
+
+.people-widget
+.people-person:hover
+.avatar {
+  transform:
+    scale(1.025);
+
+  box-shadow:
+    0 0 0 5px rgba(45, 212, 191, 0.08),
+    0 9px 20px rgba(0, 0, 0, 0.24);
+}
+
+
+/* -----------------------------------------
+   NAME
+----------------------------------------- */
+
+.people-widget .portrait-title h2 {
+  margin:
+    0 0 0.3rem;
+
+  color:
+    #f1f5f9;
+
+  font-size:
+    1.2rem;
+
+  font-weight:
+    800;
+
+  line-height:
+    1.25;
+}
+
+.people-widget .portrait-title h2 a {
+  color:
+    #f1f5f9 !important;
+
+  text-decoration:
+    none !important;
+}
+
+.people-widget .portrait-title h2 a:hover {
+  color:
+    #93c5fd !important;
+}
+
+
+/* -----------------------------------------
+   ROLE
+----------------------------------------- */
+
+.people-widget .portrait-title h3 {
+  margin:
+    0;
+
+  color:
+    #7fc8e8;
+
+  font-size:
+    0.92rem;
+
+  font-weight:
+    600;
+
+  line-height:
+    1.4;
+}
+
+
+/* -----------------------------------------
+   SOCIAL ICONS
+----------------------------------------- */
+
+.people-widget .network-icon {
+  margin:
+    0.75rem 0 0;
+
+  padding:
+    0;
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    0.3rem;
+}
+
+.people-widget .network-icon li {
+  margin:
+    0 !important;
+
+  padding:
+    0 !important;
+}
+
+.people-widget .network-icon a {
+  color:
+    #94a3b8 !important;
+
+  text-decoration:
+    none !important;
+
+  transition:
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.people-widget .network-icon a:hover {
+  color:
+    #2dd4bf !important;
+
+  transform:
+    translateY(-1px);
+
+  text-decoration:
+    none !important;
+}
+
+
+/* -----------------------------------------
+   REMOVE GLOBAL LINK UNDERLINES
+----------------------------------------- */
+
+.people-widget a,
+.people-widget a:hover,
+.people-widget a:focus,
+.people-widget a:active {
+  text-decoration:
+    none !important;
+}
+
+
+/* -----------------------------------------
+   MOBILE
+----------------------------------------- */
+
+@media (max-width: 768px) {
+
+  .people-widget .people-person .avatar {
+    width:
+      165px !important;
+
+    height:
+      165px !important;
+  }
+
+}
+
+</style>
