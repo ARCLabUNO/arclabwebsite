@@ -1,0 +1,199 @@
+<style>
+
+/* =========================================================
+   ARC LAB PEOPLE PAGE
+   Editorial / minimal treatment
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   GROUP HEADINGS
+--------------------------------------------------------- */
+
+.people-widget > .col-md-12 h2 {
+  position: relative;
+
+  margin-bottom: 1.4rem !important;
+  padding-bottom: 0.55rem;
+
+  color: #f1f5f9;
+
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.2;
+
+  letter-spacing: -0.01em;
+}
+
+
+/* short editorial rule */
+
+.people-widget > .col-md-12 h2::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 42px;
+  height: 2px;
+
+  background: #2dd4bf;
+}
+
+
+/* ---------------------------------------------------------
+   PERSON
+   No card. No background. No border.
+--------------------------------------------------------- */
+
+.people-widget .people-person {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+
+  transition: none;
+}
+
+
+/* ---------------------------------------------------------
+   PORTRAIT
+--------------------------------------------------------- */
+
+.people-widget .people-person .avatar {
+  width: 180px !important;
+  height: 180px !important;
+
+  object-fit: cover;
+
+  /*
+    Very subtle dark edge.
+    This separates pale portraits from the page
+    without turning the image into a graphic.
+  */
+  border: 2px solid rgba(0, 0, 0, 0.55);
+
+  box-shadow:
+    0 5px 14px rgba(0, 0, 0, 0.22);
+
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* extremely restrained hover */
+
+.people-widget .people-person:hover .avatar {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 18px rgba(0, 0, 0, 0.28);
+}
+
+
+/* ---------------------------------------------------------
+   NAME
+--------------------------------------------------------- */
+
+.people-widget .portrait-title h2 {
+  margin: 0.8rem 0 0.2rem;
+
+  color: #f1f5f9;
+
+  font-size: 1.16rem;
+  font-weight: 700;
+  line-height: 1.25;
+
+  letter-spacing: -0.01em;
+}
+
+
+.people-widget .portrait-title h2 a {
+  color: #f1f5f9 !important;
+
+  text-decoration: none !important;
+}
+
+
+.people-widget .portrait-title h2 a:hover {
+  color: #ffffff !important;
+
+  text-decoration: none !important;
+}
+
+
+/* ---------------------------------------------------------
+   ROLE
+--------------------------------------------------------- */
+
+.people-widget .portrait-title h3 {
+  margin: 0;
+
+  color: #8fa9c3;
+
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+
+/* ---------------------------------------------------------
+   SOCIAL LINKS
+--------------------------------------------------------- */
+
+.people-widget .network-icon {
+  margin-top: 0.65rem;
+}
+
+
+.people-widget .network-icon li {
+  margin-right: 0.15rem;
+}
+
+
+.people-widget .network-icon a {
+  color: #7f8b99 !important;
+
+  text-decoration: none !important;
+
+  transition:
+    color 0.15s ease,
+    opacity 0.15s ease;
+}
+
+
+.people-widget .network-icon a:hover {
+  color: #2dd4bf !important;
+
+  text-decoration: none !important;
+}
+
+
+/* ---------------------------------------------------------
+   REMOVE THEME LINK DECORATION
+--------------------------------------------------------- */
+
+.people-widget a,
+.people-widget a:hover,
+.people-widget a:focus,
+.people-widget a:active {
+  text-decoration: none !important;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+  .people-widget .people-person .avatar {
+    width: 165px !important;
+    height: 165px !important;
+  }
+
+}
+
+</style>
