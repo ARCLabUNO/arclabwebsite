@@ -176,80 +176,71 @@
 ========================================================= */
 
 .arc-news-section {
-  max-width:
-    1050px;
+  max-width: 1050px;
 
-  margin:
-    0 auto;
+  margin: 0 auto;
 
-  padding:
-    1.5rem;
+  padding: 1.6rem 1.75rem 1.25rem;
 
-  background:
-    transparent;
+  background: transparent;
 
-  border:
-    1px solid #33465f;
+  border: 1px solid #33465f;
 
-  border-radius:
-    12px;
+  border-radius: 8px;
 
   box-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.18);
+    0 4px 16px rgba(0, 0, 0, 0.10);
 }
 
+
+/* ---------------------------------------------------------
+   HEADER
+--------------------------------------------------------- */
+
 .arc-news-header {
-  display:
-    flex;
+  display: flex;
 
-  justify-content:
-    space-between;
+  justify-content: space-between;
 
-  align-items:
-    baseline;
+  align-items: baseline;
 
-  gap:
-    1rem;
+  gap: 1rem;
 
-  margin-bottom:
-    1.4rem;
+  margin-bottom: 1.15rem;
 }
 
 .arc-news-header h2 {
-  margin:
-    0;
+  margin: 0;
 
-  color:
-    #d9e8f5;
+  color: #d9e8f5;
 
-  font-size:
-    1.8rem;
+  font-size: 1.45rem;
 
-  font-weight:
-    800;
+  font-weight: 800;
 }
 
 .arc-news-more {
-  color:
-    #7fc8e8 !important;
+  position: relative;
 
-  font-size:
-    0.9rem;
+  color: #7fc8e8 !important;
 
-  font-weight:
-    700;
+  font-size: 0.86rem;
 
-  text-decoration:
-    none !important;
+  font-weight: 700;
 
-  white-space:
-    nowrap;
+  text-decoration: none !important;
+
+  padding-bottom: 2px;
 }
 
 .arc-news-more:hover {
-  color:
-    #2dd4bf !important;
+  color: #2dd4bf !important;
 }
+
+
+/* ---------------------------------------------------------
+   LIST
+--------------------------------------------------------- */
 
 .arc-news-list {
   border-top:
@@ -257,84 +248,119 @@
 }
 
 .arc-news-item {
-  display:
-    grid;
+  display: grid;
 
   grid-template-columns:
-    92px minmax(0, 1fr);
+    82px minmax(0, 1fr);
 
-  column-gap:
-    1.25rem;
+  column-gap: 1.2rem;
 
-  padding:
-    0.9rem 0;
+  padding: 0.75rem 0;
 
   border-bottom:
-    1px solid rgba(51, 70, 95, 0.68);
+    1px solid rgba(51, 70, 95, 0.58);
 }
+
+.arc-news-item:last-child {
+  border-bottom: 0;
+}
+
+
+/* ---------------------------------------------------------
+   DATE
+--------------------------------------------------------- */
 
 .arc-news-date {
-  color:
-    #5eead4;
+  padding-top: 0.1rem;
 
-  font-size:
-    0.8rem;
+  color: #5eead4;
 
-  font-weight:
-    800;
+  font-size: 0.76rem;
 
-  line-height:
-    1.4;
+  font-weight: 800;
 
-  letter-spacing:
-    0.04em;
+  line-height: 1.35;
 
-  text-transform:
-    uppercase;
+  letter-spacing: 0.045em;
+
+  text-transform: uppercase;
 }
 
+
+/* ---------------------------------------------------------
+   TITLE
+--------------------------------------------------------- */
+
 .arc-news-title {
-  margin:
-    0 0 0.22rem;
+  margin: 0 0 0.12rem;
 
-  color:
-    #d9e8f5;
+  color: #d9e8f5;
 
-  font-size:
-    1rem;
+  font-size: 0.96rem;
 
-  font-weight:
-    700;
+  font-weight: 700;
 
-  line-height:
-    1.45;
+  line-height: 1.4;
 }
 
 .arc-news-title a {
-  color:
-    inherit !important;
+  color: inherit !important;
 
-  text-decoration:
-    none !important;
+  text-decoration: none !important;
 }
 
 .arc-news-title a:hover {
-  color:
-    #7fc8e8 !important;
+  color: #7fc8e8 !important;
+
+  text-decoration: none !important;
 }
 
+
+/* ---------------------------------------------------------
+   DESCRIPTION
+--------------------------------------------------------- */
+
 .arc-news-description {
-  margin:
-    0;
+  margin: 0;
 
-  color:
-    #9aa8bd;
+  color: #9aa8bd;
 
-  font-size:
-    0.88rem;
+  font-size: 0.84rem;
 
-  line-height:
-    1.5;
+  line-height: 1.45;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 650px) {
+
+  .arc-news-section {
+    padding:
+      1.3rem 1.1rem 1rem;
+  }
+
+  .arc-news-header {
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+
+    gap:
+      0.35rem;
+  }
+
+  .arc-news-item {
+    grid-template-columns:
+      68px minmax(0, 1fr);
+
+    column-gap:
+      0.8rem;
+  }
+
 }
 
 
