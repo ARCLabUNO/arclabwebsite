@@ -212,6 +212,8 @@
       {{ end }}
 
 
+      <!-- PUBLICATION CARD -->
+
       <article
         class="pub-card"
         data-topics="{{ delimit ($topics | uniq) "," }}"
@@ -238,6 +240,9 @@
 
         <div class="pub-card-body">
 
+
+          <!-- TITLE -->
+
           <h2 class="pub-card-title">
             <a href="{{ .RelPermalink }}">
               {{ .Title }}
@@ -245,10 +250,14 @@
           </h2>
 
 
+          <!-- AUTHORS -->
+
           <div class="pub-card-authors">
             {{ partial "page_metadata_authors" . }}
           </div>
 
+
+          <!-- JOURNAL + YEAR -->
 
           <p class="pub-card-meta">
 
@@ -264,6 +273,8 @@
           </p>
 
 
+          <!-- SUMMARY -->
+
           {{ with .Params.summary }}
 
             <p class="pub-card-summary">
@@ -273,10 +284,14 @@
           {{ end }}
 
 
+          <!-- CUSTOM LINKS -->
+
           <div class="pub-card-links">
             {{ partial "page_links" (dict "page" . "is_list" 1) }}
           </div>
 
+
+          <!-- READ MORE -->
 
           <div class="pub-card-footer">
 
@@ -288,6 +303,7 @@
             </a>
 
           </div>
+
 
         </div>
 
@@ -327,6 +343,7 @@
   gap: 1rem;
 }
 
+
 .pub-search input {
   width: 100%;
 
@@ -343,9 +360,11 @@
   font-size: 1rem;
 }
 
+
 .pub-search input::placeholder {
   color: #9aa8bd;
 }
+
 
 .pub-search input:focus,
 .pub-topic-select:focus {
@@ -357,6 +376,7 @@
     0 0 0 3px rgba(45, 212, 191, 0.12);
 }
 
+
 .pub-select-wrap {
   display: flex;
   flex-direction: column;
@@ -366,12 +386,14 @@
   max-width: 320px;
 }
 
+
 .pub-select-label {
   color: #d1dce8;
 
   font-size: 0.92rem;
   font-weight: 600;
 }
+
 
 .pub-topic-select {
   padding: 0.8rem 1rem;
@@ -386,6 +408,7 @@
 
   font-size: 0.96rem;
 }
+
 
 .pub-results-count {
   color: #9aa8bd;
@@ -407,6 +430,8 @@
   gap: 2rem;
 
   margin-top: 2rem;
+
+  align-items: stretch;
 }
 
 
@@ -436,6 +461,8 @@
 
   display: flex;
   flex-direction: column;
+
+  height: 100%;
 
   transition:
     transform 0.2s ease,
@@ -467,6 +494,7 @@
   z-index: 2;
 }
 
+
 .pub-card:hover {
   transform: translateY(-4px);
 
@@ -475,6 +503,7 @@
   box-shadow:
     0 14px 32px rgba(0, 0, 0, 0.28);
 }
+
 
 .pub-card.is-hidden {
   display: none;
@@ -491,6 +520,7 @@
   overflow: hidden;
 }
 
+
 .pub-card-image {
   width: 100%;
   height: 220px;
@@ -504,6 +534,7 @@
     filter 0.25s ease;
 }
 
+
 .pub-card-image-link:hover .pub-card-image {
   transform: scale(1.02);
 
@@ -512,7 +543,7 @@
 
 
 /* =================================
-   BODY
+   CARD BODY
 ================================= */
 
 .pub-card-body {
@@ -521,7 +552,7 @@
   display: flex;
   flex-direction: column;
 
-  height: 100%;
+  flex: 1;
 }
 
 
@@ -537,11 +568,13 @@
   margin: 0 0 0.75rem;
 }
 
+
 .pub-card-title a {
   color: #f1f5f9;
 
   text-decoration: none;
 }
+
 
 .pub-card-title a:hover {
   color: #93c5fd;
@@ -562,11 +595,13 @@
   line-height: 1.5;
 }
 
+
 .pub-card-authors a {
   color: #dce6f1;
 
   text-decoration: none;
 }
+
 
 .pub-card-authors a:hover {
   color: #5eead4;
@@ -590,6 +625,7 @@
 
   line-height: 1.5;
 }
+
 
 .pub-dot {
   color: #2dd4bf;
@@ -620,8 +656,9 @@
 ================================= */
 
 .pub-card-links {
-  margin: 0 0 0.65rem;
+  margin: 0 0 0.75rem;
 }
+
 
 .pub-card-links .btn,
 .pub-card-links .btn-page-header,
@@ -658,6 +695,7 @@
     color 0.15s ease;
 }
 
+
 .pub-card-links .btn:hover,
 .pub-card-links .btn-page-header:hover,
 .pub-card-links .btn-links:hover {
@@ -676,9 +714,11 @@
 ================================= */
 
 .pub-card-footer {
-  margin-top: 0;
+  margin-top: auto;
+
   padding-top: 0;
 }
+
 
 .pub-read-more {
   display: inline-flex;
@@ -711,6 +751,7 @@
     box-shadow 0.15s ease;
 }
 
+
 .pub-read-more:hover {
   background: #3d73a8;
 
@@ -740,6 +781,7 @@
 
   text-align: center;
 }
+
 
 .pub-no-results.show {
   display: block;
@@ -786,6 +828,7 @@ document.addEventListener(
     const noResults =
       document.getElementById('pubNoResults');
 
+
     let activeSearch = '';
     let activeTopic = 'all';
 
@@ -793,6 +836,7 @@ document.addEventListener(
     function updateResults() {
 
       let visibleCount = 0;
+
 
       cards.forEach(
         card => {
@@ -806,9 +850,11 @@ document.addEventListener(
               .map(topic => topic.trim())
               .filter(Boolean);
 
+
           const matchesSearch =
             !activeSearch ||
             text.includes(activeSearch);
+
 
           const matchesTopic =
             activeTopic === 'all' ||
