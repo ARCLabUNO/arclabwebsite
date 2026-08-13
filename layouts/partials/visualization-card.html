@@ -4,58 +4,94 @@
 <article class="visualization-card">
 
   {{ if $img }}
-    <a href="{{ $link }}"
-       class="visualization-card-image-link"
-       {{ if .Params.external_link }}target="_blank" rel="noopener"{{ end }}>
+
+    <a
+      href="{{ $link }}"
+      class="visualization-card-image-link"
+      {{ if .Params.external_link }}target="_blank" rel="noopener"{{ end }}
+    >
+
       <img
         src="{{ $img.RelPermalink }}"
         alt="{{ .Title }}"
-        class="visualization-card-image">
+        class="visualization-card-image"
+      >
+
     </a>
+
   {{ end }}
 
-  <div class="visualization-card-body">
 
-    {{ with .Params.label }}
-      <div class="visualization-card-label">
-        {{ . }}
-      </div>
-    {{ end }}
+  {{ with .Params.label }}
 
-    <h2 class="visualization-card-title">
-      <a href="{{ $link }}"
-         {{ if .Params.external_link }}target="_blank" rel="noopener"{{ end }}>
-        {{ .Title }}
-      </a>
-    </h2>
-
-    {{ with .Params.authors }}
-      <p class="visualization-card-authors">
-        {{ . }}
-      </p>
-    {{ end }}
-
-    {{ if or .Params.journal .Params.year }}
-      <p class="visualization-card-publication">
-        {{ with .Params.journal }}<em>{{ . }}</em>{{ end }}
-        {{ if and .Params.journal .Params.year }} ({{ .Params.year }}){{ else }}{{ with .Params.year }}{{ . }}{{ end }}{{ end }}
-      </p>
-    {{ end }}
-
-    {{ with .Params.summary }}
-      <p class="visualization-card-summary">
-        {{ . }}
-      </p>
-    {{ end }}
-
-    <div class="visualization-card-footer">
-      <a href="{{ $link }}"
-         class="visualization-launch"
-         {{ if .Params.external_link }}target="_blank" rel="noopener"{{ end }}>
-        Launch Tool →
-      </a>
+    <div class="visualization-card-label">
+      {{ . }}
     </div>
 
-  </div>
+  {{ end }}
+
+
+  <h2 class="visualization-card-title">
+
+    <a
+      href="{{ $link }}"
+      {{ if .Params.external_link }}target="_blank" rel="noopener"{{ end }}
+    >
+      {{ .Title }}
+    </a>
+
+  </h2>
+
+
+  {{ with .Params.authors }}
+
+    <p class="visualization-card-authors">
+
+      {{ range $i, $author := . }}
+        {{ if $i }}, {{ end }}{{ $author }}
+      {{ end }}
+
+    </p>
+
+  {{ end }}
+
+
+  {{ if or .Params.journal .Params.year }}
+
+    <p class="visualization-card-publication">
+
+      {{ with .Params.journal }}
+        <em>{{ . }}</em>
+      {{ end }}
+
+      {{ if and .Params.journal .Params.year }}
+        ({{ .Params.year }})
+      {{ else }}
+        {{ with .Params.year }}
+          {{ . }}
+        {{ end }}
+      {{ end }}
+
+    </p>
+
+  {{ end }}
+
+
+  {{ with .Params.summary }}
+
+    <p class="visualization-card-summary">
+      {{ . }}
+    </p>
+
+  {{ end }}
+
+
+  <a
+    href="{{ $link }}"
+    class="visualization-launch"
+    {{ if .Params.external_link }}target="_blank" rel="noopener"{{ end }}
+  >
+    Launch Tool →
+  </a>
 
 </article>
