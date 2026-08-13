@@ -5,4 +5,4 @@ banner:
   image: ''
 ---
 
-## Explore ARC Lab research through interactive data tools designed for deeper discovery. Investigate patterns, compare results, and engage with the evidence behind our published work.
+Explore ARC Lab research through interactive data tools designed to make our findings easier to examine and understand. Dive into the data, compare patterns, and explore results from different perspectives beyond the published figures.

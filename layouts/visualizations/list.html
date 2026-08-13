@@ -4,7 +4,7 @@
 
   <h1>{{ .Title }}</h1>
 
-  <p class="visualization-page-intro">
+  <p class="visualizations-page-intro">
     Explore ARC Lab research through interactive data tools designed to make our
     findings easier to examine and understand. Dive into the data, compare
     patterns, and explore results from different perspectives beyond the
@@ -26,7 +26,7 @@
   max-width: 1200px;
 }
 
-.visualization-page-intro {
+.visualizations-page .visualizations-page-intro {
   margin: 0.75rem 0 2.25rem;
   max-width: 760px;
   color: #cbd5e1;
@@ -34,14 +34,14 @@
   line-height: 1.7;
 }
 
-.visualization-card-grid {
+.visualizations-page .visualization-card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 2rem;
   align-items: stretch;
 }
 
-.visualization-card {
+.visualizations-page .visualization-card {
   background: #111827;
   color: #f9fafb;
   border: 1px solid #1f2937;
@@ -52,61 +52,78 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-width: 0;
   height: 100%;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.visualization-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.28);
-}
-
-.visualization-card-image-link {
+.visualizations-page .visualization-card-image-link {
   display: block;
   width: 100%;
 }
 
-.visualization-card-image {
+.visualizations-page .visualization-card-image {
   width: 100%;
   height: 240px;
   object-fit: cover;
   display: block;
 }
 
-.visualization-card-body {
+.visualizations-page .visualization-card-body {
   padding: 1.25rem 1.25rem 1.5rem;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
-.visualization-card-title {
+.visualizations-page .visualization-card-label {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.visualizations-page .visualization-card-title {
   font-size: 1.25rem;
   line-height: 1.35;
   margin: 0 0 0.75rem;
 }
 
-.visualization-card-title a {
+.visualizations-page .visualization-card-title a {
   color: #f9fafb;
   text-decoration: none;
 }
 
-.visualization-card-title a:hover {
+.visualizations-page .visualization-card-title a:hover {
   color: #cbd5e1;
 }
 
-.visualization-card-summary {
+.visualizations-page .visualization-card-authors {
+  color: #dbeafe;
+  margin: 0 0 0.65rem;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.visualizations-page .visualization-card-publication {
+  color: #d1d5db;
+  margin: 0 0 0.9rem;
+  font-size: 0.95rem;
+}
+
+.visualizations-page .visualization-card-summary {
   color: #e5e7eb;
   line-height: 1.6;
-  margin: 0;
+  margin: 0 0 1rem;
 }
 
-.visualization-card-footer {
+.visualizations-page .visualization-card-footer {
   margin-top: auto;
-  padding-top: 1.25rem;
+  padding-top: 0.5rem;
 }
 
-.visualization-launch {
+.visualizations-page .visualization-launch {
   display: inline-block;
   background: #1f3a5f;
   color: #fff !important;
@@ -117,17 +134,23 @@
   font-weight: 600;
 }
 
-.visualization-launch:hover {
+.visualizations-page .visualization-launch:hover {
   background: #162944;
   text-decoration: none;
 }
 
+@media (max-width: 991px) {
+  .visualizations-page .visualization-card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
-  .visualization-card-grid {
+  .visualizations-page .visualization-card-grid {
     grid-template-columns: 1fr;
   }
 
-  .visualization-card-image {
+  .visualizations-page .visualization-card-image {
     height: 220px;
   }
 }

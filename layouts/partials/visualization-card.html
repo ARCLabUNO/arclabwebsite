@@ -16,6 +16,12 @@
 
   <div class="visualization-card-body">
 
+    {{ with .Params.label }}
+      <div class="visualization-card-label">
+        {{ . }}
+      </div>
+    {{ end }}
+
     <h2 class="visualization-card-title">
       <a href="{{ $link }}"
          {{ if .Params.external_link }}target="_blank" rel="noopener"{{ end }}>
@@ -24,16 +30,17 @@
     </h2>
 
     {{ with .Params.authors }}
-      <div class="visualization-card-authors">
+      <p class="visualization-card-authors">
         {{ . }}
-      </div>
+      </p>
     {{ end }}
 
-    <div class="visualization-card-publication">
-      {{ with .Params.journal }}<em>{{ . }}</em>{{ end }}
-      {{ if and .Params.journal .Params.year }} · {{ end }}
-      {{ with .Params.year }}{{ . }}{{ end }}
-    </div>
+    {{ if or .Params.journal .Params.year }}
+      <p class="visualization-card-publication">
+        {{ with .Params.journal }}<em>{{ . }}</em>{{ end }}
+        {{ if and .Params.journal .Params.year }} ({{ .Params.year }}){{ else }}{{ with .Params.year }}{{ . }}{{ end }}{{ end }}
+      </p>
+    {{ end }}
 
     {{ with .Params.summary }}
       <p class="visualization-card-summary">
@@ -45,7 +52,7 @@
       <a href="{{ $link }}"
          class="visualization-launch"
          {{ if .Params.external_link }}target="_blank" rel="noopener"{{ end }}>
-        Explore the visualization →
+        Launch Tool →
       </a>
     </div>
 
