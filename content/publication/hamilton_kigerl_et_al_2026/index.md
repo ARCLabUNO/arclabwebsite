@@ -46,7 +46,8 @@ url_code = ""
   
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-# links = [{name = "Preprint", url="https://www.researchgate.net/publication/362436390_Procedural_justice_legal_orientations_and_gang_membership_Testing_an_alternative_explanation_to_understand_the_gang-misconduct_link", icon = "unlock-alt", icon_pack = "fas"}, {name = "DOI", url="https://doi.org/10.1111/1745-9125.12316"}]
+links = [name = "Data Explorer", url = "/explorers/criminal-history-expiration-date/", icon = "chart-line", icon_pack = "fas"]
+# links = [{name = "DOI", url="https://doi.org/10.1111/1745-9125.12316", icon = "unlock-alt", icon_pack = "fas"}]
   
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder.
