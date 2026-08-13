@@ -1,170 +1,512 @@
 <style>
+
+/* =================================
+   TRAINING MODULES
+================================= */
+
 .training-container {
   max-width: 1200px;
+
   margin: 2rem auto;
+
   padding: 0 1rem;
 }
 
+
+.training-container > h2 {
+  color: #f1f5f9;
+
+  margin-bottom: 1.25rem;
+}
+
+
+/* =================================
+   GRID
+================================= */
+
 .training-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(320px, 1fr));
+
   gap: 2rem;
+
   margin-top: 2rem;
+
+  align-items: stretch;
 }
+
+
+/* =================================
+   CARD
+================================= */
 
 .training-card {
-  background: #111827;
-  color: #f9fafb;
-  border-radius: 10px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  background:
+    linear-gradient(
+      145deg,
+      #1a2940 0%,
+      #0f1622 100%
+    );
+
+  color: #f1f5f9;
+
+  border-radius: 12px;
+
   padding: 2rem;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  border: 1px solid #1f2937;
-  border-top: 4px solid #1f3a5f;
+
+  border: 1px solid #33465f;
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.18);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
+
+
+/* BLUE → TEAL ARC ACCENT */
+
+.training-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #3b82f6 0%,
+      #2dd4bf 100%
+    );
+}
+
 
 .training-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+  transform: translateY(-5px);
+
+  border-color: #526b89;
+
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.28);
 }
 
+
+/* =================================
+   SERIES LABEL
+================================= */
+
 .training-label {
-  display: inline-block;
-  margin-bottom: 0.75rem;
-  padding: 0.35rem 0.7rem;
-  font-size: 0.85rem;
-  font-weight: 600;
+  display: inline-flex;
+
+  align-items: center;
+
+  align-self: flex-start;
+
+  margin-bottom: 0.85rem;
+
+  padding: 0.38rem 0.7rem;
+
+  font-size: 0.78rem;
+
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  letter-spacing: 0.05em;
+
+  text-transform: uppercase;
+
   border-radius: 999px;
 }
 
-/* Label Variants */
+
+/* =================================
+   ONGOING SERIES
+================================= */
+
 .training-label.ongoing {
-  color: #dbeafe;
-  background: #1e3a8a;
+  color: #5eead4;
+
+  background:
+    rgba(45, 212, 191, 0.12);
+
+  border:
+    1px solid rgba(45, 212, 191, 0.55);
+
+  box-shadow:
+    0 0 12px rgba(45, 212, 191, 0.06);
 }
+
+
+/* =================================
+   UPCOMING SERIES
+================================= */
 
 .training-label.upcoming {
-  color: #9ca3af;
-  background: #1f2937;
+  color: #b7c4d5;
+
+  background:
+    rgba(148, 163, 184, 0.10);
+
+  border:
+    1px solid rgba(148, 163, 184, 0.28);
 }
 
-/* Hidden cards */
+
+/* =================================
+   HIDDEN CARDS
+================================= */
+
 .hidden-series {
   display: none;
 }
 
+
+/* =================================
+   TITLE
+================================= */
+
 .training-card h3 {
+  margin:
+    0 0 0.35rem;
+
+  color: #f1f5f9;
+
   font-size: 1.5rem;
-  margin-bottom: 0.25rem;
-  color: #f9fafb;
+
+  font-weight: 800;
+
+  line-height: 1.3;
 }
+
+
+/* =================================
+   AUTHOR
+================================= */
 
 .training-author {
-  font-size: 0.9rem;
-  color: #9ca3af;
-  margin-bottom: 0.75rem;
+  margin:
+    0 0 0.85rem;
+
+  color: #7fc8e8 !important;
+
+  font-size: 0.9rem !important;
+
+  font-weight: 600;
+
+  line-height: 1.5;
 }
+
+
+/* =================================
+   DESCRIPTION
+================================= */
 
 .training-card p {
-  color: #d1d5db;
-  line-height: 1.6;
-  margin-bottom: 1rem;
+  color: #c3cfdd;
+
+  line-height: 1.65;
+
+  margin-bottom: 1.25rem;
+
+  font-size: 0.98rem;
 }
+
+
+/*
+The author rule comes after the general paragraph
+styling so it retains the blue accent.
+*/
+
+.training-card .training-author {
+  color: #7fc8e8;
+}
+
+
+/* =================================
+   BUTTON
+================================= */
 
 .training-link {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: #1f3a5f;
-  color: #ffffff !important;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 500;
-  transition: background 0.25s ease;
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  align-self: flex-start;
+
+  margin-top: auto;
+
+  padding:
+    0.65rem 1rem;
+
+  background:
+    #315f8f;
+
+  color:
+    #ffffff !important;
+
+  border:
+    1px solid #4e7eae;
+
+  border-radius:
+    5px;
+
+  font-size:
+    0.9rem;
+
+  font-weight:
+    800;
+
+  line-height:
+    1.2;
+
+  text-decoration:
+    none !important;
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.16);
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
+
 
 .training-link:hover {
-  background: #162944;
+  background:
+    #3d73a8;
+
+  border-color:
+    #69a0d2;
+
+  color:
+    #ffffff !important;
+
+  text-decoration:
+    none !important;
+
+  transform:
+    translateY(-1px);
+
+  box-shadow:
+    0 5px 12px rgba(0, 0, 0, 0.22);
 }
 
-/* Responsive */
+
+/* =================================
+   REMOVE LINK UNDERLINES
+================================= */
+
+.training-container a,
+.training-container a:hover,
+.training-container a:focus,
+.training-container a:active {
+  text-decoration: none !important;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
 @media (max-width: 768px) {
+
   .training-card {
     padding: 1.5rem;
   }
+
 }
+
 </style>
 
+
 <div class="training-container">
-  <h2>Current Series</h2>
+
+  <h2>
+    Current Series
+  </h2>
+
 
   <div class="training-grid">
 
-    <!-- #1 Ongoing -->
+
+    <!-- =================================
+         #1 FOUNDATIONS
+    ================================= -->
+
     <div class="training-card">
-      <span class="training-label ongoing">Ongoing Series</span>
-      <h3>Lessons in Risk - Foundations</h3>
-      <p class="training-author">Developed by Dr. Zachary Hamilton</p>
+
+      <span class="training-label ongoing">
+        Ongoing Series
+      </span>
+
+      <h3>
+        Lessons in Risk - Foundations
+      </h3>
+
+      <p class="training-author">
+        Developed by Dr. Zachary Hamilton
+      </p>
+
       <p>
         An introduction to what risk scores are, how they are constructed,
         and the foundational concepts needed to interpret them correctly.
       </p>
-      <a href="/training-modules/lessons-in-risk-foundations/" class="training-link">
+
+      <a
+        href="/training-modules/lessons-in-risk-foundations/"
+        class="training-link"
+      >
         Explore the Series
       </a>
+
     </div>
 
-    <!-- #2 -->
+
+    <!-- =================================
+         #2 MEASUREMENT
+    ================================= -->
+
     <div class="training-card">
-      <span class="training-label ongoing">Ongoing Series</span>
-      <h3>Lessons in Risk - Measurement &amp; Performance</h3>
-      <p class="training-author">Developed by Dr. Zachary Hamilton</p>
+
+      <span class="training-label ongoing">
+        Ongoing Series
+      </span>
+
+      <h3>
+        Lessons in Risk - Measurement &amp; Performance
+      </h3>
+
+      <p class="training-author">
+        Developed by Dr. Zachary Hamilton
+      </p>
+
       <p>
         A focused look at how risk tools are evaluated and what common performance metrics
         do (and do not) tell you.
       </p>
-      <a href="/training-modules/lessons-in-risk-measurement/" class="training-link">
+
+      <a
+        href="/training-modules/lessons-in-risk-measurement/"
+        class="training-link"
+      >
         Explore the Series
       </a>
+
     </div>
 
-    <!-- #3 -->
+
+    <!-- =================================
+         #3 APPLICATION
+    ================================= -->
+
     <div class="training-card">
-      <span class="training-label ongoing">Ongoing Series</span>
-      <h3>Lessons in Risk - Application &amp; Decision-Making</h3>
-      <p class="training-author">Developed by Dr. Zachary Hamilton</p>
+
+      <span class="training-label ongoing">
+        Ongoing Series
+      </span>
+
+      <h3>
+        Lessons in Risk - Application &amp; Decision-Making
+      </h3>
+
+      <p class="training-author">
+        Developed by Dr. Zachary Hamilton
+      </p>
+
       <p>
         Examines how risk information is used in practice, including supervision,
         programming decisions, reassessment, and the role of thresholds in real-world contexts.
       </p>
-      <a href="/training-modules/lessons-in-risk-application/" class="training-link">
+
+      <a
+        href="/training-modules/lessons-in-risk-application/"
+        class="training-link"
+      >
         Explore the Series
       </a>
+
     </div>
 
-    <!-- #4 -->
+
+    <!-- =================================
+         #4 THEORY
+    ================================= -->
+
     <div class="training-card">
-      <span class="training-label ongoing">Ongoing Series</span>
-      <h3>Lessons in Risk - Theory &amp; Dynamics</h3>
-      <p class="training-author">Developed by Dr. Zachary Hamilton</p>
+
+      <span class="training-label ongoing">
+        Ongoing Series
+      </span>
+
+      <h3>
+        Lessons in Risk - Theory &amp; Dynamics
+      </h3>
+
+      <p class="training-author">
+        Developed by Dr. Zachary Hamilton
+      </p>
+
       <p>
         Explores the theoretical structure behind risk tools, including latent constructs,
         domain relationships, and how risk—and pathways—change over time.
       </p>
-      <a href="/training-modules/lessons-in-risk-theory/" class="training-link">
+
+      <a
+        href="/training-modules/lessons-in-risk-theory/"
+        class="training-link"
+      >
         Explore the Series
       </a>
+
     </div>
 
-    <!-- #5 -->
+
+    <!-- =================================
+         #5 ADVANCED
+    ================================= -->
+
     <div class="training-card">
-      <span class="training-label upcoming">Upcoming Series</span>
-      <h3>Lessons in Risk - Advanced Topics</h3>
-      <p class="training-author">Developed by Dr. Zachary Hamilton</p>
+
+      <span class="training-label upcoming">
+        Upcoming Series
+      </span>
+
+      <h3>
+        Lessons in Risk - Advanced Topics
+      </h3>
+
+      <p class="training-author">
+        Developed by Dr. Zachary Hamilton
+      </p>
+
       <p>
         Covers advanced issues in tool development and use, including bias, fairness,
         generalizability, and the challenges of applying risk assessment across populations.
       </p>
+
     </div>
 
+
   </div>
+
 </div>
