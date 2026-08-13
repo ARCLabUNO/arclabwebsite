@@ -61,17 +61,37 @@ sections:
       title:
       subtitle: ''
       text: |
-        <div style="text-align:center; max-width:950px; margin:0 auto;">
+        <div class="arc-team-section">
+
           <h2>The ARC Lab Team</h2>
-          <img src="/media/homyphoto_edited2.jpg" alt="ARC Lab group photo" style="max-width:850px; width:100%; height:auto; border-radius:12px; display:block; margin:1.5rem auto;">
 
-          <p>
-            ARC brings together faculty, research staff, and graduate researchers working on shared questions about correctional policy, practice, and outcomes. The lab operates as a collaborative research environment where projects are developed, analyzed, and carried forward across teams.
-          </p>
+          <div class="arc-team-layout">
 
-          <p>
-            Lab members contribute to ongoing research, engage with applied data, and participate in work that connects academic research to policy and practice in corrections.
-          </p>
+            <div class="arc-team-photo">
+              <img
+                src="/media/homyphoto_edited2.jpg"
+                alt="ARC Lab group photo"
+              >
+            </div>
+
+            <div class="arc-team-copy">
+
+              <p>
+                ARC brings together faculty, research staff, and graduate researchers working on shared questions about correctional policy, practice, and outcomes. The lab operates as a collaborative research environment where projects are developed, analyzed, and carried forward across teams.
+              </p>
+
+              <p>
+                Lab members contribute to ongoing research, engage with applied data, and participate in work that connects academic research to policy and practice in corrections.
+              </p>
+
+              <a href="/people/" class="arc-editorial-link">
+                Meet the team →
+              </a>
+
+            </div>
+
+          </div>
+
         </div>
     design:
       columns: '1'
