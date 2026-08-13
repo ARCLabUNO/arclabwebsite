@@ -46,7 +46,23 @@
 
   {{ with .Params.authors }}
 
-    <p class="visualization-card-authors">{{ delimit . ", " }}</p>
+    <p class="visualization-card-authors">
+
+      {{ range $i, $author := . }}
+
+        {{ if $i }}, {{ end }}
+
+        {{ $person := site.GetPage (printf "/authors/%s" $author) }}
+
+        {{ with $person }}
+          {{ .Title }}
+        {{ else }}
+          {{ $author }}
+        {{ end }}
+
+      {{ end }}
+
+    </p>
 
   {{ end }}
 
