@@ -46,13 +46,7 @@
 
   {{ with .Params.authors }}
 
-    <p class="visualization-card-authors">
-
-      {{ range $i, $author := . }}
-        {{ if $i }}, {{ end }}{{ $author }}
-      {{ end }}
-
-    </p>
+    <p class="visualization-card-authors">{{ delimit . ", " }}</p>
 
   {{ end }}
 
