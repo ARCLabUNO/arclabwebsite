@@ -1,20 +1,20 @@
 <style>
 
-/* =========================================================
-   ARC LAB PEOPLE PAGE
+/* =========================================
+   ARC LAB — PEOPLE
    Editorial / minimal treatment
-========================================================= */
+========================================= */
 
 
-/* ---------------------------------------------------------
+/* -----------------------------------------
    GROUP HEADINGS
---------------------------------------------------------- */
+----------------------------------------- */
 
 .people-widget > .col-md-12 h2 {
   position: relative;
 
-  margin-bottom: 1.4rem !important;
-  padding-bottom: 0.55rem;
+  margin-bottom: 1.45rem !important;
+  padding-bottom: 0.7rem;
 
   color: #f1f5f9;
 
@@ -23,175 +23,234 @@
   line-height: 1.2;
 
   letter-spacing: -0.01em;
+
+  text-align: center;
 }
 
 
-/* short editorial rule */
+/* centered editorial rule */
 
 .people-widget > .col-md-12 h2::after {
   content: "";
 
   position: absolute;
 
-  left: 0;
+  left: 50%;
   bottom: 0;
 
-  width: 42px;
+  width: 38px;
   height: 2px;
 
+  transform: translateX(-50%);
+
   background: #2dd4bf;
+
+  border-radius: 999px;
 }
 
 
-/* ---------------------------------------------------------
+/* -----------------------------------------
    PERSON
-   No card. No background. No border.
---------------------------------------------------------- */
+----------------------------------------- */
 
 .people-widget .people-person {
+  position: relative;
+
   background: transparent !important;
   border: 0 !important;
   box-shadow: none !important;
 
-  transition: none;
-}
-
-
-/* ---------------------------------------------------------
-   PORTRAIT
---------------------------------------------------------- */
-
-.people-widget .people-person .avatar {
-  width: 180px !important;
-  height: 180px !important;
-
-  object-fit: cover;
-
-  /*
-    Very subtle dark edge.
-    This separates pale portraits from the page
-    without turning the image into a graphic.
-  */
-  border: 2px solid rgba(0, 0, 0, 0.55);
-
-  box-shadow:
-    0 5px 14px rgba(0, 0, 0, 0.22);
-
   transition:
-    box-shadow 0.2s ease,
     transform 0.2s ease;
 }
 
+.people-widget .people-person:hover {
+  transform: translateY(-3px);
+}
 
-/* extremely restrained hover */
 
-.people-widget .people-person:hover .avatar {
-  transform: translateY(-2px);
+/* -----------------------------------------
+   PORTRAIT
+----------------------------------------- */
+
+.people-widget .people-person .avatar {
+  display: block;
+
+  width: 180px !important;
+  height: 180px !important;
+
+  aspect-ratio: 1 / 1;
+
+  margin:
+    0 auto 1rem;
+
+  object-fit: cover;
+
+  border-radius: 50% !important;
+
+  border: 2px solid rgba(0, 0, 0, 0.6);
 
   box-shadow:
-    0 7px 18px rgba(0, 0, 0, 0.28);
+    0 5px 14px rgba(0, 0, 0, 0.28);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 
-/* ---------------------------------------------------------
+/* subtle hover */
+
+.people-widget .people-person:hover .avatar {
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.34);
+}
+
+
+/* -----------------------------------------
    NAME
---------------------------------------------------------- */
+----------------------------------------- */
 
 .people-widget .portrait-title h2 {
-  margin: 0.8rem 0 0.2rem;
+  margin:
+    0 0 0.28rem;
 
-  color: #f1f5f9;
+  color:
+    #d9e8f5;
 
-  font-size: 1.16rem;
-  font-weight: 700;
-  line-height: 1.25;
+  font-size:
+    1.18rem;
 
-  letter-spacing: -0.01em;
+  font-weight:
+    700;
+
+  line-height:
+    1.25;
+
+  letter-spacing:
+    -0.01em;
 }
-
 
 .people-widget .portrait-title h2 a {
-  color: #f1f5f9 !important;
+  color:
+    #d9e8f5 !important;
 
-  text-decoration: none !important;
+  text-decoration:
+    none !important;
 }
-
 
 .people-widget .portrait-title h2 a:hover {
-  color: #ffffff !important;
+  color:
+    #f1f5f9 !important;
 
-  text-decoration: none !important;
+  text-decoration:
+    none !important;
 }
 
 
-/* ---------------------------------------------------------
+/* -----------------------------------------
    ROLE
---------------------------------------------------------- */
+----------------------------------------- */
 
 .people-widget .portrait-title h3 {
-  margin: 0;
+  margin:
+    0;
 
-  color: #8fa9c3;
+  color:
+    #8fa9c3;
 
-  font-size: 0.88rem;
-  font-weight: 400;
-  line-height: 1.45;
+  font-size:
+    0.88rem;
+
+  font-weight:
+    400;
+
+  line-height:
+    1.45;
 }
 
 
-/* ---------------------------------------------------------
+/* -----------------------------------------
    SOCIAL LINKS
---------------------------------------------------------- */
+----------------------------------------- */
 
 .people-widget .network-icon {
-  margin-top: 0.65rem;
-}
+  margin:
+    0.65rem 0 0;
 
+  padding:
+    0;
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    0.3rem;
+}
 
 .people-widget .network-icon li {
-  margin-right: 0.15rem;
+  margin:
+    0 !important;
+
+  padding:
+    0 !important;
 }
 
-
 .people-widget .network-icon a {
-  color: #7f8b99 !important;
+  color:
+    #7f8b99 !important;
 
-  text-decoration: none !important;
+  text-decoration:
+    none !important;
 
   transition:
     color 0.15s ease,
     opacity 0.15s ease;
 }
 
-
 .people-widget .network-icon a:hover {
-  color: #2dd4bf !important;
+  color:
+    #2dd4bf !important;
 
-  text-decoration: none !important;
+  text-decoration:
+    none !important;
 }
 
 
-/* ---------------------------------------------------------
-   REMOVE THEME LINK DECORATION
---------------------------------------------------------- */
+/* -----------------------------------------
+   REMOVE GLOBAL LINK DECORATION
+----------------------------------------- */
 
 .people-widget a,
 .people-widget a:hover,
 .people-widget a:focus,
 .people-widget a:active {
-  text-decoration: none !important;
+  text-decoration:
+    none !important;
 }
 
 
-/* ---------------------------------------------------------
+/* -----------------------------------------
    MOBILE
---------------------------------------------------------- */
+----------------------------------------- */
 
 @media (max-width: 768px) {
 
   .people-widget .people-person .avatar {
-    width: 165px !important;
-    height: 165px !important;
+    width:
+      165px !important;
+
+    height:
+      165px !important;
   }
 
 }
