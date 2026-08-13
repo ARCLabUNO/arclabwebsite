@@ -1,0 +1,158 @@
+{{- define "main" -}}
+
+{{/* =========================================================
+     AUTHOR PROFILE PAGE
+========================================================= */}}
+
+{{ if not .File }}
+
+<div class="universal-wrapper pt-3">
+
+  <h1>
+    {{ .Title }}
+  </h1>
+
+</div>
+
+{{ end }}
+
+
+<section id="profile-page" class="pt-5">
+
+  <div class="container">
+
+
+    {{/* =====================================================
+         PROFILE / ABOUT BLOCK
+    ===================================================== */}}
+
+    {{ if .File }}
+
+      {{ $widget := "blocks/v1/about.html" }}
+      {{ $username := path.Base .File.Dir }}
+
+      {{ $params := dict
+        "wcPage" $
+        "wcBlock" .
+        "author" $username
+      }}
+
+      {{ partial $widget $params }}
+
+    {{ end }}
+
+
+    {{/* =====================================================
+         LATEST / SELECTED WORK
+
+         Show a maximum of 10 items, newest first.
+    ===================================================== */}}
+
+    {{ $query := where .Pages ".IsNode" false }}
+    {{ $query = $query.ByDate.Reverse }}
+
+    {{ $latest := first 10 $query }}
+
+
+    {{ if gt (len $latest) 0 }}
+
+      <div class="article-widget content-widget-hr author-latest">
+
+        <h3>
+          Latest
+        </h3>
+
+
+        <div class="author-latest-list">
+
+          {{ range $latest }}
+
+            <article class="author-latest-item">
+
+
+              {{/* YEAR */}}
+
+              <div class="author-latest-year">
+                {{ .Date.Format "2006" }}
+              </div>
+
+
+              {{/* MAIN CONTENT */}}
+
+              <div class="author-latest-content">
+
+
+                {{/* TITLE */}}
+
+                <a
+                  href="{{ .RelPermalink }}"
+                  class="author-latest-title"
+                >
+                  {{ .Title }}
+                </a>
+
+
+                {{/* PUBLICATION / JOURNAL / TYPE */}}
+
+                <div class="author-latest-meta">
+
+
+                  {{ with .Params.publication }}
+
+                    <span class="author-latest-journal">
+                      {{ . | markdownify }}
+                    </span>
+
+
+                  {{ else with .Params.journal }}
+
+                    <span class="author-latest-journal">
+                      <em>{{ . }}</em>
+                    </span>
+
+
+                  {{ else }}
+
+                    {{ if eq .Type "project" }}
+
+                      <span class="author-latest-type">
+                        Project
+                      </span>
+
+                    {{ else if eq .Type "post" }}
+
+                      <span class="author-latest-type">
+                        News
+                      </span>
+
+                    {{ else }}
+
+                      <span class="author-latest-type">
+                        {{ .Type | title }}
+                      </span>
+
+                    {{ end }}
+
+                  {{ end }}
+
+                </div>
+
+
+              </div>
+
+            </article>
+
+          {{ end }}
+
+        </div>
+
+      </div>
+
+    {{ end }}
+
+  </div>
+
+</section>
+
+
+{{- end -}}
