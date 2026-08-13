@@ -1,81 +1,260 @@
 <style>
+
+/* =================================
+   LEARNING HUB
+================================= */
+
 .learning-hub-container {
   max-width: 1200px;
+
   margin: 2rem auto;
+
   padding: 0 1rem;
 }
 
+
 .learning-hub-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
   gap: 2rem;
+
   margin-top: 2rem;
 }
 
+
+/* =================================
+   CARD
+================================= */
+
 .learning-card {
-  background: #111827;
-  color: #f9fafb;
-  border-radius: 10px;
+  position: relative;
+
+  background:
+    linear-gradient(
+      145deg,
+      #1a2940 0%,
+      #0f1622 100%
+    );
+
+  color: #f1f5f9;
+
+  border-radius: 12px;
+
   padding: 2rem;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  border: 1px solid #1f2937;
-  border-top: 4px solid #1f3a5f;
+
+  border: 1px solid #33465f;
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
   display: flex;
+
   flex-direction: column;
+
   justify-content: space-between;
+
+  overflow: hidden;
 }
 
-.learning-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+
+/* BLUE → TEAL ACCENT */
+
+.learning-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #3b82f6 0%,
+      #2dd4bf 100%
+    );
 }
+
+
+.learning-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #526b89;
+
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.28);
+}
+
+
+/* =================================
+   TITLE
+================================= */
 
 .learning-card h3 {
   font-size: 1.4rem;
+
   margin-bottom: 0.75rem;
-  color: #f9fafb;
+
+  color: #f1f5f9;
+
+  font-weight: 800;
+
+  line-height: 1.3;
 }
 
+
+/* =================================
+   DESCRIPTION
+================================= */
+
 .learning-card p {
-  color: #d1d5db;
+  color: #c3cfdd;
+
   line-height: 1.6;
+
   margin-bottom: 1.5rem;
 }
 
+
+/* =================================
+   LINK BUTTON
+================================= */
+
 .learning-link {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: #1f3a5f;
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.65rem 1rem;
+
+  background: #315f8f;
+
   color: #ffffff !important;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 500;
-  transition: background 0.25s ease;
+
+  border:
+    1px solid #4e7eae;
+
+  text-decoration: none !important;
+
+  border-radius: 5px;
+
+  font-weight: 800;
+
+  font-size: 0.9rem;
+
+  line-height: 1.2;
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.16);
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
+
 
 .learning-link:hover {
-  background: #162944;
+  background: #3d73a8;
+
+  border-color: #69a0d2;
+
+  color: #ffffff !important;
+
+  text-decoration: none !important;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 5px 12px rgba(0, 0, 0, 0.22);
 }
 
+
+/* =================================
+   COMING SOON
+================================= */
+
 .learning-badge {
-  display: inline-block;
+  display: inline-flex;
+
+  align-items: center;
+
   margin-top: 0.5rem;
-  padding: 0.35rem 0.7rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #d1d5db;
-  background: #1f2937;
+
+  padding: 0.38rem 0.7rem;
+
+  font-size: 0.78rem;
+
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  letter-spacing: 0.05em;
+
+  text-transform: uppercase;
+
+  color: #5eead4;
+
+  background:
+    rgba(45, 212, 191, 0.12);
+
+  border:
+    1px solid rgba(45, 212, 191, 0.55);
+
   border-radius: 999px;
 }
 
+
+/* =================================
+   DISABLED LINK
+================================= */
+
 .learning-link.disabled {
   background: #374151;
+
+  border-color: #4b5563;
+
+  color: #9ca3af !important;
+
   cursor: default;
+
   pointer-events: none;
+
+  box-shadow: none;
 }
 
+
+/* =================================
+   REMOVE UNDERLINES
+================================= */
+
+.learning-hub-container a,
+.learning-hub-container a:hover,
+.learning-hub-container a:focus,
+.learning-hub-container a:active {
+  text-decoration: none !important;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
 @media (max-width: 992px) {
+
   .learning-hub-grid {
     grid-template-columns: 1fr;
   }
@@ -83,50 +262,104 @@
   .learning-card {
     padding: 1.5rem;
   }
+
 }
+
 </style>
 
+
 <div class="learning-hub-container">
+
   <div class="learning-hub-grid">
 
+
+    <!-- TRAINING MODULES -->
+
     <div class="learning-card">
+
       <div>
-        <h3>Training Modules</h3>
+
+        <h3>
+          Training Modules
+        </h3>
+
         <p>
           Short, focused modules on corrections-related topics, including risk assessment
           and applied research concepts.
         </p>
+
       </div>
+
       <div>
-        <a href="/training-modules/" class="learning-link">Explore Training Modules</a>
+
+        <a
+          href="/training-modules/"
+          class="learning-link"
+        >
+          Explore Training Modules
+        </a>
+
       </div>
+
     </div>
 
+
+    <!-- PODCAST SEARCH -->
+
     <div class="learning-card">
+
       <div>
-        <h3>Podcast Search</h3>
+
+        <h3>
+          Podcast Search
+        </h3>
+
         <p>
           A searchable tool for instructors and students to find podcast episodes and discussions
           relevant to corrections, reentry, and criminal justice topics.
         </p>
+
       </div>
+
       <div>
-        <span class="learning-badge">Coming Soon</span>
+
+        <span class="learning-badge">
+          Coming Soon
+        </span>
+
       </div>
+
     </div>
 
+
+    <!-- READING LISTS -->
+
     <div class="learning-card">
+
       <div>
-        <h3>Reading Lists</h3>
+
+        <h3>
+          Reading Lists
+        </h3>
+
         <p>
           Curated reading lists for instructors, students, and practitioners, organized around
           key topics in corrections, justice, and reentry.
         </p>
+
       </div>
+
       <div>
-        <span class="learning-badge">Coming Soon</span>
+
+        <span class="learning-badge">
+          Coming Soon
+        </span>
+
       </div>
+
     </div>
 
+
   </div>
+
 </div>
