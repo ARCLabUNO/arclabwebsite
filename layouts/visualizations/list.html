@@ -21,9 +21,7 @@
 
 <style>
 
-/* --------------------------------
-   PAGE
--------------------------------- */
+/* PAGE */
 
 .visualizations-page {
   max-width: 1200px;
@@ -35,22 +33,18 @@
   max-width: 800px;
   margin: 0.75rem 0 2.75rem;
 
-  color: #475569;
+  color: #cbd5e1;
 
   font-size: 1.05rem;
   line-height: 1.7;
 }
 
 
-/* --------------------------------
-   GRID
--------------------------------- */
+/* GRID */
 
 .visualization-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
   gap: 2.5rem;
 
@@ -59,9 +53,7 @@
 }
 
 
-/* --------------------------------
-   CARD
--------------------------------- */
+/* CARD */
 
 .visualization-card {
   display: flex;
@@ -70,15 +62,15 @@
   min-width: 0;
   height: 100%;
 
-  background: #ffffff;
+  background: #172235;
 
-  border: 1px solid #d6dce4;
+  border: 1px solid #34445c;
   border-radius: 10px;
 
   padding: 1.5rem;
 
   box-shadow:
-    0 4px 14px rgba(15, 23, 42, 0.08);
+    0 6px 18px rgba(0, 0, 0, 0.22);
 
   transition:
     transform 0.2s ease,
@@ -89,22 +81,19 @@
 .visualization-card:hover {
   transform: translateY(-3px);
 
-  border-color: #b8c2cf;
+  border-color: #52647d;
 
   box-shadow:
-    0 10px 25px rgba(15, 23, 42, 0.13);
+    0 10px 28px rgba(0, 0, 0, 0.3);
 }
 
 
-/* --------------------------------
-   THUMBNAIL
--------------------------------- */
+/* THUMBNAIL */
 
 .visualization-card-image-link {
   display: block;
 
   width: 100%;
-
   margin-bottom: 1.3rem;
 
   overflow: hidden;
@@ -123,15 +112,12 @@
   transition: transform 0.25s ease;
 }
 
-.visualization-card-image-link:hover
-.visualization-card-image {
+.visualization-card-image-link:hover .visualization-card-image {
   transform: scale(1.015);
 }
 
 
-/* --------------------------------
-   PUBLICATION LABEL
--------------------------------- */
+/* PUBLICATION LABEL */
 
 .visualization-card-label {
   display: inline-block;
@@ -140,9 +126,10 @@
   margin: 0 0 0.9rem;
   padding: 0.45rem 0.72rem;
 
-  background: #1f4e79;
+  background: #315f8f;
   color: #ffffff;
 
+  border: 1px solid #4777a8;
   border-radius: 3px;
 
   font-size: 0.78rem;
@@ -154,14 +141,12 @@
 }
 
 
-/* --------------------------------
-   TITLE
--------------------------------- */
+/* TITLE */
 
 .visualization-card-title {
   margin: 0 0 0.7rem;
 
-  color: #172033;
+  color: #ffffff;
 
   font-size: 1.4rem;
   font-weight: 700;
@@ -169,60 +154,52 @@
 }
 
 .visualization-card-title a {
-  color: inherit;
+  color: #ffffff;
   text-decoration: none;
 }
 
 .visualization-card-title a:hover {
-  color: #1f4e79;
+  color: #b9d6f2;
 }
 
 
-/* --------------------------------
-   AUTHORS
--------------------------------- */
+/* AUTHORS */
 
 .visualization-card-authors {
   margin: 0 0 0.45rem;
 
-  color: #334155;
+  color: #dbe4ef;
 
   font-size: 0.96rem;
   line-height: 1.5;
 }
 
 
-/* --------------------------------
-   JOURNAL
--------------------------------- */
+/* JOURNAL */
 
 .visualization-card-publication {
   margin: 0 0 1rem;
 
-  color: #64748b;
+  color: #aebdce;
 
   font-size: 0.94rem;
   line-height: 1.5;
 }
 
 
-/* --------------------------------
-   DESCRIPTION
--------------------------------- */
+/* DESCRIPTION */
 
 .visualization-card-summary {
   margin: 0 0 1.4rem;
 
-  color: #475569;
+  color: #cbd5e1;
 
   font-size: 0.98rem;
   line-height: 1.65;
 }
 
 
-/* --------------------------------
-   BUTTON AREA
--------------------------------- */
+/* BUTTON AREA */
 
 .visualization-card-footer {
   margin-top: auto;
@@ -230,9 +207,7 @@
 }
 
 
-/* --------------------------------
-   LAUNCH BUTTON
--------------------------------- */
+/* LAUNCH BUTTON */
 
 .visualization-launch {
   display: inline-flex;
@@ -245,7 +220,7 @@
   background: #2e7d5b;
   color: #ffffff !important;
 
-  border: 1px solid #2e7d5b;
+  border: 1px solid #3d9970;
   border-radius: 5px;
 
   font-size: 0.92rem;
@@ -261,8 +236,8 @@
 }
 
 .visualization-launch:hover {
-  background: #1f5c42;
-  border-color: #1f5c42;
+  background: #3a946d;
+  border-color: #4bab80;
 
   color: #ffffff !important;
 
@@ -272,9 +247,7 @@
 }
 
 
-/* --------------------------------
-   MOBILE
--------------------------------- */
+/* MOBILE */
 
 @media (max-width: 768px) {
 
