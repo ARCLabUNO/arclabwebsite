@@ -396,52 +396,49 @@
    HOMEPAGE — RESEARCH & COLLABORATION
 ========================================================= */
 
-.arc-collaboration-section {
+.arc-collab-section {
   max-width: 950px;
   margin: 0 auto;
 }
 
-.arc-collaboration-section > h2 {
-  text-align: center;
-  margin-bottom: 1.75rem;
+.arc-collab-section h2 {
+  position: relative;
+  display: inline-block;
+
+  margin-bottom: 1.5rem;
+
+  color: #d9e8f5;
 }
 
-.arc-collaboration-copy {
+.arc-collab-copy {
   max-width: 800px;
 
   margin: 0 auto;
 
-  padding-left: 1.4rem;
+  padding-left: 1.35rem;
 
   border-left: 2px solid #2dd4bf;
 
   text-align: left;
 }
 
-.arc-collaboration-copy p {
+.arc-collab-copy p {
   margin: 0 0 1rem;
+
+  color: #c3cfdd;
 
   line-height: 1.75;
 }
 
-.arc-collaboration-copy p:last-child {
+.arc-collab-copy p:last-child {
   margin-bottom: 0;
 }
 
-.arc-collaboration-copy a {
+.arc-collab-copy a {
   color: #7fc8e8 !important;
   text-decoration: none !important;
 }
 
-.arc-collaboration-copy a:hover {
+.arc-collab-copy a:hover {
   color: #2dd4bf !important;
-  text-decoration: none !important;
-}
-
-@media (max-width: 650px) {
-
-  .arc-collaboration-copy {
-    padding-left: 1rem;
-  }
-
 }
