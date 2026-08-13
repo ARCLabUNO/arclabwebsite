@@ -1,57 +1,384 @@
 <section class="study-section">
+
   <div class="study-section-inner">
+
     <h2>What We Study</h2>
 
+    <div class="study-heading-rule"></div>
+
     <p class="study-intro">
-      ARC focuses on key areas within corrections, with an emphasis on applied research:
+      ARC examines correctional systems, policies, and practices through
+      applied and theoretically informed research.
     </p>
+
 
     <div class="study-grid">
 
-      <div class="study-card">
-        <h3>Criminological Theory</h3>
-        <p>Theoretical perspectives that help explain behavior, institutional dynamics, and system change.</p>
+
+      <!-- =================================
+           MISCONDUCT & RECIDIVISM
+      ================================= -->
+
+      <div class="study-item">
+
+        <div>
+
+          <h3>
+            Misconduct &amp; Recidivism
+          </h3>
+
+          <p>
+            Examining misconduct, reoffending, and the individual,
+            institutional, and contextual factors that shape correctional
+            outcomes.
+          </p>
+
+        </div>
+
       </div>
 
-      <div class="study-card">
-        <h3>Decision-Making</h3>
-        <p>How choices are shaped by individual, social, and environmental factors over time.</p>
+
+      <!-- =================================
+           CRIMINOLOGICAL THEORY
+      ================================= -->
+
+      <div class="study-item">
+
+        <div>
+
+          <h3>
+            Criminological Theory
+          </h3>
+
+          <p>
+            Using criminological theory to understand offending,
+            institutional dynamics, behavior, and change across
+            correctional contexts.
+          </p>
+
+        </div>
+
       </div>
 
-      <div class="study-card">
-        <h3>Gangs &amp; Gang Membership</h3>
-        <p>Identification, behavior, management, and system-level responses.</p>
+
+      <!-- =================================
+           PROGRAM EVALUATION
+      ================================= -->
+
+      <div class="study-item">
+
+        <div>
+
+          <h3>
+            Program Evaluation
+          </h3>
+
+          <p>
+            Evaluating correctional programs and practices to understand
+            implementation, effectiveness, and opportunities for improvement.
+          </p>
+
+        </div>
+
       </div>
 
-      <div class="study-card">
-        <h3>Institutional &amp; Community Corrections</h3>
-        <p>How systems operate and affect populations across custody and supervision.</p>
+
+      <!-- =================================
+           RISK-NEEDS ASSESSMENT
+      ================================= -->
+
+      <div class="study-item">
+
+        <div>
+
+          <h3>
+            Risk-Needs Assessment
+          </h3>
+
+          <p>
+            Development, measurement, implementation, and interpretation
+            of tools used to understand and respond to correctional risk
+            and need.
+          </p>
+
+        </div>
+
       </div>
 
-      <div class="study-card">
-        <h3>Program Evaluation</h3>
-        <p>Assessing correctional interventions, programs, and services.</p>
+
+      <!-- =================================
+           REENTRY & DESISTANCE
+      ================================= -->
+
+      <div class="study-item">
+
+        <div>
+
+          <h3>
+            Reentry &amp; Desistance
+          </h3>
+
+          <p>
+            How people transition from correctional supervision and how
+            systems can support stability, change, and long-term success.
+          </p>
+
+        </div>
+
       </div>
 
-      <div class="study-card">
-        <h3>Reentry &amp; Desistance</h3>
-        <p>Outcomes, barriers, and pathways following release.</p>
+
+      <!-- =================================
+           GANGS & GANG MEMBERSHIP
+      ================================= -->
+
+      <div class="study-item">
+
+        <div>
+
+          <h3>
+            Gangs &amp; Gang Membership
+          </h3>
+
+          <p>
+            Studying gang involvement, behavior, and institutional and
+            community responses to gang membership.
+          </p>
+
+        </div>
+
       </div>
 
-      <div class="study-card">
-        <h3>Restrictive Housing</h3>
-        <p>Use, conditions, and consequences within correctional settings.</p>
-      </div>
-
-      <div class="study-card">
-        <h3>Risk-Needs Assessment</h3>
-        <p>Development of assessment tools tailored to the operational needs of adult and juvenile justice agencies.</p>
-      </div>
 
     </div>
 
+
     <p class="study-outro">
-      Across these areas, the lab prioritizes research that is methodologically rigorous and directly relevant to policy and practice.
+      Across these areas, the lab prioritizes research that is
+      methodologically rigorous and directly relevant to policy and practice.
     </p>
+
   </div>
+
+
+  <style>
+
+  /* =========================================================
+     ARC LAB — WHAT WE STUDY
+     Editorial homepage treatment
+  ========================================================= */
+
+  .study-section {
+    width: 100%;
+
+    padding:
+      3rem 1rem 3.25rem;
+  }
+
+
+  .study-section-inner {
+    max-width:
+      1050px;
+
+    margin:
+      0 auto;
+  }
+
+
+  /* ---------------------------------------------------------
+     HEADING
+  --------------------------------------------------------- */
+
+  .study-section h2 {
+    margin:
+      0 0 0.5rem;
+
+    color:
+      #f1f5f9;
+
+    font-size:
+      1.85rem;
+
+    font-weight:
+      800;
+
+    line-height:
+      1.2;
+
+    text-align:
+      center;
+  }
+
+
+  .study-heading-rule {
+    width:
+      34px;
+
+    height:
+      2px;
+
+    margin:
+      0.65rem auto 1.5rem;
+
+    background:
+      #2dd4bf;
+
+    border-radius:
+      999px;
+  }
+
+
+  /* ---------------------------------------------------------
+     INTRO
+  --------------------------------------------------------- */
+
+  .study-intro {
+    max-width:
+      760px;
+
+    margin:
+      0 auto 2rem;
+
+    color:
+      #9aa8bd;
+
+    font-size:
+      0.98rem;
+
+    line-height:
+      1.65;
+
+    text-align:
+      center;
+  }
+
+
+  /* ---------------------------------------------------------
+     GRID
+  --------------------------------------------------------- */
+
+  .study-grid {
+    display:
+      grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    column-gap:
+      3rem;
+
+    border-top:
+      1px solid #33465f;
+  }
+
+
+  /* ---------------------------------------------------------
+     ITEM
+  --------------------------------------------------------- */
+
+  .study-item {
+    padding:
+      1rem 0 1.1rem;
+
+    border-bottom:
+      1px solid rgba(51, 70, 95, 0.72);
+  }
+
+
+  /* ---------------------------------------------------------
+     TITLE
+  --------------------------------------------------------- */
+
+  .study-item h3 {
+    margin:
+      0 0 0.3rem;
+
+    color:
+      #d9e8f5;
+
+    font-size:
+      1.02rem;
+
+    font-weight:
+      700;
+
+    line-height:
+      1.4;
+  }
+
+
+  /* ---------------------------------------------------------
+     DESCRIPTION
+  --------------------------------------------------------- */
+
+  .study-item p {
+    margin:
+      0;
+
+    color:
+      #9aa8bd;
+
+    font-size:
+      0.92rem;
+
+    line-height:
+      1.55;
+  }
+
+
+  /* ---------------------------------------------------------
+     OUTRO
+  --------------------------------------------------------- */
+
+  .study-outro {
+    max-width:
+      780px;
+
+    margin:
+      1.75rem auto 0;
+
+    color:
+      #aebdca;
+
+    font-size:
+      0.93rem;
+
+    line-height:
+      1.65;
+
+    text-align:
+      center;
+  }
+
+
+  /* ---------------------------------------------------------
+     MOBILE
+  --------------------------------------------------------- */
+
+  @media (max-width: 850px) {
+
+    .study-grid {
+      grid-template-columns:
+        1fr;
+    }
+
+  }
+
+
+  @media (max-width: 600px) {
+
+    .study-section {
+      padding:
+        2.5rem 0.9rem 2.75rem;
+    }
+
+    .study-section h2 {
+      font-size:
+        1.65rem;
+    }
+
+  }
+
+  </style>
+
 </section>
