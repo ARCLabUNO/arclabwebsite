@@ -1,0 +1,400 @@
+############################################################
+# ARC Lab hero banner — animated decay-curve GIF, built in R
+#
+# Recreates the arcorrectionslab.org hero animation (the v11 HTML/CSS/JS
+# mockup) as a standalone .gif you can drop straight into the site's
+# existing <img src="..."> tag — no HTML/CSS/JS/iframe needed.
+#
+# WHAT IT DRAWS (same 9-second loop, same real data, as the HTML version):
+#   - 3 lines = 3 real age-group recidivism-decay curves (18-24 / 25-34 /
+#     35+), each R(t) = p1 * exp(-k*(t-1)), using the manuscript's real
+#     year-1 probabilities and Table-4 decay-rate multipliers.
+#   - The lines hold in their separated/fanned shape, each with its own
+#     small traveling spark + fading trail.
+#   - They then morph together onto the middle (25-34) curve, with a
+#     single master spark traveling the shared path, arriving as the
+#     merge completes.
+#   - The two "losing" lines fade out, leaving one dashed merged line;
+#     a brief ripple marks the landing point.
+#   - Title / tagline / affiliation text fade in on the same schedule as
+#     the HTML version. Ambient background particles + a soft glow
+#     vignette run throughout.
+#
+# HOW TO RUN
+#   1. Edit the CONFIG block below (title/tagline/affiliation text, output
+#      size, output path) to match your site.
+#   2. For the best-looking result, install these (all standard CRAN
+#      packages):
+#         install.packages(c("ggplot2", "ggfx", "gifski"))
+#      The script runs and produces a real GIF even without ggfx/gifski —
+#      it just falls back to flatter shadows/glow and, for GIF assembly,
+#      to the ImageMagick command-line tool (`convert`/`magick`) if
+#      installed on your system, which almost every R/RStudio setup on
+#      macOS or Linux already has, and which the R package `installr`
+#      or https://imagemagick.org can install on Windows.
+#   3. Run: Rscript build_hero_gif.R  (or Source it in RStudio)
+#
+# This was verified end-to-end in a sandboxed environment that could not
+# reach CRAN, so it was tested via the ImageMagick-CLI fallback path
+# (frame-by-frame math, layout, and GIF assembly all confirmed working);
+# the ggfx-based glow/blur layers are standard, well-documented effects
+# but could not be executed in that same sandbox — if anything looks off
+# once ggfx is installed, the CONFIG block below is the place to tune it.
+############################################################
+
+suppressPackageStartupMessages({
+  library(ggplot2)
+})
+
+HAS_GGFX   <- requireNamespace("ggfx", quietly = TRUE)
+HAS_GIFSKI <- requireNamespace("gifski", quietly = TRUE)
+HAS_MAGICK <- requireNamespace("magick", quietly = TRUE)
+IM_CLI     <- Sys.which(c("magick", "convert"))
+IM_CLI     <- IM_CLI[nzchar(IM_CLI)][1]  # first available CLI binary, or NA
+
+cat("ggfx available:  ", HAS_GGFX, "\n")
+cat("gifski available: ", HAS_GIFSKI, "\n")
+cat("magick (R pkg):   ", HAS_MAGICK, "\n")
+cat("ImageMagick CLI:  ", if (!is.na(IM_CLI)) IM_CLI else "not found", "\n")
+
+if (HAS_GGFX) library(ggfx)
+
+############################################################
+# CONFIG — edit this block for your own site
+############################################################
+
+# A 1200x420 @ 20fps / 9s loop (180 frames) renders in well under a minute
+# and produced a ~3 MB file in testing here -- fine for a hero banner, but
+# drop FPS to 12-15 and/or WIDTH_PX/HEIGHT_PX if you want a smaller file
+# for faster page loads.
+OUT_GIF   <- "hero_decay.gif"
+WIDTH_PX  <- 1200
+HEIGHT_PX <- 420
+FPS       <- 20
+DURATION_S <- 9
+N_FRAMES  <- FPS * DURATION_S
+
+TITLE_TEXT       <- "How long does a criminal record predict future risk?"
+TAGLINE_TEXT     <- "Studying correctional systems as they operate,\nand how they can work better."
+# (using a comma instead of an em dash above -- some PNG-device fonts
+# substitute a different glyph for "—"; swap back to an em dash if
+# your machine's font renders it fine)
+AFFILIATION_TEXT <- "UNO School of Criminology and Criminal Justice"
+
+BG_COLOR    <- "#0a0f18"
+TEXT_COLOR  <- "#eaf2ff"
+TAGLINE_GLOW_COLORS <- c("#3b82f6", "#2dd4bf")  # blue + teal, matching v8's dual-color text-flash-glow
+
+############################################################
+# Real data: 3 age-group decay curves (same values used throughout this
+# project's video/explorer/flyer work)
+############################################################
+
+K0 <- 0.119
+groups <- data.frame(
+  id    = c("g18_24", "g25_34", "g35p"),
+  label = c("18–24", "25–34", "35+"),
+  p1    = c(28.0, 12.9, 3.7),
+  k     = K0 * c(1.00, 1.02, 1.25),
+  color = c("#3b82f6", "#f5f8fc", "#2dd4bf"),
+  stringsAsFactors = FALSE
+)
+TARGET_ID <- "g25_34"  # merge target: the middle curve (avoids the "flat
+                        # near-bottom merged line" problem the HTML mockup
+                        # hit in v4 and fixed in v5 by NOT merging onto the
+                        # lowest curve)
+
+X_MIN <- 1; X_MAX <- 30
+T_SEQ <- seq(X_MIN, X_MAX, by = 0.25)
+
+probAt <- function(p1, k, t) p1 * exp(-k * (t - 1))
+
+target_row <- groups[groups$id == TARGET_ID, ]
+target_curve <- function(t) probAt(target_row$p1, target_row$k, t)
+
+############################################################
+# Timeline — same phase breakdown as the HTML/CSS v11 loop (fractions of
+# the 9s cycle)
+############################################################
+
+PHASES <- list(
+  chart_fade      = c(0.00, 0.08),
+  fanned_hold     = c(0.08, 0.26),
+  tagline_fade    = c(0.20, 0.28),
+  morph           = c(0.26, 0.50),
+  loser_fade      = c(0.50, 0.56),
+  ripple          = c(0.50, 0.58),
+  affiliation_fade= c(0.52, 0.60),
+  hold            = c(0.60, 0.85),
+  graphic_fade    = c(0.85, 0.97)
+)
+
+ease <- function(x) { x <- pmin(pmax(x, 0), 1); x * x * (3 - 2 * x) }         # smoothstep
+phase_frac <- function(f, ph) ease((f - ph[1]) / (ph[2] - ph[1]))
+
+############################################################
+# Background particles ("floating dust") — seeded so the drift is
+# deterministic and loops seamlessly (period = one full 9s cycle)
+############################################################
+
+set.seed(7)
+N_PARTICLES <- 20
+particles <- data.frame(
+  id    = seq_len(N_PARTICLES),
+  x0    = runif(N_PARTICLES, X_MIN, X_MAX),
+  y0    = runif(N_PARTICLES, 0, 30),
+  amp_x = runif(N_PARTICLES, 0.4, 1.4),
+  amp_y = runif(N_PARTICLES, 0.4, 1.4),
+  phase = runif(N_PARTICLES, 0, 2 * pi),
+  size  = runif(N_PARTICLES, 0.4, 1.3)
+)
+
+particle_positions <- function(f) {
+  ang <- 2 * pi * f
+  data.frame(
+    x = particles$x0 + particles$amp_x * sin(ang + particles$phase),
+    y = particles$y0 + particles$amp_y * cos(ang + particles$phase * 1.3),
+    size = particles$size
+  )
+}
+
+############################################################
+# Per-frame data builder
+############################################################
+
+build_frame_data <- function(f) {
+  chart_alpha   <- phase_frac(f, PHASES$chart_fade)
+  fanned_local  <- phase_frac(f, PHASES$fanned_hold)
+  morph_prog    <- phase_frac(f, PHASES$morph)
+  loser_alpha   <- 1 - phase_frac(f, PHASES$loser_fade)
+  ripple_local  <- phase_frac(f, PHASES$ripple)
+  in_morph_or_later <- f >= PHASES$morph[1]
+
+  # --- lines ---
+  line_list <- lapply(seq_len(nrow(groups)), function(i) {
+    g <- groups[i, ]
+    y_own <- probAt(g$p1, g$k, T_SEQ)
+    if (in_morph_or_later) {
+      y <- (1 - morph_prog) * y_own + morph_prog * target_curve(T_SEQ)
+    } else {
+      y <- y_own
+    }
+    is_target <- g$id == TARGET_ID
+    alpha <- if (is_target) 1 else loser_alpha
+    data.frame(t = T_SEQ, y = y, id = g$id, label = g$label,
+               color = g$color, alpha = alpha, dashed = is_target)
+  })
+  lines_df <- do.call(rbind, line_list)
+
+  # --- sparks ---
+  spark_list <- list()
+  if (f >= PHASES$fanned_hold[1] && f < PHASES$morph[1]) {
+    # each line gets its own traveling spark + 2-dot fading trail
+    for (i in seq_len(nrow(groups))) {
+      g <- groups[i, ]
+      spark_t <- X_MIN + (X_MAX - X_MIN) * fanned_local
+      trail_t <- pmax(X_MIN, spark_t - c(0, 0.6, 1.2))
+      trail_alpha <- c(1, 0.55, 0.25)
+      spark_list[[length(spark_list) + 1]] <- data.frame(
+        t = trail_t, y = probAt(g$p1, g$k, trail_t),
+        color = g$color, alpha = trail_alpha, size = c(2.6, 1.8, 1.1)
+      )
+    }
+  } else if (f >= PHASES$morph[1] && f < PHASES$morph[2]) {
+    # single master spark traveling the shared target path
+    spark_t <- X_MIN + (X_MAX - X_MIN) * morph_prog
+    trail_t <- pmax(X_MIN, spark_t - c(0, 0.6, 1.2))
+    trail_alpha <- c(1, 0.55, 0.25)
+    spark_list[[1]] <- data.frame(
+      t = trail_t, y = target_curve(trail_t),
+      color = "#f5f8fc", alpha = trail_alpha, size = c(3.2, 2.1, 1.3)
+    )
+  }
+  sparks_df <- if (length(spark_list)) do.call(rbind, spark_list) else
+    data.frame(t = numeric(0), y = numeric(0), color = character(0),
+               alpha = numeric(0), size = numeric(0))
+
+  # --- ripple (landing point = right edge of the target curve) ---
+  ripple_df <- NULL
+  if (f >= PHASES$ripple[1] && f < PHASES$ripple[2]) {
+    r_prog <- ripple_local
+    ripple_df <- data.frame(
+      t = X_MAX, y = target_curve(X_MAX),
+      r = 0.6 + 2.4 * r_prog, alpha = 0.7 * (1 - r_prog)
+    )
+  }
+
+  list(
+    chart_alpha = chart_alpha,
+    lines = lines_df,
+    sparks = sparks_df,
+    ripple = ripple_df,
+    tagline_alpha = phase_frac(f, PHASES$tagline_fade),
+    affiliation_alpha = phase_frac(f, PHASES$affiliation_fade),
+    graphic_alpha = 1 - phase_frac(f, PHASES$graphic_fade),
+    glow_strength = if (f >= PHASES$ripple[1] && f < PHASES$ripple[2] + 0.02)
+      1 - phase_frac(f, c(PHASES$ripple[1], PHASES$ripple[2] + 0.02)) else 0
+  )
+}
+
+############################################################
+# Frame renderer
+############################################################
+
+build_frame_plot <- function(f) {
+  d <- build_frame_data(f)
+  overall_alpha <- d$chart_alpha * d$graphic_alpha
+
+  p <- ggplot() +
+    coord_cartesian(xlim = c(X_MIN, X_MAX), ylim = c(0, 33), expand = FALSE) +
+    scale_size_identity() +
+    theme_void() +
+    theme(
+      plot.background = element_rect(fill = BG_COLOR, color = NA),
+      panel.background = element_rect(fill = BG_COLOR, color = NA),
+      plot.margin = margin(10, 16, 10, 16)
+    )
+
+  # --- soft background vignette glow (two large low-alpha tinted blobs) ---
+  glow_layer <- function(x, y, fill, alpha) {
+    geom_point(data = data.frame(x = x, y = y), aes(x, y),
+               size = 220, colour = fill, alpha = alpha * overall_alpha)
+  }
+  if (HAS_GGFX) {
+    p <- p + with_blur(glow_layer(X_MAX * 0.85, 24, "#3b82f6", 0.10), sigma = 40) +
+             with_blur(glow_layer(X_MIN + 2, 4, "#2dd4bf", 0.08), sigma = 40)
+  } else {
+    p <- p + glow_layer(X_MAX * 0.85, 24, "#3b82f6", 0.05) +
+             glow_layer(X_MIN + 2, 4, "#2dd4bf", 0.04)
+  }
+
+  # --- ambient particles ---
+  pts <- particle_positions(f)
+  p <- p + geom_point(data = pts, aes(x, y, size = size),
+                       colour = "#dbe9ff", alpha = 0.35 * overall_alpha)
+
+  # --- drop shadows (offset, blurred duplicate of each line) ---
+  shadow_layer <- function(sub) {
+    geom_line(data = sub, aes(t, y - 1.1, group = id),
+              colour = "#000814", linewidth = 3,
+              alpha = 0.35 * unique(sub$alpha) * overall_alpha)
+  }
+  for (gid in unique(d$lines$id)) {
+    sub <- d$lines[d$lines$id == gid, ]
+    if (max(sub$alpha) <= 0.01) next
+    if (HAS_GGFX) {
+      p <- p + with_blur(shadow_layer(sub), sigma = 4)
+    } else {
+      p <- p + shadow_layer(sub)
+    }
+  }
+
+  # --- the 3 lines themselves ---
+  for (gid in unique(d$lines$id)) {
+    sub <- d$lines[d$lines$id == gid, ]
+    a <- unique(sub$alpha) * overall_alpha
+    if (a <= 0.005) next
+    lty <- if (unique(sub$dashed)) "22" else "solid"
+    p <- p + geom_line(data = sub, aes(t, y), colour = unique(sub$color),
+                        linewidth = 1.4, alpha = a, lineend = "round",
+                        linetype = lty)
+  }
+
+  # --- sparks (with fading trail) ---
+  if (nrow(d$sparks)) {
+    spark_layer <- geom_point(data = d$sparks, aes(t, y, size = size),
+                               colour = d$sparks$color,
+                               alpha = d$sparks$alpha * overall_alpha)
+    p <- p + (if (HAS_GGFX) with_outer_glow(spark_layer, colour = "#f5f8fc", sigma = 6, expand = 3)
+              else spark_layer)
+  }
+
+  # --- ripple at the merge landing point ---
+  if (!is.null(d$ripple)) {
+    ripple_layer <- geom_point(data = d$ripple, aes(t, y),
+                                shape = 21, colour = "#f5f8fc", fill = NA,
+                                stroke = 1.6, size = d$ripple$r * 10,
+                                alpha = d$ripple$alpha * overall_alpha)
+    p <- p + ripple_layer
+  }
+
+  # --- text overlay ---
+  title_grob <- annotate("text", x = X_MIN, y = 30.5, label = TITLE_TEXT,
+                          hjust = 0, vjust = 1, colour = TEXT_COLOR,
+                          fontface = "bold", size = 6.2,
+                          alpha = overall_alpha)
+  p <- p + title_grob
+
+  glow_col <- TAGLINE_GLOW_COLORS[1 + (d$glow_strength > 0.5)]
+  tagline_layer <- annotate("text", x = X_MAX, y = 27, label = TAGLINE_TEXT,
+                             hjust = 1, vjust = 1, colour = TEXT_COLOR,
+                             size = 3.6, lineheight = 1.05,
+                             alpha = d$tagline_alpha * overall_alpha)
+  affil_layer <- annotate("text", x = X_MAX, y = 19, label = AFFILIATION_TEXT,
+                           hjust = 1, vjust = 1, colour = TEXT_COLOR,
+                           size = 2.9,
+                           alpha = d$affiliation_alpha * overall_alpha)
+
+  if (HAS_GGFX && d$glow_strength > 0.01) {
+    p <- p + with_outer_glow(tagline_layer, colour = glow_col,
+                              sigma = 5, expand = 2 * d$glow_strength) +
+             with_outer_glow(affil_layer, colour = glow_col,
+                              sigma = 5, expand = 2 * d$glow_strength)
+  } else {
+    p <- p + tagline_layer + affil_layer
+  }
+
+  p
+}
+
+############################################################
+# Render all frames to PNG, then assemble into a GIF
+############################################################
+
+frame_dir <- file.path(tempdir(), "arc_hero_frames")
+unlink(frame_dir, recursive = TRUE)
+dir.create(frame_dir, showWarnings = FALSE)
+
+cat(sprintf("Rendering %d frames to %s ...\n", N_FRAMES, frame_dir))
+png_files <- character(N_FRAMES)
+for (i in seq_len(N_FRAMES)) {
+  f <- (i - 1) / N_FRAMES  # 0..1, exclusive of 1 so the loop is seamless
+  plt <- build_frame_plot(f)
+  out_path <- file.path(frame_dir, sprintf("frame_%04d.png", i))
+  ggsave(out_path, plt, width = WIDTH_PX / 100, height = HEIGHT_PX / 100,
+         dpi = 100, bg = BG_COLOR)
+  png_files[i] <- out_path
+  if (i %% 20 == 0) cat(sprintf("  %d / %d frames done\n", i, N_FRAMES))
+}
+
+cat("Assembling GIF...\n")
+delay_s <- 1 / FPS
+
+if (HAS_GIFSKI) {
+  gifski::gifski(png_files, gif_file = OUT_GIF, width = WIDTH_PX,
+                  height = HEIGHT_PX, delay = delay_s, loop = TRUE)
+} else if (HAS_MAGICK) {
+  imgs <- magick::image_read(png_files)
+  anim <- magick::image_animate(magick::image_join(imgs), fps = FPS, loop = 0)
+  magick::image_write(anim, OUT_GIF)
+} else if (!is.na(IM_CLI)) {
+  delay_cs <- round(100 / FPS)  # ImageMagick delay is in 1/100s units
+  args <- c("-delay", delay_cs, "-loop", "0", png_files, OUT_GIF)
+  status <- system2(IM_CLI, args)
+  if (status != 0) stop("ImageMagick GIF assembly failed (exit code ", status, ").")
+} else {
+  stop(
+    "No GIF-writing method available. Install one of:\n",
+    "  install.packages('gifski')   (recommended, fastest)\n",
+    "  install.packages('magick')\n",
+    "or install the ImageMagick command-line tool (imagemagick.org)."
+  )
+}
+
+cat(sprintf("Done: %s (%d frames, %.1fs loop @ %d fps, %dx%d px)\n",
+            normalizePath(OUT_GIF), N_FRAMES, DURATION_S, FPS, WIDTH_PX, HEIGHT_PX))
+
+if (!HAS_GGFX) {
+  cat("\nNote: ggfx wasn't available, so shadows/glow used a flatter fallback.\n",
+      "Run install.packages('ggfx') and re-run this script for the full soft-blur look.\n")
+}
