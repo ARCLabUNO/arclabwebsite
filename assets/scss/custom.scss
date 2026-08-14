@@ -393,6 +393,16 @@
 
 /* Match homepage sections to the ARC hero GIF */
 
+/* Global ARC background */
+.dark,
+.dark body,
+.dark .page-wrapper,
+.dark .page-body,
+.dark main {
+  background-color: #0f1622 !important;
+}
+
+/* Homepage sections */
 .dark .home-section {
   background: #0f1622 !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
