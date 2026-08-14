@@ -408,21 +408,31 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
-/* ARC Lab navigation bar */
+/* ========================================
+   ARC LAB NAVIGATION
+======================================== */
+
+/* Desktop/top navigation bar */
 .dark .navbar {
   background: #182437 !important;
 }
 
-/* Menu links — teal on hover */
+/* Navigation links */
 .dark .navbar .nav-link {
   transition: color 0.2s ease;
 }
 
+/* ARC teal on hover */
 .dark .navbar .nav-link:hover {
   color: #2dd4bf !important;
 }
 
-/* Current page */
+/* Current/active page */
 .dark .navbar .nav-link.active {
   color: #2dd4bf !important;
+}
+
+/* Mobile expanded menu */
+.dark .navbar-collapse {
+  background: #182437 !important;
 }
