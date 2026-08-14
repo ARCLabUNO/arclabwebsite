@@ -412,23 +412,26 @@
    ARC LAB NAVIGATION
 ======================================== */
 
-/* Desktop/top navigation bar */
 .dark .navbar {
   background: #182437 !important;
 }
 
-/* Navigation links */
+/* Regular menu links */
 .dark .navbar .nav-link {
   transition: color 0.2s ease;
 }
 
-/* ARC teal on hover */
-.dark .navbar .nav-link:hover {
+.dark .navbar .nav-link:hover,
+.dark .navbar .nav-link.active {
   color: #2dd4bf !important;
 }
 
-/* Current/active page */
-.dark .navbar .nav-link.active {
+/* ARC Lab brand/title */
+.dark .navbar-brand {
+  transition: color 0.2s ease;
+}
+
+.dark .navbar-brand:hover {
   color: #2dd4bf !important;
 }
 
