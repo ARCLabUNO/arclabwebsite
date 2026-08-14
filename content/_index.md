@@ -10,7 +10,7 @@ sections:
       subtitle: ''
       text: |
         <div style="text-align:center; width:100%; margin:0; padding:0;">
-          <img src="https://arcorrectionslab.org/img/hero_decay.gif" alt="Animated ARC Lab graphic" style="width:100%; max-width:100%; height:auto; display:block; margin:0 auto;">
+          <img src="https://arcorrectionslab.org/img/XX.gif" alt="Animated ARC Lab graphic" style="width:100%; max-width:100%; height:auto; display:block; margin:0 auto;">
         </div>
     design:
       columns: '1'
