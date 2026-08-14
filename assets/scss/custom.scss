@@ -439,3 +439,41 @@
 .dark .navbar-collapse {
   background: #182437 !important;
 }
+
+
+/* ========================================
+   ARC LAB DARK MODE TYPOGRAPHY
+======================================== */
+
+/* Main text */
+.dark body,
+.dark main,
+.dark .page-body,
+.dark .home-section {
+  color: #eaf2ff !important;
+}
+
+/* Headings */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: #eaf2ff !important;
+}
+
+/* Paragraphs and standard text */
+.dark p,
+.dark li {
+  color: #eaf2ff;
+}
+
+/* Links */
+.dark main a {
+  color: #7fc8e8;
+}
+
+.dark main a:hover {
+  color: #2dd4bf;
+}
