@@ -17,7 +17,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Incoming MS Student
+role: MS Student
 
 # Organizations/Affiliations
 organizations:

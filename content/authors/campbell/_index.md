@@ -17,7 +17,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Incoming MA Student
+role: MA Student
 
 # Organizations/Affiliations
 organizations:
