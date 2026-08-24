@@ -6,7 +6,7 @@ title = "Building evaluation readiness through research-practitioner partnership
 authors = ["gonzales", "tostlebe", "Shane Reilly"]
   
 # Publication
-publication = "*Criminal Justice Review*"
+publication = "*Justice Evaluation Journal*"
   
 # Publication types (2 = Journal article; 3 = preprint; 4 = report; 6 = book chapter)
 publication_types = ["article-journal"]
