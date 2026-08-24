@@ -31,7 +31,6 @@ interests:
   - Institutional corrections and reentry
   - Misconduct and recidivism
   - Gangs in institutions and communities
-  - Mental and physical health
   - Criminological theory
 
 education:
