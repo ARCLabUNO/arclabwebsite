@@ -93,4 +93,4 @@ Taylor is also:
 3) Collaborating with Dr. Zachary Hamilton on a manuscript examining how risk and need scores shift across four time points—from six months prior to release through 18 months post-release—and assessing how those changes affect recidivism risk; and
 4) Leading a meta-analysis on reentry programming.
 
-Taylor's work has appeared in *Criminal Justice & Behavior* and *Criminal Justice Review*, among other journals.
+Taylor's work has appeared in *Criminal Justice & Behavior*, *Crime & Delinquency*, and *Criminal Justice Review*, among other journals.
