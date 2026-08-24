@@ -1,6 +1,6 @@
 +++
 # Paper title
-title = "Building evaluation readiness through research-practitioner partnerships: Lessons from a community-based reentry program"
+title = "Building evaluation readiness through research-practitioner partnerships: Lessons from a community-based reentry program (Forthcoming)"
   
 # Authors
 authors = ["gonzales", "tostlebe", "Shane Reilly"]
