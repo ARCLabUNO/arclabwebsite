@@ -59,3 +59,4 @@ url_code = ""
   focal_point = "Center"
 +++
 
+{{< figure src="taylorkarate2026_2.jpeg" caption="Taylor Karate Time" >}}
