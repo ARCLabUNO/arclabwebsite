@@ -2,6 +2,8 @@
 title: Congratulations Dr. Gildea!
 date: 2025-07-30
 summary: "Congratulations to Brian Gildea, who successfully defended his dissertation."
+authors:
+  - gildea
 ---
 
 Congratulations to [Brian Gildea](https://arcorrectionslab.org/author/brian-gildea/), who successfully defended his dissertation, *RNR principles' impact on probation officers' supervision styles in a domestic violence court*, on July 30th.
