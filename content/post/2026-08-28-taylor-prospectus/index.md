@@ -6,7 +6,7 @@ author:
   - gonzales
 ---
 
-Congratulations to [Taylor Gonzales](https://arcorrectionslab.org/author/taylor-gonzales/), who successfully defended her dissertation prospectus, **"Reentry in Practice: A Process Evaluation of a Prisoner Transitional Living Program,"** on October 7th.
+Congratulations to [Taylor Gonzales](https://arcorrectionslab.org/author/taylor-gonzales/), who successfully defended her dissertation prospectus, **"Reentry in Practice: A Process Evaluation of a Prisoner Transitional Living Program,"** on August 28th.
 
 Taylor's dissertation examines how community-based prisoner reentry programs translate their intended program models into everyday practice. Drawing on implementation science, street-level bureaucracy, and organizational theory, her research explores both how the Never Give Up Transitional Living Program is implemented by staff and how that implementation is experienced and understood by staff and participants throughout the reentry process.
 
