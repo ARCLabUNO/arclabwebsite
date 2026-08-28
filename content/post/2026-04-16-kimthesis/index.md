@@ -2,6 +2,8 @@
 title: "Congratulations Yujin!"
 date: 2026-04-16
 summary: "Congratulations to Yujin Kim, who successfully defended her thesis on April 16th."
+authors:
+  - kim
 ---
 
 <!--more-->
