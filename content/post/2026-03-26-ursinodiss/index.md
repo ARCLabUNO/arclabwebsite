@@ -2,6 +2,8 @@
 title: Congratulations Dr. Ursino!
 date: 2026-03-26
 summary: "Congratulations to John Ursino, who successfully defended his dissertation on March 26th."
+authors:
+  - ursino
 ---
 
 Congratulations to [John Ursino](https://arcorrectionslab.org/author/john-ursino/), who successfully defended his dissertation, *Crowding, capacity, and reform: Exploring the dynamics of correctional policy*, on March 26th.
