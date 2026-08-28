@@ -2,7 +2,7 @@
 title: Taylor Successfully Defends Dissertation Prospectus
 date: 2026-08-28
 summary: "Congratulations to Taylor Gonzales, who successfully defended her dissertation prospectus."
-author:
+authors:
   - gonzales
 ---
 
