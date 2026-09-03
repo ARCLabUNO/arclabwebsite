@@ -46,7 +46,8 @@ url_code = ""
   
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-# links = [{name = "DOI", url="https://doi.org/10.1177/07340168261445422"}]
+links = [{name = "Preprint", url="https://www.researchgate.net/publication/413886034_Building_evaluation_readiness_through_research-practitioner_partnerships_Lessons_from_a_community-based_reentry_program", icon = "unlock-alt", icon_pack = "fas"}]
+# , {name = "DOI", url="https://doi.org/10.1080/23774657.2025.2581081"}]
   
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder.
