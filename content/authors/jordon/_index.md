@@ -54,12 +54,12 @@ social:
   - icon: envelope
     icon_pack: fas
     link: 'mailto:cjordon@unomaha.edu'
-  - icon: x-twitter
-    icon_pack: fab
-    link: https://x.com/JordonCaitlyn
-#  - icon: google-scholar
-#    icon_pack: ai
-#    link: https://scholar.google.com/citations?hl=en&user=JQw_-w4AAAAJ
+#  - icon: x-twitter
+#    icon_pack: fab
+#    link: https://x.com/JordonCaitlyn
+  - icon: google-scholar
+    icon_pack: ai
+    link: https://scholar.google.com/citations?user=RwlVEgYAAAAJ&hl=en
   - icon: linkedin
     icon_pack: fab
     link: https://www.linkedin.com/in/caitlyn-j-9b4a72132/
@@ -67,7 +67,7 @@ social:
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
   - icon: cv
     icon_pack: ai
-    link: files/cv_jordon.pdf
+    link: https://docs.google.com/document/d/1atYF114uUnHjY0VkodgD80_BqezbUN7MkgqbzUF-V4g/edit?usp=sharing
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ''
