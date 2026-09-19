@@ -12,7 +12,7 @@ publication = "*Criminology*"
 publication_types = ["article-journal"]
   
 # Date the paper was published.
-date = 2026-08-07T10:00:00Z
+date = 2026-09-19T10:00:00Z
   
 # Date this page was created.
 publishdate = 2026-08-07T10:00:00Z
