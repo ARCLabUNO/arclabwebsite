@@ -3,7 +3,7 @@ title: Zach Hamilton Receives ASC Division of Corrections and Sentencing Disting
 date: 2026-09-20
 summary: "ARC Lab Director Zach Hamilton received the American Society of Criminology Division on Corrections and Sentencing’s Distinguished Scholar Award, recognizing his lasting contributions to corrections and sentencing scholarship."
 authors:
-  - hamilton
+  - admin
 ---
 
 ARC Lab Director Zach Hamilton has received the *Distinguished Scholar Award* from the American Society of Criminology’s Division on Corrections and Sentencing.
