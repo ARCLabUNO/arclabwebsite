@@ -1,12 +1,6 @@
 ---
 title: "Criminal History's Expiration Date"
 
-authors:
-  - "admin"
-  - "kigerl"
-  - "tostlebe"
-  - "ursino"
-
 label: "CRIM 2026"
 journal: "Criminology"
 year: "2026"
