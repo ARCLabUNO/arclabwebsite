@@ -46,7 +46,7 @@ url_code = ""
   
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-links = [{name = "DOI", url="http://doi.org/10.1111/1745-9125.70069", icon = "unlock-alt", icon_pack = "fas"}, {name = "Data Explorer", url = "/explorers/criminal-history-expiration-date/", icon = "chart-line", icon_pack = "fas"}, {name = "Replication Materials", url = "https://github.com/ARCLabUNO/criminal-history-expiration-date", icon = "github", icon_pack = "fab"}]
+links = [{name = "DOI", url="http://doi.org/10.1111/1745-9125.70069", icon = "unlock-alt", icon_pack = "fas"}, {name = "Data Explorer", url = "/explorers/criminal-history-expiration-date/", icon = "chart-line", icon_pack = "fas"}, {name = "Replication Materials", url = "https://github.com/ARCLabUNO/criminal-history-expiration-date", icon = "github", icon_pack = "fab"}, {name = "Flyer", url = "/criminal-history-expiration-date-flyer.pdf", icon = "file-pdf", icon_pack = "fas"},]
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder.
