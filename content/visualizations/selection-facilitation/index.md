@@ -1,0 +1,14 @@
+---
+title: "Selection and Facilitation"
+
+authors:
+  - "tostlebe"
+
+label: "JRCD 2026"
+journal: "Journal of Research in Crime and Delinquency"
+year: "2026"
+
+summary: "Explore how psychopathic traits and gang membership shape one another over time, with interactive visualizations of selection, facilitation, and enhancement."
+
+external_link: "/explorers/selection-facilitation/"
+---
