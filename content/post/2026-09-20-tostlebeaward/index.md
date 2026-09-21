@@ -1,5 +1,5 @@
 ---
-title: Jenn Tostlebe Receives ASC Division of Corrections and Sentencing Distinguished New Scholar Award
+title: Jenn Tostlebe Receives ASC Division on Corrections and Sentencing Distinguished New Scholar Award
 date: 2026-09-20
 summary: "ARC Lab Director Jenn Tostlebe received the American Society of Criminology Division on Corrections and Sentencing’s Distinguished New Scholar Award, recognizing outstanding early-career achievement in corrections and sentencing research."
 authors:
