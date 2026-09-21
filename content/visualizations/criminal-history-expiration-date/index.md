@@ -1,6 +1,12 @@
 ---
 title: "Criminal History's Expiration Date"
 
+display_authors:
+  - "Zachary Hamilton"
+  - "Alex Kigerl"
+  - "Jennifer J. Tostlebe"
+  - "John Ursino"
+
 label: "CRIM 2026"
 journal: "Criminology"
 year: "2026"
