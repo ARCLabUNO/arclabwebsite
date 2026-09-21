@@ -1,9 +1,6 @@
 ---
 title: "Selection and Facilitation"
 
-authors:
-  - "tostlebe"
-
 label: "JRCD 2026"
 journal: "Journal of Research in Crime and Delinquency"
 year: "2026"
