@@ -1,5 +1,5 @@
 ---
-title: "Selection and Facilitation"
+title: "Selection and facilitation: Is the gang membership-psychopathic triats link a product of individual differences, social influences, or both?"
 
 display_authors:
   - "Jennifer J. Tostlebe"
