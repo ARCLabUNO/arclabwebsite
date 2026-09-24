@@ -22,7 +22,7 @@
 
   <div class="visualization-grid">
 
-    {{ range .Pages.ByTitle }}
+    {{ range .Pages.ByDate.Reverse }}
       {{ partial "visualization-card.html" . }}
     {{ end }}
 
