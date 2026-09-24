@@ -1,5 +1,5 @@
 ---
-title: "Criminal History's Expiration Date"
+title: "Criminal history's expiration date"
 
 display_authors:
   - "Zachary Hamilton"
