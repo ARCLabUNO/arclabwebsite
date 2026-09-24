@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore the Data — Step-Up Program</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0b2947;
+  --navy-deep:#061a2e;
+  --navy-soft:#173a5e;
+  --blue:#1565c0;
+  --blue-deep:#0d47a1;
+  --blue-light:#bbdefb;
+  --blue-mist:#e6f1fb;
+  --teal:#2f6b5e;
+  --teal-light:#dcece7;
+  --accent:#2f6b5e;
+  --accent-deep:#1c4a3d;
+  --accent-light:#a9ded0;
+  --accent-bright:#3ddcb8;
+  --gold:#d49321;
+  --gold-light:#f7e8c7;
+  --red:#b65047;
+  --paper:#f6f9fc;
+  --card:#ffffff;
+  --ink:#152634;
+  --ink-soft:#4a5d70;
+  --ink-faint:#7c8fa1;
+  --line:#d9e5f0;
+  --line-soft:#eaf1f8;
+  --radius:12px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;color:var(--navy);margin:0 0 .5rem;font-weight:600;letter-spacing:-.015em;}
+h1 em,h2 em{font-style:italic;font-weight:500;color:var(--accent-deep);}
+p{margin:0 0 1rem;color:var(--ink-soft);}
+a{color:var(--blue-deep);}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+.mono{font-family:'IBM Plex Mono',monospace;}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:700;color:var(--accent-deep);display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+.eyebrow:before{content:"";width:22px;height:2px;background:var(--accent);display:inline-block;}
+[data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease;}
+[data-reveal].in-view{opacity:1;transform:translateY(0);}
+@media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none;transition:none;}}
+header.mast{background:var(--navy);color:#eaf2fb;padding:14px 0;border-bottom:3px solid var(--blue-light);}
+header.mast .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.brandmark{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-light);font-weight:700;}
+.brandmark .dot{width:9px;height:9px;border-radius:50%;background:var(--accent-light);}
+.mast-title{font-size:13px;color:#c9dcef;font-weight:500;font-style:italic;font-family:'Fraunces',serif;}
+.hero{position:relative;overflow:hidden;background:var(--navy-deep);color:#eaf2fb;padding:76px 0 58px;}
+.hero .motif{position:absolute;inset:0;opacity:.55;pointer-events:none;}
+.hero .wrap{position:relative;z-index:1;}
+.hero .eyebrow{color:var(--accent-bright);}
+.hero .eyebrow:before{background:var(--accent);}
+.hero h1{font-size:42px;line-height:1.14;max-width:790px;color:#f4f8fc;font-weight:600;}
+.hero h1 em{color:var(--accent-bright);font-weight:600;text-shadow:0 0 22px rgba(61,220,184,.25);}
+.hero .lede{font-size:18px;max-width:700px;color:#a9c1d9;margin-top:16px;}
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:42px;}
+.stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:20px 18px;border-top:3px solid var(--blue-light);backdrop-filter:blur(2px);transition:transform .2s ease,border-color .2s ease;}
+.stat:hover{transform:translateY(-3px);border-top-color:var(--accent);}
+.stat.alt{border-top-color:var(--accent);}
+.stat .num{font-family:'Fraunces',serif;font-size:31px;font-weight:600;color:#f4f8fc;line-height:1;font-variant-numeric:tabular-nums;}
+.stat.alt .num{color:var(--accent-light);}
+.stat .label{font-size:13px;color:#9db4cb;margin-top:9px;line-height:1.45;}
+.research{background:#102c48;padding:36px 0 42px;border-bottom:1px solid rgba(255,255,255,.08);}
+.question-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.question{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.11);border-radius:var(--radius);padding:22px 24px;position:relative;}
+.question .qnum{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--accent-light);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;}
+.question h3{font-size:20px;color:#f5f8fb;line-height:1.25;}
+.question p{color:#adc2d5;font-size:13.5px;margin:8px 0 0;}
+section{padding:60px 0;}
+section.shade{background:var(--blue-mist);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.fig-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:var(--blue-deep);background:var(--blue-light);padding:4px 9px;border-radius:5px;margin-bottom:12px;font-weight:500;}
+.section-head{max-width:700px;margin-bottom:28px;}
+.section-head h2{font-size:28px;}
+.section-head p{font-size:15.5px;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:0 1px 2px rgba(11,41,71,.04);transition:box-shadow .25s ease;}
+.card:hover{box-shadow:0 6px 20px rgba(11,41,71,.08);}
+.design-card{padding:26px 28px 28px;}
+.design-grid{display:grid;grid-template-columns:1fr 54px 1.2fr 54px 1fr;gap:0;align-items:center;}
+.step{min-height:180px;border:1px solid var(--line);border-radius:12px;padding:20px;background:#fff;display:flex;flex-direction:column;justify-content:space-between;}
+.step.start{background:#f9fbfd;}
+.step.treatment{background:#edf8f6;border-color:#b8dcd3;}
+.step.end{background:#f9fbfd;}
+.step .k{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.07em;color:var(--ink-faint);text-transform:uppercase;}
+.step h3{font-size:21px;margin:8px 0 5px;}
+.step p{font-size:13.5px;margin:0;line-height:1.45;}
+.step .detail{margin-top:16px;font-size:12px;color:var(--ink-faint);padding-top:12px;border-top:1px solid var(--line-soft);}
+.arrow{font-size:24px;color:var(--ink-faint);text-align:center;}
+.random{display:flex;align-items:center;gap:8px;margin:14px 0 10px;font-size:12px;color:var(--ink-faint);}
+.random:before,.random:after{content:"";height:1px;background:var(--line);flex:1;}
+.random b{font-family:'IBM Plex Mono',monospace;color:var(--navy);font-weight:500;}
+.alloc-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px;}
+.alloc{background:#fff;border:1px solid var(--line);border-radius:9px;padding:12px;}
+.alloc .t{font-size:12px;font-weight:700;color:var(--navy);}
+.alloc .v{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-faint);margin-top:3px;}
+
+.timeline-strip{margin-top:18px;display:grid;grid-template-columns:auto minmax(0,1fr) 42px minmax(0,1fr);align-items:center;gap:10px;padding:15px 17px;background:#f4f8fc;border:1px solid var(--line);border-radius:10px;}
+.timeline-label{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--ink-faint);white-space:nowrap;}
+.timeline-window{display:flex;align-items:center;gap:10px;min-width:0;padding:10px 12px;background:#fff;border:1px solid var(--line);border-radius:9px;}
+.timeline-window.during{border-top:3px solid var(--teal);}
+.timeline-window.after{border-top:3px solid var(--blue);}
+.window-k{width:24px;height:24px;flex:0 0 24px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:var(--navy);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:10px;}
+.timeline-window strong{display:block;font-size:12.5px;color:var(--navy);line-height:1.3;}
+.timeline-window span{display:block;margin-top:2px;font-size:11px;color:var(--ink-faint);line-height:1.35;}
+.timeline-connector{height:1px;background:var(--line);position:relative;}
+.timeline-connector:after{content:'→';position:absolute;left:50%;top:50%;transform:translate(-50%,-58%);background:#f4f8fc;padding:0 3px;color:var(--ink-faint);font-size:15px;}
+
+.keyline{margin-top:18px;background:#f7fbff;border-left:4px solid var(--blue);padding:16px 18px;border-radius:0 var(--radius) var(--radius) 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);}
+.keyline strong{color:var(--navy);}
+.keyline p{margin:0;font-size:14px;color:var(--ink);}
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;}
+.toggle{font-size:13.5px;font-weight:600;cursor:pointer;padding:9px 15px;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--ink-soft);transition:all .15s ease;}
+.toggle:hover{border-color:var(--blue);transform:translateY(-1px);}
+.toggle.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+.toggle.blue.active{background:var(--blue-deep);border-color:var(--blue-deep);}
+.toggle.teal.active{background:var(--teal);border-color:var(--teal);}
+.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.result-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;}
+.result-card .result-tag{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:7px;}
+.result-card h3{font-size:20px;}
+.result-card .sub{font-size:13px;color:var(--ink-faint);margin-bottom:18px;}
+.effect-list{display:grid;gap:12px;}
+.effect-row{display:grid;grid-template-columns:134px 1fr 70px;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--line-soft);}
+.effect-row:last-child{border-bottom:none;}
+.effect-name{font-size:13.5px;color:var(--ink);font-weight:500;}
+.effect-name small{display:block;font-size:11px;color:var(--ink-faint);font-weight:400;margin-top:2px;}
+.effect-plot{position:relative;height:32px;overflow:hidden;border-radius:4px;}
+.effect-plot .zero{position:absolute;left:50%;top:2px;bottom:2px;width:1px;background:#c8d6e2;}
+.effect-plot .ci{position:absolute;top:15px;height:3px;border-radius:2px;background:var(--blue);}
+.effect-plot .ci.teal{background:var(--teal);}
+.effect-plot .ci.red{background:var(--red);}
+.effect-plot .cap{position:absolute;top:8px;width:2px;height:16px;background:currentColor;}
+.effect-plot .dot{position:absolute;top:8px;width:15px;height:15px;border-radius:50%;background:var(--navy);transform:translateX(-50%);}
+.effect-value{font-family:'IBM Plex Mono',monospace;font-size:12px;text-align:right;color:var(--navy);font-weight:500;white-space:nowrap;}
+.scale{display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--ink-faint);margin-left:144px;margin-right:70px;margin-top:2px;}
+.note{font-size:12px;color:var(--ink-faint);line-height:1.45;margin-top:14px;padding-top:12px;border-top:1px solid var(--line-soft);}
+.finding{margin-top:20px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);padding:17px 20px;border-radius:0 var(--radius) var(--radius) 0;}
+.finding .label{font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:var(--accent-deep);font-weight:700;margin-bottom:5px;}
+.finding p{font-size:14.5px;color:var(--ink);margin:0;}
+.program-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.program-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;}
+.program-item h3{font-size:18px;margin-bottom:6px;}
+.program-item p{font-size:13.5px;line-height:1.5;margin:0;}
+.program-item .time{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--teal);margin-bottom:8px;}
+.limit-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.limit{border:1px solid var(--line);background:#fff;border-radius:var(--radius);padding:20px;}
+.limit h3{font-size:18px;margin-bottom:6px;}
+.limit p{font-size:13.5px;line-height:1.5;margin:0;}
+footer{background:var(--navy);color:#cfe0f2;padding:40px 0;margin-top:0;}
+footer .wrap{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;}
+footer h4{color:var(--blue-light);font-size:12px;text-transform:uppercase;letter-spacing:.1em;margin:0 0 10px;}
+footer p{color:#b8cfe4;font-size:13.5px;margin:0 0 6px;max-width:480px;}
+footer a{color:#eaf2fb;text-decoration:underline;}
+.accessbadge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);padding:5px 12px;border-radius:999px;font-size:12px;color:#cfe0f2;margin-top:10px;}
+.accessbadge .d{width:7px;height:7px;border-radius:50%;background:#5fd68a;}
+
+.preregistered{
+  display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:7px 11px;border-radius:999px;
+  background:#eef8f5;border:1px solid #c7e4dc;color:var(--accent-deep);font-size:12px;font-weight:700;
+}
+.preregistered .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block;}
+.preregistered a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:2px;}
+.study-timeline{display:grid;grid-template-columns:150px 1fr 54px 1.15fr 54px 1fr;align-items:stretch;gap:0;margin-top:18px;}
+.timeline-side{padding:18px 14px;background:#f4f8fc;border:1px solid var(--line);border-radius:10px 0 0 10px;display:flex;flex-direction:column;justify-content:center;}
+.timeline-side .k,.consort-box .k{font-family:'IBM Plex Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-faint);}
+.timeline-side h3{font-size:18px;margin:6px 0 4px;}
+.timeline-side p{font-size:12px;margin:0;}
+.timeline-node{background:#fff;border:1px solid var(--line);padding:18px 16px;display:flex;flex-direction:column;justify-content:center;}
+.timeline-node.highlight{background:#edf8f6;border-color:#b8dcd3;}
+.timeline-node h3{font-size:18px;margin:6px 0 6px;}
+.timeline-node p{font-size:12px;margin:0;}
+.timeline-node .mini{margin-top:10px;padding-top:10px;border-top:1px solid var(--line-soft);font-size:11px;color:var(--ink-faint);}
+.timeline-arrow{display:flex;align-items:center;justify-content:center;color:var(--ink-faint);font-size:23px;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.consortrow{display:grid;grid-template-columns:1fr 1.25fr 1fr;margin-top:18px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;}
+.consort-col{padding:18px;border-right:1px solid var(--line);}
+.consort-col:last-child{border-right:none;}
+.consort-col h3{font-size:18px;margin:6px 0 4px;}
+.consort-col p{font-size:12.5px;margin:0;line-height:1.45;}
+.consort-stat{margin-top:12px;padding:11px 12px;border-radius:9px;background:#f4f8fc;border:1px solid var(--line-soft);font-size:12px;color:var(--ink);}
+.consort-stat strong{color:var(--navy);}
+.subdetails{margin-top:16px;}
+.subdetails summary{cursor:pointer;font-size:13px;color:var(--blue-deep);font-weight:600;list-style:none;}
+.subdetails summary::-webkit-details-marker{display:none;}
+.subdetails summary::before{content:"▸ ";}
+.subdetails[open] summary::before{content:"▾ ";}
+@media (max-width:900px){
+  .study-timeline{grid-template-columns:1fr;gap:8px;}
+  .timeline-side,.timeline-node{border-radius:10px;}
+  .timeline-arrow{min-height:36px;border:0;background:transparent;}
+  .consortrow,.consortrow{grid-template-columns:1fr;}
+  .consort-col{border-right:none;border-bottom:1px solid var(--line);}
+  .consort-col:last-child{border-bottom:none;}
+}
+
+details.table-toggle{margin-top:16px;}
+details.table-toggle summary{cursor:pointer;font-size:13px;color:var(--blue-deep);font-weight:600;list-style:none;}
+details.table-toggle summary::-webkit-details-marker{display:none;}
+details.table-toggle summary:before{content:"▸ ";}
+details.table-toggle[open] summary:before{content:"▾ ";}
+table.datatab{width:100%;border-collapse:collapse;margin-top:12px;font-size:13px;}
+table.datatab th,table.datatab td{padding:8px 10px;border-bottom:1px solid var(--line-soft);text-align:left;}
+table.datatab th{color:var(--ink-faint);font-weight:600;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;}
+table.datatab td{color:var(--ink);}
+table.datatab td.mono{font-family:'IBM Plex Mono',monospace;}
+
+/* ===== VISUAL POLISH: FIGURES 1–3 ===== */
+
+/* ===== FINAL PRESENTATION POLISH ===== */
+.figure-section > .wrap{position:relative;}
+.figure-label-row{margin-top:2px;}
+.figure-intro{margin-bottom:30px;}
+.figure-intro h2{max-width:760px;}
+.figure-intro p{max-width:760px;}
+.figure-card{box-shadow:0 8px 28px rgba(11,41,71,.055);}
+.design-card{padding:30px 30px 24px;}
+.study-timeline{margin-top:10px;}
+.timeline-side,.timeline-node{box-shadow:0 1px 1px rgba(11,41,71,.025);}
+.timeline-node.highlight{box-shadow:inset 0 3px 0 var(--accent-light),0 1px 1px rgba(11,41,71,.025);}
+.timeline-arrow{font-size:20px;}
+.keyline{margin-top:24px;box-shadow:0 1px 2px rgba(11,41,71,.03);}
+.subdetails{margin-top:14px;}
+.subdetails + .subdetails{margin-top:12px;}
+.program-grid{grid-auto-rows:1fr;}
+.program-item{box-shadow:0 2px 7px rgba(11,41,71,.035);}
+.program-item.feature{position:relative;padding-right:28px;}
+.program-item.feature:after{content:"SUP ≠ IMU";position:absolute;right:20px;top:20px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;color:var(--accent-deep);background:#dcece7;border:1px solid #c7e4dc;padding:4px 7px;border-radius:999px;}
+.control-group{box-shadow:0 1px 2px rgba(11,41,71,.025);}
+.plot-meta{padding-bottom:4px;}
+.plot-meta .title{letter-spacing:-.01em;}
+.effect-list{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;}
+.effect-row{padding:13px 12px;border-bottom:1px solid var(--line-soft);}
+.effect-row:nth-child(odd){background:#fbfdff;}
+.effect-row:last-child{border-bottom:none;}
+.effect-plot{height:36px;}
+.effect-plot .zero{top:0;bottom:0;background:#a8bac9;}
+.effect-plot .ci{top:16px;box-shadow:0 0 0 1px rgba(255,255,255,.35);}
+.effect-plot .dot{top:10px;}
+.scale{padding-top:4px;margin-left:146px;margin-right:72px;}
+.result-key{display:flex;gap:18px;flex-wrap:wrap;margin-top:16px;padding-top:13px;border-top:1px solid var(--line-soft);font-size:11px;color:var(--ink-faint);}
+.result-key span{display:inline-flex;align-items:center;gap:7px;}
+.result-key i{width:13px;height:13px;border-radius:50%;display:inline-block;}
+.published-block summary{font-size:12.5px;}
+.published-block{margin-top:20px;}
+.finding{margin-top:18px;box-shadow:0 2px 7px rgba(11,41,71,.035);}
+.caveat{box-shadow:0 2px 7px rgba(11,41,71,.035);}
+#results{background:linear-gradient(180deg,#fbfdff 0%,#f6f9fc 100%);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);}
+#interpretation .caveat:first-child{border-top:3px solid var(--accent-light);}
+#interpretation .caveat:last-child{border-top:3px solid var(--blue-light);}
+#caveats .program-item{min-height:166px;}
+@media(max-width:760px){
+ .program-item.feature:after{position:static;display:inline-block;margin-top:14px;align-self:flex-start;}
+ .scale{margin-left:0;margin-right:0;}
+}
+
+.figure-section{padding:72px 0;}
+.figure-section.shade{background:linear-gradient(180deg,#eef5fb 0%,#e7f1f9 100%);}
+.figure-label-row{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.fig-tag{box-shadow:0 1px 0 rgba(13,71,161,.08);}
+.figure-rule{height:1px;flex:1;background:var(--line);}
+.figure-intro{max-width:760px;margin-bottom:34px;}
+.figure-intro h2{max-width:860px;font-size:32px;line-height:1.15;margin-bottom:10px;}
+.figure-intro p{max-width:860px;font-size:16px;line-height:1.72;}
+.figure-card{position:relative;overflow:hidden;padding:32px;}
+.figure-card:before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:var(--blue-light);}
+.figure-card.teal-accent:before{background:var(--accent-light);}
+.figure-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:22px;}
+.figure-card-head h3{font-size:22px;margin:0;}
+.figure-card-head p{font-size:13px;margin:4px 0 0;max-width:650px;}
+.control-group{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px;padding:4px;background:#f1f6fa;border:1px solid var(--line);border-radius:12px;}
+.control-group .control-label{padding:0 10px;font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--ink-faint);white-space:nowrap;}
+.control-group .controls{margin:0;gap:4px;flex:1;}
+.control-group .toggle{padding:8px 14px;font-size:13px;background:transparent;border-color:transparent;}
+.control-group .toggle:hover{transform:none;border-color:var(--line);background:#fff;}
+.control-group .toggle.active{box-shadow:0 1px 2px rgba(11,41,71,.08);}
+.plot-meta{display:flex;justify-content:space-between;gap:20px;align-items:center;margin:12px 0 8px;}
+.plot-meta .title{font-family:'Fraunces',serif;font-size:22px;font-weight:600;color:var(--navy);}
+.plot-meta .meta-note{font-size:11px;color:var(--ink-faint);text-align:right;line-height:1.35;}
+.effect-row{padding:14px 0;}
+.effect-name{line-height:1.25;}
+.effect-plot{height:34px;background:linear-gradient(90deg,transparent 49.8%,rgba(21,101,192,.05) 50%,transparent 50.2%);}
+.effect-plot .zero{background:#9db1c2;width:1px;}
+.effect-plot .ci{height:4px;top:15px;}
+.effect-plot .cap{top:7px;height:19px;width:1.5px;}
+.effect-plot .dot{width:13px;height:13px;top:9px;box-shadow:0 0 0 3px rgba(255,255,255,.9);}
+.effect-value{font-size:13px;}
+.scale{font-size:10.5px;}
+.published-block{margin-top:24px;border-top:1px solid var(--line);padding-top:18px;}
+.table-caption{font-size:12px;color:var(--ink-faint);margin-bottom:8px;}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:10px;background:#fff;}
+table.datatab{margin:0;min-width:520px;}
+table.datatab th{background:#f5f8fb;padding:10px 12px;position:sticky;top:0;}
+table.datatab td{padding:10px 12px;}
+table.datatab tbody tr:last-child td{border-bottom:none;}
+table.datatab td:first-child{font-weight:600;color:var(--navy);}
+.subdetails{border-top:1px solid var(--line);padding-top:16px;}
+.subdetails summary{display:inline-flex;align-items:center;gap:6px;padding:8px 11px;border:1px solid var(--line);border-radius:8px;background:#f7fafc;color:var(--blue-deep);}
+.subdetails summary:hover{background:#fff;border-color:#bfd2e2;}
+.design-card .subdetails + .subdetails{margin-top:10px;}
+.design-timeline-label{display:flex;align-items:center;gap:8px;margin:0 0 12px;font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--ink-faint);}
+.design-timeline-label span{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);}
+.program-grid{gap:18px;}
+
+/* interaction accessibility / readable clicked states */
+.subdetails summary:hover, details.table-toggle summary:hover{background:#eef5fa;border-color:#bfd2e2;color:var(--blue-deep);}
+.subdetails summary:focus-visible, details.table-toggle summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;background:#eef5fa;}
+.control-group .toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.control-group .toggle:not(.active):hover{background:#e9f1f7;color:var(--navy);}
+.control-group .toggle.active{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:0 1px 2px rgba(11,41,71,.12);}
+.toggle:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.program-item{min-height:154px;display:flex;flex-direction:column;}
+.program-item.feature{grid-column:1/-1;background:#fff;border-color:var(--line);}
+.program-item h3{margin-bottom:8px;}
+.program-item p{margin-top:auto;}
+.intervention-intro{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-bottom:20px;}
+.intervention-summary{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;}
+.intervention-summary .big{font-family:'Fraunces',serif;font-size:28px;color:var(--navy);font-weight:600;line-height:1.1;}
+.intervention-summary .small{font-size:12px;color:var(--ink-faint);margin-top:6px;}
+.accent-band{background:#edf8f6;border:1px solid #c7e4dc;border-radius:var(--radius);padding:18px 20px;}
+.accent-band h3{font-size:18px;margin-bottom:6px;}
+.accent-band p{font-size:13px;margin:0;color:var(--ink);}
+.finding{box-shadow:0 1px 2px rgba(11,41,71,.03);}
+.caveat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+.caveat{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;}
+.caveat .time{font-size:10px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:var(--ink-faint);margin-bottom:7px;}
+.caveat h3{font-size:18px;margin-bottom:6px;}
+.caveat p{font-size:13.5px;margin:0;}
+
+@media(max-width:900px){.intervention-intro{grid-template-columns:1fr;}.figure-card-head{flex-direction:column;}.control-group{align-items:flex-start;flex-direction:column;padding:10px;}.control-group .controls{width:100%;}}
+@media(max-width:760px){
+ .timeline-strip{grid-template-columns:1fr;gap:8px;}
+ .timeline-label{margin-bottom:2px;}
+ .timeline-connector{width:1px;height:18px;justify-self:center;}
+ .timeline-connector:after{content:'↓';}
+ .stat-row{grid-template-columns:1fr 1fr;}
+ .question-grid,.results-grid,.program-grid,.limit-grid{grid-template-columns:1fr;}
+ .design-grid{grid-template-columns:1fr;gap:10px;}
+ .arrow{transform:rotate(90deg);}
+ .alloc-grid{grid-template-columns:1fr;}
+ .hero h1{font-size:31px;}
+ footer .wrap{flex-direction:column;}
+ .effect-row{grid-template-columns:115px 1fr 66px;}
+ .scale{margin-left:125px;margin-right:66px;}
+}
+@media(max-width:500px){.figure-section{padding:52px 0;}.figure-card{padding:22px 18px;}.figure-intro h2{font-size:27px;} .figure-label-row{gap:8px;}.stat-row{grid-template-columns:1fr}.wrap{padding:0 18px}.hero{padding-top:56px}.question{padding:18px}.card{padding:20px}.effect-row{grid-template-columns:1fr;gap:7px}.effect-value{text-align:left}.effect-plot{height:28px}.scale{margin:4px 0 0}.finding{padding:15px 16px}}
+
+/* ===== FIGURE 1 LAYOUT REFINEMENT ===== */
+.study-path{margin-top:18px;}
+.path-row{display:grid;align-items:stretch;}
+.path-top{grid-template-columns:minmax(220px,.78fr) 42px minmax(330px,1.22fr);}
+.path-outcomes{grid-template-columns:minmax(0,1fr) 42px minmax(0,1fr);}
+.path-node{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px;min-width:0;}
+.path-node h3{font-size:20px;line-height:1.22;margin:8px 0 8px;}
+.path-node p{font-size:13px;line-height:1.52;margin:0;}
+.path-node.path-start{background:#f6f9fc;}
+.path-node.path-random{background:#fff;}
+.path-node.path-outcome{position:relative;padding-top:20px;}
+.path-node.path-outcome.during{background:linear-gradient(180deg,#edf8f6 0%,#fff 72%);border-color:#b8dcd3;box-shadow:inset 0 4px 0 var(--accent-light);}
+.path-node.path-outcome.after{background:#fbfdff;box-shadow:inset 0 4px 0 var(--blue-light);}
+.path-node .k{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);}
+.path-node .mini{margin-top:14px;padding-top:12px;border-top:1px solid var(--line-soft);font-size:11.5px;line-height:1.45;color:var(--ink-faint);}
+.path-node .mini strong{color:var(--navy);}
+.path-arrow{display:flex;align-items:center;justify-content:center;color:#8aa0b2;font-size:22px;}
+.path-divider{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;margin:18px 0;color:var(--ink-faint);font-size:10px;letter-spacing:.1em;text-transform:uppercase;}
+.path-divider span{height:1px;background:var(--line);}
+.path-divider b{font-weight:700;white-space:nowrap;}
+.outcome-index{display:inline-flex;align-items:center;justify-content:center;width:27px;height:27px;border-radius:50%;background:var(--navy);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:10px;margin-bottom:12px;}
+.path-node.during .outcome-index{background:var(--teal);}
+.path-node.after .outcome-index{background:var(--blue-deep);}
+.keyline{margin-top:20px;}
+.design-card{padding:30px;}
+.design-timeline-label{margin-bottom:14px;}
+
+/* Keep Figure 1 and the result figures on one coherent visual rhythm. */
+.figure-intro{margin-bottom:28px;}
+.figure-card{border-radius:14px;}
+.section-head{max-width:780px;} .figure-intro{max-width:900px;}
+.subdetails{margin-top:14px;}
+.subdetails summary{font-size:12.5px;}
+
+@media(max-width:860px){
+  .path-top{grid-template-columns:1fr;gap:10px;}
+  .path-top .path-arrow{min-height:28px;transform:rotate(90deg);}
+  .path-outcomes{grid-template-columns:1fr;gap:10px;}
+  .path-outcomes .outcome-arrow{min-height:28px;transform:rotate(90deg);}
+}
+
+</style>
+</head>
+<body>
+<header class="mast">
+  <div class="wrap">
+    <div class="brandmark"><span class="dot"></span>ARC LAB · Data Explorer</div>
+    <div class="mast-title">Advancing Research in Corrections · UNO School of Criminology &amp; Criminal Justice</div>
+  </div>
+</header>
+
+<section class="hero">
+  <svg class="motif" viewBox="0 0 960 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path d="M-30 338 C140 332 255 320 340 260 C435 194 490 95 620 82 C748 69 845 142 1005 150" fill="none" stroke="#bbdefb" stroke-width="1.5" opacity=".18"/>
+    <path d="M-30 391 C165 386 290 370 366 326 C458 273 535 191 665 181 C788 171 875 224 1005 231" fill="none" stroke="#2f6b5e" stroke-width="1.5" opacity=".16"/>
+    <path d="M-30 258 C135 255 248 241 328 200 C426 151 503 68 640 57 C763 47 861 92 1005 96" fill="none" stroke="#eaf2fb" stroke-width="1" opacity=".1"/>
+  </svg>
+  <div class="wrap">
+    <div class="eyebrow">Experimental effects of a restrictive housing step-down program</div>
+    <h1>Can people move to <em>less restrictive housing</em> without increasing misconduct?</h1>
+    <p class="lede">A randomized evaluation in the Oregon Department of Corrections compared the Step-Up Program (SUP) with continued placement in the Intensive Management Unit (IMU), examining misconduct both during restrictive housing and after return to the general prison population.</p>
+    <div class="preregistered" style="margin-top:24px;background:rgba(255,255,255,.06);border-color:rgba(169,222,208,.28);color:var(--accent-light);"><span class="dot"></span>Preregistered hypotheses · <a href="https://osf.io/t6qpx" target="_blank" rel="noopener" style="color:var(--accent-light);">OSF</a></div>
+    <div class="stat-row">
+      <div class="stat"><div class="num">211</div><div class="label">People randomized to SUP or continued IMU housing</div></div>
+      <div class="stat alt"><div class="num">52%</div><div class="label">Assigned to the Step-Up Program (109 of 211)</div></div>
+      <div class="stat"><div class="num">47.7%</div><div class="label">Of those assigned to SUP actually transferred to the unit</div></div>
+      <div class="stat alt"><div class="num">6 mo.</div><div class="label">Official misconduct follow-up after return to general population</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="research">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--accent-light);margin-bottom:20px;">Research questions</div>
+    <div class="question-grid">
+      <div class="question">
+        <div class="qnum">Question 01</div>
+        <h3>Does the Step-Up Program change misconduct while people are still in restrictive housing?</h3>
+        <p>The study examines all, violent, and non-violent misconduct using both official records and self-reports.</p>
+      </div>
+      <div class="question">
+        <div class="qnum">Question 02</div>
+        <h3>Does moving to Step-Up change misconduct after return to general population housing?</h3>
+        <p>The study follows official misconduct for six months after participants leave restrictive housing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="design" class="figure-section" data-reveal>
+  <div class="wrap">
+    <div class="figure-label-row"><div class="fig-tag">FIGURE 1 · STUDY DESIGN</div><div class="figure-rule"></div></div>
+    <div class="figure-intro">
+      <h2>Everyone started in the same restrictive setting</h2>
+      <p>People already housed in the Intensive Management Unit were randomly assigned to remain in the IMU or to be offered a transfer to the Step-Up Program. The study then measured misconduct <em>during restrictive housing</em> and, using official records, for six months after return to the general population.</p>
+      <div class="preregistered"><span class="dot"></span>Hypotheses preregistered in 2020 · <a href="https://osf.io/t6qpx" target="_blank" rel="noopener">Open Science Framework</a></div>
+    </div>
+
+    <div class="card design-card figure-card">
+      <div class="design-timeline-label"><span></span>From restrictive housing to outcomes</div>
+      <div class="study-path" aria-label="Study design and outcome timing">
+        <div class="path-row path-top">
+          <div class="path-node path-start">
+            <div class="k">Starting point</div>
+            <h3>IMU</h3>
+            <p>Everyone in the randomized sample was already housed in long-term restrictive housing.</p>
+          </div>
+          <div class="path-arrow" aria-hidden="true">→</div>
+          <div class="path-node path-random">
+            <div class="k">Random assignment</div>
+            <h3>Two paths forward</h3>
+            <p>Eligible participants were randomly assigned either to remain in the IMU or to be offered a transfer to SUP.</p>
+            <div class="alloc-grid">
+              <div class="alloc"><div class="t">Continue IMU</div><div class="v">n = 102</div></div>
+              <div class="alloc"><div class="t">Assigned SUP</div><div class="v">n = 109</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="path-divider">
+          <span></span>
+          <b>Misconduct outcomes</b>
+          <span></span>
+        </div>
+
+        <div class="path-row path-outcomes">
+          <div class="path-node path-outcome during">
+            <div class="outcome-index">01</div>
+            <div class="k">During restrictive housing</div>
+            <h3>While participants were still in IMU or SUP</h3>
+            <p>Official records were observed between randomization and the end of the restrictive-housing stay.</p>
+            <div class="mini"><strong>Self-report:</strong> interviews also measured misconduct during restrictive housing.</div>
+          </div>
+          <div class="path-arrow outcome-arrow" aria-hidden="true">→</div>
+          <div class="path-node path-outcome after">
+            <div class="outcome-index">02</div>
+            <div class="k">After return to general population</div>
+            <h3>Six-month follow-up</h3>
+            <p>Official records captured misconduct during the six months following return to the general prison population.</p>
+            <div class="mini"><strong>Interview timing:</strong> about two weeks before the transition back to general population.</div>
+          </div>
+        </div>
+      </div>
+      <div class="keyline">
+        <strong>Why randomization matters:</strong> the treatment assignment itself was random. That gives the SUP and continued-IMU groups a common starting point, so differences in later misconduct can be interpreted as experimental estimates rather than simply reflecting pre-existing differences.
+      </div>
+
+      <details class="subdetails">
+        <summary>See the pre-randomization characteristics and equivalence checks</summary>
+        <div class="consortrow">
+          <div class="consort-col">
+            <div class="k">Full randomized sample</div>
+            <h3>N = 211</h3>
+            <p>102 assigned to IMU; 109 assigned to SUP.</p>
+            <div class="consort-stat"><strong>Age:</strong> 32.0 years (SD 8.9)</div>
+            <div class="consort-stat"><strong>Gang affiliation:</strong> 78.7%</div>
+            <div class="consort-stat"><strong>Prior IMU:</strong> 40.3%</div>
+          </div>
+          <div class="consort-col">
+            <div class="k">Examples of baseline characteristics</div>
+            <h3>Groups were broadly similar</h3>
+            <p>The published equivalence table compares age, race/ethnicity, gang affiliation, mental health designation, risk score, offense characteristics, prison history, prior misconduct, and IMU history.</p>
+            <div class="consort-stat"><strong>Gang affiliation:</strong> IMU 77.5% · SUP 79.8% · p = .679</div>
+            <div class="consort-stat"><strong>Pre-randomization misconduct:</strong> 1.2 vs. 1.1 violations/quarter · p = .538</div>
+            <div class="consort-stat"><strong>IMU duration:</strong> 1.3 vs. 1.2 months · p = .682</div>
+          </div>
+          <div class="consort-col">
+            <div class="k">What randomization did not eliminate</div>
+            <h3>Small imbalances can occur</h3>
+            <p>Of 24 comparisons in the full and interview samples, most were statistically equivalent; a small number of differences occurred at conventional thresholds and were adjusted for in the regression analyses.</p>
+            <div class="consort-stat"><strong>Full sample:</strong> one difference at p &lt; .05 and one at p &lt; .10.</div>
+            <div class="consort-stat"><strong>Interview sample:</strong> no differences at p &lt; .05 and one at p &lt; .10.</div>
+          </div>
+        </div>
+      </details>
+
+      <details class="subdetails">
+        <summary>See the published study timeline and interview target · adapted from Figure 2</summary>
+        <div class="consortrow">
+          <div class="consort-col">
+            <div class="k">Before randomization</div>
+            <h3>DSU → IMU</h3>
+            <p>Participants spent an average of 142 days in the Disciplinary Segregation Unit before transfer to IMU.</p>
+          </div>
+          <div class="consort-col">
+            <div class="k">After randomization</div>
+            <h3>IMU → SUP or remain IMU</h3>
+            <p>The full study cohort averaged 5.1 months from randomization to the end of restrictive housing. Those who transferred to SUP spent an average of 51 days in IMU before the move.</p>
+          </div>
+          <div class="consort-col">
+            <div class="k">Interview timing</div>
+            <h3>~2 weeks before return</h3>
+            <p>Interviews were intended to occur shortly before participants returned to general population; 101 were conducted remotely and 11 in person.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="subdetails">
+        <summary>See the participant flow from randomization to analysis · adapted from Figure 3 (CONSORT)</summary>
+        <div class="consortrow">
+          <div class="consort-col">
+            <div class="k">Allocation</div>
+            <h3>211 randomized</h3>
+            <p>IMU: n = 102<br>SUP: n = 109</p>
+          </div>
+          <div class="consort-col">
+            <div class="k">Interview follow-up</div>
+            <h3>112 consented</h3>
+            <p>IMU: 50 · SUP: 62. Eleven people were missing the self-report misconduct section because of partial interviews and were excluded from that analysis.</p>
+          </div>
+          <div class="consort-col">
+            <div class="k">Analysis</div>
+            <h3>Administrative + survey</h3>
+            <p>Official administrative data were available for all 211 randomized participants; the self-report analyses used the resulting 101-person interview sample.</p>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="shade figure-section" id="program" data-reveal>
+  <div class="wrap">
+    <div class="figure-label-row"><div class="fig-tag">THE INTERVENTION</div><div class="figure-rule"></div></div>
+    <div class="figure-intro">
+      <h2>SUP changed the conditions of restrictive housing</h2>
+      <p>The Step-Up Program combined environmental changes, additional opportunities and programming, and a different approach to staff–prisoner interaction. It was intended to provide a less restrictive and more rehabilitative setting than the IMU.</p>
+    </div>
+    <div class="intervention-intro">
+      <div class="intervention-summary"><div class="big">5–6 hours</div><div class="small">targeted daily out-of-cell time in SUP, compared with about 1 hour in IMU</div></div>
+      <div class="accent-band"><h3>More than a housing change</h3><p>SUP combined changes to the physical environment, social interaction, programming, case management, recreation, and staff culture.</p></div>
+    </div>
+    <div class="program-grid">
+      <div class="program-item"><div class="time">01 · OUT-OF-CELL TIME</div><h3>More time outside the cell</h3><p>The program was designed to provide 5–6 hours of out-of-cell time per day, compared with about 1 hour available in the IMU.</p></div>
+      <div class="program-item"><div class="time">02 · SOCIAL CONTACT</div><h3>More interaction</h3><p>Participants had more opportunities for social interaction, including outdoor recreation with others and greater access to staff.</p></div>
+      <div class="program-item"><div class="time">03 · PROGRAMMING</div><h3>More rehabilitative services</h3><p>SUP expanded access to treatment and recreational activities, including Free Your Mind in Segregation, DBT, GOGI, Living Well, HHAAP, and Charting a New Course.</p></div>
+      <div class="program-item"><div class="time">04 · CASE MANAGEMENT</div><h3>More individualized support</h3><p>A correctional case counselor coordinated treatment plans and matched participants with programs based on their risks and needs.</p></div>
+      <div class="program-item feature"><div class="time">05 · STAFF APPROACH</div><h3>A more humanistic officer role</h3><p>Correctional officers in SUP were encouraged to adopt a more humanistic approach, including participating in activities such as card or video games with prisoners. The authors note that this did not occur in the IMU.</p></div>
+    </div>
+    <div class="callout teal"><h4>The intervention was a package</h4><p>SUP was not a single treatment component. The study evaluates a bundle of changes in living conditions, socialization, treatment access, recreation, case management, and staff culture.</p></div>
+  </div>
+</section>
+
+<section id="results" class="figure-section" data-reveal>
+  <div class="wrap">
+    <div class="figure-label-row"><div class="fig-tag">FIGURE 2 · OFFICIAL MISCONDUCT</div><div class="figure-rule"></div></div>
+    <div class="figure-intro">
+      <h2>What happened to official misconduct?</h2>
+      <p>The study estimates the difference between SUP and IMU housing. Click between the two outcome windows and estimators. Points are estimates; lines are 95% confidence intervals.</p>
+    </div>
+    <div class="card figure-card">
+      <div class="control-group"><div class="control-label">Outcome window</div><div class="controls" aria-label="Outcome window">
+        <button class="toggle teal active" data-window="rh">During restrictive housing</button>
+        <button class="toggle blue" data-window="gp">After return to general population</button>
+      </div></div>
+      <div class="control-group"><div class="control-label">Estimator</div><div class="controls" aria-label="Estimator">
+        <button class="toggle active" data-est="itt">Intent-to-treat (ITT)</button>
+        <button class="toggle" data-est="late">Local average treatment effect (LATE)</button>
+      </div></div>
+      <div id="resultPanel"></div>
+    </div>
+    <div class="finding" id="officialFinding"></div>
+    <details class="table-toggle published-block">
+      <summary>View the published estimates (b values)</summary>
+      <div class="table-caption">Published regression coefficients from Table 3. The coefficient is the estimated difference from the IMU reference group.</div>
+      <div class="table-wrap"><table class="datatab" id="officialTable">
+        <thead><tr><th>Outcome</th><th>ITT</th><th>p</th><th>LATE</th><th>p</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+    </details>
+  </div>
+</section>
+
+<section class="shade figure-section" id="selfreport" data-reveal>
+  <div class="wrap">
+    <div class="figure-label-row"><div class="fig-tag">FIGURE 3 · SELF-REPORT</div><div class="figure-rule"></div></div>
+    <div class="figure-intro">
+      <h2>Self-reports told a similar story inside restrictive housing</h2>
+      <p>Because interviews were conducted before participants returned to general population, self-report outcomes were available only for misconduct during restrictive housing.</p>
+    </div>
+    <div class="card figure-card teal-accent">
+      <div class="control-group">
+        <div class="control-label">Estimator</div>
+        <div class="controls" aria-label="Self-report estimator">
+          <button class="toggle active" data-self-est="itt">Intent-to-treat (ITT)</button>
+          <button class="toggle" data-self-est="late">Local average treatment effect (LATE)</button>
+        </div>
+      </div>
+      <div id="selfPanel"></div>
+    </div>
+    <details class="table-toggle published-block">
+      <summary>View the published estimates (b values)</summary>
+      <div class="table-caption">Published regression coefficients from Table 4. The coefficient is the estimated difference from the IMU reference group.</div>
+      <div class="table-wrap"><table class="datatab">
+        <tr><th>Outcome</th><th>ITT</th><th>p</th><th>LATE</th><th>p</th></tr>
+        <tr><td>All misconduct</td><td class="mono">−0.003</td><td>.974</td><td class="mono">−0.005</td><td>.973</td></tr>
+        <tr><td>Violent misconduct</td><td class="mono">−0.052</td><td>.350</td><td class="mono">−0.078</td><td>.335</td></tr>
+        <tr><td>Non-violent misconduct</td><td class="mono">+0.001</td><td>.995</td><td class="mono">+0.001</td><td>.995</td></tr>
+      </table></div>
+    </details>
+  </div>
+</section>
+
+<section id="interpretation" class="figure-section" data-reveal>
+  <div class="wrap">
+    <div class="figure-label-row"><div class="fig-tag">HOW TO READ THE RESULT</div><div class="figure-rule"></div></div>
+    <div class="figure-intro">
+      <h2>The key contrast is <em>inside</em> restrictive housing versus <em>after</em> return</h2>
+      <p>The experimental results are more nuanced than a single “worked” or “didn’t work” finding.</p>
+    </div>
+    <div class="caveat-grid">
+      <div class="caveat"><div class="time">01 · During restrictive housing</div><h3>A mixed pattern</h3><p>The official-record estimates were mostly null. Violent misconduct was the exception in the LATE analysis: <span class="mono">b = +0.097</span>, <span class="mono">p = .043</span>. The authors interpret this partly through greater opportunity for interpersonal contact in SUP.</p></div>
+      <div class="caveat"><div class="time">02 · After return to general population</div><h3>No detected group differences</h3><p>The official-record estimates did not show statistically significant differences between SUP and IMU across all three outcomes. The ITT coefficients were <span class="mono">−0.021</span>, <span class="mono">+0.024</span>, and <span class="mono">−0.001</span>.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="shade" id="caveats" data-reveal>
+  <div class="wrap">
+    <div class="fig-tag">WHAT TO KEEP IN MIND</div>
+    <div class="section-head">
+      <h2>The experimental test was strong; implementation was not complete</h2>
+      <p>The authors identify several reasons to interpret the findings in context.</p>
+    </div>
+    <div class="program-grid">
+      <div class="program-item"><div class="time">COVID-19</div><h3>Program disruption</h3><p>Enrollment was paused from May 2020 through March 2021, and the SUP operated in a modified format during part of the pandemic.</p></div>
+      <div class="program-item"><div class="time">PARTIAL UPTAKE</div><h3>Not everyone assigned to SUP transferred</h3><p>Only 52 of the 109 people assigned to SUP agreed to move, which is why the study reports both ITT and LATE estimates.</p></div>
+      <div class="program-item"><div class="time">STAFFING</div><h3>The intended dosage was not always achieved</h3><p>Staffing shortages meant the program did not consistently reach its intended 5–6 hours of out-of-cell time per day.</p></div>
+      <div class="program-item"><div class="time">SAMPLE SIZE</div><h3>Modest statistical power</h3><p>The study included 211 randomized participants, and the interviewed sample was smaller, limiting the ability to detect subtle effects in self-reported outcomes.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h4>Source study</h4>
+      <p><strong style="color:#eaf2fb;"><a href="https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/jennifer-tostlebe.php" target="_blank" rel="noopener">Tostlebe, J. J.</a>, <a href="https://www.colorado.edu/sociology/our-people/david-pyrooz" target="_blank" rel="noopener">Pyrooz, D. C.</a>, <a href="https://www.gc.cuny.edu/people/ryan-m-labrecque" target="_blank" rel="noopener">Labrecque, R. M.</a>, &amp; <a href="https://www.cla.purdue.edu/directory/profiles/bert-useem.html" target="_blank" rel="noopener">Useem, B.</a> (2025).</strong> <em>Experimental effects of a restrictive housing step-down program on violent and non-violent misconduct.</em> <em>Journal of Criminal Justice, 99</em>, 102466.</p>
+      <p>Oregon Department of Corrections · Randomized controlled trial</p>
+      <div class="accessbadge"><span class="d"></span>DOI: <a href="https://doi.org/10.1016/j.jcrimjus.2025.102466" target="_blank" rel="noopener">10.1016/j.jcrimjus.2025.102466</a></div>
+    </div>
+    <div>
+      <h4>About this explorer</h4>
+      <p>Figures on this page visualize the published study design and coefficient estimates from the article's Tables 3 and 4.</p>
+      <p><a href="https://arcorrectionslab.org/">The ARC Lab</a> · University of Nebraska Omaha</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const official = {
+  gp: {
+    title:'Six months after return to general population',
+    note:'Official misconduct · coefficient (b) · IMU reference',
+    finding:'Across all three official misconduct outcomes, the ITT estimates were statistically indistinguishable from zero. The LATE estimates were in the same direction and also had confidence intervals that included zero. The study therefore did not detect a statistically significant difference in official misconduct after return to general population housing.',
+    itt:[['All misconduct',-0.021,0.065,'.744'],['Violent misconduct',0.024,0.063,'.703'],['Non-violent misconduct',-0.001,0.066,'.982']],
+    late:[['All misconduct',-0.047,0.141,'.739'],['Violent misconduct',0.053,0.137,'.697'],['Non-violent misconduct',-0.003,0.142,'.982']]
+  },
+  rh: {
+    title:'During restrictive housing · official records',
+    note:'Official misconduct · coefficient (b) · IMU reference',
+    finding:'Inside restrictive housing, most official-record estimates were null. Violent misconduct was the exception: the LATE estimate was +0.097 (p = .043), with a 95% confidence interval that did not include zero. The authors interpret this partly through the greater opportunity for interpersonal interaction in SUP than in the highly isolated IMU.',
+    itt:[['All misconduct',0.073,0.043,'.090'],['Violent misconduct',0.044,0.022,'.051'],['Non-violent misconduct',0.073,0.043,'.086']],
+    late:[['All misconduct',0.160,0.093,'.086'],['Violent misconduct',0.097,0.048,'.043'],['Non-violent misconduct',0.161,0.093,'.082']]
+  }
+};
+const selfReport={
+  title:'Self-reported misconduct during restrictive housing',
+  itt:[['All misconduct',-0.003,0.102,'.974'],['Violent misconduct',-0.052,0.055,'.350'],['Non-violent misconduct',0.001,0.103,'.995']],
+  late:[['All misconduct',-0.005,0.149,'.973'],['Violent misconduct',-0.078,0.081,'.335'],['Non-violent misconduct',0.001,0.150,'.995']]
+};
+let win='rh', est='itt', selfEst='itt';
+function esc(s){return String(s).replace(/[&<>]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[m]));}
+function signed(v){return (v>0?'+':'')+v.toFixed(3);}
+function renderOfficial(){
+  const d=official[win][est];
+  const scale=est==='itt'?0.20:0.35;
+  const panel=document.getElementById('resultPanel');
+  let html=`<div class="plot-meta"><div><div class="title">${esc(official[win].title)}</div><div class="meta-note" style="text-align:left;margin-top:4px">${esc(official[win].note)}</div></div><div class="meta-note">Point = b estimate · line = 95% CI</div></div>`;
+  html+='<div class="effect-list">';
+  d.forEach((r,i)=>{
+    const v=r[1], se=r[2], ci=1.96*se, lo=v-ci, hi=v+ci;
+    const rawX=(v/scale*50)+50;
+    const rawLeft=(lo/scale*50)+50;
+    const rawRight=(hi/scale*50)+50;
+    const xVal=Math.max(0,Math.min(100,rawX));
+    const left=Math.max(0,Math.min(100,rawLeft));
+    const right=Math.max(0,Math.min(100,rawRight));
+    const width=Math.max(0,right-left);
+    const sig=Number(r[3])<.05;
+    const color=sig?'var(--red)':(v<0?'var(--blue)':'var(--teal)');
+    html+=`<div class="effect-row"><div class="effect-name">${esc(r[0])}<small>p = ${esc(r[3])}</small></div><div class="effect-plot"><div class="zero"></div><div class="ci" style="left:${left}%;width:${width}%;background:${color}"></div><div class="cap" style="left:${left}%;color:${color}"></div><div class="cap" style="left:${right}%;color:${color}"></div><div class="dot" style="left:${xVal}%;background:${color}"></div></div><div class="effect-value">${signed(v)}</div></div>`;
+  });
+  html+=`</div><div class="scale"><span>−${scale.toFixed(2)}</span><span>0</span><span>+${scale.toFixed(2)}</span></div>`;
+  html+=`<div class="result-key"><span><i style="background:var(--teal)"></i>Estimate above zero</span><span><i style="background:var(--blue)"></i>Estimate below zero</span><span><i style="background:var(--red)"></i>p &lt; .05</span></div>`;
+  html+=`<div class="note">Intent-to-treat (ITT) linear probability models fit with an ordinary least squares (OLS) regression and cluster-robust standard errors. Local average treatment effects (LATE) are fit through two-stage least squares (2SLS) regression for instrumental variable (IV) estimation and cluster-robust standard errors.</div>`;
+  panel.innerHTML=html;
+  document.getElementById('officialFinding').innerHTML=`<div class="label">${win==='rh'?'During restrictive housing':'After return to general population'}</div><p>${esc(official[win].finding)}</p>`;
+
+  const rows = official[win]['itt'].map((r,i)=>({name:r[0],itt:r[1],ittp:r[3],late:official[win].late[i][1],latep:official[win].late[i][3]}));
+  document.querySelector('#officialTable tbody').innerHTML = rows.map(r => `
+    <tr><td>${esc(r.name)}</td><td class="mono">${signed(r.itt)}</td><td>${esc(r.ittp)}</td><td class="mono">${signed(r.late)}</td><td>${esc(r.latep)}</td></tr>
+  `).join('');
+}
+function renderSelf(){
+  const d=selfReport[selfEst]; const scale=selfEst==='itt'?0.20:0.25;
+  let html=`<div class="plot-meta"><div><div class="title">${selfReport.title}</div><div class="meta-note" style="text-align:left;margin-top:4px">Coefficient (b) · IMU reference</div></div><div class="meta-note">Point = b estimate · line = 95% CI · ${selfEst.toUpperCase()}</div></div><div class="effect-list">`;
+  d.forEach(r=>{
+    const v=r[1],se=r[2],ci=1.96*se,lo=v-ci,hi=v+ci;
+    const x=Math.max(0,Math.min(100,(v/scale*50)+50));
+    const left=Math.max(0,Math.min(100,(lo/scale*50)+50));
+    const right=Math.max(0,Math.min(100,(hi/scale*50)+50));
+    const width=Math.max(0,right-left);
+    html+=`<div class="effect-row"><div class="effect-name">${esc(r[0])}<small>p = ${esc(r[3])}</small></div><div class="effect-plot"><div class="zero"></div><div class="ci" style="left:${left}%;width:${width}%;background:var(--blue)"></div><div class="cap" style="left:${left}%;color:var(--blue)"></div><div class="cap" style="left:${right}%;color:var(--blue)"></div><div class="dot" style="left:${x}%;background:var(--blue)"></div></div><div class="effect-value">${signed(v)}</div></div>`;
+  });
+  html+=`</div><div class="scale"><span>−${scale.toFixed(2)}</span><span>0</span><span>+${scale.toFixed(2)}</span></div><div class="result-key"><span><i style="background:var(--blue)"></i>Estimated coefficient</span><span>All 95% CIs include zero</span></div><div class="note">Intent-to-treat linear probability models fit with an ordinary least squares (OLS) regression and cluster-robust standard errors. Average treatment effects are fit through two-stage least squares (2SLS) regression for instrumental variable (IV) estimation and cluster-robust standard errors. All confidence intervals include zero. Self-report misconduct covered the two months prior to the interview, while participants were still in restrictive housing. The interviews therefore do not provide a self-report outcome for the later general-population period.</div>`;
+  document.getElementById('selfPanel').innerHTML=html;
+}
+document.querySelectorAll('[data-window]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-window]').forEach(x=>x.classList.remove('active'));b.classList.add('active');win=b.dataset.window;renderOfficial();}));
+document.querySelectorAll('[data-est]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-est]').forEach(x=>x.classList.remove('active'));b.classList.add('active');est=b.dataset.est;renderOfficial();renderSelf();}));
+document.querySelectorAll('[data-self-est]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-self-est]').forEach(x=>x.classList.remove('active'));b.classList.add('active');selfEst=b.dataset.selfEst;renderSelf();}));
+renderOfficial();renderSelf();
+const revealEls=document.querySelectorAll('[data-reveal]');
+if('IntersectionObserver' in window){const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in-view');io.unobserve(entry.target);}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});revealEls.forEach(el=>io.observe(el));}else revealEls.forEach(el=>el.classList.add('in-view'));
+</script>
+</body>
+</html>
