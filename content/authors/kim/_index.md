@@ -34,9 +34,9 @@ interests:
 
 education:
   courses:
-#    - course: PhD in Criminology and Criminal Justice
-#      institution: University of Nebraska Omaha
-#      year: Anticipated 2027
+    - course: PhD in Criminology, Law and Society
+      institution: George Mason University
+      year: Anticipated 2031
     - course: M.A. in Criminology and Criminal Justice
       institution: University of Nebraska at Omaha
       year: 2026
