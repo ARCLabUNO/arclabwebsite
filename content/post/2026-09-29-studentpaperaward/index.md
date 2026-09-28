@@ -1,6 +1,6 @@
 ---
 title: Caitlyn Jordon and Taylor Gonzales Receive Ben Steiner Excellence in Corrections Student Paper Award
-date: 2026-09-28
+date: 2026-09-29
 summary: "ARC Lab students Caitlyn Jordon and Taylor Gonzales received the American Society of Criminology Division on Corrections and Sentencing’s Ben Steiner Excellence in Corrections Student Paper Award for their research on release decision-making."
 authors:
   - jordon
