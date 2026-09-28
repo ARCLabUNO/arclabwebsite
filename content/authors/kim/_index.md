@@ -19,7 +19,7 @@ role: Alumna
 # Organizations/Affiliations
 organizations:
   - name: George Mason Universtiy
-#    url: 'https://www.unomaha.edu/college-of-public-affairs-and-community-service/criminology-and-criminal-justice/about-us/abby-hayes.php'
+    url: 'https://cls.gmu.edu/people/ykim276'
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests focus on the opioid overdose crisis and evolving drug policy responses, particularly in relation to criminal justice systems.
