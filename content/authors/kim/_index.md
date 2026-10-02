@@ -51,7 +51,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:ykim57@unomaha.edu'
+    link: 'mailto:ykim276@gmu.edu'
 #  - icon: x-twitter
 #    icon_pack: fab
 #    link: https://x.com/AbigailHayes0
