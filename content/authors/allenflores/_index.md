@@ -50,7 +50,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:bayleeallen@unomaha.edu'
+    link: 'mailto:BALLEN30@depaul.edu'
 #  - icon: twitter
 #    icon_pack: fab
 #    link: https://twitter.com/Zkhamilto
