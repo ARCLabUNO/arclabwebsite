@@ -1,9 +1,10 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Explore the Data — Criminal History's Expiration Date</title>
+<title>Recidivism Decay Explorer</title>
 <style>
   :root {
     --bg: #0a0f18;
@@ -360,6 +361,8 @@
         <div class="footnote-text" id="conv-source-note"></div>
       </div>
 
+      <p class="footnote-text" style="margin-top:4px;">Note: these curves are on a different scale than Figure 2's group comparisons above. Figure 2 shows illustrative curves anchored to the raw 28% year-1 probability, built the same way for every group so they're comparable to each other. The curves here are instead scaled to pass exactly through each state's real, published base rate and convergence year from Table 7 &mdash; so a given line's value here isn't meant to match that same group's value in Figure 2 at the same year. They answer different questions: Figure 2 asks how groups compare to one another; this figure asks when each state's real charge rate converges to its own real background rate.</p>
+
       <div class="table-toggle-row">
         <button type="button" class="table-toggle" id="conv-table-toggle" aria-expanded="false">
           <span class="chev">&#9656;</span> View this data as a table
@@ -425,9 +428,9 @@
   <section class="block">
     <h2 class="block-heading">How these curves were built</h2>
     <div class="method-card">
-      <p><strong>Figure 1 (GLM vs. GLMM):</strong> Table 2 reports both specifications' lookback odds ratios (GLM 0.44, GLMM 0.39, each per 1-SD/4.85-year increase in lookback), converted here into an illustrative per-year decay rate. Year-1 starting probabilities (GLM &ldquo;exceeding 20%,&rdquo; GLMM &ldquo;approximately 5%&rdquo;) are taken directly from the paper's own description of Figure 4. The GLMM's lower, steeper curve reflects a subject-specific (conditional) prediction once each person's repeat charges are modeled as clustered rather than independent &mdash; the paper retains the GLMM for every subsequent analysis for this reason.</p>
-      <p><strong>Figure 2 (group comparisons):</strong> decay rate derived from the published interaction-model coefficients in Tables 3&ndash;5 and Appendix Tables E-1/E-2. Year-1 starting probability: each group's real published odds ratio applied multiplicatively, in odds-space, onto the study's year-1 population probability of 28%: <code>odds_group = odds_reference &times; OR</code>, then converted back to a probability. Where the paper reports a genuine null (violent vs. non-violent offense type), the lines are drawn essentially on top of each other.</p>
-      <p><strong>Figure 3 (convergence):</strong> base rates and convergence years are Table 7's real, published values, not illustrative &mdash; unchanged from the paper. Because the convergence analysis is estimated on a different scale (population-average GLMM predictions, the same lower-baseline specification as Figure 1's GLMM curve) than Figure 2's charts (anchored to the 28% observed population curve for cross-group comparability), each state's curve here is scaled so it passes exactly through that state's own real base rate at its own real convergence year, using the same real per-state decay-rate multiplier from Table 3 as Figure 2's states chart. The historical-period comparison uses Table 6: year-1 probability from the additive model's main-effect odds ratio (0.31) applied the same way as every Figure 2 dimension; decay rate from the interaction model's odds ratios (reference-period slope 0.54, interaction term 0.67), estimated on Washington data only.</p>
+      <p><strong>Figure 1 (GLM vs. GLMM):</strong> Table 2 reports both specifications' lookback odds ratios (GLM 0.44, GLMM 0.39, each per 1-SD/4.85-year increase in lookback), converted here into an illustrative per-year decay rate. Year-1 starting probabilities (GLM &ldquo;exceeding 20%,&rdquo; GLMM &ldquo;approximately 15%&rdquo;) are taken directly from the paper's own description of Figure 4. The GLMM's lower, steeper curve reflects a subject-specific (conditional) prediction once each person's repeat charges are modeled as clustered rather than independent &mdash; the paper retains the GLMM for every subsequent analysis for this reason.</p>
+      <p><strong>Figure 2 (group comparisons):</strong> decay rate derived from the published interaction-model coefficients in Tables 3&ndash;5 and Appendix Tables E-1/E-2. Year-1 starting probability: each group's real published odds ratio applied multiplicatively, in odds-space, onto the study's year-1 population probability of 28%: <code>odds_group = odds_reference &times; OR</code>, then converted back to a probability. The dashed &ldquo;population average&rdquo; line uses that same 28% figure, decaying at the shared population rate &mdash; the same scale as every group curve in this chart. Where the paper reports a genuine null (violent vs. non-violent offense type), the lines are drawn essentially on top of each other.</p>
+      <p><strong>Figure 3 (convergence):</strong> base rates and convergence years are Table 7's real, published values, not illustrative &mdash; unchanged from the paper. Because the convergence analysis is estimated on a different scale (population-average GLMM predictions, the same lower-baseline specification as Figure 1's GLMM curve) than Figure 2's charts (anchored to the 28% observed population curve for cross-group comparability), each state's curve here &mdash; including the dashed population line &mdash; is scaled so it passes exactly through that state's own real base rate at its own real convergence year, using the same real per-state decay-rate multiplier from Table 3 as Figure 2's states chart. <strong>This means a given line's value in this figure is not meant to match that same group's value in Figure 2 at the same year</strong> &mdash; see the note under the chart above. The historical-period comparison uses Table 6: year-1 probability from the additive model's main-effect odds ratio (0.31) applied the same way as every Figure 2 dimension; decay rate from the interaction model's odds ratios (reference-period slope 0.54, interaction term 0.67), estimated on Washington data only.</p>
       <p>All charts on this page are <strong>illustrative</strong>: built from real, published model estimates, but not literally the paper's fitted values at every year for every subgroup. They're meant to make the paper's findings something you can see and compare yourself.</p>
     </div>
   </section>
@@ -469,7 +472,10 @@
   function probAt(p1, k, t){ return p1 * Math.exp(-k * (t - 1)); }
   function rrAt(k, t){ return Math.exp(-k * (t - 1)); }
 
-  function xPix(t){ return padL + (t / XMAX) * plotW; }
+  // xmax (last argument) defaults to the shared 25-year domain every chart but
+  // Figure 1 uses; Figure 1 overrides it to 40 to match the published Figure 4's
+  // own lookback-year axis (see GLM_GLMM_DIM below).
+  function xPix(t, xmax){ xmax = xmax || XMAX; return padL + (t / xmax) * plotW; }
   function yPixProb(p, probYMax){ return padT + (1 - p / probYMax) * plotH; }
   function yPixRel(rr){ return padT + (1 - rr) * plotH; }
 
@@ -480,16 +486,17 @@
   }
 
   // generic curve path from raw (p1, k) — used for groups and for population/reference lines
-  function curvePath(p1, k, view, probYMax){
+  function curvePath(p1, k, view, probYMax, xmax){
+    xmax = xmax || XMAX;
     let d = '';
-    for (let t = 1; t <= XMAX; t += 0.25){
+    for (let t = 1; t <= xmax; t += 0.25){
       const val = view === 'prob' ? probAt(p1, k, t) : rrAt(k, t);
       const y = view === 'prob' ? yPixProb(val, probYMax) : yPixRel(val);
-      d += (t === 1 ? 'M' : 'L') + ' ' + xPix(t).toFixed(2) + ' ' + y.toFixed(2) + ' ';
+      d += (t === 1 ? 'M' : 'L') + ' ' + xPix(t, xmax).toFixed(2) + ' ' + y.toFixed(2) + ' ';
     }
     return d;
   }
-  function pathFor(group, view, probYMax){ return curvePath(group.p1, group.k, view, probYMax); }
+  function pathFor(group, view, probYMax, xmax){ return curvePath(group.p1, group.k, view, probYMax, xmax); }
 
   function valueAt(group, view, t){
     return view === 'prob' ? probAt(group.p1, group.k, t) : rrAt(group.k, t);
@@ -499,6 +506,15 @@
     return view === 'prob' ? v.toFixed(1) + '%' : v.toFixed(2) + '×';
   }
 
+  // Shared "population average" reference line used by Figure 1, Figure 2, and the
+  // Figure 3 historical-period sub-chart: the real published year-1 population
+  // probability (28%), decaying at the shared population rate K0 — the same scale
+  // every Figure 2 group curve is anchored to. Figure 3's main convergence chart
+  // (see initConvergenceChart below) deliberately uses a DIFFERENT scale for its own
+  // population/state curves, rescaled to match Table 7's real base rates and
+  // convergence years — that's a genuinely different quantity, not a bug, and is
+  // called out explicitly in that chart's own note and in the methodology card
+  // rather than forced to visually match this line.
   const POP = { label: 'Population average', p1: 28.0, k: K0 };
 
   const DIMENSIONS = [
@@ -566,14 +582,22 @@
 
   // ---- Figure 1: GLM vs. GLMM (H1) -----------------------------------------------
   // k = -ln(OR) / 4.85 (Table 2 lookback ORs are per 1-SD/4.85-yr). p1 from Figure 4's
-  // prose ("exceeding 20%" GLM; "approximately 5%" GLMM).
+  // prose ("exceeding 20%" GLM; "approximately 15%" GLMM). Matched to the published
+  // Figure 4 (Panel 4A/4B): full 0-40-year lookback axis (not the page's usual 25-year
+  // window — GLM/GLMM was switched to the paper's primary model late in the R&R
+  // process, and this is the figure that documents that switch), 10-year axis ticks,
+  // and solid-GLM/dashed-GLMM line style matching Figure 4's own "Model: GLM Linear /
+  // GLMM Linear" legend convention (kept in color too, for this page's own style).
   const GLM_GLMM_DIM = {
     key: 'glm_glmm', tabLabel: 'GLM vs. GLMM', chartTitle: 'GLM vs. GLMM (H1)',
-    source: 'Source: Table 2 lookback odds ratios (GLM 0.44, GLMM 0.39, per 1-SD/4.85-yr increase in lookback), converted to an illustrative per-year decay rate. Year-1 % from the paper’s own description of Figure 4 (“exceeding 20%” for GLM; “approximately 5%” for GLMM).',
+    source: 'Source: Table 2 lookback odds ratios (GLM 0.44, GLMM 0.39, per 1-SD/4.85-yr increase in lookback), converted to an illustrative per-year decay rate. Year-1 % from the paper’s own description of Figure 4 (“exceeding 20%” for GLM; “approximately 15%” for GLMM). Axis matches the published Figure 4 (Panels 4A/4B): full 40-year lookback window.',
     probYMax: 25,
+    xmax: 40,
+    xticks: [1, 10, 20, 30, 40],
+    tableYears: [1, 2, 3, 5, 7, 10, 15, 20, 25, 30, 35, 40],
     groups: [
-      { key: 'glm',  label: 'GLM (ignores clustering)',        p1: 22.0, k: 0.1693, color: 'var(--s2)' },
-      { key: 'glmm', label: 'GLMM (accounts for clustering)',  p1: 5.0,  k: 0.1941, color: 'var(--s1)' },
+      { key: 'glm',  label: 'GLM Linear (ignores clustering)',        p1: 22.0, k: 0.1693, color: 'var(--s2)' },
+      { key: 'glmm', label: 'GLMM Linear (accounts for clustering)',  p1: 15.0, k: 0.1941, color: 'var(--s1)', dash: '8,5' },
     ]
   };
 
@@ -659,6 +683,8 @@
 
     function render(){
       const dim = dimensions[currentDimIdx];
+      const xmax = dim.xmax || XMAX;
+      const xticks = dim.xticks || [1,5,10,15,20,25];
       let html = '';
 
       if (currentView === 'prob'){
@@ -675,25 +701,26 @@
           html += `<text x="${padL-12}" y="${(y+4).toFixed(2)}" class="axis-label" text-anchor="end">${rr.toFixed(1)}×</text>`;
         });
       }
-      [1,5,10,15,20,25].forEach(function(gx){
-        html += `<text x="${xPix(gx).toFixed(2)}" y="${H-padB+24}" class="axis-label" text-anchor="middle">${gx===1?'Year 1':'Yr '+gx}</text>`;
+      xticks.forEach(function(gx){
+        html += `<text x="${xPix(gx, xmax).toFixed(2)}" y="${H-padB+24}" class="axis-label" text-anchor="middle">${gx===1?'Year 1':'Yr '+gx}</text>`;
       });
       html += `<line x1="${padL}" y1="${(padT+plotH).toFixed(2)}" x2="${W-padR}" y2="${(padT+plotH).toFixed(2)}" stroke="rgba(255,255,255,0.28)" stroke-width="1.2"/>`;
 
       if (showPop){
-        const d = currentView === 'prob' ? curvePath(POP.p1, POP.k, 'prob', dim.probYMax) : curvePath(POP.p1, POP.k, 'rr', dim.probYMax);
+        const d = currentView === 'prob' ? curvePath(POP.p1, POP.k, 'prob', dim.probYMax, xmax) : curvePath(POP.p1, POP.k, 'rr', dim.probYMax, xmax);
         html += `<path id="${prefix}-pop-line" d="${d}" fill="none" stroke="var(--ref)" stroke-width="2" stroke-dasharray="6,5" opacity="0.65" stroke-linecap="round"/>`;
       }
 
       dim.groups.forEach(function(g){
-        const d = pathFor(g, currentView, dim.probYMax);
+        const d = pathFor(g, currentView, dim.probYMax, xmax);
         const col = resolveColor(g.color);
         const isHidden = hidden.has(g.key);
-        const endVal = valueAt(g, currentView, XMAX);
+        const endVal = valueAt(g, currentView, xmax);
         const endY = currentView === 'prob' ? yPixProb(endVal, dim.probYMax) : yPixRel(endVal);
+        const dashAttr = g.dash ? ` stroke-dasharray="${g.dash}"` : '';
         html += `<g class="series" data-key="${g.key}" style="opacity:${isHidden ? 0.12 : 1}; transition: opacity 0.25s ease;">`;
-        html += `<path id="${prefix}-line-${g.key}" d="${d}" fill="none" stroke="${col}" stroke-width="2" stroke-linecap="round"/>`;
-        html += `<circle cx="${xPix(XMAX).toFixed(2)}" cy="${endY.toFixed(2)}" r="5" fill="${col}" stroke="#0a0f18" stroke-width="2"/>`;
+        html += `<path id="${prefix}-line-${g.key}" d="${d}" fill="none" stroke="${col}" stroke-width="2" stroke-linecap="round"${dashAttr}/>`;
+        html += `<circle cx="${xPix(xmax, xmax).toFixed(2)}" cy="${endY.toFixed(2)}" r="5" fill="${col}" stroke="#0a0f18" stroke-width="2"/>`;
         html += `</g>`;
       });
 
@@ -733,6 +760,7 @@
 
     function morphToView(){
       const dim = dimensions[currentDimIdx];
+      const xmax = dim.xmax || XMAX;
       dim.groups.forEach(function(g){
         const el = document.getElementById(prefix + '-line-' + g.key);
         if (el) el.style.transition = 'd 0.9s cubic-bezier(0.4,0,0.2,1)';
@@ -743,8 +771,8 @@
       requestAnimationFrame(function(){
         dim.groups.forEach(function(g){
           const el = document.getElementById(prefix + '-line-' + g.key);
-          if (el) el.style.d = 'path("' + pathFor(g, currentView, dim.probYMax) + '")';
-          const endVal = valueAt(g, currentView, XMAX);
+          if (el) el.style.d = 'path("' + pathFor(g, currentView, dim.probYMax, xmax) + '")';
+          const endVal = valueAt(g, currentView, xmax);
           const endY = currentView === 'prob' ? yPixProb(endVal, dim.probYMax) : yPixRel(endVal);
           const seriesEl = svg.querySelector(`.series[data-key="${g.key}"]`);
           if (seriesEl){
@@ -752,7 +780,7 @@
             if (circle){ circle.style.transition = 'cy 0.9s cubic-bezier(0.4,0,0.2,1)'; circle.setAttribute('cy', endY.toFixed(2)); }
           }
         });
-        if (popLine) popLine.style.d = 'path("' + curvePath(POP.p1, POP.k, currentView, dim.probYMax) + '")';
+        if (popLine) popLine.style.d = 'path("' + curvePath(POP.p1, POP.k, currentView, dim.probYMax, xmax) + '")';
       });
 
       setTimeout(render, 950);
@@ -762,6 +790,7 @@
       const hitrect = document.getElementById(prefix + '-hitrect');
       const crosshair = document.getElementById(prefix + '-crosshair');
       if (!hitrect) return;
+      const xmax = dim.xmax || XMAX;
 
       function onMove(evt){
         const rect = svg.getBoundingClientRect();
@@ -769,10 +798,10 @@
         const clientX = (evt.touches ? evt.touches[0].clientX : evt.clientX);
         const clientY = (evt.touches ? evt.touches[0].clientY : evt.clientY);
         const localX = (clientX - rect.left) * scaleX;
-        let t = ((localX - padL) / plotW) * XMAX;
-        t = Math.max(1, Math.min(XMAX, t));
+        let t = ((localX - padL) / plotW) * xmax;
+        t = Math.max(1, Math.min(xmax, t));
 
-        const px = xPix(t);
+        const px = xPix(t, xmax);
         crosshair.setAttribute('x1', px.toFixed(2));
         crosshair.setAttribute('x2', px.toFixed(2));
         crosshair.style.opacity = 1;
@@ -820,7 +849,7 @@
       head.innerHTML = headHtml;
 
       let bodyHtml = '';
-      TABLE_YEARS.forEach(function(yr){
+      (dim.tableYears || TABLE_YEARS).forEach(function(yr){
         bodyHtml += `<tr><th scope="row">Year ${yr}</th>`;
         dim.groups.forEach(function(g){
           bodyHtml += `<td>${fmtVal(valueAt(g, currentView, yr), currentView)}</td>`;
@@ -840,10 +869,14 @@
 
   // ---- Figure 3 (main): convergence to the general population base rate ---------
   // Table 7's real base rates/convergence years are estimated on the GLMM
-  // population-average scale (~5% baseline, per Figure 4), not the 28%-anchored
-  // scale Figure 2 uses. Each state's curve is rescaled — p1' = base * exp(k*(conv-1))
-  // — to pass exactly through its own real (base rate, convergence year) point, while
-  // k stays the real per-state multiplier from Table 3. See methodology card.
+  // population-average scale (~15% year-1 baseline, per Figure 4), not the
+  // 28%-anchored scale Figure 2 uses. Each state's curve is rescaled — p1' =
+  // base * exp(k*(conv-1)) — to pass exactly through its own real (base rate,
+  // convergence year) point, while k stays the real per-state multiplier from
+  // Table 3. This rescaling is independent of the GLMM year-1 baseline value
+  // itself (it only uses each state's real base rate, convergence year, and
+  // Table 3 decay multiplier), so it is unaffected by the Figure 1 GLMM
+  // 5%->15% correction above. See methodology card.
   function initConvergenceChart(){
     const CONV_PROB_YMAX = 10;
     const STATES = [
@@ -1040,3 +1073,5 @@
 </script>
 </body>
 </html>
+
+</body></html>
