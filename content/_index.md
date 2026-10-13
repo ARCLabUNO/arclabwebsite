@@ -63,7 +63,7 @@ sections:
       text: |
         <div style="text-align:center; max-width:950px; margin:0 auto;">
           <h2>The ARC Lab Team</h2>
-          <img src="/media/homyphoto_edited2.jpg" alt="ARC Lab group photo" style="max-width:850px; width:100%; height:auto; border-radius:12px; display:block; margin:1.5rem auto;">
+          <img src="/media/FullSizeRender.jpeg" alt="ARC Lab group photo" style="max-width:850px; width:100%; height:auto; border-radius:12px; display:block; margin:1.5rem auto;">
 
           <p>
             ARC brings together faculty, research staff, and graduate researchers working on shared questions about correctional policy, practice, and outcomes. The lab operates as a collaborative research environment where projects are developed, analyzed, and carried forward across teams.
