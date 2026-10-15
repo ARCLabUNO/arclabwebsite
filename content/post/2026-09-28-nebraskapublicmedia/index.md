@@ -1,7 +1,7 @@
 ---
 title: ARC Lab Research Featured by Nebraska Public Media
 date: 2026-09-28
-summary: "ARC Lab Research Featured by Nebraska Public Media"
+summary: "ARC Lab research was featured by Nebraska Public Media, highlighting findings from a Criminology study examining how the predictive value of criminal history declines over time. Coauthors Zachary Hamilton and Jennifer Tostlebe were quoted discussing the findings and their implications for risk assessment and criminal justice decision-making."
 authors:
   - admin
   - tostlebe
