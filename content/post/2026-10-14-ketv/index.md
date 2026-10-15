@@ -1,6 +1,6 @@
 ---
 title: ARC Lab Research on Criminal History Featured by KETV
-date: 2026-09-28
+date: 2026-10-14
 summary: "ARC Lab research published in Criminology was featured by KETV NewsWatch 7. The study finds that the predictive value of prior criminal charges declines over time, challenging conventional approaches to risk assessment and criminal justice decision-making."
 authors:
   - admin
