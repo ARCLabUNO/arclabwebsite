@@ -1,6 +1,6 @@
 +++
 # Paper title
-title = "Beyond misconduct: Experimental and qualitative evidence on daily life, perceptions of correctional officers, and reform in a restrictive housing step-down program (Forthcoming)"
+title = "Beyond misconduct: Experimental and qualitative evidence on daily life, perceptions of correctional officers, and reform in a restrictive housing step-down program"
   
 # Authors
 authors = ["hayes", "tostlebe", "Ryan Labrecque", "David Pyrooz"]
