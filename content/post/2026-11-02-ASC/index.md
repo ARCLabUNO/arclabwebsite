@@ -7,9 +7,8 @@ summary: "ARC Lab researchers will share 11 presentations and celebrate several 
 
 Members of the Applied Research in Corrections (ARC) Lab at the University of Nebraska at Omaha will present their research and receive several prestigious awards at the 2026 American Society of Criminology (ASC) Annual Meeting, November 18–21 in Chicago, Illinois.
 
-Across 11 presentations spanning six sessions, ARC Lab researchers will contribute to discussions on correctional policy, prisoner reentry, risk assessment, institutional environments, and crime prevention. This year's conference will also recognize the contributions of ARC Lab faculty and doctoral students to the field of corrections and sentencing.
-
 We invite conference attendees to join us for our presentations and award celebrations throughout the week!
+
 
 ## Wednesday, November 18
 
