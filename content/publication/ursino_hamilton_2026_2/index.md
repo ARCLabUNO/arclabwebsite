@@ -6,7 +6,7 @@ title = "Systems-based forecasting in jail populations [Forthcoming]"
 authors = ["ursino", "admin"]
   
 # Publication
-publication = "*Criminology & Public Policy"
+publication = "Criminology & Public Policy"
   
 # Publication types (2 = Journal article; 3 = preprint; 4 = report; 6 = book chapter)
 publication_types = ["article-journal"]
