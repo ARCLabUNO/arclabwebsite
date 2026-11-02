@@ -46,7 +46,7 @@ url_code = ""
   
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
- links = [{name = "Pre-registration", url="https://osf.io/t6qpx", icon = "osf", icon_pack = "ai"}]
+ links = [{name = "DOI", url="https://doi.org/10.1177/00111287261502312"}, {name = "Pre-registration", url="https://osf.io/t6qpx", icon = "osf", icon_pack = "ai"}]
   
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder.
