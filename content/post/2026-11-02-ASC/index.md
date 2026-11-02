@@ -22,7 +22,7 @@ We invite conference attendees to join us for our presentations and award celebr
 
 **6:30-8:00 PM | Grand Ballroom, 4th Floor**
 
-- ARC Lab doctoral candidate **Taylor Gonzales** will be recognized with the Ruth D. Peterson Fellowship during the ASC Awards Plenary.
+- **Taylor Gonzales** - Ruth D. Peterson Fellowship
 
 
 ## Thursday, November 19
