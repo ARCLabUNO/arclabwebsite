@@ -1,6 +1,6 @@
 +++
 # Paper title
-title = "Systems-based forecasting in jail populations [Forthcoming]"
+title = "Systems-based forecasting in jail populations (Forthcoming)"
   
 # Authors
 authors = ["ursino", "admin"]
