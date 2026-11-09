@@ -1,6 +1,6 @@
 +++
 # Paper title
-title = "Building evaluation readiness through research-practitioner partnerships: Lessons from a community-based reentry program (Forthcoming)"
+title = "Building evaluation readiness through research-practitioner partnerships: Lessons from a community-based reentry program"
   
 # Authors
 authors = ["gonzales", "tostlebe", "Shane Reilly"]
@@ -12,7 +12,7 @@ publication = "*Justice Evaluation Journal*"
 publication_types = ["article-journal"]
   
 # Date the paper was published.
-date = 2026-08-24T10:00:00Z
+date = 2026-11-07T10:00:00Z
   
 # Date this page was created.
 publishdate = 2026-08-24T10:00:00Z
@@ -46,9 +46,8 @@ url_code = ""
   
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-links = [{name = "Preprint", url="https://www.researchgate.net/publication/413886034_Building_evaluation_readiness_through_research-practitioner_partnerships_Lessons_from_a_community-based_reentry_program", icon = "unlock-alt", icon_pack = "fas"}]
-# , {name = "DOI", url="https://doi.org/10.1080/23774657.2025.2581081"}]
-  
+links = [{name = "Preprint", url="https://www.researchgate.net/publication/413886034_Building_evaluation_readiness_through_research-practitioner_partnerships_Lessons_from_a_community-based_reentry_program", icon = "unlock-alt", icon_pack = "fas"}, {name = "DOI", url="https://doi.org/10.1080/24751979.2026.2755614"}]
+
 # Featured image
 # To use, add an image named `featured.jpg/png` to your project's folder.
 [image]
