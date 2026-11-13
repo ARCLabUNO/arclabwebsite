@@ -88,3 +88,5 @@ At the center of her graduate work is her **dissertation,** which investigates h
 Alongside her dissertation, Abby is pursuing two additional lines of research:
 1) An interrupted time series analysis assessing whether a recent Nebraska policy change has meaningfully reduced restrictive housing use for misconduct; and
 2) A scoping review tracing the origins and evolution of gangs alongside other criminal groups (e.g., delinquent peer networks, drug cartels, and extremist organizations) to interrogate whether gangs are better understood as an extension of peer dynamics or as a form of organized crime.
+
+Abby has accepted an Assistant Professor position in the School of Criminal Justice at the University of Central Oklahoma, beginning Fall 2027!
