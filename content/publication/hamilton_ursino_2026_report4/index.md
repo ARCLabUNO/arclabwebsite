@@ -3,7 +3,7 @@
 title = "Developing violence risk assessments for treatment court populations: Pooled LSI-R and ORAS violent reconviction tools and state-specific localized assessments (Doc. #2026-11-1004)"
   
 # Authors
-authors = ["ursino", "admin"]
+authors = ["admin", "ursino"]
   
 # Publication
 publication = "*Advancing Research in Corrections Lab*"
