@@ -1,6 +1,6 @@
 +++
 # Paper title
-title = "Alaska localized LSI-R violence and recidivism assessment: Development and validation of localized general and violent reconviction scores for the Alaska Level of Service Inventory-Revised"
+title = "Alaska localized LSI-R violence and recidivism assessment: Development and validation of localized general and violent reconviction scores for the Alaska Level of Service Inventory-Revised (Doc. #2026-11-1001)"
   
 # Authors
 authors = ["ursino", "admin"]
