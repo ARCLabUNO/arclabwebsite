@@ -58,3 +58,11 @@ links = [{name = "Interim Report", url="Hamilton et al. (2026) -- IA Phase 1 Rep
   # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
   focal_point = "Center"
 +++
+
+## Suggested Citation
+
+Hamilton, Z., Tostlebe, J., Jordon, C., & Gonzales, T. (2026).
+Phase 1 interim report: Understanding release decision-making
+and release readiness in Iowa corrections (Doc. #2026-09-1001).
+*Advancing Research in Corrections Lab,* School of Criminology
+and Criminal Justice, University of Nebraska Omaha. Omaha, NE.
