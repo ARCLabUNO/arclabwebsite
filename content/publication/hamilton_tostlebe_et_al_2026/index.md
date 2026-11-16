@@ -1,6 +1,6 @@
 +++
 # Paper title
-title = "Phase 1 interim report: Understanding release decision-making and release readiness in Iowa corrections"
+title = "Phase 1 interim report: Understanding release decision-making and release readiness in Iowa corrections (Doc. #2026-09-1001)"
   
 # Authors
 authors = ["admin", "tostlebe", "jordon", "gonzales"]
