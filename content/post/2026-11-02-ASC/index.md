@@ -1,6 +1,6 @@
 ---
 title: ARC Lab Researchers and Students to Present Research and Receive Awards at ASC 2026
-date: 2026-11-02
+date: 2026-11-16
 summary: "ARC Lab researchers will share 11 presentations and celebrate several faculty and student awards at the 2026 American Society of Criminology Annual Meeting. Join us in Chicago as we highlight research on corrections, reentry, risk assessment, decarceration, and crime prevention!"
 
 ---
