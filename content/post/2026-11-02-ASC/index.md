@@ -75,7 +75,7 @@ We invite conference attendees to join us for our presentations and award celebr
   <a href="IMG_8676.jpeg">
     <img src="IMG_8676.jpeg"
          alt="Zach with Award"
-         style="width: 200px; height: 160px; object-fit: cover; border-radius: 6px;">
+         style="width: 200px; height: auto; border-radius: 6px;">
   </a>
 
 </div>
