@@ -58,7 +58,7 @@ We invite conference attendees to join us for our presentations and award celebr
 **8:00–9:20 AM | Wabash Room, 3rd Floor**
 
 - **Zachary Hamilton** - Distinguished Scholar Award
-<div class="peterson-gallery" style="
+<div class="asc-gallery" style="
   display: flex;
   gap: 12px;
   justify-content: center;
@@ -81,7 +81,7 @@ We invite conference attendees to join us for our presentations and award celebr
 </div>
 
 - **Jennifer Tostlebe** - Distinguished New Scholar Award
-<div class="peterson-gallery" style="
+<div class="asc-gallery" style="
   display: flex;
   gap: 12px;
   justify-content: center;
@@ -103,7 +103,7 @@ We invite conference attendees to join us for our presentations and award celebr
 </div>
 
 - **Caitlyn Jordon and Taylor Gonzales** — Ben Steiner Excellence in Corrections Student Paper Award
-<div class="peterson-gallery" style="
+<div class="asc-gallery" style="
   display: flex;
   gap: 12px;
   justify-content: center;
@@ -125,7 +125,7 @@ We invite conference attendees to join us for our presentations and award celebr
 </div>
 
 - **Abigail Hayes** — Dr. Kimchi Memorial Graduate Travel Award
-<div class="peterson-gallery" style="
+<div class="asc-gallery" style="
   display: flex;
   gap: 12px;
   justify-content: center;
@@ -155,11 +155,47 @@ We invite conference attendees to join us for our presentations and award celebr
 - **Housing Context and Group Composition: Explaining Assault Patterns in Prison** — Abigail Hayes
 - **Reentry in Practice: A Process Evaluation of a Transitional Living Program** — Taylor Gonzales
 
+<div class="asc-gallery" style="
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+">
+  <a href="IMG_2952.jpeg">
+    <img src="IMG_2952.jpeg"
+         alt="Hayes ASC Presentation"
+         style="width: 200px; height: 160px; object-fit: cover; border-radius: 6px;">
+  </a>
+
+  <a href="IMG_2954.jpeg">
+    <img src="IMG_2954.jpeg"
+         alt="Gonzales ASC Presentation"
+         style="width: 200px; height: 160px; object-fit: cover; border-radius: 6px;">
+  </a>
+</div>
+
 ### From Access to Impact: Methodological Interventions Across Corrections, Reentry, and Community Violence Intervention Research
 
 **3:30–4:50 PM | Sandburg 2, 7th Floor**
 
 - **Turning Lived Experience into Infrastructure: Research-Practitioner Partnerships as Evaluation Readiness in Community-Based Prisoner Reentry Programs** — Jennifer Tostlebe and Taylor Gonzales
+
+<div class="asc-gallery" style="
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+">
+  <a href="IMG_2943.jpeg">
+    <img src="IMG_2943.jpeg"
+         alt="Tostlebe ASC Presentation"
+         style="width: 200px; height: 160px; object-fit: cover; border-radius: 6px;">
+  </a>
+</div>
 
 ### Innovations from the Victimology and Victim Studies Research Lab—Part 2: Furthering Research on Prevention and Response
 
@@ -182,6 +218,39 @@ This session features four ARC Lab presentations exploring how research can info
 - **Informed Release: Parole Decision-Making Process through Correctional Staff Perspectives** — Caitlyn Jordon, Jennifer Tostlebe, and Zachary Hamilton
 - **MnSTARR 3.0 and Early Release Decisions in Minnesota** — Naya Russell-Coprich, John Ursino, and Zachary Hamilton
 - **A Century of Chronicity: Informing Release via Career Trajectories** — Alex Kigerl, Zachary Hamilton, and Jennifer Tostlebe
+
+<div class="asc-gallery" style="
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+">
+  <a href="IMG_4912.jpeg">
+    <img src="IMG_4912.jpeg"
+         alt="Ursino ASC Presentation"
+         style="width: 200px; height: 160px; object-fit: cover; border-radius: 6px;">
+  </a>
+
+  <a href="IMG_4896.jpeg">
+    <img src="IMG_4896.jpeg"
+         alt="Jordon ASC Presentation"
+         style="width: 200px; height: 160px; object-fit: cover; border-radius: 6px;">
+  </a>
+  
+  <a href="IMG_4908.jpeg">
+    <img src="IMG_4908.jpeg"
+         alt="Russell ASC Presentation"
+         style="width: 200px; height: 160px; object-fit: cover; border-radius: 6px;">
+  </a>
+
+  <a href="IMG_2962.jpeg">
+    <img src="IMG_2962.jpeg"
+         alt="Hamilton ASC Presentation"
+         style="width: 200px; height: 160px; object-fit: cover; border-radius: 6px;">
+  </a>
+</div>
 
 ### Risk Assessment and Racial Bias in Juvenile Justice
 
