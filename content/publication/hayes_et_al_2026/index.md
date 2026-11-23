@@ -58,3 +58,6 @@ url_code = ""
   # Options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
   focal_point = "Center"
 +++
+
+{{< figure src="IMU_4723.jpeg" caption="Abby Karate Time" >}}
+
