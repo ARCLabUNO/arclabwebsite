@@ -81,7 +81,49 @@ We invite conference attendees to join us for our presentations and award celebr
 </div>
 
 - **Jennifer Tostlebe** - Distinguished New Scholar Award
+<div class="peterson-gallery" style="
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+">
+  <a href="IMG_1138.jpeg">
+    <img src="IMG_1138.jpeg"
+         alt="Jenn accepting Award"
+         style="width: 200px; height: 160px; object-fit: cover; border-radius: 6px;">
+  </a>
+
+  <a href="1000018901.jpeg">
+    <img src="1000018901.jpeg"
+         alt="Jenn with Award"
+         style="width: 200px; height: 160px; object-fit: cover; border-radius: 6px;">
+  </a>
+</div>
+
 - **Caitlyn Jordon and Taylor Gonzales** — Ben Steiner Excellence in Corrections Student Paper Award
+<div class="peterson-gallery" style="
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+">
+  <a href="IMG_8672.jpeg">
+    <img src="IMG_8672.jpeg"
+         alt="Cait and Taylor accepting Award"
+         style="width: 200px; height: 160px; object-fit: cover; border-radius: 6px;">
+  </a>
+
+  <a href="1000018905.jpeg">
+    <img src="1000018905.jpeg"
+         alt="Cait and Taylor with Award"
+         style="width: 200px; height: 160px; object-fit: cover; border-radius: 6px;">
+  </a>
+</div>
+
 - **Abigail Hayes** — Dr. Kimchi Memorial Graduate Travel Award
 
 ### Across the Corrections Continuum: Institutional Contexts of Harm, Health, and Reintegration
