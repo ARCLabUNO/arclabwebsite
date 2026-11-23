@@ -23,6 +23,17 @@ We invite conference attendees to join us for our presentations and award celebr
 
 - **Taylor Gonzales** - Ruth D. Peterson Fellowship
 
+<div class="peterson-gallery">
+  <a href="IMG_1119.jpeg">
+    <img src="IMG_1119.jpeg" alt="Taylor accepting Award">
+  </a>
+  <a href="IMG_4847.jpeg">
+    <img src="IMG_4847.jpeg" alt="Taylor with Award">
+  </a>
+  <a href="IMG_4848.jpeg">
+    <img src="IMG_4848.jpeg" alt="Taylor with Award">
+  </a>
+</div>
 
 ## Thursday, November 19
 
