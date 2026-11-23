@@ -125,6 +125,28 @@ We invite conference attendees to join us for our presentations and award celebr
 </div>
 
 - **Abigail Hayes** — Dr. Kimchi Memorial Graduate Travel Award
+<div class="peterson-gallery" style="
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+">
+  <a href="IMG_1140.jpeg">
+    <img src="IMG_1140.jpeg"
+         alt="Abby accepting Award"
+         style="width: 200px; height: 160px; object-fit: cover; border-radius: 6px;">
+  </a>
+
+  <a href="1000018909.jpeg">
+    <img src="1000018909.jpeg"
+         alt="Abby with Award"
+         style="width: 200px; height: 160px; object-fit: cover; border-radius: 6px;">
+  </a>
+</div>
+
+{{< figure src="image000000.jpeg" caption="ARC Lab ASC Awards" >}}
 
 ### Across the Corrections Continuum: Institutional Contexts of Harm, Health, and Reintegration
 
