@@ -59,5 +59,6 @@ url_code = ""
   focal_point = "Center"
 +++
 
-{{< figure src="IMU_4723.jpeg" caption="Abby Karate Time">}}
+
+{{< figure src="IMU_4723.jpeg" caption="Abby Karate Time" width="400px" >}}
 
