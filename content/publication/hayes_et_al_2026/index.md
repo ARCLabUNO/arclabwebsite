@@ -60,5 +60,5 @@ url_code = ""
 +++
 
 
-{{< figure src="IMU_4723.jpeg" caption="Abby Karate Time" width="400px" >}}
+{{< figure src="IMG_4723.jpeg" caption="Abby Karate Time" width="400px" >}}
 
