@@ -29,7 +29,7 @@ We invite conference attendees to join us for our presentations and award celebr
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 20px 0;
+  margin: 10px 0;
 ">
   <a href="IMG_1119.jpeg">
     <img src="IMG_1119.jpeg"
@@ -58,6 +58,28 @@ We invite conference attendees to join us for our presentations and award celebr
 **8:00–9:20 AM | Wabash Room, 3rd Floor**
 
 - **Zachary Hamilton** - Distinguished Scholar Award
+<div class="peterson-gallery" style="
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+">
+  <a href="IMG_8667.jpeg">
+    <img src="IMG_8667.jpeg"
+         alt="Zach accepting Award"
+         style="width: 200px; height: 160px; object-fit: cover; border-radius: 6px;">
+  </a>
+
+  <a href="IMG_8676.jpeg">
+    <img src="IMG_8676.jpeg"
+         alt="Zach with Award"
+         style="width: 200px; height: 160px; object-fit: cover; border-radius: 6px;">
+  </a>
+
+</div>
+
 - **Jennifer Tostlebe** - Distinguished New Scholar Award
 - **Caitlyn Jordon and Taylor Gonzales** — Ben Steiner Excellence in Corrections Student Paper Award
 - **Abigail Hayes** — Dr. Kimchi Memorial Graduate Travel Award
